@@ -16,7 +16,7 @@
 <body class="font-roboto bg-bodyBg">
 
     <!-- header part start  -->
-    <header class="lg:sticky top-0 ">
+    <header class="lg:sticky top-0 z-10">
         <!-- Top Header -->
         <div class="py-3 bg-white border-b border-line">
             <div class="container px-4">
@@ -93,10 +93,10 @@
                                         <ul class="bg-transparent p-0">
                                             <li class="text-center border-b border-[#283B44] py-4 px-2">
                                                 <div class="user_avatar mx-auto mb-2">
-                                                    <div class="flex items-center justify-center mx-auto relative" id="avatarContainer">
+                                                    <div class="flex items-center justify-center mx-auto" id="avatarContainer">
                                                         <span class="text-2xl font-bold text-white" id="text">K</span>
                                                         <img class="h-full w-full rounded-full object-cover hidden" src="./assets/images/logo.png" alt="User Avatar" id="avatarImage">
-                                                        <label class="absolute -bottom-3 -right-4 cursor-pointer">
+                                                        <label class="absolute -bottom-1 -right-2 cursor-pointer">
                                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
                                                                 <defs>
                                                                     <pattern id="pattern" width="1" height="1" viewBox="-4.444 -4.444 26.887 26.887">
@@ -200,6 +200,19 @@
     <!-- header part end  -->
 
 
+    <!-- Sub Header -->
+    <div class="bg-bodyBg lg:sticky top-[4.8rem]">
+        <div class="container px-4">
+            <div class="flex items-center justify-between border-b border-line py-2 md:py-3 lg:py-5">
+                <h2 class="text-xl md:text-2xl text-black font-medium">Projektit</h2>
+    
+            </div>
+        </div> <!-- container -->
+
+    </div>
+    <!-- Sub Header -->
+
+
     <!-- Project Steps  -->
     <section class="py-10">
 
@@ -215,7 +228,7 @@
 
                     <!-- Step Items -->
                     <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="!#">Tilaajan yhteydenotto</a>
+                        <a class="pr-1" href="./step.html">Tilaajan yhteydenotto</a>
                         <div class="dropdown">
                             <button class="dropdown-toggle" data-dropdown="dropdown-menu1">
                                 
@@ -250,7 +263,7 @@
                     
                     <!-- Step Items -->
                     <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="!#">Lähtötietojen läpikäynti, alustavan kustannusarvion ja aikataulun teko</a>
+                        <a class="pr-1" href="./step.html">Lähtötietojen läpikäynti, alustavan kustannusarvion ja aikataulun teko</a>
                         <div class="dropdown">
                             <button class="dropdown-toggle" data-dropdown="dropdown-menu2">
                                 
@@ -283,7 +296,7 @@
                     
                     <!-- Step Items -->
                     <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="!#">Kohdekäynti</a>
+                        <a class="pr-1" href="./step.html">Kohdekäynti</a>
                         <div class="dropdown" id="dropdown4">
                             <button class="dropdown-toggle" data-dropdown="dropdown-menu3">
                                 
@@ -317,7 +330,7 @@
                     
                     <!-- Step Items -->
                     <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="!#">Vuokrasopimuksen apudokumentit</a>
+                        <a class="pr-1" href="./step.html">Vuokrasopimuksen apudokumentit</a>
                         <div class="dropdown" id="dropdown5">
                             <button class="dropdown-toggle" data-dropdown="dropdown-menu4">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
@@ -349,7 +362,7 @@
                     
                     <!-- Step Items -->
                     <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="!#">Kustannusarvion ja aikataulun päivitys</a>
+                        <a class="pr-1" href="./step.html">Kustannusarvion ja aikataulun päivitys</a>
                         <div class="dropdown" id="dropdown6">
                             <button class="dropdown-toggle" data-dropdown="dropdown-menu5">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
@@ -382,7 +395,7 @@
                     
                     <!-- Step Items -->
                     <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="!#">Vuokrasopimuksen allekirjoitus ja vuokralaismuutoksen aloituspäätös</a>
+                        <a class="pr-1" href="./step.html">Vuokrasopimuksen allekirjoitus ja vuokralaismuutoksen aloituspäätös</a>
                         <div class="dropdown" id="dropdown7">
                             <button class="dropdown-toggle" data-dropdown="dropdown-menu6">
                             
@@ -424,7 +437,7 @@
 
                     <!-- Step Items -->
                     <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="!#">Noste.ion tarjouksen toimitus</a>
+                        <a class="pr-1" href="./step.html">Noste.ion tarjouksen toimitus</a>
                         <div class="dropdown">
                             <button class="dropdown-toggle" data-dropdown="dropdown-menu7">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
@@ -456,7 +469,7 @@
 
                     <!-- Step Items -->
                     <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="!#">Projektiraportointi ja kustannusseuranta</a>
+                        <a class="pr-1" href="./step.html">Projektiraportointi ja kustannusseuranta</a>
                         <div class="dropdown" id="dropdown">
                             <button class="dropdown-toggle" data-dropdown="dropdown-menu8">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
@@ -488,7 +501,7 @@
                     
                     <!-- Step Items -->
                     <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="!#">Suunnittelu ja selvitykset</a>
+                        <a class="pr-1" href="./step.html">Suunnittelu ja selvitykset</a>
                         <div class="dropdown" id="dropdown10">
                             <button class="dropdown-toggle" data-dropdown="dropdown-menu9">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
@@ -521,7 +534,7 @@
                     
                     <!-- Step Items -->
                     <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="!#">Tarjouspyynnön lähetys ja urakkakilpailutus</a>
+                        <a class="pr-1" href="./step.html">Tarjouspyynnön lähetys ja urakkakilpailutus</a>
                         <div class="dropdown">
                             <button class="dropdown-toggle" data-dropdown="dropdown-menu10">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
@@ -553,7 +566,7 @@
                     
                     <!-- Step Items -->
                     <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="!#">Kaupalliset asiakirjat ja kilpailutusmateriaalin teko</a>
+                        <a class="pr-1" href="./step.html">Kaupalliset asiakirjat ja kilpailutusmateriaalin teko</a>
                         <div class="dropdown">
                             <button class="dropdown-toggle" data-dropdown="dropdown-menu11">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
@@ -586,7 +599,7 @@
                     
                     <!-- Step Items -->
                     <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="!#">Tarjouksen hyväksyttäminen</a>
+                        <a class="pr-1" href="./step.html">Tarjouksen hyväksyttäminen</a>
                         <div class="dropdown">
                             <button class="dropdown-toggle" data-dropdown="dropdown-menu12">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
@@ -627,7 +640,7 @@
 
                     <!-- Step Items -->
                     <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="!#">Urakan kirjallinen tilaus</a>
+                        <a class="pr-1" href="./step.html">Urakan kirjallinen tilaus</a>
                         <div class="dropdown">
                             <button class="dropdown-toggle" data-dropdown="dropdown-menu13">
 								
@@ -661,7 +674,7 @@
 
                     <!-- Step Items -->
                     <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="!#">Urakkasopimuksen allekirjoitus</a>
+                        <a class="pr-1" href="./step.html">Urakkasopimuksen allekirjoitus</a>
                         <div class="dropdown">
                             <button class="dropdown-toggle" data-dropdown="dropdown-menu14">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
@@ -694,7 +707,7 @@
                     
                     <!-- Step Items -->
                     <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="!#">Työmaan käynnistymisen tehtävät</a>
+                        <a class="pr-1" href="./step.html">Työmaan käynnistymisen tehtävät</a>
                         <div class="dropdown">
                             <button class="dropdown-toggle" data-dropdown="dropdown-menu15">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
@@ -727,7 +740,7 @@
                     
                     <!-- Step Items -->
                     <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="!#">Työmaan aloituskokous</a>
+                        <a class="pr-1" href="./step.html">Työmaan aloituskokous</a>
                         <div class="dropdown">
                             <button class="dropdown-toggle" data-dropdown="dropdown-menu16">
                                 
@@ -770,7 +783,7 @@
 
                     <!-- Step Items -->
                     <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="!#">Yleinen projektinjohto rakentamisen aikana</a>
+                        <a class="pr-1" href="./step.html">Yleinen projektinjohto rakentamisen aikana</a>
                         <div class="dropdown">
                             <button class="dropdown-toggle" data-dropdown="dropdown-menu17">
                                 
@@ -804,7 +817,7 @@
 
                     <!-- Step Items -->
                     <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="!#">Työmaavalvonta</a>
+                        <a class="pr-1" href="./step.html">Työmaavalvonta</a>
                         <div class="dropdown">
                             <button class="dropdown-toggle" data-dropdown="dropdown-menu18">
                                 
@@ -837,7 +850,7 @@
                     
                     <!-- Step Items -->
                     <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="!#">Työmaakokoukset</a>
+                        <a class="pr-1" href="./step.html">Työmaakokoukset</a>
                         <div class="dropdown">
                             <button class="dropdown-toggle" data-dropdown="dropdown-menu19">
                                 
@@ -870,7 +883,7 @@
                     
                     <!-- Step Items -->
                     <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="!#">Lisä- ja muutostyökäsittely</a>
+                        <a class="pr-1" href="./step.html">Lisä- ja muutostyökäsittely</a>
                         <div class="dropdown">
                             <button class="dropdown-toggle" data-dropdown="dropdown-menu20">
                                 
@@ -911,7 +924,7 @@
 
                     <!-- Step Items -->
                     <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="!#">Vastaanottotarkastustilaisuus</a>
+                        <a class="pr-1" href="./step.html">Vastaanottotarkastustilaisuus</a>
                         <div class="dropdown">
                             <button class="dropdown-toggle" data-dropdown="dropdown-menu21">
                                 
@@ -945,7 +958,7 @@
 
                     <!-- Step Items -->
                     <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="!#">Hallinnanluovutustilaisuus</a>
+                        <a class="pr-1" href="./step.html">Hallinnanluovutustilaisuus</a>
                         <div class="dropdown" >
                             <button class="dropdown-toggle" data-dropdown="dropdown-menu22">
                                 
@@ -979,7 +992,7 @@
                     
                     <!-- Step Items -->
                     <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="!#">Virhe- ja puutekorjausten valvonta</a>
+                        <a class="pr-1" href="./step.html">Virhe- ja puutekorjausten valvonta</a>
                         <div class="dropdown">
                             <button class="dropdown-toggle" data-dropdown="dropdown-menu23">
                                 
@@ -1012,7 +1025,7 @@
                     
                     <!-- Step Items -->
                     <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="!#">Taloudellinen loppuselvitys</a>
+                        <a class="pr-1" href="./step.html">Taloudellinen loppuselvitys</a>
                         <div class="dropdown">
                             <button class="dropdown-toggle" data-dropdown="dropdown-menu24">
                                 
@@ -1046,7 +1059,7 @@
                     
                     <!-- Step Items -->
                     <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="!#">Loppudokumentaatio ja projektin lopetuss</a>
+                        <a class="pr-1" href="./step.html">Loppudokumentaatio ja projektin lopetuss</a>
                         <div class="dropdown">
                             <button class="dropdown-toggle" data-dropdown="dropdown-menu25">
                                 

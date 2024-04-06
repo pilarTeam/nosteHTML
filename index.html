@@ -16,7 +16,7 @@
 <body class="font-roboto bg-bodyBg">
 
     <!-- header part start  -->
-    <header class="lg:sticky top-0 ">
+    <header class="lg:sticky top-0 z-10">
         <!-- Top Header -->
         <div class="py-3 bg-white border-b border-line">
             <div class="container px-4">
@@ -116,10 +116,10 @@
                                         <ul class="bg-transparent p-0">
                                             <li class="text-center border-b border-[#283B44] py-4 px-2">
                                                 <div class="user_avatar mx-auto mb-2">
-                                                    <div class="flex items-center justify-center mx-auto relative" id="avatarContainer">
+                                                    <div class="flex items-center justify-center mx-auto" id="avatarContainer">
                                                         <span class="text-2xl font-bold text-white" id="text">K</span>
                                                         <img class="h-full w-full rounded-full object-cover hidden" src="./assets/images/logo.png" alt="User Avatar" id="avatarImage">
-                                                        <label class="absolute -bottom-3 -right-4 cursor-pointer">
+                                                        <label class="absolute -bottom-1 -right-2 cursor-pointer">
                                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
                                                                 <defs>
                                                                     <pattern id="pattern" width="1" height="1" viewBox="-4.444 -4.444 26.887 26.887">
@@ -221,7 +221,107 @@
 
     </header> <!-- header_area  -->
     <!-- header part end  -->
-
+    
+    <!-- Sub Header -->
+    <div class="bg-bodyBg lg:sticky top-[4.8rem]">
+        <div class="container px-4">
+            <div class="flex items-center justify-between border-b border-line py-2 md:py-3 lg:py-5">
+                <h2 class="text-xl md:text-2xl text-black font-medium hidden md:block">Projektit</h2>
+    
+                <div class="flex items-center w-full md:w-auto gap-2">
+                    <a href="#!" class="btn bg-accent text-white px-3 md:px-4 text-xs md:text-sm w-1/2 md:w-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19" height="19" viewBox="0 0 19 19">
+                            <defs>
+                                <pattern id="pattern9" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                    <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA4UlEQVR4nO3RsXEEQBDDsO2/aboEBw6s/wMq0Ih3AAAAAAAAAB+nX/z3vuckyJYE2ZIgWxJkS4JsSZAtCbIlQbYkyJYE2ZIgWxJkS4JsSZAtCbIlQbYkyJYE2ZIgWxJkS4JsSZAtCbIlQbYkyJYE2ZIgfzvo292aHndretyt6XG3psfdmh53a3rcrelx97octCVBtiTIlgTZkiBbEmRLgmxJkC0JsiVBtiTIlgTZkiBbEmRLgmxJkC0JsiVBtiTIlgTZkiBbEmRLgmxJkC0JsiVBtiTIlgQBAAAAAAAA7tv8AGPo8dM0PqxnAAAAAElFTkSuQmCC" />
+                                </pattern>
+                            </defs>
+                            <rect id="icons8-plus-math-100_white" width="19" height="19" fill="url(#pattern9)" />
+                        </svg>
+    
+                        Luo uusi projekti
+                    </a>
+    
+                    <a href="#!" class="btn border-black1 px-3 md:px-4 text-xs md:text-sm w-1/2 md:w-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19" height="19" viewBox="0 0 19 19">
+                            <defs>
+                                <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                    <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA9UlEQVR4nO3UsW0DMQAEwQ+3jC9A/bdndeBEgHl6zwDMiVuQ1wUAAAAAAADwdbpfP7+d0/f7dxJkS4JsSZAtCbIlQbYkyJYE2ZIgWxJkS4JsSZAtCbIlQbYkyJYE2ZIgWxJkS4JsSZAtCbIlQbYkyJYE2ZIgWxJkS4JsSZDPBnr6udacHiRBBMkLeR1/Cb6s+/zYgtznBxZkYNQEOT9kTw3y1zLQlgTZkiBbEmRLgmxJkC0JsiVBtiTIlgTZkiBbEmRLgmxJkC0JsiVBtiTIlgTZkiBbEmRLgmxJkC0JsiVBtiTIlgTZkiBbEgQAAAAAAAC4nuYNlib3fYJFJygAAAAASUVORK5CYII=" />
+                                </pattern>
+                            </defs>
+                            <rect id="icons8-plus-math-100" width="19" height="19" fill="url(#pattern)" />
+                        </svg>
+    
+                        Luo uusi käyttäjä
+                    </a>
+                </div>
+            </div>
+        </div> <!-- container -->
+    
+        <!-- search start  -->
+        <div class="container px-4">
+            <div class="flex flex-col md:flex-row md:items-center justify-between border_bottom_1 py-2 md:py-3 lg:py-5 border-b border-line">
+                <div class="search_box">
+    
+                    <form action="#">
+                        <div class="flex items-center gap-4">
+                            <div class="flex items-center md:min-w-[16rem] lg:min-w-[20rem] w-full px-2 border border-line rounded-lg shadow-component bg-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+                                    <defs>
+                                        <pattern id="pattern003" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 128 128">
+                                            <image width="128" height="128" xlink:href="data:image/png;base64,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" />
+                                        </pattern>
+                                    </defs>
+                                    <rect id="icons8-search-128" width="20" height="20" fill="url(#pattern003)" />
+                                </svg>
+                                <input class="px-1 py-2 w-full bg-transparent" type="text" name="search" id="" placeholder="Hae yksittäistä projektia...">
+                            </div>
+    
+                            <div class="flex items-center gap-2">
+                                <button class="btn border-black1">Tyhjennä</button>
+                                <button class="btn bg-black text-white">Hae</button>
+                            </div>
+                        </div>
+                    </form>
+    
+                </div> <!-- search_box -->
+    
+                <div class="flex items-center justify-end text-right gap-2">
+                    <button class="btn active" id="grid-view-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+                            <defs>
+                                <pattern id="pattern001" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                    <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAADAklEQVR4nO3csVITURjF8Q1F7knoVVTYi5MZmexVXwqVRh9OHSvFTqTSV1HocWIjWVLk7nBycjLfmdn2z29JFprkNk0sFovFYrFYLBaLbe9GKZe3qS2XyN01crnZ7NVdp9xdpFzeNfP5eAe9629y+Pwxcjnf/E2VlVfK5efCtCve2u0hl2/qm8Ld63zxFOyAt26pLWdbcDM3q995L964e4e8IJfL4e7T/nF52Gx4+89ePkBbPizfYHfh7q0e2nJ1Ozpt548a0aZHJwdLv+y2/HH3Vq//2N2LlOiBmVcfJHtg5tUHyR6YefVBsgdmXn2Q7IGZVx8ke2Dm1QfJHph59UGyB2ZefZDsgZlXHyR7YObVB8kemHn1QbIHZl59kOyBmVcfJHtg5tUHyR6YefVBsgdmXn2Q7IGZVx8ke2Dm1QfJHph59UGyB2ZefZDsgZlXHyR7YObVB8kemHn1QbIHZl59kOyBmVcfJHtg5tUHyR6YefVBsgdm3vpg78PLik+S976I8/8G2/K7MfdWL7XlRy/6UfGJ8um/T5J3n29bUu6+u3urN87lff+x25Yr5flrd2/9ZrOEtvxS3wzuXN2XlV8Rc/MO2eTpqyfI5es23dz06ORgV7xDN1o8cou/g/1/nBu52nK1+NnpuDtd853m5o3FYrFYbGNzOztkZOZdf25nh0zMvLVzOztkz8xbN7ezQ5KZd8gLYnV2SDLzVs/t7BCYeavXf+zuRUr0wMyrD5I9MPPqg2QPzLz6INkDM68+SPbAzKsPkj0w8+qDZA/MvPog2QMzrz5I9sDMqw+SPTDz6oNkD8y8+iDZAzOvPkj2wMyrD5I9MPPqg2QPzLz6INkDM68+SPbAzKsPkj0w8+qDZA/MvPog2QMzrz5I9sDMqw+SPTDz6oNkD8y8+iDZAzOvPkj2wMyrD5I9MPPqg2QPzLz6INkDM2990OzsEJh5q+d2dkgy81bP7eyQsZm3fm5nh8zMvEPmdnbIxMw7dG5nh4zMvLFYLBaLxWKxWCzWKPYXCuVwFl1xSZsAAAAASUVORK5CYII=" />
+                                </pattern>
+                            </defs>
+                            <rect id="icons8-grid-100" width="20" height="20" fill="url(#pattern001)" />
+                        </svg>
+                    </button>
+    
+                    <button class="btn border" id="list-view-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+                            <defs>
+                                <pattern id="pattern002" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                    <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACB0lEQVR4nO3bT07CQByG4W5ox4V4Ap2JaYJ0xlXvofFe/o2nUY8BgudAd5DUTGsUCiTtAuYnfZ9kNk0DTb9Mp53kiyIAAAAACKx3OrSJcQ/KuLEy9qsabpwYex+fZVno6+uOLIuVts/K2IUyrtg87EJp+xTleS/05XYhjLftQdSGtq+EskPVzGgYxm8o7nGX19TpNWPDY+o9NtlVNBgc+xGby2tl3KQ2S+axtsPQ139wfhbwlTCiNO2vnXienyhjp8vnJsbeBbnoQ+YDWL7JfjZsO/dIu5vaLBk1+P12j0LT7REp7WYrB/xjaps07dfWkRmBOAJRBz1Dyg/AvwM8slzYQPwXeO3gxC/gGxd1bT+Wz02MvW2zXqEBvx2y/tprp34BL9+20rRfLua1MKrXXnfR5D/Qkt8OaTu1/Mxq+z9oKs97fjukcSDavbB1spdQ3KN/FG0Pws7LmcHm4n7XFP8F7j/6lHaf1bAjv4CzVQIAAAAAAAAAAAAAe0WDSgoaVILQoJKFBpUgNKiEoUElDA0qJ6wfQoOqCB0CgRjJgdCgKkQFQoNKGBpUAtGgkoYGlUA0qGSiQQUAAAAAAAAAAAAAYtCgkoIGlSA0qGShQSUIDSphaFAJQ4PKBa8gUNgx4W88gZj/EggNqkJUIDSohKFBJRANKmloUAlEg0omGlQAAAAAEHXKNx+rMm1+KmuxAAAAAElFTkSuQmCC" />
+                                </pattern>
+                            </defs>
+                            <rect id="icons8-list-100_1_" data-name="icons8-list-100 (1)" width="20" height="20" fill="url(#pattern002)" />
+                        </svg>
+                    </button>
+                </div> <!-- flex -->
+            </div>
+    
+        </div> <!-- container -->
+        <!-- search end -->
+    
+        <div class="container px-4">
+            <div class="flex items-center justify-between text-sm font-normal py-2 md:py-3 lg:py-5">
+                <span class="text-black1">VIIMEISIMMÄT PROJEKTIT</span>
+                <span class="text-black">Näytetään <b>27</b> hanketta</span>
+            </div> <!-- card_list_header -->
+        </div>
+    </div>
+    <!-- Sub Header -->
 
     <!-- card list start  -->
     <section class="py-10">
@@ -240,7 +340,7 @@
 
                     <div>
                         <div class="border-b border-black2 pt-5 pb-2 px-3">
-                            <a href="!#">
+                            <a href="./project-details.html">
                                 <p class="text-lg font-bold py-3">Lorem Ipsum</p>
                                 <p class="text-base font-medium text-[#475467] mb-2">#122343</p>
                             </a>
@@ -325,7 +425,7 @@
 
                     <div>
                         <div class="border-b border-black2 pt-5 pb-2 px-3">
-                            <a href="!#">
+                            <a href="project-details.html">
                                 <p class="text-lg font-bold py-3">Lorem Ipsum</p>
                                 <p class="text-base font-medium text-[#475467] mb-2">#122343</p>
                             </a>
@@ -383,7 +483,7 @@
                         </div> <!-- footer_top -->
 
                         <div class="bg-[#F2F4F7] text-right px-3 py-4">
-                            <a href="#!" class="btn bg-white border border-black2">
+                            <a href="./project-details.html" class="btn bg-white border border-black2">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19" height="19" viewBox="0 0 19 19">
                                     <defs>
                                         <pattern id="pattern7" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 96 96">
@@ -537,26 +637,8 @@
                 });
                 setActiveButton($(this));
             });
-
-            $("#FileUpload1").change(function (event) {
-                const input = event.target;
-                const text = $("#text");
-                const avatarImage = $("#avatarImage");
-
-                if (input.files && input.files[0]) {
-                    const reader = new FileReader();
-                    reader.onload = function (e) {
-                        avatarImage.attr("src", e.target.result);
-                        text.addClass("hidden");
-                        avatarImage.removeClass("hidden");
-                    };
-                    reader.readAsDataURL(input.files[0]);
-                }
-            });
         });
     </script>
 </body>
-
-</html>
 
 </html>
