@@ -20,39 +20,39 @@
         <!-- Top Header -->
         <div class="py-3 bg-white border-b border-line">
             <div class="container px-4">
-                <div class="flex gap-4 items-center justify-center md:justify-normal">
+                <div class="flex items-center flex-wrap gap-4 justify-center md:justify-normal">
                     <!-- site_logo -->
-                    <div class="site_logo order-1 w-[15%]">
+                    <div class="site_logo order-1 w-[45%] xl:w-[20%]">
                         <a href="index.html">
                             <img src="./assets/images/logo.png" alt="logo">
                         </a>
                     </div><!-- site_logo -->
 
                     <!-- Tab Fuild -->
-                    <div class="flex justify-center order-3 lg:order-2 col-span-3 lg:col-span-4 mx-auto w-[50%]">
+                    <div class="flex justify-center order-3 xl:order-2 col-span-3 lg:col-span-4 ml-auto w-full xl:w-[50%]">
                         <ul class="flex flex-col sm:flex-row flex-auto items-center justify-between rounded-sm md:rounded-md bg-white border border-line" id="buttonList_2">
-                            <li class="flex item-center justify-center w-full md:w-auto border-r border-line active">
-                                <button class="text-xs md:text-left">
+                            <li class="flex item-center md:justify-center w-full md:w-auto md:border-r border-line active">
+                                <button class="text-sm text-left">
                                     Projektin valmistelu
                                 </button>
                             </li>
-                            <li class="flex item-center justify-center w-full md:w-auto border-r border-line">
-                                <button class="text-xs md:text-left">
+                            <li class="flex item-center md:justify-center w-full md:w-auto md:border-r border-line">
+                                <button class="text-sm text-left">
                                     Rakentamisen valmistelu
                                 </button>
                             </li>
-                            <li class="flex item-center justify-center w-full md:w-auto border-r border-line">
-                                <button class="text-xs md:text-left">
+                            <li class="flex item-center md:justify-center w-full md:w-auto md:border-r border-line">
+                                <button class="text-sm text-left">
                                     Rakentamisen käynnistäminen
                                 </button>
                             </li>
-                            <li class="flex item-center justify-center w-full md:w-auto border-r border-line">
-                                <button class="text-xs md:text-left">
+                            <li class="flex item-center md:justify-center w-full md:w-auto md:border-r border-line">
+                                <button class="text-sm text-left">
                                     Rakentaminen
                                 </button>
                             </li>
-                            <li class="flex item-center justify-center w-full md:w-auto">
-                                <button class="text-xs md:text-left">
+                            <li class="flex item-center md:justify-center w-full md:w-auto">
+                                <button class="text-sm text-left">
                                     Rakennustöiden vastaanotto ja toimeksiannon lopetus
                                 </button>
                             </li>
@@ -60,10 +60,10 @@
                     </div> <!-- Tab Fuild -->
 
                     <!-- User Profile -->
-                    <div class="flex justify-end order-2 lg:order-3 w-[15%]">
-                        <div class="flex items-center gap-5">
+                    <div class="flex justify-end order-2 xl:order-3 w-[45%] xl:w-[26%] ml-auto">
+                        <div class="flex items-center">
 
-                            <a href="#!" class="hidden md:block">
+                            <a href="#!" class="hidden sm:block hover:bg-[#FAFAFB] focus:bg-[#FAFAFB] rounded p-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-4" viewBox="0 0 23 23">
                                     <defs>
                                         <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
@@ -75,7 +75,7 @@
                             
                             </a>
                             
-                            <a href="#!" class="hidden md:block">
+                            <a href="#!" class="hidden sm:block hover:bg-[#FAFAFB] focus:bg-[#FAFAFB] rounded p-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-4" viewBox="0 0 23 23">
                                     <defs>
                                         <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
@@ -87,7 +87,7 @@
                             
                             </a>
                             
-                            <a href="#!" class="hidden md:block">
+                            <a href="#!" class="hidden sm:block hover:bg-[#FAFAFB] focus:bg-[#FAFAFB] rounded p-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-4" viewBox="0 0 23 23">
                                     <defs>
                                         <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
@@ -99,7 +99,7 @@
                             
                             </a>
 
-                            <div class="border-l border-line pl-4 flex items-center gap-3 relative">
+                            <div class="border-l border-line pl-4 ml-3 flex items-center gap-3 relative">
                                 <div class="user_avatar">
                                     <span class="text-xl lg:text-2xl font-bold text-white">K</span>
                                     <img class="h-full w-full rounded-full object-cover hidden" src="./assets/images/logo.png" alt="">
@@ -236,23 +236,27 @@
             <!-- grid View Item -->
             <div class="grid grid-cols-1 gap-4">
                 <!-- card_item -->
-                <div class="card_item h-fit">
+                <div class="card_item relative h-fit">
                     <!-- Card Header -->
-                    <div class="card_header p-4 border-b border-line">
-                        <div class="lg:w-[80%]">
+                    <div class="card_header px-4 md:px-8 py-6 border-b border-line top-0 z-10">
+                        <div>
                             <p class="text-sm font-normal text-[#818D93] mb-1">Project nimi</p>
-                            <h2 class="text-xl font-medium text-[#08202C] mb-1">Projektin valmistelu</h2>
+                            <h2 class="text-xl font-medium text-[#08202C] mb-4">Projektin valmistelu</h2>
 
-                            <p class="text-xs text-[#475467] mb-2">Projektin valmisteluvaiheessa tärkeintä on tukea kiinteistönomistajan vuokraamisesta vastaavaa tahoa niin, että tilasta tehtävä vuokrasopimustarjous kiinteistönomistajan (eli vuokranantajan / tilaajan) asiakkaalle, eli vuokralaisehdokkaalle olisi mahdollisimman houkutteleva. Samalla vuokrasopimustarjous pyritään laatimaan mahdollisimman...</p>
 
-                            <a href="!#" class="text-accent underline decoration-accent text-base">Lue lisää</a>
+                            <p class="text-base text-[#475467] mb-2" id="content">
+                                Projektin valmisteluvaiheessa tärkeintä on tukea kiinteistönomistajan vuokraamisesta vastaavaa tahoa niin, että tilasta tehtävä vuokrasopimustarjous kiinteistönomistajan (eli vuokranantajan / tilaajan) asiakkaalle, eli vuokralaisehdokkaalle olisi mahdollisimman houkutteleva. Samalla vuokrasopimustarjous pyritään laatimaan mahdollisimman kannattavaksi kiinteistönomistajalle. Vaiheelle kuvaavaa on aika-ajoin kiireelliset selvitystyöt, teknisten reunaehtojen selvitys vähillä lähtötiedoilla, sekä vuokrasopimustarjoukseen tarvittavien avustavien lähtötietojen nopea toimitus vuokrauksesta vastaavalle taholle. Tässä vaiheessa vuokralaisehdokas usein kilpailuttaa useita kiinteistönomistajia lyhyen ajanjakson sisällä ja kiinteistöomistajan, jota noste.io auttaa, on pyrittävä antamaan vuokralaisehdokkaalle paras mahdollinen tarjous vuokralaisen tarvitsemista tiloista, niin tilatarpeiden kuin kustannusten osalta. <br> <br>
+                                Noste.ion toimittamat vuokrasopimustarjouksen lähtötiedot pyritään antamaan mahdollisimman paikkaansa pitävänä, ilman virheitä ja mahdollisimman nopeasti kiinteistönomistajalle vuokrasopimustarjouksen lähtötiedoiksi. Tässä vaiheessa tehtävät alustavat selvitykset pyritään usein myös tekemään hyvin kustannustehokkaasti, koska vuokralaisehdokas voi päätyä valitsemaan jonkin toisen kiinteistönomistajan tilat, jäämään vanhoihin tiloihin tai tekemään jonkin muun ratkaisuun. Vuokrauksesta vastaavan tahon mieltymysten mukaan, henkilö joko toivoo paljon yhteystyötä noste.iolta tai sitten henkilö tekee hyvin omatoimisesti ja omin päin tämän vaiheen.
+                            </p>
+                            
+                            <button class="text-accent underline decoration-accent text-base" id="showMore">Lue lisää</button>
                         </div>
                     </div><!-- Card Header -->
                     <!-- Card Body -->
-                    <div class="px-4 pt-6 pb-10 lg:h-[348px] overflow-y-auto no-scrollbar">
+                    <div class="px-4 md:px-8 pt-6 pb-10 lg:h-[645px] overflow-y-auto no-scrollbar scroll-smooth">
                         <h1 class="text-lg text-dark mb-4">Tilaajan yhteydenotto</h1>
 
-                        <p class="text-xs text-[#475467] mb-4">
+                        <p class="text-base text-[#475467] mb-4">
                             <b>Sisältö:</b><br>
                             Käydään läpi tilaajan kanssa sähköpostitse / Teamsilla / puhelimitse vuokralaismuutoksen lähtötiedot ja lähtötietotarpeet sekä sovitaan projektipäällikön tehtävät. Lisäksi dokumentoidaan läpikäydyt asiat. <br><br><br>
                             <b>Kuvaus:</b><br>
@@ -261,96 +265,108 @@
                             Huom. vaikka projektin valmisteluvaiheessa on vasta tarkoituksena auttaa tilaajaa pääsemään vuokrasopimukseen vuokralaisen kanssa, on projektipäällikölle tärkeää pyrkiä ymmärtämään koko projektin luonne mahdollisimman hyvin, jotta vuokrasopimukseen liittyvät lähtötiedot saadaan mahdollisimman paikkansapitäviksi. Tavanomaiset lähtötiedot tässä vaiheessa ovat esimerkiksi tilasuunnittelijan tekemä alustava pohjapiirustus, karkea näkemys aikataulusta, yksittäisiä tietoja siitä millaisia muutoksia halutaan olemassa olevaan tilaan. Tässä vaiheessa pitää pyrkiä kaivamaan mahdollisimman paljon lisää tietoa sellaisista asioista, joilla on merkittävä vaikutus vuokralaismuutokselle.
                         </p>
 
-                        <table class="w-full whitespace-nowrap border-collapse">
-                            <thead class="text-left rounded-t-lg bg-accent text-white">
-                                <tr class="rounded-lg">
-                                    <th class="px-4 py-2">Tehtävät:</th>
-                                    <th class="px-4 py-2">Status:</th>
-                                    <th class="px-4 py-2">Dokumentit:</th>
-                                    <th class="px-4 py-2">Kommentti:</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr tabindex="0">
-                                    <td class="px-4 py-4 border border-line">
-                                        <p class="text-sm text-[#818D93]">Valmistele ja laadi lähtötietopalaverin asialista</p>
-                                    </td>
-                                    <td class="px-4 py-4 border border-line text-xs" id="project_table_status">
-                                        <div class="inline-flex items-center rounded-sm border border-line px-2 py-1">
-                                            <span></span>
-                                            Aloittamatta
+                        <div>
+                        
+                            <div class="flex flex-col">
+                                <div class="overflow-x-auto shadow-md sm:rounded-lg">
+                                    <div class="inline-block min-w-full align-middle">
+                                        <div class="overflow-hidden">
+                                            <table class="w-full whitespace-nowrap border-collapse">
+                                                <thead class="text-left rounded-t-lg bg-accent text-white">
+                                                    <tr class="rounded-lg">
+                                                        <th class="p-3">Tehtävät:</th>
+                                                        <th class="p-3">Status:</th>
+                                                        <th class="p-3">Dokumentit:</th>
+                                                        <th class="p-3">Kommentti:</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr tabindex="0">
+                                                        <td class="px-4 py-3 border border-line">
+                                                            <p class="text-sm text-[#818D93]">Valmistele ja laadi lähtötietopalaverin asialista</p>
+                                                        </td>
+                                                        <td class="px-4 py-3 border border-line text-sm" id="project_table_status">
+                                                            <div class="inline-flex items-center rounded-md border border-line px-2 py-1">
+                                                                <span></span>
+                                                                Aloittamatta
+                                                            </div>
+                                                        </td>
+                                                        <td class="px-4 py-3 border border-line">
+                                                            <a href="!#" class="text-accent underline decoration-accent text-sm">Lähtötietopalaverin asialista</a>
+                                                        </td>
+                                                        <td class="px-4 py-3 border border-line">
+                                                            <form action="#">
+                                                                <input class="border border-accent w-full rounded-md" type="text">
+                                                            </form>
+                                                        </td>
+                                                    </tr>
+                                                    <tr tabindex="0">
+                                                        <td class="px-4 py-3 border border-line">
+                                                            <p class="text-sm text-[#818D93]">Valmistele ja laadi lähtötietopalaverin asialista</p>
+                                                        </td>
+                                                        <td class="px-4 py-3 border border-line text-sm" id="project_table_status">
+                                                            <div class="inline-flex items-center rounded-md border border-line px-2 py-1 active">
+                                                                <span></span>
+                                                                valmis
+                                                            </div>
+                                                        </td>
+                                                        <td class="px-4 py-3 border border-line">
+                                            
+                                                        </td>
+                                                        <td class="px-4 py-3 border border-line">
+                                                            <form action="#">
+                                                                <input class="border border-accent w-full rounded-md" type="text">
+                                                            </form>
+                                                        </td>
+                                                    </tr>
+                                            
+                                                    <tr tabindex="0">
+                                                        <td class="px-4 py-3 border border-line">
+                                                            <p class="text-sm text-[#818D93]">Valmistele ja laadi lähtötietopalaverin asialista</p>
+                                                        </td>
+                                                        <td class="px-4 py-3 border border-line text-sm" id="project_table_status">
+                                                            <div class="inline-flex items-center rounded-md border border-line px-2 py-1 active">
+                                                                <span></span>
+                                                                valmis
+                                                            </div>
+                                                        </td>
+                                                        <td class="px-4 py-3 border border-line">
+                                            
+                                                        </td>
+                                                        <td class="px-4 py-3 border border-line">
+                                                            <form action="#">
+                                                                <input class="border border-accent w-full rounded-md" type="text">
+                                                            </form>
+                                                        </td>
+                                                    </tr>
+                                            
+                                                    <tr tabindex="0">
+                                                        <td class="px-4 py-3 border border-line">
+                                                            <p class="text-sm text-[#818D93]">Valmistele ja laadi lähtötietopalaverin asialista</p>
+                                                        </td>
+                                                        <td class="px-4 py-3 border border-line text-sm" id="project_table_status">
+                                                            <div class="inline-flex items-center rounded-md border border-line px-2 py-1">
+                                                                <span></span>
+                                                                Aloittamatta
+                                                            </div>
+                                                        </td>
+                                                        <td class="px-4 py-3 border border-line">
+                                                            <a href="!#" class="text-accent underline decoration-accent text-sm">Lähtötietopalaverin asialista</a>
+                                                        </td>
+                                                        <td class="px-4 py-3 border border-line">
+                                                            <form action="#">
+                                                                <input class="border border-accent w-full rounded-md" type="text">
+                                                            </form>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
-                                    </td>
-                                    <td class="px-4 py-4 border border-line">
-                                        <a href="!#" class="text-accent underline decoration-accent text-sm">Lähtötietopalaverin asialista</a>
-                                    </td>
-                                    <td class="px-4 py-4 border border-line">
-                                        <form action="#">
-                                            <input class="border border-accent w-full rounded-md" type="text">
-                                        </form>
-                                    </td>
-                                </tr>
-                                <tr tabindex="0">
-                                    <td class="px-4 py-4 border border-line">
-                                        <p class="text-sm text-[#818D93]">Valmistele ja laadi lähtötietopalaverin asialista</p>
-                                    </td>
-                                    <td class="px-4 py-4 border border-line text-xs" id="project_table_status">
-                                        <div class="inline-flex items-center rounded-sm border border-line px-2 py-1 active">
-                                            <span></span>
-                                            valmis
-                                        </div>
-                                    </td>
-                                    <td class="px-4 py-4 border border-line">
-                                        
-                                    </td>
-                                    <td class="px-4 py-4 border border-line">
-                                        <form action="#">
-                                            <input class="border border-accent w-full rounded-md" type="text">
-                                        </form>
-                                    </td>
-                                </tr>
-
-                                <tr tabindex="0">
-                                    <td class="px-4 py-4 border border-line">
-                                        <p class="text-sm text-[#818D93]">Valmistele ja laadi lähtötietopalaverin asialista</p>
-                                    </td>
-                                    <td class="px-4 py-4 border border-line text-xs" id="project_table_status">
-                                        <div class="inline-flex items-center rounded-sm border border-line px-2 py-1 active">
-                                            <span></span>
-                                            valmis
-                                        </div>
-                                    </td>
-                                    <td class="px-4 py-4 border border-line">
-                                        
-                                    </td>
-                                    <td class="px-4 py-4 border border-line">
-                                        <form action="#">
-                                            <input class="border border-accent w-full rounded-md" type="text">
-                                        </form>
-                                    </td>
-                                </tr>
-
-                                <tr tabindex="0">
-                                    <td class="px-4 py-4 border border-line">
-                                        <p class="text-sm text-[#818D93]">Valmistele ja laadi lähtötietopalaverin asialista</p>
-                                    </td>
-                                    <td class="px-4 py-4 border border-line text-xs" id="project_table_status">
-                                        <div class="inline-flex items-center rounded-sm border border-line px-2 py-1">
-                                            <span></span>
-                                            Aloittamatta
-                                        </div>
-                                    </td>
-                                    <td class="px-4 py-4 border border-line">
-                                        <a href="!#" class="text-accent underline decoration-accent text-sm">Lähtötietopalaverin asialista</a>
-                                    </td>
-                                    <td class="px-4 py-4 border border-line">
-                                        <form action="#">
-                                            <input class="border border-accent w-full rounded-md" type="text">
-                                        </form>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
                     </div><!-- Card Body -->
                     <!-- Card footer -->
                     <div class="card_footer p-2 border-t border-line">
@@ -381,6 +397,30 @@
     
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./assets/js/script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+                var showMoreButton = document.getElementById('showMore');
+                var content = document.getElementById('content');
+                var wordsToShow = 30;
+                var words = content.innerHTML.trim().split(/\s+/); // Use innerHTML to retain HTML tags
+                var hiddenWords = words.slice(wordsToShow).join(' ');
+                var isVisible = false;
+
+                content.innerHTML = words.slice(0, wordsToShow).join(' ') + ' ...';
+
+                showMoreButton.addEventListener('click', function () {
+                    if (isVisible) {
+                        content.innerHTML = words.slice(0, wordsToShow).join(' ') + ' ...';
+                        showMoreButton.textContent = 'Lue lisää';
+                    } else {
+                        content.innerHTML = words.join(' ');
+                        showMoreButton.textContent = 'Vähemmän lukemista';
+                    }
+                    isVisible = !isVisible;
+                });
+            });
+    </script>
 </body>
     
 </html>
