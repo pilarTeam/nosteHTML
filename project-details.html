@@ -68,7 +68,7 @@
 
                             </a>
     
-                            <div class="border-l border-line pl-4 flex items-center gap-3 relative">
+                            <div class="border-l border-line pl-4 flex items-center g relative">
                                 <div class="user_avatar">
                                     <span class="text-xl lg:text-2xl font-bold text-white">K</span>
                                     <img class="h-full w-full rounded-full object-cover hidden" src="./assets/images/logo.png" alt="">
@@ -129,7 +129,7 @@
                                                 </a>
                                             </li>
                                             <li class="inline-block w-full p-2">
-                                                <a href="#!" class="user_box flex items-center justify-between gap-3 relative">
+                                                <a href="#!" class="user_box flex items-center justify-between g relative">
                                                     <div class="flex items-center gap-2">
                                                         <div class="user_avatar">
                                                             <span class="text-xl lg:text-2xl font-bold text-white">K</span>
@@ -201,11 +201,11 @@
 
 
     <!-- Sub Header -->
-    <div class="bg-bodyBg lg:sticky top-[4.8rem]">
+    <div class="bg-bodyBg lg:sticky top-[4.55rem]">
         <div class="container px-4">
             <div class="flex items-center justify-between border-b border-line py-2 md:py-3 lg:py-5">
                 <h2 class="text-xl md:text-2xl text-black font-medium">Projektit</h2>
-    
+                <i class="um-icon-android-alert"></i>
             </div>
         </div> <!-- container -->
 
@@ -223,16 +223,16 @@
                 <div>
                     <!-- Step Title -->
                     <div class="p-2 shadow flex items-center text-sm font-bold min-h-[4rem] bg-white border border-[#E1E1EA] rounded mb-4 min-h-16">
-                        <p>Projektin valmistelu</p>
+                        <h5 class="text-base">Projektin valmistelu</h5>
                     </div><!-- Step Title -->
 
                     <!-- Step Items -->
-                    <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="./step.html">Tilaajan yhteydenotto</a>
-                        <div class="dropdown">
-                            <button class="dropdown-toggle" data-dropdown="dropdown-menu1">
+                    <div class="inline-flex items-start justify-between bg-white shadow border border-l-8 border-[#E1E1EA] rounded-md w-full relative mb-2 text-sm border-l-accent">
+                        <a class="p-3 pr-2 border-l border-l-[#E1E1EA] text-sm font-medium" href="./step.html">Tilaajan yhteydenotto</a>
+                        <div class="dropdown pt-3 pr-3">
+                            <button class="dropdown-toggle rounded-sm border border-line p-[3px]" data-dropdown="dropdown-menu1">
                                 
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-3" viewBox="0 0 16 16">
                                     <defs>
                                         <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
                                         <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
@@ -243,18 +243,18 @@
 
                             </button>
 
-                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-[5rem] xl:-right-[12.5rem] top-20 z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu1">
+                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-0 top-full z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu1">
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value2" name="dropdown-menu-2"> Aloitettu</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value2" name="dropdown-menu-2"> Aloitettu</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
                                 </li>
                             </ul>
                             
@@ -262,12 +262,12 @@
                     </div><!-- Step Items -->
                     
                     <!-- Step Items -->
-                    <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="./step.html">Lähtötietojen läpikäynti, alustavan kustannusarvion ja aikataulun teko</a>
-                        <div class="dropdown">
-                            <button class="dropdown-toggle" data-dropdown="dropdown-menu2">
+                    <div class="inline-flex items-start justify-between bg-white shadow border border-l-8 border-[#E1E1EA] rounded-md w-full relative mb-2 text-sm border-l-accent">
+                        <a class="p-3 pr-2 border-l border-l-[#E1E1EA] text-sm font-medium" href="./step.html">Lähtötietojen läpikäynti, alustavan kustannusarvion ja aikataulun teko</a>
+                        <div class="dropdown pt-3 pr-3">
+                            <button class="dropdown-toggle rounded-sm border border-line p-[3px]" data-dropdown="dropdown-menu2">
                                 
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-3" viewBox="0 0 16 16">
                                     <defs>
                                         <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
                                         <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
@@ -277,30 +277,30 @@
                                 </svg>
 
                             </button>
-                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-[5rem] xl:-right-[12.5rem] top-20 z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu2">
+                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-0 top-full z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu2">
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value2" name="dropdown-menu-2"> Aloitettu</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value2" name="dropdown-menu-2"> Aloitettu</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää
+                                    <label class="flex items-center gap-2"><input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää </label>
                                 </li>
                             </ul>
                         </div>
                     </div><!-- Step Items -->
                     
                     <!-- Step Items -->
-                    <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="./step.html">Kohdekäynti</a>
-                        <div class="dropdown" id="dropdown4">
-                            <button class="dropdown-toggle" data-dropdown="dropdown-menu3">
+                    <div class="inline-flex items-start justify-between bg-white shadow border border-l-8 border-[#E1E1EA] rounded-md w-full relative mb-2 text-sm border-l-accent">
+                        <a class="p-3 pr-2 border-l border-l-[#E1E1EA] text-sm font-medium" href="./step.html">Kohdekäynti</a>
+                        <div class="dropdown pt-3 pr-3">
+                            <button class="dropdown-toggle rounded-sm border border-line p-[3px]" data-dropdown="dropdown-menu3">
                                 
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-3" viewBox="0 0 16 16">
                                     <defs>
                                         <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
                                         <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
@@ -311,29 +311,63 @@
 
                             </button>
 
-                            <ul  class="px-4 py-2 w-[12rem] bg-white absolute right-[5rem] xl:-right-[12.5rem] top-20 z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu3">
+                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-0 top-full z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu3">
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value2" name="dropdown-menu-2"> Aloitettu</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value2" name="dropdown-menu-2"> Aloitettu</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää
+                                    <label class="flex items-center gap-2"><input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!-- Step Items -->
+
+                    <!-- Step Items -->
+                    <div class="inline-flex items-start justify-between bg-white shadow border border-l-8 border-[#E1E1EA] rounded-md w-full relative mb-2 text-sm border-l-accent">
+                        <a class="p-3 pr-2 border-l border-l-[#E1E1EA] text-sm font-medium" href="./step.html">Vuokrasopimuksen apudokumentit</a>
+                        <div class="dropdown pt-3 pr-3">
+                            <button class="dropdown-toggle rounded-sm border border-line p-[3px]" data-dropdown="dropdown-menu4">
+                                
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-3" viewBox="0 0 16 16">
+                                    <defs>
+                                        <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                        <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
+                                        </pattern>
+                                    </defs>
+                                    <rect id="icons8-menu-vertical-100" width="16" height="16" transform="translate(16) rotate(90)" fill="url(#pattern)"/>
+                                </svg>
+
+                            </button>
+
+                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-0 top-full z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu4">
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
+                                </li>
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value2" name="dropdown-menu-2"> Aloitettu</label>
+                                </li>
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
+                                </li>
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää </label>
                                 </li>
                             </ul>
                         </div>
                     </div><!-- Step Items -->
                     
                     <!-- Step Items -->
-                    <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="./step.html">Vuokrasopimuksen apudokumentit</a>
-                        <div class="dropdown" id="dropdown5">
-                            <button class="dropdown-toggle" data-dropdown="dropdown-menu4">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                    <div class="inline-flex items-start justify-between bg-white shadow border border-l-8 border-[#E1E1EA] rounded-md w-full relative mb-2 text-sm border-l-accent">
+                        <a class="p-3 pr-2 border-l border-l-[#E1E1EA] text-sm font-medium" href="./step.html">Kustannusarvion ja aikataulun päivitys</a>
+                        <div class="dropdown pt-3 pr-3">
+                            <button class="dropdown-toggle rounded-sm border border-line p-[3px]" data-dropdown="dropdown-menu5">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-3" viewBox="0 0 16 16">
                                     <defs>
                                         <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
                                         <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
@@ -343,50 +377,18 @@
                                 </svg>
                             </button>
 
-                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-[5rem] xl:-right-[12.5rem] top-20 z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu4">
+                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-0 top-full z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu5">
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value2" name="dropdown-menu-2"> Aloitettu</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value2" name="dropdown-menu-2"> Aloitettu</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää
-                                </li>
-                            </ul>
-                        </div>
-                    </div><!-- Step Items -->
-                    
-                    <!-- Step Items -->
-                    <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="./step.html">Kustannusarvion ja aikataulun päivitys</a>
-                        <div class="dropdown" id="dropdown6">
-                            <button class="dropdown-toggle" data-dropdown="dropdown-menu5">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
-                                    <defs>
-                                        <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
-                                        <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
-                                        </pattern>
-                                    </defs>
-                                    <rect id="icons8-menu-vertical-100" width="16" height="16" transform="translate(16) rotate(90)" fill="url(#pattern)"/>
-                                </svg>
-                            </button>
-
-                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-[5rem] xl:-right-[12.5rem] top-20 z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu5">
-                                <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
-                                </li>
-                                <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value2" name="dropdown-menu-2"> Aloitettu</label>
-                                </li>
-                                <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
-                                </li>
-                                <li class="text-sm mb-2">
-                                    <input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää
+                                    <label class="flex items-center gap-2"><input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää </label>
                                 </li>
                             </ul>
                             
@@ -394,12 +396,12 @@
                     </div><!-- Step Items -->
                     
                     <!-- Step Items -->
-                    <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="./step.html">Vuokrasopimuksen allekirjoitus ja vuokralaismuutoksen aloituspäätös</a>
-                        <div class="dropdown" id="dropdown7">
-                            <button class="dropdown-toggle" data-dropdown="dropdown-menu6">
+                    <div class="inline-flex items-start justify-between bg-white shadow border border-l-8 border-[#E1E1EA] rounded-md w-full relative mb-2 text-sm border-l-accent">
+                        <a class="p-3 pr-2 border-l border-l-[#E1E1EA] text-sm font-medium" href="./step.html">Vuokrasopimuksen allekirjoitus ja vuokralaismuutoksen aloituspäätös</a>
+                        <div class="dropdown pt-3 pr-3" id="dropdown7">
+                            <button class="dropdown-toggle rounded-sm border border-line p-[3px]" data-dropdown="dropdown-menu6">
                             
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-3" viewBox="0 0 16 16">
                                     <defs>
                                         <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
                                         <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
@@ -409,18 +411,221 @@
                                 </svg>
 
                             </button>
-                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-[5rem] xl:-right-[12.5rem] top-20 z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu6">
+                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-0 top-full z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu6">
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value2" name="dropdown-menu-2"> Aloitettu</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value2" name="dropdown-menu-2"> Aloitettu</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää
+                                    <label class="flex items-center gap-2"><input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!-- Step Items -->
+                    
+                </div><!-- Step -->
+                
+                <!-- Step -->
+                <div>
+                    <!-- Step Title -->
+                    <div class="p-2 shadow flex items-center min-h-[4rem] bg-white border border-[#E1E1EA] rounded mb-4 min-h-16">
+                        <h5 class="text-base">Rakentamisen valmistelu</h5>
+                    </div><!-- Step Title -->
+
+                    <!-- Step Items -->
+                    <div class="inline-flex items-start justify-between bg-white shadow border border-l-8 border-[#E1E1EA] rounded-md w-full relative mb-2 text-sm border-l-accent">
+                        <a class="p-3 pr-2 border-l border-l-[#E1E1EA] text-sm font-medium" href="./step.html">Noste.ion tarjouksen toimitus</a>
+                        <div class="dropdown pt-3 pr-3">
+                            <button class="dropdown-toggle rounded-sm border border-line p-[3px]" data-dropdown="dropdown-menu7">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-3" viewBox="0 0 16 16">
+                                    <defs>
+                                        <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                        <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
+                                        </pattern>
+                                    </defs>
+                                    <rect id="icons8-menu-vertical-100" width="16" height="16" transform="translate(16) rotate(90)" fill="url(#pattern)"/>
+                                </svg>
+                            </button>
+
+                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-0 top-full z-10 border border-[#E1E1EA] rounded hidden"  id="dropdown-menu7">
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
+                                </li>
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value2" name="dropdown-menu-2"> Aloitettu</label>
+                                </li>
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
+                                </li>
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!-- Step Items -->
+
+                    <!-- Step Items -->
+                    <div class="inline-flex items-start justify-between bg-white shadow border border-l-8 border-[#E1E1EA] rounded-md w-full relative mb-2 text-sm border-l-accent">
+                        <a class="p-3 pr-2 border-l border-l-[#E1E1EA] text-sm font-medium" href="./step.html">Projektiraportointi ja kustannusseuranta</a>
+                        <div class="dropdown pt-3 pr-3" id="dropdown">
+                            <button class="dropdown-toggle rounded-sm border border-line p-[3px]" data-dropdown="dropdown-menu8">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-3" viewBox="0 0 16 16">
+                                    <defs>
+                                        <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                        <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
+                                        </pattern>
+                                    </defs>
+                                    <rect id="icons8-menu-vertical-100" width="16" height="16" transform="translate(16) rotate(90)" fill="url(#pattern)"/>
+                                </svg>
+                            </button>
+
+                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-0 top-full z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu8">
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
+                                </li>
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value2" name="dropdown-menu-2"> Aloitettu</label>
+                                </li>
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
+                                </li>
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!-- Step Items -->
+                    
+                    <!-- Step Items -->
+                    <div class="inline-flex items-start justify-between bg-white shadow border border-l-8 border-[#E1E1EA] rounded-md w-full relative mb-2 text-sm border-l-accent">
+                        <a class="p-3 pr-2 border-l border-l-[#E1E1EA] text-sm font-medium" href="./step.html">Suunnittelu ja selvitykset</a>
+                        <div class="dropdown pt-3 pr-3" id="dropdown10">
+                            <button class="dropdown-toggle rounded-sm border border-line p-[3px]" data-dropdown="dropdown-menu9">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-3" viewBox="0 0 16 16">
+                                    <defs>
+                                        <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                        <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
+                                        </pattern>
+                                    </defs>
+                                    <rect id="icons8-menu-vertical-100" width="16" height="16" transform="translate(16) rotate(90)" fill="url(#pattern)"/>
+                                </svg>
+
+                            </button>
+                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-0 top-full z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu9">
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
+                                </li>
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value2" name="dropdown-menu-2"> Aloitettu</label>
+                                </li>
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
+                                </li>
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää </label>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                    </div><!-- Step Items -->
+                    
+                    <!-- Step Items -->
+                    <div class="inline-flex items-start justify-between bg-white shadow border border-l-8 border-[#E1E1EA] rounded-md w-full relative mb-2 text-sm border-l-accent">
+                        <a class="p-3 pr-2 border-l border-l-[#E1E1EA] text-sm font-medium" href="./step.html">Tarjouspyynnön lähetys ja urakkakilpailutus</a>
+                        <div class="dropdown pt-3 pr-3">
+                            <button class="dropdown-toggle rounded-sm border border-line p-[3px]" data-dropdown="dropdown-menu10">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-3" viewBox="0 0 16 16">
+                                    <defs>
+                                        <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                        <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
+                                        </pattern>
+                                    </defs>
+                                    <rect id="icons8-menu-vertical-100" width="16" height="16" transform="translate(16) rotate(90)" fill="url(#pattern)"/>
+                                </svg>
+                            </button>
+
+                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-0 top-full z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu10">
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
+                                </li>
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value2" name="dropdown-menu-2"> Aloitettu</label>
+                                </li>
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
+                                </li>
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!-- Step Items -->
+                    
+                    <!-- Step Items -->
+                    <div class="inline-flex items-start justify-between bg-white shadow border border-l-8 border-[#E1E1EA] rounded-md w-full relative mb-2 text-sm border-l-[#06F9B7]">
+                        <a class="p-3 pr-2 border-l border-l-[#E1E1EA] text-sm font-medium" href="./step.html">Kaupalliset asiakirjat ja kilpailutusmateriaalin teko</a>
+                        <div class="dropdown pt-3 pr-3">
+                            <button class="dropdown-toggle rounded-sm border border-line p-[3px]" data-dropdown="dropdown-menu11">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-3" viewBox="0 0 16 16">
+                                    <defs>
+                                        <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                        <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
+                                        </pattern>
+                                    </defs>
+                                    <rect id="icons8-menu-vertical-100" width="16" height="16" transform="translate(16) rotate(90)" fill="url(#pattern)"/>
+                                </svg>
+                            </button>
+
+                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-0 top-full z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu11">
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
+                                </li>
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value2" name="dropdown-menu-2"> Aloitettu</label>
+                                </li>
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
+                                </li>
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää </label>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div><!-- Step Items -->
+                    
+                    <!-- Step Items -->
+                    <div class="inline-flex items-start justify-between bg-white shadow border border-l-8 border-[#E1E1EA] rounded-md w-full relative mb-2 text-sm border-l-accent">
+                        <a class="p-3 pr-2 border-l border-l-[#E1E1EA] text-sm font-medium" href="./step.html">Tarjouksen hyväksyttäminen</a>
+                        <div class="dropdown pt-3 pr-3">
+                            <button class="dropdown-toggle rounded-sm border border-line p-[3px]" data-dropdown="dropdown-menu12">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-3" viewBox="0 0 16 16">
+                                    <defs>
+                                        <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                        <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
+                                        </pattern>
+                                    </defs>
+                                    <rect id="icons8-menu-vertical-100" width="16" height="16" transform="translate(16) rotate(90)" fill="url(#pattern)"/>
+                                </svg>
+                            </button>
+
+                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-0 top-full z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu12">
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
+                                </li>
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value2" name="dropdown-menu-2"> Aloitettu</label>
+                                </li>
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
+                                </li>
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää </label>
                                 </li>
                             </ul>
                         </div>
@@ -432,219 +637,16 @@
                 <div>
                     <!-- Step Title -->
                     <div class="p-2 shadow flex items-center text-sm font-bold min-h-[4rem] bg-white border border-[#E1E1EA] rounded mb-4 min-h-16">
-                        <p>Rakentamisen valmistelu</p>
+                        <h5 class="text-base">Rakentamisen käynnistäminen</h5>
                     </div><!-- Step Title -->
 
                     <!-- Step Items -->
-                    <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="./step.html">Noste.ion tarjouksen toimitus</a>
-                        <div class="dropdown">
-                            <button class="dropdown-toggle" data-dropdown="dropdown-menu7">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
-                                    <defs>
-                                        <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
-                                        <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
-                                        </pattern>
-                                    </defs>
-                                    <rect id="icons8-menu-vertical-100" width="16" height="16" transform="translate(16) rotate(90)" fill="url(#pattern)"/>
-                                </svg>
-                            </button>
-
-                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-[5rem] xl:-right-[12.5rem] top-20 z-10 border border-[#E1E1EA] rounded hidden"  id="dropdown-menu7">
-                                <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
-                                </li>
-                                <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value2" name="dropdown-menu-2"> Aloitettu</label>
-                                </li>
-                                <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
-                                </li>
-                                <li class="text-sm mb-2">
-                                    <input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää
-                                </li>
-                            </ul>
-                        </div>
-                    </div><!-- Step Items -->
-
-                    <!-- Step Items -->
-                    <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="./step.html">Projektiraportointi ja kustannusseuranta</a>
-                        <div class="dropdown" id="dropdown">
-                            <button class="dropdown-toggle" data-dropdown="dropdown-menu8">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
-                                    <defs>
-                                        <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
-                                        <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
-                                        </pattern>
-                                    </defs>
-                                    <rect id="icons8-menu-vertical-100" width="16" height="16" transform="translate(16) rotate(90)" fill="url(#pattern)"/>
-                                </svg>
-                            </button>
-
-                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-[5rem] xl:-right-[12.5rem] top-20 z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu8">
-                                <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
-                                </li>
-                                <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value2" name="dropdown-menu-2"> Aloitettu</label>
-                                </li>
-                                <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
-                                </li>
-                                <li class="text-sm mb-2">
-                                    <input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää
-                                </li>
-                            </ul>
-                        </div>
-                    </div><!-- Step Items -->
-                    
-                    <!-- Step Items -->
-                    <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="./step.html">Suunnittelu ja selvitykset</a>
-                        <div class="dropdown" id="dropdown10">
-                            <button class="dropdown-toggle" data-dropdown="dropdown-menu9">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
-                                    <defs>
-                                        <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
-                                        <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
-                                        </pattern>
-                                    </defs>
-                                    <rect id="icons8-menu-vertical-100" width="16" height="16" transform="translate(16) rotate(90)" fill="url(#pattern)"/>
-                                </svg>
-
-                            </button>
-                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-[5rem] xl:-right-[12.5rem] top-20 z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu9">
-                                <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
-                                </li>
-                                <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value2" name="dropdown-menu-2"> Aloitettu</label>
-                                </li>
-                                <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
-                                </li>
-                                <li class="text-sm mb-2">
-                                    <input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää
-                                </li>
-                            </ul>
-                            
-                        </div>
-                    </div><!-- Step Items -->
-                    
-                    <!-- Step Items -->
-                    <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="./step.html">Tarjouspyynnön lähetys ja urakkakilpailutus</a>
-                        <div class="dropdown">
-                            <button class="dropdown-toggle" data-dropdown="dropdown-menu10">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
-                                    <defs>
-                                        <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
-                                        <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
-                                        </pattern>
-                                    </defs>
-                                    <rect id="icons8-menu-vertical-100" width="16" height="16" transform="translate(16) rotate(90)" fill="url(#pattern)"/>
-                                </svg>
-                            </button>
-
-                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-[5rem] xl:-right-[12.5rem] top-20 z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu10">
-                                <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
-                                </li>
-                                <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value2" name="dropdown-menu-2"> Aloitettu</label>
-                                </li>
-                                <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
-                                </li>
-                                <li class="text-sm mb-2">
-                                    <input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää
-                                </li>
-                            </ul>
-                        </div>
-                    </div><!-- Step Items -->
-                    
-                    <!-- Step Items -->
-                    <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="./step.html">Kaupalliset asiakirjat ja kilpailutusmateriaalin teko</a>
-                        <div class="dropdown">
-                            <button class="dropdown-toggle" data-dropdown="dropdown-menu11">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
-                                    <defs>
-                                        <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
-                                        <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
-                                        </pattern>
-                                    </defs>
-                                    <rect id="icons8-menu-vertical-100" width="16" height="16" transform="translate(16) rotate(90)" fill="url(#pattern)"/>
-                                </svg>
-                            </button>
-
-                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-[5rem] xl:-right-[12.5rem] top-20 z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu11">
-                                <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
-                                </li>
-                                <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value2" name="dropdown-menu-2"> Aloitettu</label>
-                                </li>
-                                <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
-                                </li>
-                                <li class="text-sm mb-2">
-                                    <input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää
-                                </li>
-                            </ul>
-
-                        </div>
-                    </div><!-- Step Items -->
-                    
-                    <!-- Step Items -->
-                    <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="./step.html">Tarjouksen hyväksyttäminen</a>
-                        <div class="dropdown">
-                            <button class="dropdown-toggle" data-dropdown="dropdown-menu12">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
-                                    <defs>
-                                        <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
-                                        <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
-                                        </pattern>
-                                    </defs>
-                                    <rect id="icons8-menu-vertical-100" width="16" height="16" transform="translate(16) rotate(90)" fill="url(#pattern)"/>
-                                </svg>
-                            </button>
-
-                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-[5rem] xl:-right-[12.5rem] top-20 z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu12">
-                                <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
-                                </li>
-                                <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value2" name="dropdown-menu-2"> Aloitettu</label>
-                                </li>
-                                <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
-                                </li>
-                                <li class="text-sm mb-2">
-                                    <input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää
-                                </li>
-                            </ul>
-                        </div>
-                    </div><!-- Step Items -->
-                    
-                </div><!-- Step -->
-                
-                <!-- Step -->
-                <div>
-                    <!-- Step Title -->
-                    <div class="p-2 shadow flex items-center text-sm font-bold min-h-[4rem] bg-white border border-[#E1E1EA] rounded mb-4 min-h-16">
-                        <p>Rakentamisen käynnistäminen</p>
-                    </div><!-- Step Title -->
-
-                    <!-- Step Items -->
-                    <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="./step.html">Urakan kirjallinen tilaus</a>
-                        <div class="dropdown">
-                            <button class="dropdown-toggle" data-dropdown="dropdown-menu13">
+                    <div class="inline-flex items-start justify-between bg-white shadow border border-l-8 border-[#E1E1EA] rounded-md w-full relative mb-2 text-sm border-l-accent">
+                        <a class="p-3 pr-2 border-l border-l-[#E1E1EA] text-sm font-medium" href="./step.html">Urakan kirjallinen tilaus</a>
+                        <div class="dropdown pt-3 pr-3">
+                            <button class="dropdown-toggle rounded-sm border border-line p-[3px]" data-dropdown="dropdown-menu13">
 								
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-3" viewBox="0 0 16 16">
                                     <defs>
                                         <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
                                         <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
@@ -655,29 +657,29 @@
 
                             </button>
 
-                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-[5rem] xl:-right-[12.5rem] top-20 z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu13">
+                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-0 top-full z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu13">
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value2" name="dropdown-menu-2"> Aloitettu</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value2" name="dropdown-menu-2"> Aloitettu</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää
+                                    <label class="flex items-center gap-2"><input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää </label>
                                 </li>
                             </ul>
                         </div>
                     </div><!-- Step Items -->
 
                     <!-- Step Items -->
-                    <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="./step.html">Urakkasopimuksen allekirjoitus</a>
-                        <div class="dropdown">
-                            <button class="dropdown-toggle" data-dropdown="dropdown-menu14">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                    <div class="inline-flex items-start justify-between bg-white shadow border border-l-8 border-[#E1E1EA] rounded-md w-full relative mb-2 text-sm ">
+                        <a class="p-3 pr-2 border-l border-l-[#E1E1EA] text-sm font-medium" href="./step.html">Urakkasopimuksen allekirjoitus</a>
+                        <div class="dropdown pt-3 pr-3">
+                            <button class="dropdown-toggle rounded-sm border border-line p-[3px]" data-dropdown="dropdown-menu14">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-3" viewBox="0 0 16 16">
                                     <defs>
                                         <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
                                         <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
@@ -687,18 +689,18 @@
                                 </svg>
                             </a>
 
-                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-[5rem] xl:-right-[12.5rem] top-20 z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu14">
+                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-0 top-full z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu14">
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value2" name="dropdown-menu-2"> Aloitettu</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value2" name="dropdown-menu-2"> Aloitettu</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää
+                                    <label class="flex items-center gap-2"><input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää </label>
                                 </li>
                             </ul>
                             
@@ -706,11 +708,11 @@
                     </div><!-- Step Items -->
                     
                     <!-- Step Items -->
-                    <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="./step.html">Työmaan käynnistymisen tehtävät</a>
-                        <div class="dropdown">
-                            <button class="dropdown-toggle" data-dropdown="dropdown-menu15">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                    <div class="inline-flex items-start justify-between bg-white shadow border border-l-8 border-[#E1E1EA] rounded-md w-full relative mb-2 text-sm border-l-[#06F9B7]">
+                        <a class="p-3 pr-2 border-l border-l-[#E1E1EA] text-sm font-medium" href="./step.html">Työmaan käynnistymisen tehtävät</a>
+                        <div class="dropdown pt-3 pr-3">
+                            <button class="dropdown-toggle rounded-sm border border-line p-[3px]" data-dropdown="dropdown-menu15">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-3" viewBox="0 0 16 16">
                                     <defs>
                                         <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
                                         <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
@@ -720,18 +722,18 @@
                                 </svg>
                             </button>
 
-                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-[5rem] xl:-right-[12.5rem] top-20 z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu15">
+                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-0 top-full z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu15">
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value2" name="dropdown-menu-2"> Aloitettu</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value2" name="dropdown-menu-2"> Aloitettu</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää
+                                    <label class="flex items-center gap-2"><input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää </label>
                                 </li>
                             </ul>
                             
@@ -739,12 +741,12 @@
                     </div><!-- Step Items -->
                     
                     <!-- Step Items -->
-                    <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="./step.html">Työmaan aloituskokous</a>
-                        <div class="dropdown">
-                            <button class="dropdown-toggle" data-dropdown="dropdown-menu16">
+                    <div class="inline-flex items-start justify-between bg-white shadow border border-l-8 border-[#E1E1EA] rounded-md w-full relative mb-2 text-sm border-l-[#06F9B7]">
+                        <a class="p-3 pr-2 border-l border-l-[#E1E1EA] text-sm font-medium" href="./step.html">Työmaan aloituskokous</a>
+                        <div class="dropdown pt-3 pr-3">
+                            <button class="dropdown-toggle rounded-sm border border-line p-[3px]" data-dropdown="dropdown-menu16">
                                 
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-3" viewBox="0 0 16 16">
                                     <defs>
                                         <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
                                         <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
@@ -755,18 +757,18 @@
 
                             </button>
 
-                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-[5rem] xl:-right-[12.5rem] top-20 z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu16">
+                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-0 top-full z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu16">
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value2" name="dropdown-menu-2"> Aloitettu</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value2" name="dropdown-menu-2"> Aloitettu</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää
+                                    <label class="flex items-center gap-2"><input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää </label>
                                 </li>
                             </ul>
                         </div>
@@ -778,16 +780,16 @@
                 <div>
                     <!-- Step Title -->
                     <div class="p-2 shadow flex items-center text-sm font-bold min-h-[4rem] bg-white border border-[#E1E1EA] rounded mb-4 min-h-16">
-                        <p>Rakentaminen</p>
+                        <h5 class="text-base">Rakentaminen</h5>
                     </div><!-- Step Title -->
 
                     <!-- Step Items -->
-                    <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="./step.html">Yleinen projektinjohto rakentamisen aikana</a>
-                        <div class="dropdown">
-                            <button class="dropdown-toggle" data-dropdown="dropdown-menu17">
+                    <div class="inline-flex items-start justify-between shadow border border-[#E1E1EA] rounded-md w-full relative mb-2 text-sm border-l-0 bg-[#FAFAFB] text-[#08202C]">
+                        <a class="p-3 pr-2 border-l border-l-[#E1E1EA] text-sm font-medium" href="./step.html">Yleinen projektinjohto rakentamisen aikana</a>
+                        <div class="dropdown pt-3 pr-3">
+                            <button class="dropdown-toggle rounded-sm border border-line p-[3px]" data-dropdown="dropdown-menu17">
                                 
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-3" viewBox="0 0 16 16">
                                     <defs>
                                         <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
                                         <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
@@ -797,18 +799,18 @@
                                 </svg>
                             </button>
 
-                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-[5rem] xl:-right-[12.5rem] top-20 z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu17">
+                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-0 top-full z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu17">
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value2" name="dropdown-menu-2"> Aloitettu</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value2" name="dropdown-menu-2"> Aloitettu</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää
+                                    <label class="flex items-center gap-2"><input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää </label>
                                 </li>
                             </ul>
                             
@@ -816,12 +818,12 @@
                     </div><!-- Step Items -->
 
                     <!-- Step Items -->
-                    <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="./step.html">Työmaavalvonta</a>
-                        <div class="dropdown">
-                            <button class="dropdown-toggle" data-dropdown="dropdown-menu18">
+                    <div class="inline-flex items-start justify-between bg-white shadow border border-l-8 border-[#E1E1EA] rounded-md w-full relative mb-2 text-sm border-l-[#06F9B7]">
+                        <a class="p-3 pr-2 border-l border-l-[#E1E1EA] text-sm font-medium" href="./step.html">Työmaavalvonta</a>
+                        <div class="dropdown pt-3 pr-3">
+                            <button class="dropdown-toggle rounded-sm border border-line p-[3px]" data-dropdown="dropdown-menu18">
                                 
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-3" viewBox="0 0 16 16">
                                     <defs>
                                         <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
                                         <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
@@ -831,30 +833,30 @@
                                 </svg>
                             </button>
 
-                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-[5rem] xl:-right-[12.5rem] top-20 z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu18">
+                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-0 top-full z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu18">
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value2" name="dropdown-menu-2"> Aloitettu</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value2" name="dropdown-menu-2"> Aloitettu</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää
+                                    <label class="flex items-center gap-2"><input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää </label>
                                 </li>
                             </ul>
                         </div>
                     </div><!-- Step Items -->
                     
                     <!-- Step Items -->
-                    <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="./step.html">Työmaakokoukset</a>
-                        <div class="dropdown">
-                            <button class="dropdown-toggle" data-dropdown="dropdown-menu19">
+                    <div class="inline-flex items-start justify-between bg-white shadow border border-l-8 border-[#E1E1EA] rounded-md w-full relative mb-2 text-sm border-l-[#06F9B7]">
+                        <a class="p-3 pr-2 border-l border-l-[#E1E1EA] text-sm font-medium" href="./step.html">Työmaakokoukset</a>
+                        <div class="dropdown pt-3 pr-3">
+                            <button class="dropdown-toggle rounded-sm border border-line p-[3px]" data-dropdown="dropdown-menu19">
                                 
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-3" viewBox="0 0 16 16">
                                     <defs>
                                         <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
                                         <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
@@ -864,30 +866,30 @@
                                 </svg>
                             </button>
 
-                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-[5rem] xl:-right-[12.5rem] top-20 z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu19">
+                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-0 top-full z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu19">
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value2" name="dropdown-menu-2"> Aloitettu</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value2" name="dropdown-menu-2"> Aloitettu</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää
+                                    <label class="flex items-center gap-2"><input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää </label>
                                 </li>
                             </ul>
                         </div>
                     </div><!-- Step Items -->
                     
                     <!-- Step Items -->
-                    <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="./step.html">Lisä- ja muutostyökäsittely</a>
-                        <div class="dropdown">
-                            <button class="dropdown-toggle" data-dropdown="dropdown-menu20">
+                    <div class="inline-flex items-start justify-between bg-white shadow border border-l-8 border-[#E1E1EA] rounded-md w-full relative mb-2 text-sm border-l-[#06F9B7]">
+                        <a class="p-3 pr-2 border-l border-l-[#E1E1EA] text-sm font-medium" href="./step.html">Lisä- ja muutostyökäsittely</a>
+                        <div class="dropdown pt-3 pr-3">
+                            <button class="dropdown-toggle rounded-sm border border-line p-[3px]" data-dropdown="dropdown-menu20">
                                 
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-3" viewBox="0 0 16 16">
                                     <defs>
                                         <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
                                         <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
@@ -897,18 +899,18 @@
                                 </svg>
 
                             </button>
-                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-[5rem] xl:-right-[12.5rem] top-20 z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu20">
+                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-0 top-full z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu20">
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value2" name="dropdown-menu-2"> Aloitettu</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value2" name="dropdown-menu-2"> Aloitettu</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää
+                                    <label class="flex items-center gap-2"><input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää </label>
                                 </li>
                             </ul>
                         </div>
@@ -919,16 +921,16 @@
                 <div>
                     <!-- Step Title -->
                     <div class="p-2 shadow flex items-center text-sm font-bold min-h-[4rem] bg-white border border-[#E1E1EA] rounded mb-4 min-h-16">
-                        <p>Rakennustöiden vastaanotto ja toimeksiannon lopetus</p>
+                        <h5 class="text-base">Rakennustöiden vastaanotto ja toimeksiannon lopetus</h5>
                     </div><!-- Step Title -->
 
                     <!-- Step Items -->
-                    <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="./step.html">Vastaanottotarkastustilaisuus</a>
-                        <div class="dropdown">
-                            <button class="dropdown-toggle" data-dropdown="dropdown-menu21">
+                    <div class="inline-flex items-start justify-between bg-white shadow border border-l-8 border-[#E1E1EA] rounded-md w-full relative mb-2 text-sm border-l-white">
+                        <a class="p-3 pr-2 border-l border-l-[#E1E1EA] text-sm font-medium" href="./step.html">Vastaanottotarkastustilaisuus</a>
+                        <div class="dropdown pt-3 pr-3">
+                            <button class="dropdown-toggle rounded-sm border border-line p-[3px]" data-dropdown="dropdown-menu21">
                                 
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-3" viewBox="0 0 16 16">
                                     <defs>
                                         <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
                                         <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
@@ -938,18 +940,18 @@
                                 </svg>
 
                             </button>
-                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-[5rem] xl:-right-[12.5rem] top-20 z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu21">
+                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-0 top-full z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu21">
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value2" name="dropdown-menu-2"> Aloitettu</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value2" name="dropdown-menu-2"> Aloitettu</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää
+                                    <label class="flex items-center gap-2"><input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää </label>
                                 </li>
                             </ul>
 
@@ -957,12 +959,12 @@
                     </div><!-- Step Items -->
 
                     <!-- Step Items -->
-                    <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="./step.html">Hallinnanluovutustilaisuus</a>
-                        <div class="dropdown" >
-                            <button class="dropdown-toggle" data-dropdown="dropdown-menu22">
+                    <div class="inline-flex items-start justify-between bg-white shadow border border-l-8 border-[#E1E1EA] rounded-md w-full relative mb-2 text-sm border-l-white">
+                        <a class="p-3 pr-2 border-l border-l-[#E1E1EA] text-sm font-medium" href="./step.html">Hallinnanluovutustilaisuus</a>
+                        <div class="dropdown pt-3 pr-3" >
+                            <button class="dropdown-toggle rounded-sm border border-line p-[3px]" data-dropdown="dropdown-menu22">
                                 
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-3" viewBox="0 0 16 16">
                                     <defs>
                                         <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
                                         <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
@@ -973,63 +975,30 @@
 
                             </button>
 
-                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-[5rem] xl:-right-[12.5rem] top-20 z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu22">
+                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-0 top-full z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu22">
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value2" name="dropdown-menu-2"> Aloitettu</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value2" name="dropdown-menu-2"> Aloitettu</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää
-                                </li>
-                            </ul>
-                        </div>
-                    </div><!-- Step Items -->
-                    
-                    <!-- Step Items -->
-                    <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="./step.html">Virhe- ja puutekorjausten valvonta</a>
-                        <div class="dropdown">
-                            <button class="dropdown-toggle" data-dropdown="dropdown-menu23">
-                                
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
-                                    <defs>
-                                        <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
-                                        <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
-                                        </pattern>
-                                    </defs>
-                                    <rect id="icons8-menu-vertical-100" width="16" height="16" transform="translate(16) rotate(90)" fill="url(#pattern)"/>
-                                </svg>
-                            </button>
-
-                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-[5rem] xl:-right-[12.5rem] top-20 z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu23">
-                                <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
-                                </li>
-                                <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value2" name="dropdown-menu-2"> Aloitettu</label>
-                                </li>
-                                <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
-                                </li>
-                                <li class="text-sm mb-2">
-                                    <input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää
+                                    <label class="flex items-center gap-2"><input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää </label>
                                 </li>
                             </ul>
                         </div>
                     </div><!-- Step Items -->
                     
                     <!-- Step Items -->
-                    <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="./step.html">Taloudellinen loppuselvitys</a>
-                        <div class="dropdown">
-                            <button class="dropdown-toggle" data-dropdown="dropdown-menu24">
+                    <div class="inline-flex items-start justify-between bg-white shadow border border-l-8 border-[#E1E1EA] rounded-md w-full relative mb-2 text-sm border-l-white">
+                        <a class="p-3 pr-2 border-l border-l-[#E1E1EA] text-sm font-medium" href="./step.html">Virhe- ja puutekorjausten valvonta</a>
+                        <div class="dropdown pt-3 pr-3">
+                            <button class="dropdown-toggle rounded-sm border border-line p-[3px]" data-dropdown="dropdown-menu23">
                                 
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-3" viewBox="0 0 16 16">
                                     <defs>
                                         <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
                                         <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
@@ -1037,33 +1006,32 @@
                                     </defs>
                                     <rect id="icons8-menu-vertical-100" width="16" height="16" transform="translate(16) rotate(90)" fill="url(#pattern)"/>
                                 </svg>
-
                             </button>
 
-                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-[5rem] xl:-right-[12.5rem] top-20 z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu24">
+                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-0 top-full z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu23">
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value2" name="dropdown-menu-2"> Aloitettu</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value2" name="dropdown-menu-2"> Aloitettu</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää
+                                    <label class="flex items-center gap-2"><input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää </label>
                                 </li>
                             </ul>
                         </div>
                     </div><!-- Step Items -->
                     
                     <!-- Step Items -->
-                    <div class="inline-flex items-start justify-between border border-l-8 border-[#E1E1EA] p-2 rounded w-full relative mb-2 text-sm border-l-[#06F9B7]">
-                        <a class="pr-1" href="./step.html">Loppudokumentaatio ja projektin lopetuss</a>
-                        <div class="dropdown">
-                            <button class="dropdown-toggle" data-dropdown="dropdown-menu25">
+                    <div class="inline-flex items-start justify-between bg-white shadow border border-l-8 border-[#E1E1EA] rounded-md w-full relative mb-2 text-sm border-l-white">
+                        <a class="p-3 pr-2 border-l border-l-[#E1E1EA] text-sm font-medium" href="./step.html">Taloudellinen loppuselvitys</a>
+                        <div class="dropdown pt-3 pr-3">
+                            <button class="dropdown-toggle rounded-sm border border-line p-[3px]" data-dropdown="dropdown-menu24">
                                 
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-3" viewBox="0 0 16 16">
                                     <defs>
                                         <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
                                         <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
@@ -1074,18 +1042,52 @@
 
                             </button>
 
-                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-[5rem] xl:-right-[12.5rem] top-20 z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu25">
+                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-0 top-full z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu24">
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value2" name="dropdown-menu-2"> Aloitettu</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value2" name="dropdown-menu-2"> Aloitettu</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <label><input type="radio" class="checked:border-[#00B2A9]" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
                                 </li>
                                 <li class="text-sm mb-2">
-                                    <input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää
+                                    <label class="flex items-center gap-2"><input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!-- Step Items -->
+                    
+                    <!-- Step Items -->
+                    <div class="inline-flex items-start justify-between bg-white shadow border border-l-8 border-[#E1E1EA] rounded-md w-full relative mb-2 text-sm border-l-white">
+                        <a class="p-3 pr-2 border-l border-l-[#E1E1EA] text-sm font-medium" href="./step.html">Loppudokumentaatio ja projektin lopetuss</a>
+                        <div class="dropdown pt-3 pr-3">
+                            <button class="dropdown-toggle rounded-sm border border-line p-[3px]" data-dropdown="dropdown-menu25">
+                                
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-3" viewBox="0 0 16 16">
+                                    <defs>
+                                        <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                        <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO3cTW7CMBCGYTbtYQp39Dhb7DTYdMFZSk8BPUh/dm1FFZC6aVGVIPAn8z6SNxCkkUaexNEnJhMAAAAAAAAAAIpx827mY+ospK3F/L5fIW37z/rvaM2lGuHcrYX84GP+8jHv/loW0qeFnPtracyZm+FjfjrWiF+NiWlNU87IDjtjN2yldM6arpabd7N+FA1tSP+bpl1OS9dfHQt5MXx3/Ky2dP3V8TE/n9CQTen6q+NDehvbEIv5tXT91bGYX0fvkJBfStdfHc/I0mIh3Z+wQ0Lp+qvTtMvp2MdeN1/cla6/ShZyHnEw7ErXXfd7rJjWA0bV42q1uild9xW8z0rpn/H10e8MmnHhe4qPue0PffszyuGcsrGYIvcMAAAAAAAAAEeR7RXhyPbqcGR7tRjZXh2ObK8WI9urxROU0+LJ9moxsr1aPCNLi5Ht1dKQ7dVjZHu1OLK9ehzZXk0N2V4AAAAAAAAAYzj+t1eDI9urw5Ht1WJke3U4sr1ajGyvFk9QTosn26vFyPZq8YwsLUa2V0tDtlePke3V4sj26nFkezU1ZHsBAAAAAAAAABNV310JmT2x4ejYAAAAAElFTkSuQmCC"/>
+                                        </pattern>
+                                    </defs>
+                                    <rect id="icons8-menu-vertical-100" width="16" height="16" transform="translate(16) rotate(90)" fill="url(#pattern)"/>
+                                </svg>
+
+                            </button>
+
+                            <ul class="px-4 py-2 w-[12rem] bg-white absolute right-0 top-full z-10 border border-[#E1E1EA] rounded hidden" id="dropdown-menu25">
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value1" name="dropdown-menu-2"> Aloittamatta </label>
+                                </li>
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value2" name="dropdown-menu-2"> Aloitettu</label>
+                                </li>
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" class="accent-accent" value="value3" name="dropdown-menu-2"> Odottaa hyväksyntää</label>
+                                </li>
+                                <li class="text-sm mb-2">
+                                    <label class="flex items-center gap-2"><input type="radio" value="value4" name="dropdown-menu-2"> Odottaa hyväksyntää </label>
                                 </li>
                             </ul>
                         </div>
