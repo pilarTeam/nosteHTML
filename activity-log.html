@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity log</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- daterangepicker Style -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    
+    <!-- Main Style -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="font-roboto bg-bodyBg">
+    <!-- header part start  -->
+    <header class="lg:sticky top-0 z-10">
+        <!-- Top Header -->
+        <div class="py-3 bg-white border-b border-line">
+            <div class="container px-4">
+                <div class="flex items-center justify-between">
+                    <!-- site_logo -->
+                    <div class="site_logo order-1">
+                        <a href="index.html">
+                            <img src="./assets/images/logo.png" alt="logo">
+                        </a>
+                    </div><!-- site_logo -->
+    
+                    <!-- User Profile -->
+                    <div class="flex justify-end order-2 lg:order-3">
+                        <div class="flex items-center gap-5">
+    
+                            <a href="#!">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-6" viewBox="0 0 32 32">
+                                    <defs>
+                                        <pattern id="pattern5" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                            <image width="100" height="100" xlink:href="data:image/png;base64,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" />
+                                        </pattern>
+                                    </defs>
+                                    <rect id="icons8-time-machine-100" width="32" height="32" fill="url(#pattern5)" />
+                                </svg>
+                            </a>
+    
+                            <div class="border-l border-line pl-4 flex items-center gap-3 relative">
+                                <div class="user_avatar">
+                                    <span class="text-xl lg:text-2xl font-bold text-white">K</span>
+                                    <img class="h-full w-full rounded-full object-cover hidden" src="./assets/images/logo.png" alt="">
+                                </div> <!-- user_avatar -->
+                                <div class="hidden md:block">
+                                    <p class="text-base text-black font-medium">Klara Royment</p>
+                                    <p class="text-sm text-[#818D93] font-normal">Admin</p>
+                                </div>
+                                <div class="dropdown relative">
+                                    <button class="dropdown-toggle" data-dropdown="profile-dropdown">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12" viewBox="0 0 12 12">
+                                            <defs>
+                                                <pattern id="pattern6" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 96 96">
+                                                    <image width="96" height="96" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAABmElEQVR4nO3ZwUrDQBSF4Ww8DWZvcWPSrgJ36Puv9CGk6BOIPoVSodBFKU0TeufO/B/MPj1/BgJtGgAAAAAAAAAAAAAAAAAAAAAAAOSj2+6e2iG9Pmx3qSmM+jS2Q3p7fBmfm2zH7+29HdLvqrefkiKoT+NqSF+H39b29pldhNPxj6eUCDod/3hyinBu/FIi6Nz4OUW4NH70CLo0fg4Rrhk/agRdM75nhCnjR4ugKeN7RLhl/CgRdMv494wwZ/zcI2jO+PeKsESAHCNoifH/j32EuAU5RVCk8UuLoIjjlxJBkcePHkEljB81gkoaP1oElTh+lAgqefzcI6iG8XONoJrGzy2Cahw/lwiqeXzvCGJ8vwhifL+bIMb3iyDG94sgxveLIMafrtukdTuk/QIRvg9n/qdm2h+eqanJUjehrfk7P34Eq3d8/wjG+H4RGN8xgvHm+0UwxveLYIzvF8EY3y+CMb5fBGN8vwjG+H4RjPH9Ihjj+0UwxveLYIzvF8EY3y+CMb6XbpPW1f2TBQAAAAAAAAAAgGaSP+MgIpmI76GJAAAAAElFTkSuQmCC" />
+                                                </pattern>
+                                            </defs>
+                                            <rect id="icons8-expand-arrow-96" width="12" height="12" fill="url(#pattern6)" />
+                                        </svg>
+                                    </button>
+    
+                                    <div class="w-[15rem] border-t bg-[#08202C] absolute right-0 top-12 z-[10] dropdown-menu hidden" id="profile-dropdown">
+                                        <ul class="bg-transparent p-0">
+                                            <li class="text-center border-b border-[#283B44] py-4 px-2">
+                                                <div class="user_avatar mx-auto mb-2">
+                                                    <div class="flex items-center justify-center mx-auto" id="avatarContainer">
+                                                        <span class="text-2xl font-bold text-white" id="text">K</span>
+                                                        <img class="h-full w-full rounded-full object-cover hidden" src="./assets/images/logo.png" alt="User Avatar" id="avatarImage">
+                                                        <label class="absolute -bottom-1 -right-2 cursor-pointer">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+                                                                <defs>
+                                                                    <pattern id="pattern" width="1" height="1" viewBox="-4.444 -4.444 26.887 26.887">
+                                                                        <image preserveAspectRatio="xMidYMid slice" width="18" height="18" xlink:href="data:image/png;base64,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" />
+                                                                    </pattern>
+                                                                </defs>
+                                                                <rect id="icons8-photo-100" width="18" height="18" rx="9" fill="url(#pattern)" />
+                                                            </svg>
+    
+                                                            <input type="file" id="FileUpload1" class="hidden" />
+                                                        </label>
+                                                    </div>
+                                                </div> <!-- user_avatar -->
+    
+                                                <p class="text-white">Klara Royment</p>
+                                                <p class="text-offwhite text-sm">nimi_sukunimi@noste.io</p>
+                                            </li>
+                                            <li class="border-b border-[#283B44] inline-block w-full p-2">
+                                                <a href="#!" class="flex items-center gap-5 text-offwhite">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                                                        <defs>
+                                                            <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                                                <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAADAElEQVR4nO2c3W4TMRCFzQW8Az8vxAPAM4Dg6WhfoYAgcLWKp5WdUsAO4gapcL9owgRoUAUbvJmxfY5kqTdxvp5zdneU1nEOgiCoDy0W481xHG+Aw4AftFo/9CF/oZguabV+oALhwPHLiJA+UczjZoWU1QIJ4PhhxDYMWWqBRHDACIvFUAcQgQNG2CyGOoAIHDDCZjHUAUTggBE2i6EOIAIHjLBZDHUAEThghM1iqAOIwAEjdIoxDMOtZUxPfUgvKaRvu2/418WvCekFxfUT3svNJOrhSvUXF3d8zG8nh3D9erN89/m2m0HUeiDc5sJhbNeC/8TpCotaD4RvUzOEsV2PXWFR64FsnhlXngX5Gd/Cpu5zevr+LoV0tAP63BUWtR4IxfT1943Z2H33Ojv7cO8qaLp0hUXtB1J247kNowMFojZ1IhBjUycCMTZ1IhBjU+fmPxHxULczdf4JkI72mbR4wvIxHdc+9pL21MlTwFyXqA/50b6/TCtT3OT9+CHGU0D5MNKrGj86Ie1AWDyS8RRQLpD0utYPF8lCICxuM08BFPPJ7n30H0Pg15zwbWqOK6O7QGoRzf9Qr2rqbD4QX8vUaeXSo9mvkEqmzl4CGWqZOnsJpJqps6dAqpg6ewvEvKwYQUY41GXFCAIHjDBZDHUAEThghM1iqAOIwAEjbBZDHUAEDhhhsxjqACJwwAibxVAHEIEDRtgshjqACBwwwmYx1AFE4IARNouhDiACB4ywWYxDAQz4Rgk7gXh8o4SdQAbts30T1fwta6l9tm+img/Ea5/tm6jmAyHts30T1UEguej+tfGaAyAEgkD+R7hCGr+izQFQZWf7mg/E13K2r5dAqJazfb0EMtRytq+XQKo529dTIFWc7estkFqk7oc6gDGp+6EOIAIHjLBZDHUAEThghM1iqAOIwAEjbBZDHUAEDhhhsxjqACJwwAibxVAHEIEDRtgshjqACBwwwmYxKKTz7Zv7kFYHBxCB46cR+b6P+SMv/tkpicABQRAEQY71HbsT/O3PnJesAAAAAElFTkSuQmCC" />
+                                                            </pattern>
+                                                        </defs>
+                                                        <rect id="icons8-adjust-100" width="24" height="24" fill="url(#pattern)" />
+                                                    </svg>
+    
+                                                    Aktiivinien
+                                                </a>
+                                            </li>
+                                            <li class="inline-block w-full p-2">
+                                                <a href="#!" class="user_box flex items-center justify-between gap-3 relative">
+                                                    <div class="flex items-center gap-2">
+                                                        <div class="user_avatar">
+                                                            <span class="text-xl lg:text-2xl font-bold text-white">K</span>
+                                                            <img class="h-full w-full rounded-full object-cover hidden" src="./assets/images/logo.png" alt="">
+                                                        </div> <!-- user_avatar -->
+                                                        <div>
+                                                            <p class="text-base text-white font-medium">Klara Royment</p>
+                                                            <p class="text-sm text-[#818D93] font-normal">Admin</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="">
+                                                        <span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                                                                <defs>
+                                                                    <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 96 96">
+                                                                        <image width="96" height="96" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAABeUlEQVR4nO3ZvUoDQRiF4b0orSysFAu9IwtLr/DMgDupnLESRJAwVcKChlSCP9mzy/c+sP3ynolrssMAAAAAAAAAAAAAAACwBPmp3aSx3bvvIyRt6nUa2zaXtkulPbrvJ2z8/HkxgjE+IywgPiPM88D9Nv5hBB7M85/8o6urvNz+8y3EJeL7EN+I+EbENyK+EfGNiG9EfOLHJL5kET8kcfKJH5I4+cQPSZx84s9qeiU3vcIb1vUacbuEe/6zVOrD16u5VJ7vXPehiH92juLvnCOI+L4RRHzfCAr7wF3AQy5HfOD+5tSd4pOgiCd/KSMoenznCCK+bwQR3zeCiO8bQcT3jSDi+0YQ8X0jiPi+EUR83wgivvf3mhTxt51T++Gp3oX+eWEFI3Ti+0boxPd9EjrxfSN04vtG6MT3jdCJb/qekPg/fz7atMtc6vthgLF9qNSrGW8BubTzPLbXVOpbHusFRQzS2M6mi/gAAAAAAAAAAAAAAADDyu0BWJ5kaQG3t14AAAAASUVORK5CYII=" />
+                                                                    </pattern>
+                                                                </defs>
+                                                                <rect id="icons8-done-96" width="16" height="16" fill="url(#pattern)" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="border-b border-[#283B44] inline-block w-full p-2">
+                                                <a href="#!" class="flex items-center gap-5 text-offwhite">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                                                        <defs>
+                                                            <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                                                <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAADd0lEQVR4nO3dzW7TQBQFYAuJ8gylfQU27FiAxJ+Q+HkBxBaJChbs2PJMFDbsKRWksIkyY3emaknuTVWJTUsLbAiMhUTjAHLMTHxIz5G8i+dK83XGSXzjZtnPdLvdhZ6XR8bJunXyyXod8dBfcxDmxMlr64cPw1xlKWN2ds4ar+8IoHX/CDd623uLSTCCNjG0yW7Q6XRGp6ODhG2KK0Obbs8r0UHKa8bYXqnPwhYWvdB/njz/sGSdrFZA1qIXsl4OjhcJhaMXmZMURX95HET2oxepLsPoBeYsNvV8EWS6EAQsBAELQcBCELAQBCwEAQtBwEIQsBAELAQBC0HAYp084XdZwCjxB+e3vf+EEn9ggjSO8fI0ix2CgIUgYCEIWAgCFoLUi/G756zTl8bLi96mnM9ShSD1Mt5MKAe5l4tZihCkXozXfqUFKA0KQeol35L7k52LcpBv6aUsZghSP9bJY+PkW6XT89BsDi/HK8JP6lFQrBteiVOAIFgoBAFDIQgYCkFSoQyuNhuQ1xAsFIKAoRAkPUruB9fqD8ItKzmKcXpUG4UgYCgEAUMhyIxRvH7J/fDWn0/iNQQLhSBgKARpF6Xnh7fHX8gtCwuFIAAfHr1+NX5wB2KFWK/3jJe9ydujeqIO4/Sz2ZIbrYKExxuF9+ZtT4ZFOZwetgpSFMWZ8gu4tifCgxxtg4QYL3etk93WJ8O3e0BsWSf1om6rGMffaREECKN8EVdIqxgTn9YJAoRRvpgrZPYYTo96Xq7//gSCzBzjr/dECAKEUZ7IFYKDUZ5MkOQYU3WeECQ9xlS9WQQBwigH4paVEKNB0zVBgDDKAblCcDDKQQmCg1EOTBAcjHJwgkTBiPZLXIIAYZRFuEJqJfx3tslbr3xwQCsJ3TGTzRh8tEZrGY1Gp6zTj8kxQrhl1Uvu9KZ1ao3T973NwYUsVQgCFoKAhSBgIQhYCNI8fJAyGEaS1luukOYYBAHDIAhAku8o3LKmC0HAQhCwEAQsBAELQcBCELAQBCwEAQtBwEKQkwci+8cLFEV/OXqROUlR9JcrrUD70YsYJ+vjnXiymucflqIXmgMM4+V5ZYWszagjj4et98CYB9FBut3ugvW6QQSd8uk98iZ0NGYp0tveW7ReO0TRmiDyNsxZlrx/1euK9foqtEoSRycaq8PchG0q2cr4AfEdWLK0nQuBWq4AAAAASUVORK5CYII=" />
+                                                            </pattern>
+                                                        </defs>
+                                                        <rect id="icons8-log-out-100" width="24" height="24" fill="url(#pattern)" />
+                                                    </svg>
+                                                
+                                                    Lisää tili
+                                                </a>
+                                            </li>
+                                            <li class="border-b border-[#283B44] inline-block w-full p-2">
+                                                <a href="#!" class="flex items-center gap-5 text-offwhite">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                                                        <defs>
+                                                            <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                                                <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAADd0lEQVR4nO3dzW7TQBQFYAuJ8gylfQU27FiAxJ+Q+HkBxBaJChbs2PJMFDbsKRWksIkyY3emaknuTVWJTUsLbAiMhUTjAHLMTHxIz5G8i+dK83XGSXzjZtnPdLvdhZ6XR8bJunXyyXod8dBfcxDmxMlr64cPw1xlKWN2ds4ar+8IoHX/CDd623uLSTCCNjG0yW7Q6XRGp6ODhG2KK0Obbs8r0UHKa8bYXqnPwhYWvdB/njz/sGSdrFZA1qIXsl4OjhcJhaMXmZMURX95HET2oxepLsPoBeYsNvV8EWS6EAQsBAELQcBCELAQBCwEAQtBwEIQsBAELAQBC0HAYp084XdZwCjxB+e3vf+EEn9ggjSO8fI0ix2CgIUgYCEIWAgCFoLUi/G756zTl8bLi96mnM9ShSD1Mt5MKAe5l4tZihCkXozXfqUFKA0KQeol35L7k52LcpBv6aUsZghSP9bJY+PkW6XT89BsDi/HK8JP6lFQrBteiVOAIFgoBAFDIQgYCkFSoQyuNhuQ1xAsFIKAoRAkPUruB9fqD8ItKzmKcXpUG4UgYCgEAUMhyIxRvH7J/fDWn0/iNQQLhSBgKARpF6Xnh7fHX8gtCwuFIAAfHr1+NX5wB2KFWK/3jJe9ydujeqIO4/Sz2ZIbrYKExxuF9+ZtT4ZFOZwetgpSFMWZ8gu4tifCgxxtg4QYL3etk93WJ8O3e0BsWSf1om6rGMffaREECKN8EVdIqxgTn9YJAoRRvpgrZPYYTo96Xq7//gSCzBzjr/dECAKEUZ7IFYKDUZ5MkOQYU3WeECQ9xlS9WQQBwigH4paVEKNB0zVBgDDKAblCcDDKQQmCg1EOTBAcjHJwgkTBiPZLXIIAYZRFuEJqJfx3tslbr3xwQCsJ3TGTzRh8tEZrGY1Gp6zTj8kxQrhl1Uvu9KZ1ao3T973NwYUsVQgCFoKAhSBgIQhYCNI8fJAyGEaS1luukOYYBAHDIAhAku8o3LKmC0HAQhCwEAQsBAELQcBCELAQBCwEAQtBwEKQkwci+8cLFEV/OXqROUlR9JcrrUD70YsYJ+vjnXiymucflqIXmgMM4+V5ZYWszagjj4et98CYB9FBut3ugvW6QQSd8uk98iZ0NGYp0tveW7ReO0TRmiDyNsxZlrx/1euK9foqtEoSRycaq8PchG0q2cr4AfEdWLK0nQuBWq4AAAAASUVORK5CYII=" />
+                                                            </pattern>
+                                                        </defs>
+                                                        <rect id="icons8-log-out-100" width="24" height="24" fill="url(#pattern)" />
+                                                    </svg>
+    
+                                                    Kirjaudu ulos
+                                                </a>
+                                            </li>
+                                        </ul>
+    
+                                    </div>
+                                </div>
+                            </div> <!-- user_box -->
+    
+                        </div>
+                    </div> <!-- User Profile -->
+    
+                </div> <!-- grid -->
+            </div> <!-- container -->
+        </div>
+        <!-- Top Header -->
+
+    </header> <!-- header_area  -->
+    <!-- header part end  -->
+    
+    <section class="pt-5">
+        <div class="container px-4">
+            <div class="flex items-center gap-5 lg:gap-0 flex-col lg:flex-row">
+                <div>
+                    <h1 class="text-[26px] font-medium text-black">Toimintaloki</h1>
+                </div>
+
+                <div class="mx-auto flex flex-col lg:flex-row w-full lg:w-auto lg:items-center gap-3 lg:gap-10 rounded-lg border border-solid border-[#E1E1EA] px-8 py-3">
+                    <div>
+                        <h2 class="text-black text-[18px] font-bold">Suodatin</h2>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <span class="text-offwhite font-medium inline-block w-24 lg:w-auto">Päivämäärä:</span>
+                        <div class="dropdown_click cursor-pointer w-full flex-1 relative">
+                            <span class="flex items-center justify-between gap-1 font-medium rounded-lg border border-solid border-[#CCCCD6] px-3 py-2 text-black">
+                                Näytä kaikki
+
+                                <svg fill="#000000" width="18px" height="18px" viewBox="-8.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>angle-down</title> <path d="M7.28 20.040c-0.24 0-0.44-0.080-0.6-0.24l-6.44-6.44c-0.32-0.32-0.32-0.84 0-1.2 0.32-0.32 0.84-0.32 1.2 0l5.84 5.84 5.84-5.84c0.32-0.32 0.84-0.32 1.2 0 0.32 0.32 0.32 0.84 0 1.2l-6.44 6.44c-0.16 0.16-0.4 0.24-0.6 0.24z"></path> </g></svg>
+                            </span>
+
+                            <div class="z-10 hidden min-w-[238px] mt-2 px-5 py-3 right-0 bg-white absolute w-full dropdown_wrap rounded-lg border border-solid border-[#CCCCD6]">
+                                <span class="text-[14px] block my-3 text-[#94969C] font-medium">Näytä Kaikki</span>
+                                <span class="text-[14px] block my-3 text-black font-medium">Viime Viikko</span>
+                                <span class="text-[14px] block my-3 text-black font-medium">Viime Kuukausi</span>
+                                <span class="text-[14px] block my-3 text-black font-medium">Viime Vuosi</span>
+                                <span class="text-[14px] block my-3 text-black font-medium">2021</span>
+                                <span class="text-[14px] block my-3 text-black font-medium">2020</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <span class="text-offwhite font-medium inline-block w-24 lg:w-auto">Projekti:</span>
+                        <div class="dropdown_click cursor-pointer w-full flex-1 relative">
+                            <span class="flex items-center justify-between gap-1 font-medium rounded-lg border border-solid border-[#CCCCD6] px-3 py-2 text-black">
+                                Projektin Nimi
+
+                                <svg fill="#000000" width="18px" height="18px" viewBox="-8.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>angle-down</title> <path d="M7.28 20.040c-0.24 0-0.44-0.080-0.6-0.24l-6.44-6.44c-0.32-0.32-0.32-0.84 0-1.2 0.32-0.32 0.84-0.32 1.2 0l5.84 5.84 5.84-5.84c0.32-0.32 0.84-0.32 1.2 0 0.32 0.32 0.32 0.84 0 1.2l-6.44 6.44c-0.16 0.16-0.4 0.24-0.6 0.24z"></path> </g></svg>
+                            </span>
+
+                            <div class="z-10 hidden min-w-[238px] mt-2 px-5 py-3 right-0 bg-white absolute w-full dropdown_wrap rounded-lg border border-solid border-[#CCCCD6]">
+                                <span class="text-[14px] block my-3 text-[#94969C] font-medium">Projektin Nimi</span>
+                                <span class="text-[14px] block my-3 text-black font-medium">Projektin Nimi</span>
+                                <span class="text-[14px] block my-3 text-black font-medium">Projektin Nimi</span>
+                                <span class="text-[14px] block my-3 text-black font-medium">Projektin Nimi</span>
+                                <span class="text-[14px] block my-3 text-black font-medium">Projektin Nimi</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <span class="text-offwhite font-medium inline-block w-24 lg:w-auto">Rooli:</span>
+                        <div class="dropdown_click cursor-pointer w-full flex-1 relative">
+                            <span class="flex items-center justify-between gap-1 font-medium rounded-lg border border-solid border-[#CCCCD6] px-3 py-2 text-black">
+                                Valvoja
+
+                                <svg fill="#000000" width="18px" height="18px" viewBox="-8.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>angle-down</title> <path d="M7.28 20.040c-0.24 0-0.44-0.080-0.6-0.24l-6.44-6.44c-0.32-0.32-0.32-0.84 0-1.2 0.32-0.32 0.84-0.32 1.2 0l5.84 5.84 5.84-5.84c0.32-0.32 0.84-0.32 1.2 0 0.32 0.32 0.32 0.84 0 1.2l-6.44 6.44c-0.16 0.16-0.4 0.24-0.6 0.24z"></path> </g></svg>
+                            </span>
+
+                            <div class="z-10 hidden min-w-[238px] mt-2 px-5 py-3 right-0 bg-white absolute w-full dropdown_wrap rounded-lg border border-solid border-[#CCCCD6]">
+                                <span class="text-[14px] block my-3 text-[#94969C] font-medium">Pääkäyttäjä</span>
+                                <span class="text-[14px] block my-3 text-black font-medium">Ylläpitäjä</span>
+                                <span class="text-[14px] block my-3 text-black font-medium">Valvoja</span>
+                                <span class="text-[14px] block my-3 text-black font-medium">Projektipäällikkö</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-b border-solid border-[#E1E1EA] my-5">
+
+        </div>
+    </section>
+
+    <!-- add new project start  -->
+    <section class="pt-5 pb-20">
+        <div class="container px-4">
+            <div class="mx-auto max-w-[700px]">
+
+                <div>
+                    <span class="font-medium text-offwhite inline-block mr-2">Käytetyt suodattimet:</span>
+                    
+                    <span class="m-2 lg:mx-1 inline-flex items-center gap-1 bg-[#E9E9F0] text-offwhite text-[14px] px-2 py-[2px] rounded-[3px]">
+                        Näytä kaikki
+
+                        <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M13.06 12L17.48 7.57996C17.5537 7.5113 17.6128 7.4285 17.6538 7.3365C17.6948 7.2445 17.7168 7.14518 17.7186 7.04448C17.7204 6.94378 17.7018 6.84375 17.6641 6.75036C17.6264 6.65697 17.5703 6.57214 17.499 6.50092C17.4278 6.4297 17.343 6.37356 17.2496 6.33584C17.1562 6.29811 17.0562 6.27959 16.9555 6.28137C16.8548 6.28314 16.7555 6.30519 16.6635 6.34618C16.5715 6.38717 16.4887 6.44627 16.42 6.51996L12 10.94L7.58 6.51996C7.43782 6.38748 7.24978 6.31535 7.05548 6.31878C6.86118 6.32221 6.67579 6.40092 6.53838 6.53834C6.40096 6.67575 6.32225 6.86113 6.31882 7.05544C6.3154 7.24974 6.38752 7.43778 6.52 7.57996L10.94 12L6.52 16.42C6.37955 16.5606 6.30066 16.7512 6.30066 16.95C6.30066 17.1487 6.37955 17.3393 6.52 17.48C6.66062 17.6204 6.85125 17.6993 7.05 17.6993C7.24875 17.6993 7.43937 17.6204 7.58 17.48L12 13.06L16.42 17.48C16.5606 17.6204 16.7512 17.6993 16.95 17.6993C17.1488 17.6993 17.3394 17.6204 17.48 17.48C17.6204 17.3393 17.6993 17.1487 17.6993 16.95C17.6993 16.7512 17.6204 16.5606 17.48 16.42L13.06 12Z" fill="#818D93"></path> </g></svg>
+                    </span>
+
+                    <span class="m-2 lg:mx-1 inline-flex items-center gap-1 bg-[#E9E9F0] text-offwhite text-[14px] px-2 py-[2px] rounded-[3px]">
+                        Näytä kaikki
+
+                        <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M13.06 12L17.48 7.57996C17.5537 7.5113 17.6128 7.4285 17.6538 7.3365C17.6948 7.2445 17.7168 7.14518 17.7186 7.04448C17.7204 6.94378 17.7018 6.84375 17.6641 6.75036C17.6264 6.65697 17.5703 6.57214 17.499 6.50092C17.4278 6.4297 17.343 6.37356 17.2496 6.33584C17.1562 6.29811 17.0562 6.27959 16.9555 6.28137C16.8548 6.28314 16.7555 6.30519 16.6635 6.34618C16.5715 6.38717 16.4887 6.44627 16.42 6.51996L12 10.94L7.58 6.51996C7.43782 6.38748 7.24978 6.31535 7.05548 6.31878C6.86118 6.32221 6.67579 6.40092 6.53838 6.53834C6.40096 6.67575 6.32225 6.86113 6.31882 7.05544C6.3154 7.24974 6.38752 7.43778 6.52 7.57996L10.94 12L6.52 16.42C6.37955 16.5606 6.30066 16.7512 6.30066 16.95C6.30066 17.1487 6.37955 17.3393 6.52 17.48C6.66062 17.6204 6.85125 17.6993 7.05 17.6993C7.24875 17.6993 7.43937 17.6204 7.58 17.48L12 13.06L16.42 17.48C16.5606 17.6204 16.7512 17.6993 16.95 17.6993C17.1488 17.6993 17.3394 17.6204 17.48 17.48C17.6204 17.3393 17.6993 17.1487 17.6993 16.95C17.6993 16.7512 17.6204 16.5606 17.48 16.42L13.06 12Z" fill="#818D93"></path> </g></svg>
+                    </span>
+
+                    <span class="m-2 lg:mx-1 inline-flex items-center gap-1 bg-[#E9E9F0] text-offwhite text-[14px] px-2 py-[2px] rounded-[3px]">
+                        Näytä kaikki
+
+                        <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M13.06 12L17.48 7.57996C17.5537 7.5113 17.6128 7.4285 17.6538 7.3365C17.6948 7.2445 17.7168 7.14518 17.7186 7.04448C17.7204 6.94378 17.7018 6.84375 17.6641 6.75036C17.6264 6.65697 17.5703 6.57214 17.499 6.50092C17.4278 6.4297 17.343 6.37356 17.2496 6.33584C17.1562 6.29811 17.0562 6.27959 16.9555 6.28137C16.8548 6.28314 16.7555 6.30519 16.6635 6.34618C16.5715 6.38717 16.4887 6.44627 16.42 6.51996L12 10.94L7.58 6.51996C7.43782 6.38748 7.24978 6.31535 7.05548 6.31878C6.86118 6.32221 6.67579 6.40092 6.53838 6.53834C6.40096 6.67575 6.32225 6.86113 6.31882 7.05544C6.3154 7.24974 6.38752 7.43778 6.52 7.57996L10.94 12L6.52 16.42C6.37955 16.5606 6.30066 16.7512 6.30066 16.95C6.30066 17.1487 6.37955 17.3393 6.52 17.48C6.66062 17.6204 6.85125 17.6993 7.05 17.6993C7.24875 17.6993 7.43937 17.6204 7.58 17.48L12 13.06L16.42 17.48C16.5606 17.6204 16.7512 17.6993 16.95 17.6993C17.1488 17.6993 17.3394 17.6204 17.48 17.48C17.6204 17.3393 17.6993 17.1487 17.6993 16.95C17.6993 16.7512 17.6204 16.5606 17.48 16.42L13.06 12Z" fill="#818D93"></path> </g></svg>
+                    </span>
+
+                    <a href="#!" class="inline-block text-offwhite ml-2 underline">Tyhjennä kaikki</a>
+                </div>
+
+                <div>
+                    <div class="flex items-center gap-5 my-10">
+                        <hr class="border-b border-solid border-[#E1E1EA] flex-1">
+                        <span class="text-offwhite font-medium text-[14px]">Tänään</span>
+                        <hr class="border-b border-solid border-[#E1E1EA] flex-1">
+                    </div>
+
+                    <div>
+                        <div class="my-3 p-4 gap-3 flex rounded-lg border border-solid border-[#E1E1EA]">
+                            <div class="user_avatar">
+                                <span class="text-xl lg:text-2xl font-bold text-white">K</span>
+                                <img class="h-full w-full rounded-full object-cover hidden" src="./assets/images/logo.png" alt="" />
+                            </div>                            
+                            <div class="flex-1">
+                                <span class="text-offwhite text-[14px]">Uusi toiminta • 6 min sitten</span>
+                                <p class="text-[#94969C] mt-1"><b class="text-black">Laura Vatanen</b> lorem ipsum dolor sit amet eudat vestibulum cras dolores <b class="text-black">Vestibulum_cras.docx</b></p>
+                            </div>
+                        </div>
+                        <div class="my-3 p-4 gap-3 flex rounded-lg border border-solid border-[#E1E1EA]">
+                            <div class="user_avatar">
+                                <span class="text-xl lg:text-2xl font-bold text-white">K</span>
+                                <img class="h-full w-full rounded-full object-cover hidden" src="./assets/images/logo.png" alt="" />
+                            </div>                            
+                            <div class="flex-1">
+                                <span class="text-offwhite text-[14px]">Uusi toiminta • 6 min sitten</span>
+                                <p class="text-[#94969C] mt-1"><b class="text-black">Laura Vatanen</b> lorem ipsum dolor sit amet eudat vestibulum cras dolores <b class="text-black">Vestibulum_cras.docx</b></p>
+                            </div>
+                        </div>
+                        <div class="my-3 p-4 gap-3 flex rounded-lg border border-solid border-[#E1E1EA]">
+                            <div class="user_avatar">
+                                <span class="text-xl lg:text-2xl font-bold text-white">K</span>
+                                <img class="h-full w-full rounded-full object-cover hidden" src="./assets/images/logo.png" alt="" />
+                            </div>                            
+                            <div class="flex-1">
+                                <span class="text-offwhite text-[14px]">Uusi toiminta • 6 min sitten</span>
+                                <p class="text-[#94969C] mt-1"><b class="text-black">Laura Vatanen</b> lorem ipsum dolor sit amet eudat vestibulum cras dolores <b class="text-black">Vestibulum_cras.docx</b></p>
+                            </div>
+                        </div>
+                        <div class="my-3 p-4 gap-3 flex rounded-lg border border-solid border-[#E1E1EA]">
+                            <div class="user_avatar">
+                                <span class="text-xl lg:text-2xl font-bold text-white">K</span>
+                                <img class="h-full w-full rounded-full object-cover hidden" src="./assets/images/logo.png" alt="" />
+                            </div>                            
+                            <div class="flex-1">
+                                <span class="text-offwhite text-[14px]">Uusi toiminta • 6 min sitten</span>
+                                <p class="text-[#94969C] mt-1"><b class="text-black">Laura Vatanen</b> lorem ipsum dolor sit amet eudat vestibulum cras dolores <b class="text-black">Vestibulum_cras.docx</b></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center gap-5 my-10">
+                        <hr class="border-b border-solid border-[#E1E1EA] flex-1">
+                        <span class="text-offwhite font-medium text-[14px]">Ellen</span>
+                        <hr class="border-b border-solid border-[#E1E1EA] flex-1">
+                    </div>
+
+                    <div>
+                        <div class="my-3 p-4 gap-3 flex rounded-lg border border-solid border-[#E1E1EA]">
+                            <div class="user_avatar">
+                                <span class="text-xl lg:text-2xl font-bold text-white">K</span>
+                                <img class="h-full w-full rounded-full object-cover hidden" src="./assets/images/logo.png" alt="" />
+                            </div>                            
+                            <div class="flex-1">
+                                <span class="text-offwhite text-[14px]">Uusi toiminta • 6 min sitten</span>
+                                <p class="text-[#94969C] mt-1"><b class="text-black">Laura Vatanen</b> lorem ipsum dolor sit amet eudat vestibulum cras dolores <b class="text-black">Vestibulum_cras.docx</b></p>
+                            </div>
+                        </div>
+                        <div class="my-3 p-4 gap-3 flex rounded-lg border border-solid border-[#E1E1EA]">
+                            <div class="user_avatar">
+                                <span class="text-xl lg:text-2xl font-bold text-white">K</span>
+                                <img class="h-full w-full rounded-full object-cover hidden" src="./assets/images/logo.png" alt="" />
+                            </div>                            
+                            <div class="flex-1">
+                                <span class="text-offwhite text-[14px]">Uusi toiminta • 6 min sitten</span>
+                                <p class="text-[#94969C] mt-1"><b class="text-black">Laura Vatanen</b> lorem ipsum dolor sit amet eudat vestibulum cras dolores <b class="text-black">Vestibulum_cras.docx</b></p>
+                            </div>
+                        </div>
+                        <div class="my-3 p-4 gap-3 flex rounded-lg border border-solid border-[#E1E1EA]">
+                            <div class="user_avatar">
+                                <span class="text-xl lg:text-2xl font-bold text-white">K</span>
+                                <img class="h-full w-full rounded-full object-cover hidden" src="./assets/images/logo.png" alt="" />
+                            </div>                            
+                            <div class="flex-1">
+                                <span class="text-offwhite text-[14px]">Uusi toiminta • 6 min sitten</span>
+                                <p class="text-[#94969C] mt-1"><b class="text-black">Laura Vatanen</b> lorem ipsum dolor sit amet eudat vestibulum cras dolores <b class="text-black">Vestibulum_cras.docx</b></p>
+                            </div>
+                        </div>
+                        <div class="my-3 p-4 gap-3 flex rounded-lg border border-solid border-[#E1E1EA]">
+                            <div class="user_avatar">
+                                <span class="text-xl lg:text-2xl font-bold text-white">K</span>
+                                <img class="h-full w-full rounded-full object-cover hidden" src="./assets/images/logo.png" alt="" />
+                            </div>                            
+                            <div class="flex-1">
+                                <span class="text-offwhite text-[14px]">Uusi toiminta • 6 min sitten</span>
+                                <p class="text-[#94969C] mt-1"><b class="text-black">Laura Vatanen</b> lorem ipsum dolor sit amet eudat vestibulum cras dolores <b class="text-black">Vestibulum_cras.docx</b></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- container -->
+    </section>
+    <!-- add new project end  -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

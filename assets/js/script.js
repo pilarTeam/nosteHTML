@@ -35,4 +35,18 @@ $(document).ready(function () {
 			reader.readAsDataURL(input.files[0]);
 		}
 	});
+
+	// dropdown open close 
+	$('.dropdown_click').on('click', function(){
+		$(this).find('.dropdown_wrap').toggle();
+	});
+
+	// calendar init
+	$('#calendar').daterangepicker({
+		singleDatePicker: true,
+		showDropdowns: true,
+		minYear: 1901,
+		maxYear: parseInt(moment().format('YYYY'),10)
+	}, function(start, end, label) {});
+
 });
