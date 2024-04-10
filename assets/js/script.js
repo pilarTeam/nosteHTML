@@ -1,6 +1,4 @@
 $(document).ready(function () {
-	// DropDown
-
 	// Dropdown toggle click event
 	$(".dropdown-toggle").click(function () {
 		var dropdownMenuId = $(this).data("dropdown");
@@ -10,12 +8,11 @@ $(document).ready(function () {
 	// Document click event to hide dropdowns
 	$(document).click(function (e) {
 		var target = e.target;
-		// Check if the clicked element is not a dropdown toggle button or its parent
 		if (
 			!$(target).is(".dropdown-toggle") &&
 			!$(target).parents().is(".dropdown")
 		) {
-			$(".dropdown-menu").addClass("hidden"); // Hide all dropdown menus
+			$(".dropdown-menu").addClass("hidden");
 		}
 	});
 
