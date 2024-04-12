@@ -49,4 +49,13 @@ $(document).ready(function () {
 		maxYear: parseInt(moment().format('YYYY'),10)
 	}, function(start, end, label) {});
 
+	// checkbox toogle click 
+	$('.checkbox_change').on('change', function(){
+		$(this).parent().find('.check_show').toggleClass('hidden');
+	});
+	// help toogle click 
+	$('.help_click').on('click', function(){
+		$(this).parent().find('.help_line').toggleClass('hidden');
+		$(this).parents('.help_wrap').find('.help_show').toggleClass('hidden');
+	});
 });
