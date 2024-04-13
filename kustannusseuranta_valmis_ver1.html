@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kustannusseuranta_valmis_ver1</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- daterangepicker Style -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    
+    <!-- Main Style -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="font-roboto bg-bodyBg">
+    <!-- header part start  -->
+    <header class="lg:sticky top-0 z-10">
+        <!-- Top Header -->
+        <div class="py-3 bg-white border-b border-line">
+            <div class="container px-4">
+                <div class="flex items-center justify-between">
+                    <!-- site_logo -->
+                    <div class="site_logo order-1">
+                        <a href="index.html">
+                            <img src="./assets/images/logo.png" alt="logo">
+                        </a>
+                    </div><!-- site_logo -->
+    
+                    <!-- User Profile -->
+                    <div class="flex justify-end order-2 lg:order-3">
+                        <div class="flex items-center gap-5">
+    
+                            <a href="#!">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-6" viewBox="0 0 32 32">
+                                    <defs>
+                                        <pattern id="pattern5" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                            <image width="100" height="100" xlink:href="data:image/png;base64,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" />
+                                        </pattern>
+                                    </defs>
+                                    <rect id="icons8-time-machine-100" width="32" height="32" fill="url(#pattern5)" />
+                                </svg>
+                            </a>
+    
+                            <div class="border-l border-line pl-4 flex items-center gap-3 relative">
+                                <div class="user_avatar">
+                                    <span class="text-xl lg:text-2xl font-bold text-white">K</span>
+                                    <img class="h-full w-full rounded-full object-cover hidden" src="./assets/images/logo.png" alt="">
+                                </div> <!-- user_avatar -->
+                                <div class="hidden md:block">
+                                    <p class="text-base text-black font-medium">Klara Royment</p>
+                                    <p class="text-sm text-[#818D93] font-normal">Admin</p>
+                                </div>
+                                <div class="dropdown relative">
+                                    <button class="dropdown-toggle" data-dropdown="profile-dropdown">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12" viewBox="0 0 12 12">
+                                            <defs>
+                                                <pattern id="pattern6" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 96 96">
+                                                    <image width="96" height="96" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAABmElEQVR4nO3ZwUrDQBSF4Ww8DWZvcWPSrgJ36Puv9CGk6BOIPoVSodBFKU0TeufO/B/MPj1/BgJtGgAAAAAAAAAAAAAAAAAAAAAAAOSj2+6e2iG9Pmx3qSmM+jS2Q3p7fBmfm2zH7+29HdLvqrefkiKoT+NqSF+H39b29pldhNPxj6eUCDod/3hyinBu/FIi6Nz4OUW4NH70CLo0fg4Rrhk/agRdM75nhCnjR4ugKeN7RLhl/CgRdMv494wwZ/zcI2jO+PeKsESAHCNoifH/j32EuAU5RVCk8UuLoIjjlxJBkcePHkEljB81gkoaP1oElTh+lAgqefzcI6iG8XONoJrGzy2Cahw/lwiqeXzvCGJ8vwhifL+bIMb3iyDG94sgxveLIMafrtukdTuk/QIRvg9n/qdm2h+eqanJUjehrfk7P34Eq3d8/wjG+H4RGN8xgvHm+0UwxveLYIzvF8EY3y+CMb5fBGN8vwjG+H4RjPH9Ihjj+0UwxveLYIzvF8EY3y+CMb6XbpPW1f2TBQAAAAAAAAAAgGaSP+MgIpmI76GJAAAAAElFTkSuQmCC" />
+                                                </pattern>
+                                            </defs>
+                                            <rect id="icons8-expand-arrow-96" width="12" height="12" fill="url(#pattern6)" />
+                                        </svg>
+                                    </button>
+    
+                                    <div class="w-[15rem] border-t bg-[#08202C] absolute right-0 top-12 z-[10] dropdown-menu hidden" id="profile-dropdown">
+                                        <ul class="bg-transparent p-0">
+                                            <li class="text-center border-b border-[#283B44] py-4 px-2">
+                                                <div class="user_avatar mx-auto mb-2">
+                                                    <div class="flex items-center justify-center mx-auto" id="avatarContainer">
+                                                        <span class="text-2xl font-bold text-white" id="text">K</span>
+                                                        <img class="h-full w-full rounded-full object-cover hidden" src="./assets/images/logo.png" alt="User Avatar" id="avatarImage">
+                                                        <label class="absolute -bottom-1 -right-2 cursor-pointer">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+                                                                <defs>
+                                                                    <pattern id="pattern" width="1" height="1" viewBox="-4.444 -4.444 26.887 26.887">
+                                                                        <image preserveAspectRatio="xMidYMid slice" width="18" height="18" xlink:href="data:image/png;base64,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" />
+                                                                    </pattern>
+                                                                </defs>
+                                                                <rect id="icons8-photo-100" width="18" height="18" rx="9" fill="url(#pattern)" />
+                                                            </svg>
+    
+                                                            <input type="file" id="FileUpload1" class="hidden" />
+                                                        </label>
+                                                    </div>
+                                                </div> <!-- user_avatar -->
+    
+                                                <p class="text-white">Klara Royment</p>
+                                                <p class="text-offwhite text-sm">nimi_sukunimi@noste.io</p>
+                                            </li>
+                                            <li class="border-b border-[#283B44] inline-block w-full p-2">
+                                                <a href="#!" class="flex items-center gap-5 text-offwhite">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                                                        <defs>
+                                                            <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                                                <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAADAElEQVR4nO2c3W4TMRCFzQW8Az8vxAPAM4Dg6WhfoYAgcLWKp5WdUsAO4gapcL9owgRoUAUbvJmxfY5kqTdxvp5zdneU1nEOgiCoDy0W481xHG+Aw4AftFo/9CF/oZguabV+oALhwPHLiJA+UczjZoWU1QIJ4PhhxDYMWWqBRHDACIvFUAcQgQNG2CyGOoAIHDDCZjHUAUTggBE2i6EOIAIHjLBZDHUAEThghM1iqAOIwAEjdIoxDMOtZUxPfUgvKaRvu2/418WvCekFxfUT3svNJOrhSvUXF3d8zG8nh3D9erN89/m2m0HUeiDc5sJhbNeC/8TpCotaD4RvUzOEsV2PXWFR64FsnhlXngX5Gd/Cpu5zevr+LoV0tAP63BUWtR4IxfT1943Z2H33Ojv7cO8qaLp0hUXtB1J247kNowMFojZ1IhBjUycCMTZ1IhBjU+fmPxHxULczdf4JkI72mbR4wvIxHdc+9pL21MlTwFyXqA/50b6/TCtT3OT9+CHGU0D5MNKrGj86Ie1AWDyS8RRQLpD0utYPF8lCICxuM08BFPPJ7n30H0Pg15zwbWqOK6O7QGoRzf9Qr2rqbD4QX8vUaeXSo9mvkEqmzl4CGWqZOnsJpJqps6dAqpg6ewvEvKwYQUY41GXFCAIHjDBZDHUAEThghM1iqAOIwAEjbBZDHUAEDhhhsxjqACJwwAibxVAHEIEDRtgshjqACBwwwmYx1AFE4IARNouhDiACB4ywWYxDAQz4Rgk7gXh8o4SdQAbts30T1fwta6l9tm+img/Ea5/tm6jmAyHts30T1UEguej+tfGaAyAEgkD+R7hCGr+izQFQZWf7mg/E13K2r5dAqJazfb0EMtRytq+XQKo529dTIFWc7estkFqk7oc6gDGp+6EOIAIHjLBZDHUAEThghM1iqAOIwAEjbBZDHUAEDhhhsxjqACJwwAibxVAHEIEDRtgshjqACBwwwmYxKKTz7Zv7kFYHBxCB46cR+b6P+SMv/tkpicABQRAEQY71HbsT/O3PnJesAAAAAElFTkSuQmCC" />
+                                                            </pattern>
+                                                        </defs>
+                                                        <rect id="icons8-adjust-100" width="24" height="24" fill="url(#pattern)" />
+                                                    </svg>
+    
+                                                    Aktiivinien
+                                                </a>
+                                            </li>
+                                            <li class="inline-block w-full p-2">
+                                                <a href="#!" class="user_box flex items-center justify-between gap-3 relative">
+                                                    <div class="flex items-center gap-2">
+                                                        <div class="user_avatar">
+                                                            <span class="text-xl lg:text-2xl font-bold text-white">K</span>
+                                                            <img class="h-full w-full rounded-full object-cover hidden" src="./assets/images/logo.png" alt="">
+                                                        </div> <!-- user_avatar -->
+                                                        <div>
+                                                            <p class="text-base text-white font-medium">Klara Royment</p>
+                                                            <p class="text-sm text-[#818D93] font-normal">Admin</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="">
+                                                        <span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                                                                <defs>
+                                                                    <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 96 96">
+                                                                        <image width="96" height="96" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAABeUlEQVR4nO3ZvUoDQRiF4b0orSysFAu9IwtLr/DMgDupnLESRJAwVcKChlSCP9mzy/c+sP3ynolrssMAAAAAAAAAAAAAAACwBPmp3aSx3bvvIyRt6nUa2zaXtkulPbrvJ2z8/HkxgjE+IywgPiPM88D9Nv5hBB7M85/8o6urvNz+8y3EJeL7EN+I+EbENyK+EfGNiG9EfOLHJL5kET8kcfKJH5I4+cQPSZx84s9qeiU3vcIb1vUacbuEe/6zVOrD16u5VJ7vXPehiH92juLvnCOI+L4RRHzfCAr7wF3AQy5HfOD+5tSd4pOgiCd/KSMoenznCCK+bwQR3zeCiO8bQcT3jSDi+0YQ8X0jiPi+EUR83wgivvf3mhTxt51T++Gp3oX+eWEFI3Ti+0boxPd9EjrxfSN04vtG6MT3jdCJb/qekPg/fz7atMtc6vthgLF9qNSrGW8BubTzPLbXVOpbHusFRQzS2M6mi/gAAAAAAAAAAAAAAADDyu0BWJ5kaQG3t14AAAAASUVORK5CYII=" />
+                                                                    </pattern>
+                                                                </defs>
+                                                                <rect id="icons8-done-96" width="16" height="16" fill="url(#pattern)" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="border-b border-[#283B44] inline-block w-full p-2">
+                                                <a href="#!" class="flex items-center gap-5 text-offwhite">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                                                        <defs>
+                                                            <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                                                <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAADd0lEQVR4nO3dzW7TQBQFYAuJ8gylfQU27FiAxJ+Q+HkBxBaJChbs2PJMFDbsKRWksIkyY3emaknuTVWJTUsLbAiMhUTjAHLMTHxIz5G8i+dK83XGSXzjZtnPdLvdhZ6XR8bJunXyyXod8dBfcxDmxMlr64cPw1xlKWN2ds4ar+8IoHX/CDd623uLSTCCNjG0yW7Q6XRGp6ODhG2KK0Obbs8r0UHKa8bYXqnPwhYWvdB/njz/sGSdrFZA1qIXsl4OjhcJhaMXmZMURX95HET2oxepLsPoBeYsNvV8EWS6EAQsBAELQcBCELAQBCwEAQtBwEIQsBAELAQBC0HAYp084XdZwCjxB+e3vf+EEn9ggjSO8fI0ix2CgIUgYCEIWAgCFoLUi/G756zTl8bLi96mnM9ShSD1Mt5MKAe5l4tZihCkXozXfqUFKA0KQeol35L7k52LcpBv6aUsZghSP9bJY+PkW6XT89BsDi/HK8JP6lFQrBteiVOAIFgoBAFDIQgYCkFSoQyuNhuQ1xAsFIKAoRAkPUruB9fqD8ItKzmKcXpUG4UgYCgEAUMhyIxRvH7J/fDWn0/iNQQLhSBgKARpF6Xnh7fHX8gtCwuFIAAfHr1+NX5wB2KFWK/3jJe9ydujeqIO4/Sz2ZIbrYKExxuF9+ZtT4ZFOZwetgpSFMWZ8gu4tifCgxxtg4QYL3etk93WJ8O3e0BsWSf1om6rGMffaREECKN8EVdIqxgTn9YJAoRRvpgrZPYYTo96Xq7//gSCzBzjr/dECAKEUZ7IFYKDUZ5MkOQYU3WeECQ9xlS9WQQBwigH4paVEKNB0zVBgDDKAblCcDDKQQmCg1EOTBAcjHJwgkTBiPZLXIIAYZRFuEJqJfx3tslbr3xwQCsJ3TGTzRh8tEZrGY1Gp6zTj8kxQrhl1Uvu9KZ1ao3T973NwYUsVQgCFoKAhSBgIQhYCNI8fJAyGEaS1luukOYYBAHDIAhAku8o3LKmC0HAQhCwEAQsBAELQcBCELAQBCwEAQtBwEKQkwci+8cLFEV/OXqROUlR9JcrrUD70YsYJ+vjnXiymucflqIXmgMM4+V5ZYWszagjj4et98CYB9FBut3ugvW6QQSd8uk98iZ0NGYp0tveW7ReO0TRmiDyNsxZlrx/1euK9foqtEoSRycaq8PchG0q2cr4AfEdWLK0nQuBWq4AAAAASUVORK5CYII=" />
+                                                            </pattern>
+                                                        </defs>
+                                                        <rect id="icons8-log-out-100" width="24" height="24" fill="url(#pattern)" />
+                                                    </svg>
+                                                
+                                                    Lisää tili
+                                                </a>
+                                            </li>
+                                            <li class="border-b border-[#283B44] inline-block w-full p-2">
+                                                <a href="#!" class="flex items-center gap-5 text-offwhite">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                                                        <defs>
+                                                            <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                                                <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAADd0lEQVR4nO3dzW7TQBQFYAuJ8gylfQU27FiAxJ+Q+HkBxBaJChbs2PJMFDbsKRWksIkyY3emaknuTVWJTUsLbAiMhUTjAHLMTHxIz5G8i+dK83XGSXzjZtnPdLvdhZ6XR8bJunXyyXod8dBfcxDmxMlr64cPw1xlKWN2ds4ar+8IoHX/CDd623uLSTCCNjG0yW7Q6XRGp6ODhG2KK0Obbs8r0UHKa8bYXqnPwhYWvdB/njz/sGSdrFZA1qIXsl4OjhcJhaMXmZMURX95HET2oxepLsPoBeYsNvV8EWS6EAQsBAELQcBCELAQBCwEAQtBwEIQsBAELAQBC0HAYp084XdZwCjxB+e3vf+EEn9ggjSO8fI0ix2CgIUgYCEIWAgCFoLUi/G756zTl8bLi96mnM9ShSD1Mt5MKAe5l4tZihCkXozXfqUFKA0KQeol35L7k52LcpBv6aUsZghSP9bJY+PkW6XT89BsDi/HK8JP6lFQrBteiVOAIFgoBAFDIQgYCkFSoQyuNhuQ1xAsFIKAoRAkPUruB9fqD8ItKzmKcXpUG4UgYCgEAUMhyIxRvH7J/fDWn0/iNQQLhSBgKARpF6Xnh7fHX8gtCwuFIAAfHr1+NX5wB2KFWK/3jJe9ydujeqIO4/Sz2ZIbrYKExxuF9+ZtT4ZFOZwetgpSFMWZ8gu4tifCgxxtg4QYL3etk93WJ8O3e0BsWSf1om6rGMffaREECKN8EVdIqxgTn9YJAoRRvpgrZPYYTo96Xq7//gSCzBzjr/dECAKEUZ7IFYKDUZ5MkOQYU3WeECQ9xlS9WQQBwigH4paVEKNB0zVBgDDKAblCcDDKQQmCg1EOTBAcjHJwgkTBiPZLXIIAYZRFuEJqJfx3tslbr3xwQCsJ3TGTzRh8tEZrGY1Gp6zTj8kxQrhl1Uvu9KZ1ao3T973NwYUsVQgCFoKAhSBgIQhYCNI8fJAyGEaS1luukOYYBAHDIAhAku8o3LKmC0HAQhCwEAQsBAELQcBCELAQBCwEAQtBwEKQkwci+8cLFEV/OXqROUlR9JcrrUD70YsYJ+vjnXiymucflqIXmgMM4+V5ZYWszagjj4et98CYB9FBut3ugvW6QQSd8uk98iZ0NGYp0tveW7ReO0TRmiDyNsxZlrx/1euK9foqtEoSRycaq8PchG0q2cr4AfEdWLK0nQuBWq4AAAAASUVORK5CYII=" />
+                                                            </pattern>
+                                                        </defs>
+                                                        <rect id="icons8-log-out-100" width="24" height="24" fill="url(#pattern)" />
+                                                    </svg>
+    
+                                                    Kirjaudu ulos
+                                                </a>
+                                            </li>
+                                        </ul>
+    
+                                    </div>
+                                </div>
+                            </div> <!-- user_box -->
+    
+                        </div>
+                    </div> <!-- User Profile -->
+    
+                </div> <!-- grid -->
+            </div> <!-- container -->
+        </div>
+        <!-- Top Header -->
+
+    </header> <!-- header_area  -->
+    <!-- header part end  -->
+    
+    <style>
+        .scroller {
+            scrollbar-width: thin;
+        }
+    </style>
+    <section class="my-8">
+        <div class="container px-4">
+            <div class="border border-solid border-[#E1E1EA] rounded-[12px] p-[20px] bg-white">
+                <div class="flex items-center justify-between mb-4">
+                    <div>
+                        <span class="text-[#818D93] text-[13px] font-medium">Project nimi</span>
+                        <h1 class="text-[#08202C] text-[18px] font-medium">Kustannusseuranta</h1>
+                    </div>
+    
+                    <div>
+                        <button class="text-[#08202C] font-medium bg-[#E9E9F0] border border-solid border-[#CCCCD6] rounded-lg flex items-center gap-2 px-3 py-2">
+                            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="#08202C" d="M60,12h-6V2c0-1.105-0.895-2-2-2H12c-1.105,0-2,0.895-2,2v10H4c-2.211,0-4,1.789-4,4v32 c0,2.211,1.789,4,4,4h6v10c0,1.105,0.895,2,2,2h40c1.105,0,2-0.895,2-2V52h6c2.211,0,4-1.789,4-4V16C64,13.789,62.211,12,60,12z M12,3c0-0.553,0.447-1,1-1h38c0.553,0,1,0.447,1,1v9H12V3z M52,61c0,0.553-0.447,1-1,1H13c-0.553,0-1-0.447-1-1V37 c0-0.553,0.447-1,1-1h38c0.553,0,1,0.447,1,1V61z M62,48c0,1.104-0.896,2-2,2h-6V36c0-1.105-0.895-2-2-2H12c-1.105,0-2,0.895-2,2 v14H4c-1.104,0-2-0.896-2-2V16c0-1.104,0.896-2,2-2h56c1.104,0,2,0.896,2,2V48z"></path> <path fill="#08202C" d="M19,44h12c0.553,0,1-0.447,1-1s-0.447-1-1-1H19c-0.553,0-1,0.447-1,1S18.447,44,19,44z"></path> <path fill="#08202C" d="M45,48H19c-0.553,0-1,0.447-1,1s0.447,1,1,1h26c0.553,0,1-0.447,1-1S45.553,48,45,48z"></path> <path fill="#08202C" d="M38,54H19c-0.553,0-1,0.447-1,1s0.447,1,1,1h19c0.553,0,1-0.447,1-1S38.553,54,38,54z"></path> <path fill="#08202C" d="M55,18c-1.657,0-3,1.343-3,3s1.343,3,3,3s3-1.343,3-3S56.657,18,55,18z M55,22c-0.553,0-1-0.447-1-1 s0.447-1,1-1s1,0.447,1,1S55.553,22,55,22z"></path> <path fill="#08202C" d="M45,18c-1.657,0-3,1.343-3,3s1.343,3,3,3s3-1.343,3-3S46.657,18,45,18z M45,22c-0.553,0-1-0.447-1-1 s0.447-1,1-1s1,0.447,1,1S45.553,22,45,22z"></path> </g> </g></svg>
+      
+                            Luonnos
+                        </button>
+                    </div>
+                </div>
+
+                <hr class="border border-solid border-[#E1E1EA] ml-[-20px] mr-[-20px]">
+
+                <div class="mt-10">
+                    <span class="font-medium italic text-[#00B2A9] block">T1</span>
+                    <span class="font-medium italic text-[#00B2A9] block">K1</span>
+                </div>
+
+                <div class="flex items-center justify-between my-10">
+                    <h2 class="text-black font-medium text-[28px]">Kustannusseuranta (alv. 0%)</h2>
+                    <span class="italic text-[#00B2A9]">xx.xx.xxxx</span>
+                </div>
+
+                <div class="mb-10">
+                    <h3 class="italic text-[#00B2A9] font-medium text-[24px]">K4</h3>
+                </div>
+
+                <div>
+                    <div class="overflow-x-scroll lg:overflow-x-auto scroller">
+                        <table class="w-full">
+                            <tr>
+                                <th class="min-w-[70px]"></th>
+                                <th class="min-w-[424px] bg-[#00B2A9] text-left text-white font-medium p-3 text-[18px] border border-solid border-[#E1E1EA]">Toimenpiteet</th>
+                                <th class="min-w-[126px] bg-[#00B2A9] text-left text-white font-medium p-3 text-[18px] border border-solid border-[#E1E1EA]">Budjetti</th>
+                                <th class="min-w-[188px] bg-[#00B2A9] text-left text-white font-medium p-3 text-[18px] border border-solid border-[#E1E1EA]">Sidottu</th>
+                                <th class="min-w-[300px] bg-[#00B2A9] text-left text-white font-medium p-3 text-[18px] border border-solid border-[#E1E1EA]">Toteuma</th>
+                                <th class="min-w-[350px] bg-[#00B2A9] text-left text-white font-medium p-3 text-[18px] border border-solid border-[#E1E1EA]">Ennuste</th>
+                                <th class=""></th>
+                            </tr>
+    
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#283B44] font-medium p-3 border border-solid border-[#E1E1EA]">Rakennustyöt yhteensä</td>
+                                <td class="text-[#00B2A9] italic text-left font-medium p-3 border border-solid border-[#E1E1EA]">BU2</td>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]">E2=<span class="text-[#00B2A9] italic">UH1</span> + 6200€ + <span class="italic">Ennuste1 + jne.</span></td>
+                                <td class=""></td>
+                            </tr>
+    
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-3 border border-solid border-[#E1E1EA]">U1, Urakkasopimuksen mukaiset työt</td>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-[#00B2A9] italic text-left font-medium p-3 border border-solid border-[#E1E1EA]">UH1</td>
+                                <td class="text-left text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">60 000 €</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+    
+                            <tr>
+                                <td class="text-center font-medium p-3 border border-solid border-[#E1E1EA]"><svg width="24px" height="24px" class="mx-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="12" r="10" stroke="#586B74" stroke-width="0.384"></circle> <path d="M15 12H9" stroke="#586B74" stroke-width="0.384" stroke-linecap="round"></path> </g></svg></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="bg-[#00B2A9] text-left text-black font-medium p-3 text-[17px] border border-solid border-[#E1E1EA]">Laskunumero</td>
+                                <td class="bg-[#00B2A9] text-right text-black font-medium p-3 text-[17px] border border-solid border-[#E1E1EA]">Laskun summa (alv 0%)</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+    
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">1</td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">20 000 €</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+    
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">2</td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">40 000 €</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+    
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-center font-medium p-3 border border-solid border-[#E1E1EA]">
+                                    <label class="inline-flex items-center gap-2 cursor-pointer">
+                                        <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                            <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                        </span>
+                                        <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                    </label>
+                                </td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">x</td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">0 €</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+    
+                            <tr>
+                                <td class="text-left font-medium p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-center font-medium p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+    
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"><span class="text-[#00B2A9] italic">U1,</span> Lisä- ja muutostyöt</td>
+                                <td class="text-center font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">5 000 €</td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">5 000 €</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]">
+                                    <input type="text" name="pilar_M4" value="6 200 €" class="shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                                </td>
+                                <td class=""></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="overflow-x-scroll scroller">
+                        <table class="w-full">
+                            <tr>
+                                <td class="min-w-[70px] text-center font-medium p-3 border border-solid border-[#E1E1EA]"><svg width="24px" height="24px" class="mx-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="12" r="10" stroke="#586B74" stroke-width="0.384"></circle> <path d="M15 12H9" stroke="#586B74" stroke-width="0.384" stroke-linecap="round"></path> </g></svg></td>
+                                <td class="min-w-[424px] text-left text-white font-medium p-3 text-[18px] border border-solid border-[#E1E1EA]"></td>
+                                <td class="min-w-[126px] text-left text-white font-medium p-3 text-[18px] border border-solid border-[#E1E1EA]"></td>
+                                <td class="min-w-[188px] bg-[#00B2A9] text-left text-white font-medium p-3 text-[18px] border border-solid border-[#E1E1EA]">Juokseva nro</td>
+                                <td class="min-w-[300px] bg-[#00B2A9] text-left text-white font-medium p-3 text-[18px] border border-solid border-[#E1E1EA]">Tarjous nro</td>
+                                <td class="min-w-[350px] bg-[#00B2A9] text-left text-white font-medium p-3 text-[18px] border border-solid border-[#E1E1EA]">Sisältö</td>
+                                <td class="bg-[#00B2A9] text-left text-white font-medium p-3 text-[18px] border border-solid border-[#E1E1EA] min-w-[230px]">Tarjous € (alv 0%)</td>
+                                <td class="bg-[#00B2A9] text-left text-white font-medium p-3 text-[18px] border border-solid border-[#E1E1EA] min-w-[230px]">Tarjous pvm.</td>
+                                <td class="bg-[#00B2A9] text-left text-white font-medium p-3 text-[18px] border border-solid border-[#E1E1EA] min-w-[230px]">Käyttäjämuutos</td>
+                                <td class="bg-[#00B2A9] text-left text-white font-medium p-3 text-[18px] border border-solid border-[#E1E1EA] min-w-[230px]">Hinnoitteluperuste</td>
+                                <td class="bg-[#00B2A9] text-left text-white font-medium p-3 text-[18px] border border-solid border-[#E1E1EA] min-w-[230px]">Maksaja</td>
+                                <td class="bg-[#00B2A9] text-left text-white font-medium p-3 text-[18px] border border-solid border-[#E1E1EA] min-w-[230px]">Lisätyö / muutostyö</td>
+                                <td class="bg-[#00B2A9] text-left text-white font-medium p-3 text-[18px] border border-solid border-[#E1E1EA] min-w-[230px]">Hyväks. Käyttäjä (pvm.)</td>
+                                <td class="bg-[#00B2A9] text-left text-white font-medium p-3 text-[18px] border border-solid border-[#E1E1EA] min-w-[230px]">Hyväks. Tilaaja (pvm.)</td>
+                                <td class="bg-[#00B2A9] text-left text-white font-medium p-3 text-[18px] border border-solid border-[#E1E1EA] min-w-[230px]">Lisäaikavaikutus (tv)</td>
+                                <td class="bg-[#00B2A9] text-left text-white font-medium p-3 text-[18px] border border-solid border-[#E1E1EA] min-w-[230px]">Laskutettu</td>
+                                <td class="bg-[#00B2A9] text-left text-white font-medium p-3 text-[18px] border border-solid border-[#E1E1EA] min-w-[230px]">Lasku numero</td>
+                                <td class="bg-[#00B2A9] text-left text-white font-medium p-3 text-[18px] border border-solid border-[#E1E1EA] min-w-[450px]">Huom.</td>
+                            </tr>
+
+                            <tr>
+                                <td class="min-w-[70px] text-center font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="min-w-[424px] text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]"></td>
+                                <td class="min-w-[126px] text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]"></td>
+                                <td class="min-w-[188px] text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">1</td>
+                                <td class="min-w-[300px] text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">2a</td>
+                                <td class="min-w-[350px] text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">Sisäänkäyntiovi</td>
+                                <td class="text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">5 000 €</td>
+                                <td class="text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">12/24/2023</td>
+                                <td class="text-left text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">
+                                    <div class="dropdown_click shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2 cursor-pointer relative">
+                                        <span class="flex items-center justify-between">
+                                            Kyllä
+        
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 300 300">
+                                                <g id="expand_input_field" transform="translate(-622 -557)">
+                                                <rect id="Rectangle_1128" data-name="Rectangle 1128" width="20px" height="20px" transform="translate(622 557)" fill="#fff" opacity="0"></rect>
+                                                <path id="Path_117" data-name="Path 117" d="M46.2,5.365a14.91,14.91,0,0,1,22.908,0l42.716,51.259A14.91,14.91,0,0,1,100.37,81.079H14.938A14.91,14.91,0,0,1,3.484,56.624Z" transform="translate(828.752 742.447) rotate(180)" fill="#818d93"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+        
+                                        <div class="hidden dropdown_wrap overflow-y-auto absolute w-full border border-solid border-[#E1E1EA] rounded-lg p-3 text-offwhite mt-3 left-0 top-full z-50 bg-white" style="display: none;">
+                                            <label class="flex items-center gap-3 my-4 cursor-pointer block">                       
+                                                <span class="text-black text-[14px]">Ei</span>
+                                            </label>
+                                            <label class="flex items-center gap-3 my-4 cursor-pointer block">                       
+                                                <span class="text-black text-[14px]">Kyllä</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-left text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">
+                                    <div class="dropdown_click shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2 cursor-pointer relative">
+                                        <span class="flex items-center justify-between">
+                                            Kiinteähintainen
+        
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 300 300">
+                                                <g id="expand_input_field" transform="translate(-622 -557)">
+                                                <rect id="Rectangle_1128" data-name="Rectangle 1128" width="20px" height="20px" transform="translate(622 557)" fill="#fff" opacity="0"></rect>
+                                                <path id="Path_117" data-name="Path 117" d="M46.2,5.365a14.91,14.91,0,0,1,22.908,0l42.716,51.259A14.91,14.91,0,0,1,100.37,81.079H14.938A14.91,14.91,0,0,1,3.484,56.624Z" transform="translate(828.752 742.447) rotate(180)" fill="#818d93"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+        
+                                        <div class="hidden dropdown_wrap overflow-y-auto absolute w-full border border-solid border-[#E1E1EA] rounded-lg p-3 text-offwhite mt-3 left-0 top-full z-50 bg-white" style="display: none;">
+                                            <label class="flex items-center gap-3 my-4 cursor-pointer block">                       
+                                                <span class="text-black text-[14px]">Laskutyö</span>
+                                            </label>
+                                            <label class="flex items-center gap-3 my-4 cursor-pointer block">                       
+                                                <span class="text-black text-[14px]">Kiinteähintainen</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-left text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">
+                                    <div class="dropdown_click shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2 cursor-pointer relative">
+                                        <span class="flex items-center justify-between">
+                                            Vuokranantaja
+        
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 300 300">
+                                                <g id="expand_input_field" transform="translate(-622 -557)">
+                                                <rect id="Rectangle_1128" data-name="Rectangle 1128" width="20px" height="20px" transform="translate(622 557)" fill="#fff" opacity="0"></rect>
+                                                <path id="Path_117" data-name="Path 117" d="M46.2,5.365a14.91,14.91,0,0,1,22.908,0l42.716,51.259A14.91,14.91,0,0,1,100.37,81.079H14.938A14.91,14.91,0,0,1,3.484,56.624Z" transform="translate(828.752 742.447) rotate(180)" fill="#818d93"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+        
+                                        <div class="hidden dropdown_wrap overflow-y-auto absolute w-full border border-solid border-[#E1E1EA] rounded-lg p-3 text-offwhite mt-3 left-0 top-full z-50 bg-white" style="display: none;">
+                                            <label class="flex items-center gap-3 my-4 cursor-pointer block">                       
+                                                <span class="text-black text-[14px]">Vuokralainen</span>
+                                            </label>
+                                            <label class="flex items-center gap-3 my-4 cursor-pointer block">                       
+                                                <span class="text-black text-[14px]">Vuokranantaja</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-left text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">
+                                    <div class="dropdown_click shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2 cursor-pointer relative">
+                                        <span class="flex items-center justify-between">
+                                            Lisätyö
+        
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 300 300">
+                                                <g id="expand_input_field" transform="translate(-622 -557)">
+                                                <rect id="Rectangle_1128" data-name="Rectangle 1128" width="20px" height="20px" transform="translate(622 557)" fill="#fff" opacity="0"></rect>
+                                                <path id="Path_117" data-name="Path 117" d="M46.2,5.365a14.91,14.91,0,0,1,22.908,0l42.716,51.259A14.91,14.91,0,0,1,100.37,81.079H14.938A14.91,14.91,0,0,1,3.484,56.624Z" transform="translate(828.752 742.447) rotate(180)" fill="#818d93"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+        
+                                        <div class="hidden dropdown_wrap overflow-y-auto absolute w-full border border-solid border-[#E1E1EA] rounded-lg p-3 text-offwhite mt-3 left-0 top-full z-50 bg-white" style="display: none;">
+                                            <label class="flex items-center gap-3 my-4 cursor-pointer block">                       
+                                                <span class="text-black text-[14px]">Muutostyö</span>
+                                            </label>
+                                            <label class="flex items-center gap-3 my-4 cursor-pointer block">                       
+                                                <span class="text-black text-[14px]">Lisätyö</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">-</td>
+                                <td class="text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">Matti Meikäläinen 25.12.2023</td>
+                                <td class="text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">3</td>
+                                <td class="text-left text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">
+                                    <div class="dropdown_click shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2 cursor-pointer relative">
+                                        <span class="flex items-center justify-between">
+                                            Kyllä
+        
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 300 300">
+                                                <g id="expand_input_field" transform="translate(-622 -557)">
+                                                <rect id="Rectangle_1128" data-name="Rectangle 1128" width="20px" height="20px" transform="translate(622 557)" fill="#fff" opacity="0"></rect>
+                                                <path id="Path_117" data-name="Path 117" d="M46.2,5.365a14.91,14.91,0,0,1,22.908,0l42.716,51.259A14.91,14.91,0,0,1,100.37,81.079H14.938A14.91,14.91,0,0,1,3.484,56.624Z" transform="translate(828.752 742.447) rotate(180)" fill="#818d93"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+        
+                                        <div class="hidden dropdown_wrap overflow-y-auto absolute w-full border border-solid border-[#E1E1EA] rounded-lg p-3 text-offwhite mt-3 left-0 top-full z-50 bg-white" style="display: none;">
+                                            <label class="flex items-center gap-3 my-4 cursor-pointer block">                       
+                                                <span class="text-black text-[14px]">Ei</span>
+                                            </label>
+                                            <label class="flex items-center gap-3 my-4 cursor-pointer block">                       
+                                                <span class="text-black text-[14px]">Kyllä</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-left text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">
+                                    <div class="dropdown_click shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2 cursor-pointer relative">
+                                        <span class="flex items-center justify-between">
+                                            Kyllä
+        
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 300 300">
+                                                <g id="expand_input_field" transform="translate(-622 -557)">
+                                                <rect id="Rectangle_1128" data-name="Rectangle 1128" width="20px" height="20px" transform="translate(622 557)" fill="#fff" opacity="0"></rect>
+                                                <path id="Path_117" data-name="Path 117" d="M46.2,5.365a14.91,14.91,0,0,1,22.908,0l42.716,51.259A14.91,14.91,0,0,1,100.37,81.079H14.938A14.91,14.91,0,0,1,3.484,56.624Z" transform="translate(828.752 742.447) rotate(180)" fill="#818d93"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+        
+                                        <div class="hidden dropdown_wrap overflow-y-auto absolute w-full border border-solid border-[#E1E1EA] rounded-lg p-3 text-offwhite mt-3 left-0 top-full z-50 bg-white" style="display: none;">
+                                            <label class="flex items-center gap-3 my-4 cursor-pointer block">                       
+                                                <span class="text-black text-[14px]">Ei</span>
+                                            </label>
+                                            <label class="flex items-center gap-3 my-4 cursor-pointer block">                       
+                                                <span class="text-black text-[14px]">Kyllä</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">Teräslasiovi vasikalla, heloitukset ja lukitukset kuuluvat tarjoukseen</td>
+                            </tr>
+
+                            <tr>
+                                <td class="min-w-[70px] text-center font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="min-w-[424px] text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]"></td>
+                                <td class="min-w-[126px] text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]"></td>
+                                <td class="min-w-[188px] text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">2</td>
+                                <td class="min-w-[300px] text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">3</td>
+                                <td class="min-w-[350px] text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">Lattialistat</td>
+                                <td class="text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">1 200 €</td>
+                                <td class="text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">12/24/2023</td>
+                                <td class="text-left text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">
+                                    <div class="dropdown_click shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2 cursor-pointer relative">
+                                        <span class="flex items-center justify-between">
+                                            Kyllä
+        
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 300 300">
+                                                <g id="expand_input_field" transform="translate(-622 -557)">
+                                                <rect id="Rectangle_1128" data-name="Rectangle 1128" width="20px" height="20px" transform="translate(622 557)" fill="#fff" opacity="0"></rect>
+                                                <path id="Path_117" data-name="Path 117" d="M46.2,5.365a14.91,14.91,0,0,1,22.908,0l42.716,51.259A14.91,14.91,0,0,1,100.37,81.079H14.938A14.91,14.91,0,0,1,3.484,56.624Z" transform="translate(828.752 742.447) rotate(180)" fill="#818d93"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+        
+                                        <div class="hidden dropdown_wrap overflow-y-auto absolute w-full border border-solid border-[#E1E1EA] rounded-lg p-3 text-offwhite mt-3 left-0 top-full z-50 bg-white" style="display: none;">
+                                            <label class="flex items-center gap-3 my-4 cursor-pointer block">                       
+                                                <span class="text-black text-[14px]">Ei</span>
+                                            </label>
+                                            <label class="flex items-center gap-3 my-4 cursor-pointer block">                       
+                                                <span class="text-black text-[14px]">Kyllä</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-left text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">
+                                    <div class="dropdown_click shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2 cursor-pointer relative">
+                                        <span class="flex items-center justify-between">
+                                            Kiinteähintainen
+        
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 300 300">
+                                                <g id="expand_input_field" transform="translate(-622 -557)">
+                                                <rect id="Rectangle_1128" data-name="Rectangle 1128" width="20px" height="20px" transform="translate(622 557)" fill="#fff" opacity="0"></rect>
+                                                <path id="Path_117" data-name="Path 117" d="M46.2,5.365a14.91,14.91,0,0,1,22.908,0l42.716,51.259A14.91,14.91,0,0,1,100.37,81.079H14.938A14.91,14.91,0,0,1,3.484,56.624Z" transform="translate(828.752 742.447) rotate(180)" fill="#818d93"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+        
+                                        <div class="hidden dropdown_wrap overflow-y-auto absolute w-full border border-solid border-[#E1E1EA] rounded-lg p-3 text-offwhite mt-3 left-0 top-full z-50 bg-white" style="display: none;">
+                                            <label class="flex items-center gap-3 my-4 cursor-pointer block">                       
+                                                <span class="text-black text-[14px]">Laskutyö</span>
+                                            </label>
+                                            <label class="flex items-center gap-3 my-4 cursor-pointer block">                       
+                                                <span class="text-black text-[14px]">Kiinteähintainen</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-left text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">
+                                    <div class="dropdown_click shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2 cursor-pointer relative">
+                                        <span class="flex items-center justify-between">
+                                            Vuokranantaja
+        
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 300 300">
+                                                <g id="expand_input_field" transform="translate(-622 -557)">
+                                                <rect id="Rectangle_1128" data-name="Rectangle 1128" width="20px" height="20px" transform="translate(622 557)" fill="#fff" opacity="0"></rect>
+                                                <path id="Path_117" data-name="Path 117" d="M46.2,5.365a14.91,14.91,0,0,1,22.908,0l42.716,51.259A14.91,14.91,0,0,1,100.37,81.079H14.938A14.91,14.91,0,0,1,3.484,56.624Z" transform="translate(828.752 742.447) rotate(180)" fill="#818d93"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+        
+                                        <div class="hidden dropdown_wrap overflow-y-auto absolute w-full border border-solid border-[#E1E1EA] rounded-lg p-3 text-offwhite mt-3 left-0 top-full z-50 bg-white" style="display: none;">
+                                            <label class="flex items-center gap-3 my-4 cursor-pointer block">                       
+                                                <span class="text-black text-[14px]">Vuokralainen</span>
+                                            </label>
+                                            <label class="flex items-center gap-3 my-4 cursor-pointer block">                       
+                                                <span class="text-black text-[14px]">Vuokranantaja</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-left text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">
+                                    <div class="dropdown_click shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2 cursor-pointer relative">
+                                        <span class="flex items-center justify-between">
+                                            Lisätyö
+        
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 300 300">
+                                                <g id="expand_input_field" transform="translate(-622 -557)">
+                                                <rect id="Rectangle_1128" data-name="Rectangle 1128" width="20px" height="20px" transform="translate(622 557)" fill="#fff" opacity="0"></rect>
+                                                <path id="Path_117" data-name="Path 117" d="M46.2,5.365a14.91,14.91,0,0,1,22.908,0l42.716,51.259A14.91,14.91,0,0,1,100.37,81.079H14.938A14.91,14.91,0,0,1,3.484,56.624Z" transform="translate(828.752 742.447) rotate(180)" fill="#818d93"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+        
+                                        <div class="hidden dropdown_wrap overflow-y-auto absolute w-full border border-solid border-[#E1E1EA] rounded-lg p-3 text-offwhite mt-3 left-0 top-full z-50 bg-white" style="display: none;">
+                                            <label class="flex items-center gap-3 my-4 cursor-pointer block">                       
+                                                <span class="text-black text-[14px]">Muutostyö</span>
+                                            </label>
+                                            <label class="flex items-center gap-3 my-4 cursor-pointer block">                       
+                                                <span class="text-black text-[14px]">Lisätyö</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">-</td>
+                                <td class="text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">1</td>
+                                <td class="text-left text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">
+                                    <div class="dropdown_click shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2 cursor-pointer relative">
+                                        <span class="flex items-center justify-between">
+                                            Kyllä
+        
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 300 300">
+                                                <g id="expand_input_field" transform="translate(-622 -557)">
+                                                <rect id="Rectangle_1128" data-name="Rectangle 1128" width="20px" height="20px" transform="translate(622 557)" fill="#fff" opacity="0"></rect>
+                                                <path id="Path_117" data-name="Path 117" d="M46.2,5.365a14.91,14.91,0,0,1,22.908,0l42.716,51.259A14.91,14.91,0,0,1,100.37,81.079H14.938A14.91,14.91,0,0,1,3.484,56.624Z" transform="translate(828.752 742.447) rotate(180)" fill="#818d93"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+        
+                                        <div class="hidden dropdown_wrap overflow-y-auto absolute w-full border border-solid border-[#E1E1EA] rounded-lg p-3 text-offwhite mt-3 left-0 top-full z-50 bg-white" style="display: none;">
+                                            <label class="flex items-center gap-3 my-4 cursor-pointer block">                       
+                                                <span class="text-black text-[14px]">Ei</span>
+                                            </label>
+                                            <label class="flex items-center gap-3 my-4 cursor-pointer block">                       
+                                                <span class="text-black text-[14px]">Kyllä</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-left text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">
+                                    <div class="dropdown_click shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2 cursor-pointer relative">
+                                        <span class="flex items-center justify-between">
+                                            Kyllä
+        
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 300 300">
+                                                <g id="expand_input_field" transform="translate(-622 -557)">
+                                                <rect id="Rectangle_1128" data-name="Rectangle 1128" width="20px" height="20px" transform="translate(622 557)" fill="#fff" opacity="0"></rect>
+                                                <path id="Path_117" data-name="Path 117" d="M46.2,5.365a14.91,14.91,0,0,1,22.908,0l42.716,51.259A14.91,14.91,0,0,1,100.37,81.079H14.938A14.91,14.91,0,0,1,3.484,56.624Z" transform="translate(828.752 742.447) rotate(180)" fill="#818d93"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+        
+                                        <div class="hidden dropdown_wrap overflow-y-auto absolute w-full border border-solid border-[#E1E1EA] rounded-lg p-3 text-offwhite mt-3 left-0 top-full z-50 bg-white" style="display: none;">
+                                            <label class="flex items-center gap-3 my-4 cursor-pointer block">                       
+                                                <span class="text-black text-[14px]">Ei</span>
+                                            </label>
+                                            <label class="flex items-center gap-3 my-4 cursor-pointer block">                       
+                                                <span class="text-black text-[14px]">Kyllä</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">Vaihdetaan kaikki jalkalistat uusiin.</td>
+                            </tr>
+
+                            <tr>
+                                <td class="min-w-[70px] text-center font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="min-w-[424px] text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]"></td>
+                                <td class="min-w-[126px] text-center text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">
+                                    <label class="inline-flex items-center gap-2 cursor-pointer">
+                                        <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                            <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                        </span>
+                                        <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                    </label>
+                                </td>
+                                <td class="min-w-[188px] text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]"></td>
+                                <td class="min-w-[300px] text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]"></td>
+                                <td class="min-w-[350px] text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]"></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="overflow-x-scroll lg:overflow-x-auto scroller">
+                        <table class="w-full">
+                            <tr>
+                                <td class="text-center min-w-[70px] text-left font-medium p-3 border border-solid border-[#E1E1EA]">
+                                    <label class="inline-flex items-center gap-2 cursor-pointer">
+                                        <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                            <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                        </span>
+                                        <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                    </label>
+                                </td>
+                                <td class="min-w-[424px] text-left text-[#283B44] font-medium p-3 border border-solid border-[#E1E1EA]">
+                                    <input type="text" name="pilar_M4" value="Muut toimittajat, Asbestipurku Oy" class="itlaic shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                                </td>
+                                <td class="min-w-[126px] text-[#00B2A9] italic text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="min-w-[188px] text-left font-medium p-3 border border-solid border-[#E1E1EA]">
+                                    <input type="text" name="pilar_M4" value="Tarjous 1" class="shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                                </td>
+                                <td class="min-w-[300px] text-left p-3 border border-solid border-[#E1E1EA]">6000 €	</td>
+                                <td class="min-w-[350px] text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]">
+                                    <input type="text" name="pilar_M4" value="Ennuste1" class="shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                                </td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-center font-medium p-3 border border-solid border-[#E1E1EA]"><svg width="24px" height="24px" class="mx-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="12" r="10" stroke="#586B74" stroke-width="0.384"></circle> <path d="M15 12H9" stroke="#586B74" stroke-width="0.384" stroke-linecap="round"></path> </g></svg></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="bg-[#00B2A9] text-left text-black font-medium p-3 text-[17px] border border-solid border-[#E1E1EA]">Laskunumero</td>
+                                <td class="bg-[#00B2A9] text-right text-black font-medium p-3 text-[17px] border border-solid border-[#E1E1EA]">Laskun summa (alv 0%)</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+    
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">1</td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">1000 €</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+    
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">2</td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">5000 €</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+    
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-center font-medium p-3 border border-solid border-[#E1E1EA]">
+                                    <label class="inline-flex items-center gap-2 cursor-pointer">
+                                        <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                            <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                        </span>
+                                        <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                    </label>
+                                </td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">x</td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">0 €</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+    
+                            <tr>
+                                <td class="text-left font-medium p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-center font-medium p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+    
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]">Projektinjohto, rakennuttaminen ja valvonta</td>
+                                <td class="text-[#00B2A9] italic text-left font-medium p-3 border border-solid border-[#E1E1EA]">BU3</td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="min-w-[350px] text-left text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA] italic">E3=Ennuste2+ Ennuste3 + jne.</td>
+                                <td class=""></td>
+                            </tr>
+    
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="min-w-[350px] text-left text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA]">Partners at Noste Oy</td>
+                                <td class="text-[#00B2A9] italic text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">
+                                    <input type="text" name="pilar_M4" value="Tarjous 2" class="shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                                </td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">4500 €</td>
+                                <td class="min-w-[350px] font-medium text-right text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA] italic">
+                                    <input type="text" name="pilar_M4" value="Ennuste2" class="shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                                </td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-center font-medium p-3 border border-solid border-[#E1E1EA]"><svg width="24px" height="24px" class="mx-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="12" r="10" stroke="#586B74" stroke-width="0.384"></circle> <path d="M15 12H9" stroke="#586B74" stroke-width="0.384" stroke-linecap="round"></path> </g></svg></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="bg-[#00B2A9] text-left text-black font-medium p-3 text-[17px] border border-solid border-[#E1E1EA]">Laskunumero</td>
+                                <td class="bg-[#00B2A9] text-right text-black font-medium p-3 text-[17px] border border-solid border-[#E1E1EA]">Laskun summa (alv 0%)</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">1</td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">3500 €</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+    
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">2</td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">1000 €</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+    
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-center font-medium p-3 border border-solid border-[#E1E1EA]">
+                                    <label class="inline-flex items-center gap-2 cursor-pointer">
+                                        <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                            <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                        </span>
+                                        <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                    </label>
+                                </td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">x</td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">0 €</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-center min-w-[70px] text-left font-medium p-3 border border-solid border-[#E1E1EA]">
+                                    <label class="inline-flex items-center gap-2 cursor-pointer">
+                                        <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                            <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                        </span>
+                                        <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                    </label>
+                                </td>
+                                <td class="min-w-[424px] text-left text-[#283B44] font-medium p-3 border border-solid border-[#E1E1EA]">
+                                    <input type="text" name="pilar_M4" value="Muut toimittajat, LVIAS-valvonta Oy" class="itlaic shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                                </td>
+                                <td class="min-w-[126px] text-[#00B2A9] italic text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="min-w-[188px] text-left font-medium p-3 border border-solid border-[#E1E1EA]">
+                                    <input type="text" name="pilar_M4" value="Tarjous 3" class="shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                                </td>
+                                <td class="min-w-[300px] text-right p-3 border border-solid border-[#E1E1EA]">500 €	</td>
+                                <td class="min-w-[350px] text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]">
+                                    <input type="text" name="pilar_M4" value="Ennuste3" class="shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                                </td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-center font-medium p-3 border border-solid border-[#E1E1EA]"><svg width="24px" height="24px" class="mx-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="12" r="10" stroke="#586B74" stroke-width="0.384"></circle> <path d="M15 12H9" stroke="#586B74" stroke-width="0.384" stroke-linecap="round"></path> </g></svg></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="bg-[#00B2A9] text-left text-black font-medium p-3 text-[17px] border border-solid border-[#E1E1EA]">Laskunumero</td>
+                                <td class="bg-[#00B2A9] text-right text-black font-medium p-3 text-[17px] border border-solid border-[#E1E1EA]">Laskun summa (alv 0%)</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">1</td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">500 €</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+    
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-center font-medium p-3 border border-solid border-[#E1E1EA]">
+                                    <label class="inline-flex items-center gap-2 cursor-pointer">
+                                        <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                            <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                        </span>
+                                        <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                    </label>
+                                </td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">x</td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">0 €</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-left font-medium p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-center font-medium p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]">Suunnittelu</td>
+                                <td class="text-[#00B2A9] italic text-left font-medium p-3 border border-solid border-[#E1E1EA]">BU4</td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="min-w-[350px] text-left text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA] italic">E4=Ennuste4+ Ennuste5 + jne.</td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-center min-w-[70px] text-left font-medium p-3 border border-solid border-[#E1E1EA]">
+                                    <label class="inline-flex items-center gap-2 cursor-pointer">
+                                        <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                            <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                        </span>
+                                        <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                    </label>
+                                </td>
+                                <td class="min-w-[424px] text-left text-[#00B2A9] italic p-3 border border-solid border-[#E1E1EA]">
+                                    T9
+                                </td>
+                                <td class="min-w-[126px] text-[#00B2A9] italic text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="min-w-[188px] text-left font-medium p-3 border border-solid border-[#E1E1EA]">
+                                    <input type="text" name="pilar_M4" value="Tarjous 4" class="shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                                </td>
+                                <td class="min-w-[300px] text-right p-3 border border-solid border-[#E1E1EA]">1250 €	</td>
+                                <td class="min-w-[350px] text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]">
+                                    <input type="text" name="pilar_M4" value="Ennuste4" class="shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                                </td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-center font-medium p-3 border border-solid border-[#E1E1EA]"><svg width="24px" height="24px" class="mx-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="12" r="10" stroke="#586B74" stroke-width="0.384"></circle> <path d="M15 12H9" stroke="#586B74" stroke-width="0.384" stroke-linecap="round"></path> </g></svg></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="bg-[#00B2A9] text-left text-black font-medium p-3 text-[17px] border border-solid border-[#E1E1EA]">Laskunumero</td>
+                                <td class="bg-[#00B2A9] text-right text-black font-medium p-3 text-[17px] border border-solid border-[#E1E1EA]">Laskun summa (alv 0%)</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">1</td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">500 €</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">2</td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">700 €</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-center font-medium p-3 border border-solid border-[#E1E1EA]">
+                                    <label class="inline-flex items-center gap-2 cursor-pointer">
+                                        <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                            <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                        </span>
+                                        <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                    </label>
+                                </td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">x</td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">0 €</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-center min-w-[70px] text-left font-medium p-3 border border-solid border-[#E1E1EA]">
+                                    <label class="inline-flex items-center gap-2 cursor-pointer">
+                                        <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                            <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                        </span>
+                                        <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                    </label>
+                                </td>
+                                <td class="min-w-[424px] text-left text-[#283B44] font-medium p-3 border border-solid border-[#E1E1EA]">
+                                    <input type="text" name="pilar_M4" value="Muut toimittajat, Palokonsultti Oy/LVI-suun Oy" class="itlaic shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                                </td>
+                                <td class="min-w-[126px] text-[#00B2A9] italic text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="min-w-[188px] text-left font-medium p-3 border border-solid border-[#E1E1EA]">
+                                    <input type="text" name="pilar_M4" value="Tarjous 5" class="shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                                </td>
+                                <td class="min-w-[300px] text-right p-3 border border-solid border-[#E1E1EA]">500 €	</td>
+                                <td class="min-w-[350px] text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]">
+                                    <input type="text" name="pilar_M4" value="Ennuste5" class="shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                                </td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-center font-medium p-3 border border-solid border-[#E1E1EA]"><svg width="24px" height="24px" class="mx-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="12" r="10" stroke="#586B74" stroke-width="0.384"></circle> <path d="M15 12H9" stroke="#586B74" stroke-width="0.384" stroke-linecap="round"></path> </g></svg></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="bg-[#00B2A9] text-left text-black font-medium p-3 text-[17px] border border-solid border-[#E1E1EA]">Laskunumero</td>
+                                <td class="bg-[#00B2A9] text-right text-black font-medium p-3 text-[17px] border border-solid border-[#E1E1EA]">Laskun summa (alv 0%)</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">1</td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">120 €</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-center font-medium p-3 border border-solid border-[#E1E1EA]">
+                                    <label class="inline-flex items-center gap-2 cursor-pointer">
+                                        <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                            <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                        </span>
+                                        <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                    </label>
+                                </td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">x</td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">0 €</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]">Muut rakennuttajan tehtävät</td>
+                                <td class="text-[#00B2A9] italic text-left font-medium p-3 border border-solid border-[#E1E1EA]">BU6</td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="min-w-[350px] text-left text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA] italic">E6=Ennuste6+ jne.</td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-center min-w-[70px] text-left font-medium p-3 border border-solid border-[#E1E1EA]">
+                                    <label class="inline-flex items-center gap-2 cursor-pointer">
+                                        <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                            <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                        </span>
+                                        <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                    </label>
+                                </td>
+                                <td class="min-w-[424px] text-left text-[#283B44] font-medium p-3 border border-solid border-[#E1E1EA]">
+                                    <input type="text" name="pilar_M4" value="Muut toimittajat, Projektipankki Oy/Asbestikartoitus Oy" class="itlaic shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                                </td>
+                                <td class="min-w-[126px] text-[#00B2A9] italic text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="min-w-[188px] text-left font-medium p-3 border border-solid border-[#E1E1EA]">
+                                    <input type="text" name="pilar_M4" value="Tarjous 6" class="shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                                </td>
+                                <td class="min-w-[300px] text-right p-3 border border-solid border-[#E1E1EA]">100 €</td>
+                                <td class="min-w-[350px] text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]">
+                                    <input type="text" name="pilar_M4" value="Ennuste6" class="shadow-[0_0_5px_2px_rgb(81,244,200,44%)] w-[100%] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                                </td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-center font-medium p-3 border border-solid border-[#E1E1EA]"><svg width="24px" height="24px" class="mx-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="12" r="10" stroke="#586B74" stroke-width="0.384"></circle> <path d="M15 12H9" stroke="#586B74" stroke-width="0.384" stroke-linecap="round"></path> </g></svg></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="bg-[#00B2A9] text-left text-black font-medium p-3 text-[17px] border border-solid border-[#E1E1EA]">Laskunumero</td>
+                                <td class="bg-[#00B2A9] text-right text-black font-medium p-3 text-[17px] border border-solid border-[#E1E1EA]">Laskun summa (alv 0%)</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">1</td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">50 €</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">2</td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">50 €</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-center font-medium p-3 border border-solid border-[#E1E1EA]">
+                                    <label class="inline-flex items-center gap-2 cursor-pointer">
+                                        <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                            <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                        </span>
+                                        <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                    </label>
+                                </td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">x</td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">0 €</td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-left font-medium p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-center font-medium p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]">Kaikki yhteensä (alv. 0%)</td>
+                                <td class="text-[#00B2A9] italic text-left font-medium p-3 border border-solid border-[#E1E1EA]">BU5</td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">0€</td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">0€</td>
+                                <td class="min-w-[350px] text-left text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA] italic">E5-(<span class="text-[#00B2A9] italic">BU5</span>-((E2-<span class="text-[#00B2A9] italic">BU2</span>)+(E3-<span class="text-[#00B2A9] italic">BU3</span>)+(E4-<span class="text-[#00B2A9] italic">BU4</span>)+(E6-<span class="text-[#00B2A9] italic">BU6</span>))
+                                    jos negatiivinen niin E5=0</td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-left font-medium p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-center font-medium p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]">Riskivaraus</td>
+                                <td class="text-[#00B2A9] italic text-left font-medium p-3 border border-solid border-[#E1E1EA]">BU1</td>
+                                <td class="text-left text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">
+                                    =<span class="text-[#00B2A9] italic">UH1</span>+5000€ + Tarjous1 + Tarjous2 + Tarjous3 + Tarjous4 + Tarjous5+ Tarjous6
+                                </td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">
+                                    '=Summa <br>
+                                    toteumasarekkeesta
+                                </td>
+                                <td class="min-w-[350px] text-left font-medium text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA] italic">'=E2+ E3+E4+E5+E6</td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-left font-medium p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#00B2A9] italic font-medium p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-center font-medium p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-[#586B74] text-[14px] font-medium text-left font-medium p-6 border border-solid border-[#E1E1EA]"></td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]">Verrattuna budjettiin</td>
+                                <td class="text-[#00B2A9] italic text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">
+                                    ="Kaikki yhteensä, sidottu"/<span class="text-[#00B2A9] italic">BU1</span>*100%
+                                </td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]">
+                                    ="Kaikki yhteensä, toteuma"/<span class="text-[#00B2A9] italic">BU1</span>*100%
+                                </td>
+                                <td class="min-w-[350px] text-left font-medium text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA] italic">
+                                    ="Kaikki yhteensä, ennuste"/<span class="text-[#00B2A9] italic">BU1</span>*100%
+                                </td>
+                                <td class=""></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-[#586B74] text-[14px] text-left font-medium p-3 border border-solid border-[#E1E1EA]">Ylitys (+)/Alitus (-) (alv 0%)</td>
+                                <td class="text-[#00B2A9] italic text-left font-medium p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-left text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="text-right text-[#586B74] font-medium text-[14px] p-3 border border-solid border-[#E1E1EA]"></td>
+                                <td class="min-w-[350px] text-left font-medium text-[#586B74] p-3 text-[14px] border border-solid border-[#E1E1EA] italic">
+                                    ="Kaikki yhteensä, ennuste"-<span class="text-[#00B2A9] italic">BU1</span>
+                                </td>
+                                <td class=""></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <hr class="border border-solid border-[#E1E1EA] ml-[-20px] mr-[-20px] mt-10">
+
+                <div class="flex items-center justify-between pt-[20px]">
+                    <div>
+                        <a href="./index.html" class="text-[14px] text-black font-medium border border-solid border-[#E1E1EA] rounded-lg flex items-center pr-3 py-1">
+                            <svg width="24px" height="24px" class="mx-auto" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" stroke="#000000" stroke-width="0.00032"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="icomoon-ignore"> </g> <path d="M12.792 15.233l-0.754 0.754 6.035 6.035 0.754-0.754-5.281-5.281 5.256-5.256-0.754-0.754-3.013 3.013z" fill="#7a7a7a"> </path> </g></svg>
+                            Takaisin
+                        </a>
+                    </div>
+    
+                    <div>
+                        <button class="text-[14px] text-white font-medium bg-[#00B2A9] border border-solid border-[#818D930F] rounded-lg flex items-center gap-2 px-3 py-1">
+                            Hyväksy
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
