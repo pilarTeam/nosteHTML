@@ -31,6 +31,7 @@ module.exports = {
 			},
 			boxShadow: {
 				component: "1px 1px 3px #818D9314",
+				input: "0px 0px 5px 2px rgb(81,244,200,44%)",
 			},
 		},
 	},
