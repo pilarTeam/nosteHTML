@@ -20,6 +20,16 @@ module.exports = {
 			bodyBg: "#FCFCFD",
 			line: "#00000014",
 			transparent: "#00000000",
+
+			// ---------Kamrul Vai------------
+
+			heading: "#101828",
+			text: "#344054",
+			lightGray: "#818D93",
+			graybg: "#FCFCFD",
+			gray: "#E1E1EA",
+			green: "#06F9B7",
+			darkGray: "#586B74",
 		},
 		fontFamily: {
 			roboto: ["Roboto", "sans-serif"],
