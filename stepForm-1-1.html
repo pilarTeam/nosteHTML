@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Management Software - template</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="font-roboto bg-bodyBg">
+
+    <!-- header part start  -->
+    <header class="lg:sticky top-0 z-10">
+        <!-- Top Header -->
+        <div class="py-3 bg-white border-b border-line">
+            <div class="container px-4">
+                <div class="flex items-center flex-wrap gap-4 justify-center md:justify-normal">
+                    <!-- site_logo -->
+                    <div class="site_logo order-1 w-[45%] xl:w-[20%]">
+                        <a href="index.html">
+                            <img src="./assets/images/logo.png" alt="logo">
+                        </a>
+                    </div><!-- site_logo -->
+
+                    <!-- Tab Fuild -->
+                    <div class="flex justify-center order-3 xl:order-2 col-span-3 lg:col-span-4 ml-auto w-full xl:w-[50%]">
+                        <ul class="flex flex-col sm:flex-row flex-auto items-center justify-between rounded-sm md:rounded-md bg-white border border-line" id="buttonList_2">
+                            <li class="flex item-center md:justify-center w-full md:w-auto md:border-r border-line active">
+                                <button class="text-sm text-left">
+                                    Projektin valmistelu
+                                </button>
+                            </li>
+                            <li class="flex item-center md:justify-center w-full md:w-auto md:border-r border-line">
+                                <button class="text-sm text-left">
+                                    Rakentamisen valmistelu
+                                </button>
+                            </li>
+                            <li class="flex item-center md:justify-center w-full md:w-auto md:border-r border-line">
+                                <button class="text-sm text-left">
+                                    Rakentamisen käynnistäminen
+                                </button>
+                            </li>
+                            <li class="flex item-center md:justify-center w-full md:w-auto md:border-r border-line">
+                                <button class="text-sm text-left">
+                                    Rakentaminen
+                                </button>
+                            </li>
+                            <li class="flex item-center md:justify-center w-full md:w-auto">
+                                <button class="text-sm text-left">
+                                    Rakennustöiden vastaanotto ja toimeksiannon lopetus
+                                </button>
+                            </li>
+                        </ul> <!-- tab_box -->
+                    </div> <!-- Tab Fuild -->
+
+                    <!-- User Profile -->
+                    <div class="flex justify-end order-2 xl:order-3 w-[45%] xl:w-[26%] ml-auto">
+                        <div class="flex items-center">
+
+                            <a href="#!" class="hidden sm:block hover:bg-[#FAFAFB] focus:bg-[#FAFAFB] rounded p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-4" viewBox="0 0 23 23">
+                                    <defs>
+                                        <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                            <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACH0lEQVR4nO2aMU4DMRQFfVMEFceIqeNIsMdFIdRsEQlIMuPvN9IW6R4zdiRWaS2EEEJ4MH1sl0mfz8Npe2rVEIi9/PU5HD+++ml7bZWgpfZEqRWkV7sp+z+uyenVo1QJ0qtEKRDkvP/8dnx/abMye5DD2J73Uaa+KbMHaa21UlEqBCkVpUqQMlEqBSkRpVqQ6aNUDDJ1lKpBpo1SOciUUaoHmS7KCkGmirJKkGmirBRkiiirBdFHWTGIOsqqQbRRVg6ijDJ7kH6/54z87itBtmtRPhPEc0OYbwx8wC9JkMXo9AHFB8jAfeADZOA+8AEycB/4ABm4D3yADNwHPkAG7gMfIAP3gQ+QgfvAB8jAfeADZOA+8AEycB//HfDol339zm9rE2QkSG7IFXJDRm6I60TIwH3gA2TgPvABMnAf+AAZuA98gAzcBz5ABu4DHyAD94EPkIH7mP1dVpP5wAckyI1JkJ/khox8ZblOhAzcBz5ABu4DHyAD94EPkIH7wAfIwH3gA2TgPvABMnAf+AAZuI/Z/1PvN37XlSAjQXJDrpAbMnJDXCdCBu4DHyAD94EPkIH7wAfIwH3gA2TgPvABMnAf+AAZuA98gAzcBz5ABu4DHyAD94EPkIH7wAfIwH3gA2TgPvABMnAf+AAZuA98gAzcBz5ABu4DHyAD94EPkIH7wAfIwH3sB+TZEqSLD0JuyOAjJMjgxWuChBBCaKvzDQGUurXKthVmAAAAAElFTkSuQmCC" />
+                                        </pattern>
+                                    </defs>
+                                    <rect id="icons8-file-100_2_" data-name="icons8-file-100 (2)" width="23" height="23" fill="url(#pattern)" />
+                                </svg>
+
+                            </a>
+
+                            <a href="#!" class="hidden sm:block hover:bg-[#FAFAFB] focus:bg-[#FAFAFB] rounded p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-4" viewBox="0 0 23 23">
+                                    <defs>
+                                        <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                            <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACH0lEQVR4nO2aMU4DMRQFfVMEFceIqeNIsMdFIdRsEQlIMuPvN9IW6R4zdiRWaS2EEEJ4MH1sl0mfz8Npe2rVEIi9/PU5HD+++ml7bZWgpfZEqRWkV7sp+z+uyenVo1QJ0qtEKRDkvP/8dnx/abMye5DD2J73Uaa+KbMHaa21UlEqBCkVpUqQMlEqBSkRpVqQ6aNUDDJ1lKpBpo1SOciUUaoHmS7KCkGmirJKkGmirBRkiiirBdFHWTGIOsqqQbRRVg6ijDJ7kH6/54z87itBtmtRPhPEc0OYbwx8wC9JkMXo9AHFB8jAfeADZOA+8AEycB/4ABm4D3yADNwHPkAG7gMfIAP3gQ+QgfvAB8jAfeADZOA+8AEycB//HfDol339zm9rE2QkSG7IFXJDRm6I60TIwH3gA2TgPvABMnAf+AAZuA98gAzcBz5ABu4DHyAD94EPkIH7mP1dVpP5wAckyI1JkJ/khox8ZblOhAzcBz5ABu4DHyAD94EPkIH7wAfIwH3gA2TgPvABMnAf+AAZuI/Z/1PvN37XlSAjQXJDrpAbMnJDXCdCBu4DHyAD94EPkIH7wAfIwH3gA2TgPvABMnAf+AAZuA98gAzcBz5ABu4DHyAD94EPkIH7wAfIwH3gA2TgPvABMnAf+AAZuA98gAzcBz5ABu4DHyAD94EPkIH7wAfIwH3sB+TZEqSLD0JuyOAjJMjgxWuChBBCaKvzDQGUurXKthVmAAAAAElFTkSuQmCC" />
+                                        </pattern>
+                                    </defs>
+                                    <rect id="icons8-file-100_2_" data-name="icons8-file-100 (2)" width="23" height="23" fill="url(#pattern)" />
+                                </svg>
+
+                            </a>
+
+                            <a href="#!" class="hidden sm:block hover:bg-[#FAFAFB] focus:bg-[#FAFAFB] rounded p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-4" viewBox="0 0 23 23">
+                                    <defs>
+                                        <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                            <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACH0lEQVR4nO2aMU4DMRQFfVMEFceIqeNIsMdFIdRsEQlIMuPvN9IW6R4zdiRWaS2EEEJ4MH1sl0mfz8Npe2rVEIi9/PU5HD+++ml7bZWgpfZEqRWkV7sp+z+uyenVo1QJ0qtEKRDkvP/8dnx/abMye5DD2J73Uaa+KbMHaa21UlEqBCkVpUqQMlEqBSkRpVqQ6aNUDDJ1lKpBpo1SOciUUaoHmS7KCkGmirJKkGmirBRkiiirBdFHWTGIOsqqQbRRVg6ijDJ7kH6/54z87itBtmtRPhPEc0OYbwx8wC9JkMXo9AHFB8jAfeADZOA+8AEycB/4ABm4D3yADNwHPkAG7gMfIAP3gQ+QgfvAB8jAfeADZOA+8AEycB//HfDol339zm9rE2QkSG7IFXJDRm6I60TIwH3gA2TgPvABMnAf+AAZuA98gAzcBz5ABu4DHyAD94EPkIH7mP1dVpP5wAckyI1JkJ/khox8ZblOhAzcBz5ABu4DHyAD94EPkIH7wAfIwH3gA2TgPvABMnAf+AAZuI/Z/1PvN37XlSAjQXJDrpAbMnJDXCdCBu4DHyAD94EPkIH7wAfIwH3gA2TgPvABMnAf+AAZuA98gAzcBz5ABu4DHyAD94EPkIH7wAfIwH3gA2TgPvABMnAf+AAZuA98gAzcBz5ABu4DHyAD94EPkIH7wAfIwH3sB+TZEqSLD0JuyOAjJMjgxWuChBBCaKvzDQGUurXKthVmAAAAAElFTkSuQmCC" />
+                                        </pattern>
+                                    </defs>
+                                    <rect id="icons8-file-100_2_" data-name="icons8-file-100 (2)" width="23" height="23" fill="url(#pattern)" />
+                                </svg>
+
+                            </a>
+
+                            <div class="border-l border-line pl-4 ml-3 flex items-center gap-3 relative">
+                                <div class="user_avatar">
+                                    <span class="text-xl lg:text-2xl font-medium text-white">K</span>
+                                    <img class="h-full w-full rounded-full object-cover hidden" src="./assets/images/logo.png" alt="">
+                                </div> <!-- user_avatar -->
+                                <div class="hidden md:block">
+                                    <p class="text-sm text-black font-medium">Klara Royment</p>
+                                    <p class="text-sm text-[#586B74] font-normal">Admin</p>
+                                </div>
+                                <div class="dropdown relative">
+                                    <button class="dropdown-toggle" data-dropdown="profile-dropdown">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12" viewBox="0 0 12 12">
+                                            <defs>
+                                                <pattern id="pattern6" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 96 96">
+                                                    <image width="96" height="96" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAABmElEQVR4nO3ZwUrDQBSF4Ww8DWZvcWPSrgJ36Puv9CGk6BOIPoVSodBFKU0TeufO/B/MPj1/BgJtGgAAAAAAAAAAAAAAAAAAAAAAAOSj2+6e2iG9Pmx3qSmM+jS2Q3p7fBmfm2zH7+29HdLvqrefkiKoT+NqSF+H39b29pldhNPxj6eUCDod/3hyinBu/FIi6Nz4OUW4NH70CLo0fg4Rrhk/agRdM75nhCnjR4ugKeN7RLhl/CgRdMv494wwZ/zcI2jO+PeKsESAHCNoifH/j32EuAU5RVCk8UuLoIjjlxJBkcePHkEljB81gkoaP1oElTh+lAgqefzcI6iG8XONoJrGzy2Cahw/lwiqeXzvCGJ8vwhifL+bIMb3iyDG94sgxveLIMafrtukdTuk/QIRvg9n/qdm2h+eqanJUjehrfk7P34Eq3d8/wjG+H4RGN8xgvHm+0UwxveLYIzvF8EY3y+CMb5fBGN8vwjG+H4RjPH9Ihjj+0UwxveLYIzvF8EY3y+CMb6XbpPW1f2TBQAAAAAAAAAAgGaSP+MgIpmI76GJAAAAAElFTkSuQmCC" />
+                                                </pattern>
+                                            </defs>
+                                            <rect id="icons8-expand-arrow-96" width="12" height="12" fill="url(#pattern6)" />
+                                        </svg>
+                                    </button>
+
+                                    <div class="w-[15rem] border-t bg-[#08202C] absolute right-0 top-12 z-[10] dropdown-menu hidden" id="profile-dropdown">
+                                        <ul class="bg-transparent p-0">
+                                            <li class="text-center border-b border-[#283B44] py-4 px-2">
+                                                <div class="user_avatar mx-auto mb-2">
+                                                    <div class="flex items-center justify-center mx-auto" id="avatarContainer">
+                                                        <span class="text-2xl font-medium text-white" id="text">K</span>
+                                                        <img class="h-full w-full rounded-full object-cover hidden" src="./assets/images/logo.png" alt="User Avatar" id="avatarImage">
+                                                        <label class="absolute -bottom-1 -right-2 cursor-pointer">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+                                                                <defs>
+                                                                    <pattern id="pattern" width="1" height="1" viewBox="-4.444 -4.444 26.887 26.887">
+                                                                        <image preserveAspectRatio="xMidYMid slice" width="18" height="18" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAHTUlEQVR4nO1dSawURRguNS5xTSQe3BKXqFyMaxQ1ehLxoBJliUSiIcZEgvHgXYkJ4E1li1xFQI0eFEGJ8QoafS6HR1d1z189LP3//RBEQHbUMX/PPDNdPfNm5r3p5XXXl1Ty8qbTf/X/Tf1b/V0jhIWFhYWFhYWFhYWFhYWFhUVHOBpnK8CvFGCoNDXSGhLwHwVYl4AbXX//XZYOA41G4wKl8YM0Seg+8KwEfN2S0gap6b18yKD/h1ujFy0pbKbqY7MiE5IzIVLjUdfdd32lSRkdHb1IatwdUw5g6Gp8tNFonJeW3JGRxoVS4wtsrgzZn4kqQwG9aTjbv10/fDAz+ZreSK6U4GlRReyG/bdJoFOGQt7Pcg6NRuN8pWmXMYe9o6MHLhdVApsjqem7uLkg1PrwVVnPReqxO03TJQHfFUVE09bSfAW0SQJJBXg8NafqB8/k9ZwKaGV6AQP+1dQdbZKa5rFOJzfJGs5VmrxMohzAz0WOqNfrlygglVFE5w305WO7KjW9k2G4eUTu3XudyBmuT49JwH8zeWaWA7SKdd1zYhmToV0dPC4KAqVpqdR4IKvnZ1M58YRqONf8lkhNp5Wm1RyO/haGl2WmnZKAdca6U5rWtHQZWyldw2x2NqbPkJoCW3wbHtx6cDfr1FglbkdHH0VTxsqwZKRGSnylaJqXuJDDMsPGrU5hPhYi0vVaw3Rt7ERILOxzdfhAv/UoR+NrEvCHKE9pju+VDpfxZ5aBzgXVOCEkExcpjcfaL+qnfMDhqtT0ywSRxM/Ont+v7XWfqkHKg1fE9YTHEheZyuyvUjshGeNjZNLZaYnRU9+DEsJmaoCYe2laDzZdMXRCIp8RT/K28QaP5+2/QWrcbtxv17BielWjJznLVUBbI78HdLhZHMSz/HerbsSfrZI+zilq7jR0Qrho1n49EzH+Wa0W3NjTRg5SGfZxjtT0SYdyfe9qANApqeljvkeam15FIORY2oS4gM9KoF8HJaErOezzajhXVMRkbWdSmAyp8eupmCzXHbtFAe0YFhFJYvAbtSe8WZRrhYTLBjAbr/Y9UT9cyA0HE9zPk4DrXAie97zgntF9+67mKI6H4wQz+H8O4CIJuF5pqk1AyhHlhwtEWQjhsJfzjN5k4I/9hr1S49ud74Pnmk1tg++3t7paPuJ7dLw30HJRBkIYnPRxntGdEPyp38SQSzWq8zd5m+cduFUMYw8/aUpzKxOlQkhblXip0rSzGXlF0ddONlNTWhmAxx2glwZ8zt6yIFiigE7kvVJSI2TKE/PDhR3ICLkqmpZM9jMKcCy5Gmm+qDIhHE0lHDhgyOYlbdkswyQlcvQZRV+FJCQR2gIeT3NlmHBqeK9pvtjPVJIQTvpMmU4KPqMXlMaX82hJKhwhZsjMyZrICWbtjasDaZdZCkUI15WM8PjcMELbyUL6wR3cVxxbrT4+ISpDCOCnxur4UOQMpWmzoYMtlSCEdyLNqm2WHe/dIGvBw4bZOjmCeKkoOyHRfkZclicK0wCOOiuzVRxCeHMp9k3EdaIgUOZ7jr06C0tCyNZ4qIuLREEgo7eqYoR8WQVC4u1GGSaCfSWKvdpzSkeIpkOxFeIEM0RB4Hl0TTz6o4NVIORMu5wiNdN5nnexQcjptGRZQvpAVQmxJksU2Knz3oQoCCTQfUZI7lSBkMKGvUrTYsNkfVHFxHC9KAiUxg2VSwyTlV6qiYKUThRgPbZ6Nc4uPSHca8uFu9iD18dmiZyhAB8xVseJShQXGdyn2/MNoozB5XZDB5tTllfsDaosGhu6QdVxZmKDKkVzVThCWvLiDXZAO0ROMBvouCm7Ulu4bUd3xGRKCJaIjOH6+Io5D0eHT6Utt3CEMKIudMORehkmihLofjPA4NbVLGQXkhBuSoua02Kk4FgW/sTRwe3mMRoS6E9ZD28SVSUkkuuHC0zZCnCM9yZSXRkdzjTp+AJ/1QiJZAMtT/oTOslNbGn4DNNMtczlWyJDFJqQiV5HUEA7uG9qyvev40wF9G3pX0dIe6Wo1uGYnKhxq84g4WirHMIZ+BYzz8hrZUwrQhj8SkDC0cfJ8bk7hBsS2M/wFjDvOkZHfDjBDC6ht46A3WDWphIOPEOfMW0JaYu+ur3tNOXBoW1W0VQpCBkHd6H38x7jAGMki6SvtISM+wHuIGz6gQ7RUa/RfP9jc9q1qcoQ0g4uh0fkAK3k3TzeYlVAf7Q6Wc7w3/w//oyvYRLSLKGLqhNSJlhCph8hgx9gZjE5eN6hK42o7+jQjvizSOuIv+QhmGsmIctiWIdgdjwmtkCd6WUB69Tsb3aAnuv/IGVLSj4HKY9nxh0OpOf4fi3bPevoBwfrzKkFD7XMVGxlsK57Vg7MzkI7KD0dAK7o72eA+ADJjH66oYpDRj9XgSsG6myJCntAbt6TV2UbQO6kC5ytnzyax2FZVDcyTiK1g/r8ySN0WIccTdlDpS0sLCwsLCwsLCwsLCwsLCwsLCwsRAXwH8ObJ6aYQdgHAAAAAElFTkSuQmCC" />
+                                                                    </pattern>
+                                                                </defs>
+                                                                <rect id="icons8-photo-100" width="18" height="18" rx="9" fill="url(#pattern)" />
+                                                            </svg>
+
+                                                            <input type="fshadow-input ile" id="FileUpload1" class="hidden" />
+                                                        </label>
+                                                    </div>
+                                                </div> <!-- user_avatar -->
+
+                                                <p class="text-white">Klara Royment</p>
+                                                <p class="text-offwhite text-sm">nimi_sukunimi@noste.io</p>
+                                            </li>
+                                            <li class="border-b border-[#283B44] inline-block w-full p-2">
+                                                <a href="#!" class="flex items-center gap-5 text-offwhite">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                                                        <defs>
+                                                            <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                                                <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAADAElEQVR4nO2c3W4TMRCFzQW8Az8vxAPAM4Dg6WhfoYAgcLWKp5WdUsAO4gapcL9owgRoUAUbvJmxfY5kqTdxvp5zdneU1nEOgiCoDy0W481xHG+Aw4AftFo/9CF/oZguabV+oALhwPHLiJA+UczjZoWU1QIJ4PhhxDYMWWqBRHDACIvFUAcQgQNG2CyGOoAIHDDCZjHUAUTggBE2i6EOIAIHjLBZDHUAEThghM1iqAOIwAEjdIoxDMOtZUxPfUgvKaRvu2/418WvCekFxfUT3svNJOrhSvUXF3d8zG8nh3D9erN89/m2m0HUeiDc5sJhbNeC/8TpCotaD4RvUzOEsV2PXWFR64FsnhlXngX5Gd/Cpu5zevr+LoV0tAP63BUWtR4IxfT1943Z2H33Ojv7cO8qaLp0hUXtB1J247kNowMFojZ1IhBjUycCMTZ1IhBjU+fmPxHxULczdf4JkI72mbR4wvIxHdc+9pL21MlTwFyXqA/50b6/TCtT3OT9+CHGU0D5MNKrGj86Ie1AWDyS8RRQLpD0utYPF8lCICxuM08BFPPJ7n30H0Pg15zwbWqOK6O7QGoRzf9Qr2rqbD4QX8vUaeXSo9mvkEqmzl4CGWqZOnsJpJqps6dAqpg6ewvEvKwYQUY41GXFCAIHjDBZDHUAEThghM1iqAOIwAEjbBZDHUAEDhhhsxjqACJwwAibxVAHEIEDRtgshjqACBwwwmYx1AFE4IARNouhDiACB4ywWYxDAQz4Rgk7gXh8o4SdQAbts30T1fwta6l9tm+img/Ea5/tm6jmAyHts30T1UEguej+tfGaAyAEgkD+R7hCGr+izQFQZWf7mg/E13K2r5dAqJazfb0EMtRytq+XQKo529dTIFWc7estkFqk7oc6gDGp+6EOIAIHjLBZDHUAEThghM1iqAOIwAEjbBZDHUAEDhhhsxjqACJwwAibxVAHEIEDRtgshjqACBwwwmYxKKTz7Zv7kFYHBxCB46cR+b6P+SMv/tkpicABQRAEQY71HbsT/O3PnJesAAAAAElFTkSuQmCC" />
+                                                            </pattern>
+                                                        </defs>
+                                                        <rect id="icons8-adjust-100" width="24" height="24" fill="url(#pattern)" />
+                                                    </svg>
+
+                                                    Aktiivinien
+                                                </a>
+                                            </li>
+                                            <li class="inline-block w-full p-2">
+                                                <a href="#!" class="user_box flex items-center justify-between gap-3 relative">
+                                                    <div class="flex items-center gap-2">
+                                                        <div class="user_avatar">
+                                                            <span class="text-xl lg:text-2xl font-medium text-white">K</span>
+                                                            <img class="h-full w-full rounded-full object-cover hidden" src="./assets/images/logo.png" alt="">
+                                                        </div> <!-- user_avatar -->
+                                                        <div>
+                                                            <p class="text-sm text-white font-medium">Klara Royment</p>
+                                                            <p class="text-sm text-[#586B74] font-normal">Admin</p>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                                                                <defs>
+                                                                    <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 96 96">
+                                                                        <image width="96" height="96" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAABeUlEQVR4nO3ZvUoDQRiF4b0orSysFAu9IwtLr/DMgDupnLESRJAwVcKChlSCP9mzy/c+sP3ynolrssMAAAAAAAAAAAAAAACwBPmp3aSx3bvvIyRt6nUa2zaXtkulPbrvJ2z8/HkxgjE+IywgPiPM88D9Nv5hBB7M85/8o6urvNz+8y3EJeL7EN+I+EbENyK+EfGNiG9EfOLHJL5kET8kcfKJH5I4+cQPSZx84s9qeiU3vcIb1vUacbuEe/6zVOrD16u5VJ7vXPehiH92juLvnCOI+L4RRHzfCAr7wF3AQy5HfOD+5tSd4pOgiCd/KSMoenznCCK+bwQR3zeCiO8bQcT3jSDi+0YQ8X0jiPi+EUR83wgivvf3mhTxt51T++Gp3oX+eWEFI3Ti+0boxPd9EjrxfSN04vtG6MT3jdCJb/qekPg/fz7atMtc6vthgLF9qNSrGW8BubTzPLbXVOpbHusFRQzS2M6mi/gAAAAAAAAAAAAAAADDyu0BWJ5kaQG3t14AAAAASUVORK5CYII=" />
+                                                                    </pattern>
+                                                                </defs>
+                                                                <rect id="icons8-done-96" width="16" height="16" fill="url(#pattern)" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="border-b border-[#283B44] inline-block w-full p-2">
+                                                <a href="#!" class="flex items-center gap-5 text-offwhite">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                                                        <defs>
+                                                            <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                                                <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAADd0lEQVR4nO3dzW7TQBQFYAuJ8gylfQU27FiAxJ+Q+HkBxBaJChbs2PJMFDbsKRWksIkyY3emaknuTVWJTUsLbAiMhUTjAHLMTHxIz5G8i+dK83XGSXzjZtnPdLvdhZ6XR8bJunXyyXod8dBfcxDmxMlr64cPw1xlKWN2ds4ar+8IoHX/CDd623uLSTCCNjG0yW7Q6XRGp6ODhG2KK0Obbs8r0UHKa8bYXqnPwhYWvdB/njz/sGSdrFZA1qIXsl4OjhcJhaMXmZMURX95HET2oxepLsPoBeYsNvV8EWS6EAQsBAELQcBCELAQBCwEAQtBwEIQsBAELAQBC0HAYp084XdZwCjxB+e3vf+EEn9ggjSO8fI0ix2CgIUgYCEIWAgCFoLUi/G756zTl8bLi96mnM9ShSD1Mt5MKAe5l4tZihCkXozXfqUFKA0KQeol35L7k52LcpBv6aUsZghSP9bJY+PkW6XT89BsDi/HK8JP6lFQrBteiVOAIFgoBAFDIQgYCkFSoQyuNhuQ1xAsFIKAoRAkPUruB9fqD8ItKzmKcXpUG4UgYCgEAUMhyIxRvH7J/fDWn0/iNQQLhSBgKARpF6Xnh7fHX8gtCwuFIAAfHr1+NX5wB2KFWK/3jJe9ydujeqIO4/Sz2ZIbrYKExxuF9+ZtT4ZFOZwetgpSFMWZ8gu4tifCgxxtg4QYL3etk93WJ8O3e0BsWSf1om6rGMffaREECKN8EVdIqxgTn9YJAoRRvpgrZPYYTo96Xq7//gSCzBzjr/dECAKEUZ7IFYKDUZ5MkOQYU3WeECQ9xlS9WQQBwigH4paVEKNB0zVBgDDKAblCcDDKQQmCg1EOTBAcjHJwgkTBiPZLXIIAYZRFuEJqJfx3tslbr3xwQCsJ3TGTzRh8tEZrGY1Gp6zTj8kxQrhl1Uvu9KZ1ao3T973NwYUsVQgCFoKAhSBgIQhYCNI8fJAyGEaS1luukOYYBAHDIAhAku8o3LKmC0HAQhCwEAQsBAELQcBCELAQBCwEAQtBwEKQkwci+8cLFEV/OXqROUlR9JcrrUD70YsYJ+vjnXiymucflqIXmgMM4+V5ZYWszagjj4et98CYB9FBut3ugvW6QQSd8uk98iZ0NGYp0tveW7ReO0TRmiDyNsxZlrx/1euK9foqtEoSRycaq8PchG0q2cr4AfEdWLK0nQuBWq4AAAAASUVORK5CYII=" />
+                                                            </pattern>
+                                                        </defs>
+                                                        <rect id="icons8-log-out-100" width="24" height="24" fill="url(#pattern)" />
+                                                    </svg>
+
+                                                    Lisää tili
+                                                </a>
+                                            </li>
+                                            <li class="border-b border-[#283B44] inline-block w-full p-2">
+                                                <a href="#!" class="flex items-center gap-5 text-offwhite">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                                                        <defs>
+                                                            <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                                                <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAADd0lEQVR4nO3dzW7TQBQFYAuJ8gylfQU27FiAxJ+Q+HkBxBaJChbs2PJMFDbsKRWksIkyY3emaknuTVWJTUsLbAiMhUTjAHLMTHxIz5G8i+dK83XGSXzjZtnPdLvdhZ6XR8bJunXyyXod8dBfcxDmxMlr64cPw1xlKWN2ds4ar+8IoHX/CDd623uLSTCCNjG0yW7Q6XRGp6ODhG2KK0Obbs8r0UHKa8bYXqnPwhYWvdB/njz/sGSdrFZA1qIXsl4OjhcJhaMXmZMURX95HET2oxepLsPoBeYsNvV8EWS6EAQsBAELQcBCELAQBCwEAQtBwEIQsBAELAQBC0HAYp084XdZwCjxB+e3vf+EEn9ggjSO8fI0ix2CgIUgYCEIWAgCFoLUi/G756zTl8bLi96mnM9ShSD1Mt5MKAe5l4tZihCkXozXfqUFKA0KQeol35L7k52LcpBv6aUsZghSP9bJY+PkW6XT89BsDi/HK8JP6lFQrBteiVOAIFgoBAFDIQgYCkFSoQyuNhuQ1xAsFIKAoRAkPUruB9fqD8ItKzmKcXpUG4UgYCgEAUMhyIxRvH7J/fDWn0/iNQQLhSBgKARpF6Xnh7fHX8gtCwuFIAAfHr1+NX5wB2KFWK/3jJe9ydujeqIO4/Sz2ZIbrYKExxuF9+ZtT4ZFOZwetgpSFMWZ8gu4tifCgxxtg4QYL3etk93WJ8O3e0BsWSf1om6rGMffaREECKN8EVdIqxgTn9YJAoRRvpgrZPYYTo96Xq7//gSCzBzjr/dECAKEUZ7IFYKDUZ5MkOQYU3WeECQ9xlS9WQQBwigH4paVEKNB0zVBgDDKAblCcDDKQQmCg1EOTBAcjHJwgkTBiPZLXIIAYZRFuEJqJfx3tslbr3xwQCsJ3TGTzRh8tEZrGY1Gp6zTj8kxQrhl1Uvu9KZ1ao3T973NwYUsVQgCFoKAhSBgIQhYCNI8fJAyGEaS1luukOYYBAHDIAhAku8o3LKmC0HAQhCwEAQsBAELQcBCELAQBCwEAQtBwEKQkwci+8cLFEV/OXqROUlR9JcrrUD70YsYJ+vjnXiymucflqIXmgMM4+V5ZYWszagjj4et98CYB9FBut3ugvW6QQSd8uk98iZ0NGYp0tveW7ReO0TRmiDyNsxZlrx/1euK9foqtEoSRycaq8PchG0q2cr4AfEdWLK0nQuBWq4AAAAASUVORK5CYII=" />
+                                                            </pattern>
+                                                        </defs>
+                                                        <rect id="icons8-log-out-100" width="24" height="24" fill="url(#pattern)" />
+                                                    </svg>
+
+                                                    Kirjaudu ulos
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div> <!-- user_box -->
+
+                        </div>
+                    </div> <!-- User Profile -->
+
+                </div> <!-- grid -->
+            </div> <!-- container -->
+        </div>
+        <!-- Top Header -->
+
+    </header> <!-- header_area  -->
+    <!-- header part end  -->
+
+    <!-- Main Content -->
+    <section class="py-10">
+        <div class="container px-4">
+            <!-- grid View Item -->
+            <div class="grid grid-cols-1 gap-4">
+                <!-- card_item -->
+                <div class="card_item relative h-fit">
+                    <!-- Card Header -->
+                    <div class="card_header flex flex-col md:flex-row items-center md:justify-between px-4 md:px-8 py-6 border-b border-line top-0 z-10">
+                        <div>
+                            <p class="text-sm font-normal text-[#586B74] mb-1">Project nimi</p>
+                            <!-- Breadcrumb -->
+                            <nav class="flex justify-between" aria-label="Breadcrumb">
+                                <ol class="inline-flex flex-wrap items-center mb-3 sm:mb-0">
+                                    <li>
+                                        <span class="text-xs md:text-sm font-medium text-black">Projektin valmistelu</span>
+                                    </li>
+                                    <span class="mx-1 md:mx-2 text-black">/</span>
+                                    <li aria-current="page">
+                                        <span class="text-xs md:text-sm font-medium text-black">Tilaajan yhteydenotto</span>
+                                    </li>
+                                    <span class="mx-1 md:mx-2 text-gray-400">/</span>
+                                    <li aria-current="page">
+                                        <span class="text-xs md:text-sm font-medium text-black">Lähtötietop_valmis_ver1</span>
+                                    </li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <button class="btn gap-2 border border-line bg-[#E9E9F0]">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+                                <defs>
+                                    <pattern id="pattern2" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                        <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAADO0lEQVR4nO2cz05UMRSHu9F3UHTNq4h7VyQtYTHBzLQy0LLleSAmJugr+CcqPsKQiEs1KuyHFMHoxXtvh7TTc879/ZKuSO/Md77pbcvMrVIIgiAIQizGhbnkprildsEMhEAI6dT+BBuMkG4hinkMdx72ANJ42ANI42EPII2HPYA0HvYA0njYA0jjYQ8gjYc9gDQe9gDSeNgDSONhDyCNhz2ANB72ANJ42ANI42EPII2HPYA0HvYA0njYA0jjYQ8gjYc9gDQe9gDUeJ7s79/Vbm9ibHhnbDhvviG0sFgNbDjXzr811o9jbReSsTkO940Ln1D0UOSDp60/Xt/evpc8MiAjLOMO8HE0Gt3pFXJ5m8Itab6MGmjrn/YKuZwz/u7kwlG8hSUNL6Q1ejpdMda/bMwrb1RfjPNn/wiZTld6OyFJWbd7Dxoj5Bf95Z3wLFxfCCkbCCEWCCEWCCmYjZ2dh9qG53FyvmovNp+F1a4+EFJWxreb+wv/Pf6trR+EFEocGe0bvnDY1g9CCiXeojp24T/b+kFIBSHa+R9t/SCkUOIE3jFCDtr6QUihxNVUnMD/M6l/jf8iaesHIeVXWodxzrhqB10yYiCEWCCEWCCEWCCEWCCEWCCEWCCEWCCEWKoJkf5TIpWpLvk7JF5HWlOZ6pK/Q+J1pDWVqS75OyReR1pTmeqSv0Ph61AJhBALhBALhBALhBALhBDLYIRsuPBYW39SexmrrT/Rk901KnWp9sLahs+1ZZjrZsMXKnWp9sIQQk3IZHfNuDCrPjpcmBnrH1GpS/0XJh4DIbRSTUjzN6u3fegTIyTXQ5+Nx6Ljo7y3kQIhN2VoF14t/li09eMSk2btfYju2Wf01qXM+9pKO3TG+uNlCYlr/9IyzJ/mT6kI0Ta8TzpaIyYejBLP4liKEOdPhyfEf0g+fOY60V48i0M7/7p5ukNOIUvch8y69hnlhfiz37UMW8kjI2dShXCJ4c7DHkAaD3sAaTzsAaTxpAIM7fuQakleZQ3s+5BqgRCuQgb2fUi1sAeQxsMeQBoPewBpPOwBpPGwB5DGwx5AGg+BZey8ZFPcUrtgBkIghHRqf4INRgiCIAiihpULmb7nGYjfxQAAAAAASUVORK5CYII=" />
+                                    </pattern>
+                                </defs>
+                                <rect id="icons8-print-100" width="20" height="20" fill="url(#pattern2)" />
+                            </svg>
+
+                        
+                            Takaisin
+                        </button>
+                    </div><!-- Card Header -->
+                    <!-- Card Body -->
+                    <div class="px-4 md:px-8 pt-6 pb-10 lg:h-[645px] overflow-y-auto no-scrollbar scroll-smooth">
+                        <div class="">
+                            <div class="mx-auto max-w-[750px] mb-4">
+                                <p class="text-sm text-accent italic">K1</p>
+                                <p class="text-sm text-accent italic">K1</p>
+                            </div>
+                            
+                            <h4 class="mb-8 text-[#081F2C] mx-auto max-w-[750px]">Projektin lähtötietopalaveri</h4>
+
+                            <form action="#">
+                                <div class="mb-8 mx-auto max-w-[750px]">
+                                    <div class="flex flex-wrap mb-4">
+                                        <label class="flex-[3] mr-4 text-sm font-medium text-black" for="version">Versio:</label>
+                                        <p class="flex-[3] text-sm text-accent" id="version">xx.xx.xxxx</p>
+                                    </div>
+    
+                                    <div class="flex flex-wrap mb-2">
+                                        <label class="flex-[3] mr-4 text-sm font-medium text-black" for="subscriber">Tilaaja:</label>
+                                        <p class="flex-[3] text-sm text-accent italic" id="subscriber">T1</p>
+                                    </div>
+                                    
+                                    <div class="flex flex-wrap mb-4">
+                                        <label class="flex-[3] mr-4 text-sm font-medium text-black" for="author">Laatija:</label>
+                                        <p class="flex-[3] text-sm text-accent italic" id="author">P1, Partners at Noste Oy</p>
+                                    </div>
+                                    
+                                    <div class="flex flex-wrap mb-4">
+                                        <label class="flex-[3] mr-4 text-sm font-medium text-black" for="target">Kohde:</label>
+                                        <p class="flex-[3] text-sm text-accent italic" id="target">K4</p>
+                                    </div>
+    
+                                    <div class="flex flex-wrap mb-4">
+                                        <label class="flex-[3] mr-4 text-sm font-medium text-black" for="target"></label>
+                                        <p class="flex-[3] text-sm text-accent italic">K1</p>
+                                    </div>
+                                    
+                                    <div class="flex flex-wrap mb-4">
+                                        <label class="flex-[3] mr-4 text-sm font-medium text-black" for="target"></label>
+                                        <p class="flex-[3] text-sm text-accent italic">K2</p>
+                                    </div>
+    
+                                    <div class="flex flex-wrap mb-4">
+                                        <label class="flex-[3] mr-4 text-sm font-medium text-black" for="target"></label>
+                                        <p class="flex-[3] text-sm text-accent italic">K3</p>
+                                    </div>
+    
+                                    <div class="flex flex-wrap mb-4">
+                                        <label class="flex-[3] mr-4 text-sm font-medium text-black" for="present">Läsnä:</label>
+                                        <input class="shadow-input flex-[3] md:ml-5 text-sm border-accent rounded-md text-[#686d70]" type="text" id="present" name="present">
+                                    </div>
+                                </div>
+
+                                <p class="mb-8 text-[#081F2C] text-sm font-medium mx-auto max-w-[750px]">Tämän läpikäynnin tavoitteena on projektin lähtötietojen tehokas selvittäminen ja koonti yhteen paikkaan. Lisäksi käydään yhteisesti läpi Nosteelle astetetut tehtävät sekä arvioitu aikataulu.</p>
+
+                                <div>
+                                    <div class="dropdown relative">
+                                        <div class="flex flex-wrap flex-col mb-8 mx-auto max-w-[750px]">
+                                            <label class="mr-4 mb-2 text-sm font-medium text-black flex items-center" for="general_situation">
+                                                Vuokrauksen yleistilanne 
+                                                <a href="javascript:void(0)" class="dropdown-toggle z-1 ml-3" data-dropdown="other_questions_tooltip">
+                                                    <svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                                        <g id="SVGRepo_iconCarrier">
+                                                            <circle cx="12" cy="12" r="10" stroke="#000000" stroke-width="0.72"></circle>
+                                                            <path d="M10.125 8.875C10.125 7.83947 10.9645 7 12 7C13.0355 7 13.875 7.83947 13.875 8.875C13.875 9.56245 13.505 10.1635 12.9534 10.4899C12.478 10.7711 12 11.1977 12 11.75V13" stroke="#000000" stroke-width="0.72" stroke-linecap="round"></path>
+                                                            <circle cx="12" cy="16" r="1" fill="#000000"></circle>
+                                                        </g>
+                                                    </svg>
+                                                </a>
+                                            </label>
+                                            <textarea class="shadow-input text-sm border-accent rounded-md text-[#586B74] order-3" id="general_ituation" name="general_situation" rows="4">Onko tila ollut pitkään tyhjänä (vuokrauksen haasteet vs tilan vapautuminen juuri) tai milloin tila vapautuu? Mikä uuden vuokralaisen kanssa solmittavan vuokrasopimuksen tilanne on?</textarea>
+    
+                                            <div class="tooltip_content p-2 lg:w-52 lg:after:w-[210%] xl:after:w-[273%] 2xl:after:w-[337%] border border-[#E1E1EA] bg-[#F6F8FF] rounded-md relkative lg:absolute top-0 right-2 order-2 mb-2 hidden
+                                            " id="other_questions_tooltip">
+                                                <p class="text-xs font-normal text-[#586B74]">Vuokrauksen yleistilanteessa käydään läpi, miksi ja milloin vuokraus on aktivoitunut (selvitetään onko tilassa haasteita tai ollaanko jo pitkään neuvoteltu samaa vuokrasopimusta) Korvaa pohjassa olevat apukysymykset keskustelun mukaan.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex flex-wrap flex-col mb-8 mx-auto max-w-[750px]">
+                                        <label class="mr-4 mb-2 text-sm font-medium text-black" for="nosti_tasks">
+                                            Nosteen tehtävät
+                                        </label>
+                                        <textarea class="shadow-input text-sm border-accent rounded-md text-[#586B74]" id="nosti_tasks" name="nosti_tasks" rows="4">Nosteelta toivotaan kustannusarvion ja alustavan aikataulun laadintaa? Millä aikataululla yllä olevat tarvitaan?</textarea>
+                                    </div>
+
+                                    <div class="dropdown relative">
+                                        <div class="flex flex-wrap flex-col mb-8 mx-auto max-w-[750px]">
+                                            <div class="flex items-center mb-2">
+                                                <p class="mr-4 text-sm font-normal text-[#586B74]">Sovittiin, että Noste laatii seuraavat dokumentit:</p>
+                                                <a href="#" class="dropdown-toggle z-1" data-dropdown="other_questions_tooltip3">
+                                                    <svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                                        <g id="SVGRepo_iconCarrier">
+                                                            <circle cx="12" cy="12" r="10" stroke="#000000" stroke-width="0.72"></circle>
+                                                            <path d="M10.125 8.875C10.125 7.83947 10.9645 7 12 7C13.0355 7 13.875 7.83947 13.875 8.875C13.875 9.56245 13.505 10.1635 12.9534 10.4899C12.478 10.7711 12 11.1977 12 11.75V13" stroke="#000000" stroke-width="0.72" stroke-linecap="round"></path>
+                                                            <circle cx="12" cy="16" r="1" fill="#000000"></circle>
+                                                        </g>
+                                                    </svg>
+                                                </a>
+                                            </div>
+
+                                            <div class="md:pl-12 order-3">
+                                                <label class="flex items-center text-sm md:text-sm mb-2" for="agreed_prepare_documents1">
+                                                    <input class="shadow-input mr-2 relative appearance-none rounded border cursor-pointer border-accent checked:border-accent checked:after:content-['\2713'] checked:after:text-primary checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 h-5 w-2 p-2" type="checkbox" name="agreed_prepare_documents[]" id="agreed_prepare_documents1">
+                                                    Vuokrasopimuksen hankintarajaliite
+                                                </label>
+                                                <label class="flex items-center text-sm md:text-sm mb-2" for="agreed_prepare_documents2">
+                                                    <input class="shadow-input mr-2 relative appearance-none rounded border cursor-pointer border-accent checked:border-accent checked:after:content-['\2713'] checked:after:text-primary checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 h-5 w-2 p-2" type="checkbox" name="agreed_prepare_documents[]" id="agreed_prepare_documents2">
+                                                    Vuokrasopimuksen rakennustapaselostus
+                                                </label>
+                                                <label class="flex items-center text-sm md:text-sm mb-2" for="agreed_prepare_documents3">
+                                                    <input class="shadow-input mr-2 relative appearance-none rounded border cursor-pointer border-accent checked:border-accent checked:after:content-['\2713'] checked:after:text-primary checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 h-5 w-2 p-2" type="checkbox" name="agreed_prepare_documents[]" id="agreed_prepare_documents3">
+                                                    Vuokrasopimuksen lähtötietoaikataulu
+                                                </label>
+                                                <label class="flex items-center text-sm md:text-sm mb-2" for="agreed_prepare_documents4">
+                                                    <input class="shadow-input mr-2 relative appearance-none rounded border cursor-pointer border-accent checked:border-accent checked:after:content-['\2713'] checked:after:text-primary checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 h-5 w-2 p-2" type="checkbox" name="agreed_prepare_documents[]" id="agreed_prepare_documents4">
+                                                    <input class="shadow-input text-sm border-accent rounded-md text-[#586B74] w-1/2" type="text" id="agreed_prepare_documents_content" name="agreed_prepare_documents_content" value="Muu, mikä">
+                                                </label>
+                                            </div>
+    
+                                            <div class="tooltip_content p-2 lg:w-52 lg:after:w-[142%] xl:after:w-[201%] 2xl:after:w-[265%] border border-[#E1E1EA] bg-[#F6F8FF] rounded-md relkative lg:absolute top-0 right-2 order-2 mb-2 hidden
+                                            " id="other_questions_tooltip3">
+                                                <p class="text-xs font-normal text-[#586B74]">Vuokrauksen yleistilanteessa käydään läpi, miksi ja milloin vuokraus on aktivoitunut (selvitetään onko tilassa haasteita tai ollaanko jo pitkään neuvoteltu samaa vuokrasopimusta) Korvaa pohjassa olevat apukysymykset keskustelun mukaan.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown relative">
+                                        <div class="mb-2 mx-auto max-w-[750px]">
+                                            <div class="flex items-center mb-4">
+                                                <h5 class="font-medium">Vuokralaismuutoksen sisällön ja laatutason läpikäynti</h5>
+                                                <a href="#" class="dropdown-toggle z-1 ml-4" data-dropdown="field_of_change_of_status_tooltip">
+                                                    <svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                                        <g id="SVGRepo_iconCarrier">
+                                                            <circle cx="12" cy="12" r="10" stroke="#000000" stroke-width="0.72"></circle>
+                                                            <path d="M10.125 8.875C10.125 7.83947 10.9645 7 12 7C13.0355 7 13.875 7.83947 13.875 8.875C13.875 9.56245 13.505 10.1635 12.9534 10.4899C12.478 10.7711 12 11.1977 12 11.75V13" stroke="#000000" stroke-width="0.72" stroke-linecap="round"></path>
+                                                            <circle cx="12" cy="16" r="1" fill="#000000"></circle>
+                                                        </g>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        
+                                            <div class="tooltip_content p-2 lg:w-52 lg:after:w-[142%] xl:after:w-[136%] 2xl:after:w-[265%] border border-[#E1E1EA] bg-[#F6F8FF] rounded-md relkative lg:absolute top-0 right-2 order-2 mb-2 hidden
+                                            " id="field_of_change_of_status_tooltip">
+                                                <p class="text-xs font-normal text-[#586B74]">Kustannusjako on tärkeää, jotta tiedetään maksaja uusille toiveille ja budjettiylityksille.</p>
+                                            </div>
+                                        </div>
+                                        <div class="mb-8 mx-auto max-w-[750px]">
+                                            <div class="flex flex-wrap flex-col md:flex-row md:items-center mb-4 mx-auto max-w-[750px]">
+                                                <label class="flex-[.5] md:mr-4 text-sm font-medium text-[#999a9b]" for="field_of_change_of_status">Tilamuutoksen ala</label>
+                                                <div class="flex items-center">
+                                                    <input class="shadow-input text-sm border-accent rounded-md text-black w-36 md:ml-6" type="text" id="field_of_change_of_status" name="field_of_change_of_status">
+                                                    <span class="flex items-center ml-2">m<sup>2</sup></span>
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-wrap flex-col md:flex-row md:items-center mb-4 mx-auto max-w-[750px]">
+                                                <label class="flex-[.5] md:mr-4 text-sm font-medium text-[#999a9b]" for="project_name">Projektin nimi</label>
+                                                <input class="shadow-input text-sm border-accent rounded-md w-36 text-black" type="text" id="project_name" name="project_name" placeholder="xxxxx">
+                                            </div>
+                                            <div class="flex flex-wrap flex-col md:flex-row md:items-center mb-4">
+                                                <label class="flex-[.5] md:mr-4 text-sm font-medium text-[#999a9b]" for="the_building_ompleted_year">Rakennuksen valmistumisvuosi</label>
+                                                <input class="shadow-input text-sm border-accent rounded-md w-36 text-black " type="text" id="the_building_ompleted_year" name="the_building_ompleted_year">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mb-8 dropdown relative">
+                                        <div class="mx-auto max-w-[750px] relative">
+                                            <textarea class="shadow-input w-full text-sm border-accent rounded-md text-[#586B74]" id="who_pays_new_requests_and_budget" name="who_pays_new_requests_and_budget" rows="6">Käytiin läpi lähtötilanne. Käytiin läpi tilasuunnitelma, tilasuunnitelman lähtötietopuutteet/kysymykset sekä vuokralaisen erikoistoiveet ja tekniset vaatimukset. Käytiin läpi kiinteistön tekniset valmiudet verrattuna vuokralaisen vaatimuksiin. Käytiin läpi tilamuutosten laajuus verrattuna olemassa olevaan tilaan. Käytiin läpi maksaako vuokralainen osan kustannuksista (ja mikä on mahdollinen kustannusjako).
+                                            
+    Mikä suunnitelmien taso on? Joko suunnitelmat on lukittu vai vieläkö muutoksia tulee.
+                                            </textarea>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="dropdown relative">
+                                        <div class="flex flex-wrap flex-col mb-8 mx-auto max-w-[750px]">
+                                            <div class="flex items-center mb-4">
+                                                <label class="mr-4 text-sm font-medium text-black" for="other_questions">
+                                                    Muut kysymykset
+                                                </label>
+                                                <a href="#" class="dropdown-toggle z-1 ml-4" data-dropdown="other_questions_tooltip4">
+                                                    <svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                                        <g id="SVGRepo_iconCarrier">
+                                                            <circle cx="12" cy="12" r="10" stroke="#000000" stroke-width="0.72"></circle>
+                                                            <path d="M10.125 8.875C10.125 7.83947 10.9645 7 12 7C13.0355 7 13.875 7.83947 13.875 8.875C13.875 9.56245 13.505 10.1635 12.9534 10.4899C12.478 10.7711 12 11.1977 12 11.75V13" stroke="#000000" stroke-width="0.72" stroke-linecap="round"></path>
+                                                            <circle cx="12" cy="16" r="1" fill="#000000"></circle>
+                                                        </g>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            
+                                            <textarea class="shadow-input text-sm border-accent rounded-md text-[#586B74]" id="other_questions" name="other_questions" rows="4">Tullaanko töiden aikana tekemään töitä, jotka eivät kuulu vuokralaismuutokseen (esim. PTS asiat)</textarea>
+                                        </div>
+
+                                        <div class="tooltip_content p-2 lg:w-52 lg:after:w-[142%] xl:after:w-[286%] 2xl:after:w-[351%] border border-[#E1E1EA] bg-[#F6F8FF] rounded-md relkative lg:absolute top-0 right-2 order-2 mb-2 hidden" id="other_questions_tooltip4">
+                                            <p class="text-xs font-normal text-[#586B74]">Kiinteistöissä tehdään kiinteistön ylläpitoon ja huoltoon liittyviä PTS-korjauksia (eli pitkän tähtäimen suunnitelman mukaisia korjauksia). Kiinteistö hoitaa PTS-korjaukset pääsääntöisesti itse mutta jos vuokralaismuutosalueella on jotakin tiedossa olevia töitä ne usein halutaan yhdistää vuokralaismuutoksen kanssa.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="mb-8 mx-auto max-w-[750px]">
+                                        <h5 class="mr-4 mb-2 text-sm font-normal text-black">Sähkön laskutus</h5>
+                                        <div class="flex md:flex-wrap flex-col md:flex-row md:items-center justify-between mb-4">
+                                            <label class="flex items-center text-sm mb-2" for="electricity_billing1">
+                                                <input class="shadow-input mr-2 relative appearance-none rounded border cursor-pointer border-accent checked:border-accent checked:after:content-['\2713'] checked:after:text-primary checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 h-5 w-2 p-2" type="checkbox" name="electricity_billing[]" id="electricity_billing1">
+                                                Sähkö laskutetaan neliöperusteisesti
+                                            </label>
+                                            <label class="flex items-center text-sm mb-2" for="electricity_billing2">
+                                                <input class="shadow-input mr-2 relative appearance-none rounded border cursor-pointer border-accent checked:border-accent checked:after:content-['\2713'] checked:after:text-primary checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 h-5 w-2 p-2" type="checkbox" name="electricity_billing[]" id="electricity_billing2">
+                                                kiinteistön alamittauksen avulla
+                                            </label>
+                                            <label class="flex items-center text-sm mb-2" for="electricity_billing3">
+                                                <input class="shadow-input mr-2 relative appearance-none rounded border cursor-pointer border-accent checked:border-accent checked:after:content-['\2713'] checked:after:text-primary checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 h-5 w-2 p-2" type="checkbox" name="electricity_billing[]" id="electricity_billing3">
+                                                vuokralaisella oma sähkösopimus
+                                            </label>
+                                        </div>
+                                        <textarea class="shadow-input w-full text-sm border-accent rounded-md text-[#586B74]" id="electricity_billing_comment" name="electricity_billing_comment" rows="4">Miten tilaan pääsee käymään/kulkutunnisteet? Onko käytössä projektipankkia vai jaetaanko suunnitelmia sähköpostilla? Sähköisen laskutuksen ohjeet?</textarea>
+                                    </div>
+
+                                    <div class="mx-auto max-w-[750px]">
+                                        <h5 class="mr-4 mb-4 text-sm font-medium text-black">Perustiedot</h5>
+                                        <p class="mb-4 text-sm">Tämän läpikäynnin tavoitteena on projektin lähtötietojen tehokas selvittäminen ja koonti yhteen paikkaan. Lisäksi käydään yhteisesti läpi Nosteelle astetetut tehtävät sekä arvioitu aikataulu.</p>
+                                    </div>
+
+
+                                    <div class="flex flex-wrap flex-col md:flex-row md:items-center mb-4 mx-auto max-w-[750px]">
+                                        <label class="flex-[2] mr-4 text-sm font-normal text-[#586B74]" for="property_name">Kiinteistön nimi</label>
+                                        <input class="shadow-input flex-[3] text-sm border-accent rounded-md text-[#586B74]" type="text" id="property_name" name="property_name">
+                                    </div>
+
+                                    <div class="flex flex-wrap flex-col md:flex-row md:items-center mb-4 mx-auto max-w-[750px]">
+                                        <label class="flex-[2] mr-4 text-sm font-normal text-[#586B74]" for="sreet_address">Kiinteistön katuosoite</label>
+                                        <input class="shadow-input flex-[3] text-sm border-accent rounded-md text-[#586B74]" type="text" id="sreet_address" name="sreet_address">
+                                    </div>
+
+                                    <div class="flex flex-wrap flex-col md:flex-row md:items-center mb-4 mx-auto max-w-[750px]">
+                                        <label class="flex-[2] mr-4 text-sm font-normal text-[#586B74]" for="property_manager">Kiinteistöpäällikkö (Henkilö)</label>
+                                        <input class="shadow-input flex-[3] text-sm border-accent rounded-md text-[#586B74]" type="text" id="property_manager" name="property_manager">
+                                    </div>
+
+                                    <div class="flex flex-wrap flex-col md:flex-row md:items-center mb-4 mx-auto max-w-[750px]">
+                                        <label class="flex-[2] mr-4 text-sm font-normal text-[#586B74]" for="property_manager_email">Kiinteistöpäällikön sähköposti</label>
+                                        <input class="shadow-input flex-[3] text-sm border-accent rounded-md text-[#586B74]" type="email" id="property_manager_email" name="property_manager_email">
+                                    </div>
+
+                                    <div class="flex flex-wrap flex-col md:flex-row md:items-center mb-4 mx-auto max-w-[750px]">
+                                        <label class="flex-[2] mr-4 text-sm font-normal text-[#586B74]" for="property_manager_phone">Kiinteistöpäällikön puhelinnumero</label>
+                                        <input class="shadow-input flex-[3] text-sm border-accent rounded-md text-[#586B74]" type="tel" id="property_manager_phone" name="property_manager_phone">
+                                    </div>
+
+                                    <div class="flex flex-wrap flex-col md:flex-row md:items-center mb-4 mx-auto max-w-[750px]">
+                                        <label class="flex-[2] mr-4 text-sm font-normal text-[#586B74]" for="maintenance_person">Huoltohenkilö (Henkilö)</label>
+                                        <input class="shadow-input flex-[3] text-sm border-accent rounded-md text-[#586B74]" type="text" id="maintenance_person" name="maintenance_person">
+                                    </div>
+
+                                    <div class="flex flex-wrap flex-col md:flex-row md:items-center mb-4 mx-auto max-w-[750px]">
+                                        <label class="flex-[2] mr-4 text-sm font-normal text-[#586B74]" for="service_email">Huollon sähköposti</label>
+                                        <input class="shadow-input flex-[3] text-sm border-accent rounded-md text-[#586B74]" type="email" id="service_email" name="service_email">
+                                    </div>
+
+                                    <div class="flex flex-wrap flex-col md:flex-row md:items-center mb-4 mx-auto max-w-[750px]">
+                                        <label class="flex-[2] mr-4 text-sm font-normal text-[#586B74]" for="service_phone_number">Huollon puhelinnumero</label>
+                                        <input class="shadow-input flex-[3] text-sm border-accent rounded-md text-[#586B74]" type="tel" id="service_phone_number" name="service_phone_number">
+                                    </div>
+
+                                    <div class="flex flex-wrap flex-col md:flex-row md:items-center mb-4 mx-auto max-w-[750px]">
+                                        <label class="flex-[2] mr-4 text-sm font-normal text-[#586B74]" for="aulas_email">Aulan sähköposti</label>
+                                        <input class="shadow-input flex-[3] text-sm border-accent rounded-md text-[#586B74]" type="email" id="aulas_email" name="aulas_email">
+                                    </div>
+
+                                    <div class="flex flex-wrap flex-col md:flex-row md:items-center mb-4 mx-auto max-w-[750px]">
+                                        <label class="flex-[2] mr-4 text-sm font-normal text-[#586B74]" for="lobby_phone_number">Aulan puhelinnumero</label>
+                                        <input class="shadow-input flex-[3] text-sm border-accent rounded-md text-[#586B74]" type="tel" id="lobby_phone_number" name="lobby_phone_number">
+                                    </div>
+
+                                    <div class="flex flex-wrap flex-col md:flex-row md:items-center mb-4 mx-auto max-w-[750px]">
+                                        <label class="flex-[2] mr-4 text-sm font-normal text-[#586B74]" for="lobby_opening_hours">Aulan aukioloajat</label>
+                                        <input class="shadow-input flex-[3] text-sm border-accent rounded-md text-[#586B74]" type="text" id="lobby_opening_hours" name="lobby_opening_hours">
+                                    </div>
+
+                                    <div class="flex flex-wrap flex-col md:flex-row md:items-center mb-4 mx-auto max-w-[750px]">
+                                        <label class="flex-[2] mr-4 text-sm font-normal text-[#586B74]" for="tenant_company">Vuokralainen (yhtiö)</label>
+                                        <input class="shadow-input flex-[3] text-sm border-accent rounded-md text-[#586B74]" type="text" id="tenant_company" name="tenant_company">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div><!-- Card Body -->
+                    <!-- Card footer -->
+                    <div class="card_footer p-4 border-t border-line">
+                        <div class="flex items-center justify-between">
+                            <a href="./step.html" class="btn gap-2 border border-line">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+                                    <defs>
+                                        <pattern id="pattern13" width="1" height="1" patternTransform="matrix(-1, 0, 0, 1, 40, 0)" viewBox="0 0 20 20">
+                                            <image preserveAspectRatio="xMidYMid slice" width="20" height="20" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABkklEQVR4nO3dQYrVQBhF4ecKFVF6oHu5dZ12SuiK6xNUeiC6A4UnDxyI9jwHcz4IZPjDISGTP3W5SJIkSdJ/rnN/3bm+da7HbOvF0fOc2vV6fTa29b1zv/6+foxt3R0916l1rq9/BDHK0XK/Xt6eDKOA5P7h1d9RxrZ+vpvr7dGznZZRgIwCZBQgowAZBSh+ffHEKDwxCk+MwhOj8MQoPDEKT4zCE6PwxCg8MQpPjMITo/DEKDwxCk+MwhOj8MQoPDEKT4zCE6PwxCg8MQpPjMITo/DEKDwxCk+MwhOj8MQoPGNbd08torpHz4vy5ciZTm08EWTM9fnouU5p+Mqi/Xtl/2dnfmwPb46e7XRqDI4ag6PG4KgxOGoMjhqDo8bgqDE4agyOGoOjxuCoMThqDI4ag6PG4KgxOGoMjhqDo8bgqDE4agyOGoOjxuCoMThqDI4ag6PG4KgxOGoMDmOAGAPEGCDGADEGiDFA+v7Dcw8nBrmtGntSNEjnevQsddora9s/jbl/vN0fPY8kSZIkXU7uFxa7dmp7vSU5AAAAAElFTkSuQmCC" />
+                                        </pattern>
+                                    </defs>
+                                    <rect id="icons8-arrow-100" width="20" height="20" fill="url(#pattern13)" />
+                                </svg>
+
+                                Takaisin
+                            </a>
+                            
+                            <a href="!#" class="btn gap-2 border border-accent bg-accent text-white">
+                                Hyväksy
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Card footer -->
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- Main Content -->
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
