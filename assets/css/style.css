@@ -2109,6 +2109,10 @@ input:focus,
     margin-top: -50px;
   }
 
+  .lg\:block {
+    display: block;
+  }
+
   .lg\:h-\[645px\] {
     height: 645px;
   }
