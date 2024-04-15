@@ -623,17 +623,12 @@ input:focus {
 	#buttonList_2 li {
   height: 100%;
   border-radius: 0.125rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 @media (min-width: 768px) {
   #buttonList li,
 	#buttonList_2 li {
     border-radius: 9999px;
-    padding: 0.5rem;
   }
 }
 
@@ -642,7 +637,7 @@ input:focus {
 }
 
 #buttonList li svg {
-  width: 1.25rem;
+  width: 25px;
 }
 
 #buttonList li.active {
@@ -1465,6 +1460,10 @@ input:focus {
   padding: 3px;
 }
 
+.p-\[10px\] {
+  padding: 10px;
+}
+
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -1493,6 +1492,11 @@ input:focus {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.px-\[15px\] {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .py-1 {
@@ -1528,6 +1532,31 @@ input:focus {
 .py-\[2px\] {
   padding-top: 2px;
   padding-bottom: 2px;
+}
+
+.py-\[7px\] {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.px-\[13px\] {
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.px-\[8px\] {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.py-\[6px\] {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.py-\[5px\] {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .pb-10 {
@@ -1696,6 +1725,11 @@ input:focus {
 .text-\[\#586B74\] {
   --tw-text-opacity: 1;
   color: rgb(88 107 116 / var(--tw-text-opacity));
+}
+
+.text-\[\#5F6E75\] {
+  --tw-text-opacity: 1;
+  color: rgb(95 110 117 / var(--tw-text-opacity));
 }
 
 .text-\[\#818D93\] {
