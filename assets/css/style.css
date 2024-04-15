@@ -1077,6 +1077,14 @@ input:focus {
   width: 100%;
 }
 
+.min-w-\[126px\] {
+  min-width: 126px;
+}
+
+.min-w-\[188px\] {
+  min-width: 188px;
+}
+
 .min-w-\[190px\] {
   min-width: 190px;
 }
@@ -1093,30 +1101,6 @@ input:focus {
   min-width: 245px;
 }
 
-.min-w-full {
-  min-width: 100%;
-}
-
-.min-w-\[70px\] {
-  min-width: 70px;
-}
-
-.min-w-\[424px\] {
-  min-width: 424px;
-}
-
-.min-w-\[74px\] {
-  min-width: 74px;
-}
-
-.min-w-\[126px\] {
-  min-width: 126px;
-}
-
-.min-w-\[188px\] {
-  min-width: 188px;
-}
-
 .min-w-\[300px\] {
   min-width: 300px;
 }
@@ -1125,12 +1109,20 @@ input:focus {
   min-width: 350px;
 }
 
-.min-w-\[200px\] {
-  min-width: 200px;
+.min-w-\[424px\] {
+  min-width: 424px;
 }
 
 .min-w-\[450px\] {
   min-width: 450px;
+}
+
+.min-w-\[70px\] {
+  min-width: 70px;
+}
+
+.min-w-full {
+  min-width: 100%;
 }
 
 .max-w-\[700px\] {
@@ -1233,14 +1225,6 @@ input:focus {
   overflow-x: scroll;
 }
 
-.overscroll-x-auto {
-  overscroll-behavior-x: auto;
-}
-
-.overscroll-x-contain {
-  overscroll-behavior-x: contain;
-}
-
 .scroll-smooth {
   scroll-behavior: smooth;
 }
@@ -1292,11 +1276,6 @@ input:focus {
 
 .border {
   border-width: 1px;
-}
-
-.border-x {
-  border-left-width: 1px;
-  border-right-width: 1px;
 }
 
 .border-b {
@@ -1474,16 +1453,16 @@ input:focus {
   padding: 1.25rem;
 }
 
+.p-6 {
+  padding: 1.5rem;
+}
+
 .p-\[20px\] {
   padding: 20px;
 }
 
 .p-\[3px\] {
   padding: 3px;
-}
-
-.p-6 {
-  padding: 1.5rem;
 }
 
 .px-1 {
@@ -1636,8 +1615,16 @@ input:focus {
   font-size: 18px;
 }
 
+.text-\[24px\] {
+  font-size: 24px;
+}
+
 .text-\[26px\] {
   font-size: 26px;
+}
+
+.text-\[28px\] {
+  font-size: 28px;
 }
 
 .text-base {
@@ -1665,22 +1652,6 @@ input:focus {
   line-height: 1rem;
 }
 
-.text-\[28px\] {
-  font-size: 28px;
-}
-
-.text-\[24px\] {
-  font-size: 24px;
-}
-
-.text-\[20px\] {
-  font-size: 20px;
-}
-
-.text-\[128px\] {
-  font-size: 128px;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -1705,6 +1676,11 @@ input:focus {
 .text-\[\#08202C\] {
   --tw-text-opacity: 1;
   color: rgb(8 32 44 / var(--tw-text-opacity));
+}
+
+.text-\[\#283B44\] {
+  --tw-text-opacity: 1;
+  color: rgb(40 59 68 / var(--tw-text-opacity));
 }
 
 .text-\[\#344054\] {
@@ -1755,11 +1731,6 @@ input:focus {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[\#283B44\] {
-  --tw-text-opacity: 1;
-  color: rgb(40 59 68 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -1966,6 +1937,10 @@ input:focus {
     margin-top: -50px;
   }
 
+  .lg\:block {
+    display: block;
+  }
+
   .lg\:h-\[645px\] {
     height: 645px;
   }
@@ -2028,14 +2003,6 @@ input:focus {
 
   .lg\:overflow-x-auto {
     overflow-x: auto;
-  }
-
-  .lg\:overflow-x-hidden {
-    overflow-x: hidden;
-  }
-
-  .lg\:overflow-x-visible {
-    overflow-x: visible;
   }
 
   .lg\:py-5 {
