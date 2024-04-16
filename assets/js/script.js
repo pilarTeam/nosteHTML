@@ -1,4 +1,6 @@
 $(document).ready(function () {
+	// DropDown
+
 	// Dropdown toggle click event
 	$(".dropdown-toggle").click(function () {
 		var dropdownMenuId = $(this).data("dropdown");
@@ -8,11 +10,12 @@ $(document).ready(function () {
 	// Document click event to hide dropdowns
 	$(document).click(function (e) {
 		var target = e.target;
+		// Check if the clicked element is not a dropdown toggle button or its parent
 		if (
 			!$(target).is(".dropdown-toggle") &&
 			!$(target).parents().is(".dropdown")
 		) {
-			$(".dropdown-menu").addClass("hidden");
+			$(".dropdown-menu").addClass("hidden"); // Hide all dropdown menus
 		}
 	});
 
@@ -31,5 +34,20 @@ $(document).ready(function () {
 			};
 			reader.readAsDataURL(input.files[0]);
 		}
+	});
+
+	// dropdown open close
+	$(".dropdown_click").on("click", function () {
+		$(this).find(".dropdown_wrap").toggle();
+	});
+
+	// checkbox toogle click
+	$(".checkbox_change").on("change", function () {
+		$(this).parent().find(".check_show").toggleClass("hidden");
+	});
+	// help toogle click
+	$(".help_click").on("click", function () {
+		$(this).parent().find(".help_line").toggleClass("hidden");
+		$(this).parents(".help_wrap").find(".help_show").toggleClass("hidden");
 	});
 });
