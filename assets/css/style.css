@@ -1019,6 +1019,10 @@ input:focus,
   margin-right: 1rem;
 }
 
+.mr-5 {
+  margin-right: 1.25rem;
+}
+
 .mr-\[-20px\] {
   margin-right: -20px;
 }
@@ -1228,6 +1232,10 @@ input:focus,
   max-width: 750px;
 }
 
+.max-w-full {
+  max-width: 100%;
+}
+
 .max-w-md {
   max-width: 28rem;
 }
@@ -1266,6 +1274,14 @@ input:focus,
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.list-disc {
+  list-style-type: disc;
+}
+
+.list-none {
+  list-style-type: none;
 }
 
 .appearance-none {
@@ -2160,6 +2176,10 @@ input:focus,
     min-width: 16rem;
   }
 
+  .md\:flex-\[\.7\] {
+    flex: .7;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2230,6 +2250,11 @@ input:focus,
     line-height: 2rem;
   }
 
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
   .md\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -2286,6 +2311,14 @@ input:focus,
     width: 13rem;
   }
 
+  .lg\:w-\[0px\] {
+    width: 0px;
+  }
+
+  .lg\:w-\[240px\] {
+    width: 240px;
+  }
+
   .lg\:w-\[384px\] {
     width: 384px;
   }
@@ -2312,6 +2345,10 @@ input:focus,
 
   .lg\:min-w-\[320px\] {
     min-width: 320px;
+  }
+
+  .lg\:flex-\[\.67\] {
+    flex: .67;
   }
 
   .lg\:grid-cols-3 {
@@ -2422,6 +2459,10 @@ input:focus,
 }
 
 @media (min-width: 1536px) {
+  .\32xl\:w-\[384px\] {
+    width: 384px;
+  }
+
   .\32xl\:after\:w-\[265\%\]::after {
     content: var(--tw-content);
     width: 265%;
