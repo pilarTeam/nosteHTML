@@ -865,10 +865,6 @@ input:focus {
   grid-column: span 3 / span 3;
 }
 
-.col-span-1 {
-  grid-column: span 1 / span 1;
-}
-
 .m-2 {
   margin: 0.5rem;
 }
@@ -885,6 +881,11 @@ input:focus {
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
+}
+
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .my-3 {
@@ -976,6 +977,10 @@ input:focus {
   margin-left: -20px;
 }
 
+.ml-\[-80px\] {
+  margin-left: -80px;
+}
+
 .ml-\[150px\] {
   margin-left: 150px;
 }
@@ -1054,26 +1059,6 @@ input:focus {
 
 .mt-\[60px\] {
   margin-top: 60px;
-}
-
-.ml-\[-80px\] {
-  margin-left: -80px;
-}
-
-.ml-\[-8\%px\] {
-  margin-left: -8%px;
-}
-
-.ml-\[-85px\] {
-  margin-left: -85px;
-}
-
-.ml-\[-90px\] {
-  margin-left: -90px;
-}
-
-.ml-\[-100px\] {
-  margin-left: -100px;
 }
 
 .block {
@@ -1173,6 +1158,10 @@ input:focus {
   width: 15rem;
 }
 
+.w-\[164px\] {
+  width: 164px;
+}
+
 .w-\[16px\] {
   width: 16px;
 }
@@ -1197,6 +1186,10 @@ input:focus {
   width: 290px;
 }
 
+.w-\[400px\] {
+  width: 400px;
+}
+
 .w-\[45\%\] {
   width: 45%;
 }
@@ -1211,42 +1204,6 @@ input:focus {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[464px\] {
-  width: 464px;
-}
-
-.w-\[164px\] {
-  width: 164px;
-}
-
-.w-\[424px\] {
-  width: 424px;
-}
-
-.w-\[324px\] {
-  width: 324px;
-}
-
-.w-\[354px\] {
-  width: 354px;
-}
-
-.w-\[384px\] {
-  width: 384px;
-}
-
-.w-\[350px\] {
-  width: 350px;
-}
-
-.w-\[380px\] {
-  width: 380px;
-}
-
-.w-\[400px\] {
-  width: 400px;
 }
 
 .min-w-\[126px\] {
@@ -1313,6 +1270,10 @@ input:focus {
   max-width: 700px;
 }
 
+.max-w-\[800px\] {
+  max-width: 800px;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -1331,6 +1292,10 @@ input:focus {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.list-disc {
+  list-style-type: disc;
 }
 
 .grid-cols-1 {
@@ -1415,10 +1380,6 @@ input:focus {
 
 .gap-\[5px\] {
   gap: 5px;
-}
-
-.gap-\[10px\] {
-  gap: 10px;
 }
 
 .gap-x-2 {
@@ -1601,6 +1562,11 @@ input:focus {
   background-color: rgb(148 150 156 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#D0D3D4\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(208 211 212 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#E9E9F0\] {
   --tw-bg-opacity: 1;
   background-color: rgb(233 233 240 / var(--tw-bg-opacity));
@@ -1650,9 +1616,14 @@ input:focus {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#D0D3D4\] {
+.bg-\[\#E1E1EA\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(208 211 212 / var(--tw-bg-opacity));
+  background-color: rgb(225 225 234 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#F8F8F8\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 248 248 / var(--tw-bg-opacity));
 }
 
 .object-cover {
@@ -1694,6 +1665,14 @@ input:focus {
 
 .p-\[3px\] {
   padding: 3px;
+}
+
+.p-10 {
+  padding: 2.5rem;
+}
+
+.p-\[10px\] {
+  padding: 10px;
 }
 
 .px-1 {
@@ -1781,6 +1760,21 @@ input:focus {
   padding-bottom: 7px;
 }
 
+.py-\[10px\] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.px-\[25px\] {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.px-\[35px\] {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1825,6 +1819,14 @@ input:focus {
   padding-top: 20px;
 }
 
+.pl-\[35px\] {
+  padding-left: 35px;
+}
+
+.pr-\[15px\] {
+  padding-right: 15px;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1835,6 +1837,10 @@ input:focus {
 
 .text-right {
   text-align: right;
+}
+
+.align-top {
+  vertical-align: top;
 }
 
 .align-middle {
@@ -1913,6 +1919,10 @@ input:focus {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-\[19px\] {
+  font-size: 19px;
 }
 
 .font-bold {
@@ -2015,6 +2025,10 @@ input:focus {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-\[15\] {
+  color: 15;
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -2029,6 +2043,10 @@ input:focus {
 
 .opacity-0 {
   opacity: 0;
+}
+
+.opacity-50 {
+  opacity: 0.5;
 }
 
 .shadow {
@@ -2300,6 +2318,10 @@ input:focus {
     width: 240px;
   }
 
+  .lg\:w-\[350px\] {
+    width: 350px;
+  }
+
   .lg\:w-\[380px\] {
     width: 380px;
   }
@@ -2314,6 +2336,10 @@ input:focus {
 
   .lg\:w-\[440px\] {
     width: 440px;
+  }
+
+  .lg\:w-\[464px\] {
+    width: 464px;
   }
 
   .lg\:w-\[60px\] {
@@ -2340,14 +2366,6 @@ input:focus {
     width: auto;
   }
 
-  .lg\:w-\[464px\] {
-    width: 464px;
-  }
-
-  .lg\:w-\[350px\] {
-    width: 350px;
-  }
-
   .lg\:min-w-\[209px\] {
     min-width: 209px;
   }
@@ -2366,10 +2384,6 @@ input:focus {
 
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .lg\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .lg\:flex-row {
