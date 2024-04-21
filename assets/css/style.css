@@ -883,11 +883,6 @@ input:focus {
   margin-bottom: 2.5rem;
 }
 
-.my-20 {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
-
 .my-3 {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
@@ -1061,6 +1056,10 @@ input:focus {
   margin-top: 60px;
 }
 
+.mt-\[-5px\] {
+  margin-top: -5px;
+}
+
 .block {
   display: block;
 }
@@ -1178,6 +1177,10 @@ input:focus {
   width: 19px;
 }
 
+.w-\[20\%\] {
+  width: 20%;
+}
+
 .w-\[200px\] {
   width: 200px;
 }
@@ -1204,6 +1207,30 @@ input:focus {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[10\%\] {
+  width: 10%;
+}
+
+.w-\[15\%\] {
+  width: 15%;
+}
+
+.w-\[40\%\] {
+  width: 40%;
+}
+
+.w-\[35\%\] {
+  width: 35%;
+}
+
+.w-\[9171px\] {
+  width: 9171px;
+}
+
+.w-\[51px\] {
+  width: 51px;
 }
 
 .min-w-\[126px\] {
@@ -1264,6 +1291,14 @@ input:focus {
 
 .min-w-full {
   min-width: 100%;
+}
+
+.min-w-\[210px\] {
+  min-width: 210px;
+}
+
+.min-w-\[480px\] {
+  min-width: 480px;
 }
 
 .max-w-\[700px\] {
@@ -1582,6 +1617,11 @@ input:focus {
   background-color: rgb(246 248 255 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#F8F8F8\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 248 248 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#FAFAFB\] {
   --tw-bg-opacity: 1;
   background-color: rgb(250 250 251 / var(--tw-bg-opacity));
@@ -1614,16 +1654,6 @@ input:focus {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#E1E1EA\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(225 225 234 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#F8F8F8\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 248 248 / var(--tw-bg-opacity));
 }
 
 .object-cover {
@@ -1665,14 +1695,6 @@ input:focus {
 
 .p-\[3px\] {
   padding: 3px;
-}
-
-.p-10 {
-  padding: 2.5rem;
-}
-
-.p-\[10px\] {
-  padding: 10px;
 }
 
 .px-1 {
@@ -1745,6 +1767,11 @@ input:focus {
   padding-bottom: 1.5rem;
 }
 
+.py-\[10px\] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .py-\[2px\] {
   padding-top: 2px;
   padding-bottom: 2px;
@@ -1758,21 +1785,6 @@ input:focus {
 .py-\[7px\] {
   padding-top: 7px;
   padding-bottom: 7px;
-}
-
-.py-\[10px\] {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.px-\[25px\] {
-  padding-left: 25px;
-  padding-right: 25px;
-}
-
-.px-\[35px\] {
-  padding-left: 35px;
-  padding-right: 35px;
 }
 
 .pb-10 {
@@ -1791,12 +1803,20 @@ input:focus {
   padding-left: 1rem;
 }
 
+.pl-\[35px\] {
+  padding-left: 35px;
+}
+
 .pr-2 {
   padding-right: 0.5rem;
 }
 
 .pr-3 {
   padding-right: 0.75rem;
+}
+
+.pr-\[15px\] {
+  padding-right: 15px;
 }
 
 .pt-10 {
@@ -1817,14 +1837,6 @@ input:focus {
 
 .pt-\[20px\] {
   padding-top: 20px;
-}
-
-.pl-\[35px\] {
-  padding-left: 35px;
-}
-
-.pr-\[15px\] {
-  padding-right: 15px;
 }
 
 .text-left {
@@ -1876,6 +1888,10 @@ input:focus {
   font-size: 18px;
 }
 
+.text-\[19px\] {
+  font-size: 19px;
+}
+
 .text-\[20px\] {
   font-size: 20px;
 }
@@ -1919,10 +1935,6 @@ input:focus {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-\[19px\] {
-  font-size: 19px;
 }
 
 .font-bold {
@@ -2023,10 +2035,6 @@ input:focus {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[15\] {
-  color: 15;
 }
 
 .underline {
@@ -2270,6 +2278,18 @@ input:focus {
     margin-top: -50px;
   }
 
+  .lg\:ml-\[50px\] {
+    margin-left: 50px;
+  }
+
+  .lg\:mt-\[-55px\] {
+    margin-top: -55px;
+  }
+
+  .lg\:mt-\[-80px\] {
+    margin-top: -80px;
+  }
+
   .lg\:block {
     display: block;
   }
@@ -2364,6 +2384,10 @@ input:focus {
 
   .lg\:w-auto {
     width: auto;
+  }
+
+  .lg\:w-\[209px\] {
+    width: 209px;
   }
 
   .lg\:min-w-\[209px\] {
@@ -2466,5 +2490,13 @@ input:focus {
 
   .\32xl\:w-\[384px\] {
     width: 384px;
+  }
+
+  .\32xl\:w-\[350x\] {
+    width: 350x;
+  }
+
+  .\32xl\:w-\[350px\] {
+    width: 350px;
   }
 }
