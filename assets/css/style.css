@@ -1953,6 +1953,10 @@ input:focus {
   line-height: 1rem;
 }
 
+.text-\[170px\] {
+  font-size: 170px;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -2408,6 +2412,10 @@ input:focus {
 
   .lg\:w-auto {
     width: auto;
+  }
+
+  .lg\:w-\[420px\] {
+    width: 420px;
   }
 
   .lg\:min-w-\[209px\] {
