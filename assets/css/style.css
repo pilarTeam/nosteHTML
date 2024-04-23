@@ -1068,6 +1068,10 @@ input:focus {
   margin-top: 60px;
 }
 
+.mr-1 {
+  margin-right: 0.25rem;
+}
+
 .block {
   display: block;
 }
@@ -1121,8 +1125,32 @@ input:focus {
   height: 100%;
 }
 
+.h-\[15px\] {
+  height: 15px;
+}
+
+.h-\[10px\] {
+  height: 10px;
+}
+
+.h-\[12px\] {
+  height: 12px;
+}
+
+.h-\[100px\] {
+  height: 100px;
+}
+
+.h-\[150px\] {
+  height: 150px;
+}
+
 .min-h-\[4rem\] {
   min-height: 4rem;
+}
+
+.min-h-\[200px\] {
+  min-height: 200px;
 }
 
 .w-1\/2 {
@@ -1217,6 +1245,10 @@ input:focus {
   width: 51px;
 }
 
+.w-\[7px\] {
+  width: 7px;
+}
+
 .w-\[8\%\] {
   width: 8%;
 }
@@ -1237,8 +1269,24 @@ input:focus {
   width: 100%;
 }
 
-.w-\[7px\] {
-  width: 7px;
+.w-\[15px\] {
+  width: 15px;
+}
+
+.w-\[10px\] {
+  width: 10px;
+}
+
+.w-\[12px\] {
+  width: 12px;
+}
+
+.w-40 {
+  width: 10rem;
+}
+
+.w-\[40\%\] {
+  width: 40%;
 }
 
 .min-w-\[126px\] {
@@ -1339,18 +1387,6 @@ input:focus {
 
 .max-w-\[800px\] {
   max-width: 800px;
-}
-
-.max-w-\[900px\] {
-  max-width: 900px;
-}
-
-.max-w-\[950px\] {
-  max-width: 950px;
-}
-
-.max-w-\[1000px\] {
-  max-width: 1000px;
 }
 
 .max-w-\[880px\] {
@@ -1536,6 +1572,10 @@ input:focus {
 
 .rounded-sm {
   border-radius: 0.125rem;
+}
+
+.rounded-\[2px\] {
+  border-radius: 2px;
 }
 
 .rounded-t-lg {
@@ -1891,6 +1931,10 @@ input:focus {
   padding-top: 20px;
 }
 
+.pt-2 {
+  padding-top: 0.5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1901,6 +1945,10 @@ input:focus {
 
 .text-right {
   text-align: right;
+}
+
+.align-baseline {
+  vertical-align: baseline;
 }
 
 .align-top {
@@ -1918,6 +1966,10 @@ input:focus {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-\[12px\] {
+  font-size: 12px;
 }
 
 .text-\[13px\] {
@@ -2023,6 +2075,11 @@ input:focus {
   color: rgb(6 249 183 / var(--tw-text-opacity));
 }
 
+.text-\[\#081F2C\] {
+  --tw-text-opacity: 1;
+  color: rgb(8 31 44 / var(--tw-text-opacity));
+}
+
 .text-\[\#08202C\] {
   --tw-text-opacity: 1;
   color: rgb(8 32 44 / var(--tw-text-opacity));
@@ -2091,11 +2148,6 @@ input:focus {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[\#081F2C\] {
-  --tw-text-opacity: 1;
-  color: rgb(8 31 44 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -2335,12 +2387,20 @@ input:focus {
     margin-left: 50px;
   }
 
+  .lg\:ml-\[5px\] {
+    margin-left: 5px;
+  }
+
   .lg\:mt-0 {
     margin-top: 0px;
   }
 
   .lg\:mt-20 {
     margin-top: 5rem;
+  }
+
+  .lg\:mt-\[-42px\] {
+    margin-top: -42px;
   }
 
   .lg\:mt-\[-50px\] {
@@ -2353,14 +2413,6 @@ input:focus {
 
   .lg\:mt-\[-80px\] {
     margin-top: -80px;
-  }
-
-  .lg\:ml-\[5px\] {
-    margin-left: 5px;
-  }
-
-  .lg\:mt-\[-42px\] {
-    margin-top: -42px;
   }
 
   .lg\:block {
@@ -2393,6 +2445,10 @@ input:focus {
 
   .lg\:w-\[130px\] {
     width: 130px;
+  }
+
+  .lg\:w-\[170px\] {
+    width: 170px;
   }
 
   .lg\:w-\[180px\] {
@@ -2473,10 +2529,6 @@ input:focus {
 
   .lg\:w-auto {
     width: auto;
-  }
-
-  .lg\:w-\[170px\] {
-    width: 170px;
   }
 
   .lg\:min-w-\[209px\] {
@@ -2573,6 +2625,10 @@ input:focus {
 }
 
 @media (min-width: 1536px) {
+  .\32xl\:w-\[260px\] {
+    width: 260px;
+  }
+
   .\32xl\:w-\[284px\] {
     width: 284px;
   }
@@ -2583,9 +2639,5 @@ input:focus {
 
   .\32xl\:w-\[384px\] {
     width: 384px;
-  }
-
-  .\32xl\:w-\[260px\] {
-    width: 260px;
   }
 }
