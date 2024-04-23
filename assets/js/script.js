@@ -58,4 +58,14 @@ $(document).ready(function () {
 		$(this).parent().find('.help_line').toggleClass('hidden');
 		$(this).parents('.help_wrap').find('.help_show').toggleClass('hidden');
 	});
+
+	// popup open close 
+	$('.popup_open').on('click', function(){
+		$('.popup_wrap').removeClass('hidden');
+		$('body').css('overflow', 'hidden');
+	});
+	$('.popup_close').on('click', function(){
+		$(this).parents('.popup_wrap').addClass('hidden');
+		$('body').css('overflow', 'inherit');
+	});
 });
