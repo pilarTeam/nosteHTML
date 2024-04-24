@@ -908,6 +908,10 @@ input:focus,
   top: 100%;
 }
 
+.top-\[3px\] {
+  top: 3px;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -1020,6 +1024,11 @@ input:focus,
 .my-\[32px\] {
   margin-top: 32px;
   margin-bottom: 32px;
+}
+
+.my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 
 .mb-1 {
@@ -1543,6 +1552,10 @@ input:focus,
   width: 100%;
 }
 
+.w-\[30\%\] {
+  width: 30%;
+}
+
 .min-w-\[126px\] {
   min-width: 126px;
 }
@@ -1657,6 +1670,22 @@ input:focus,
 
 .min-w-full {
   min-width: 100%;
+}
+
+.min-w-\[320px\] {
+  min-width: 320px;
+}
+
+.min-w-\[355px\] {
+  min-width: 355px;
+}
+
+.min-w-\[655px\] {
+  min-width: 655px;
+}
+
+.min-w-\[738px\] {
+  min-width: 738px;
 }
 
 .max-w-3xl {
@@ -1897,6 +1926,10 @@ input:focus,
 
 .gap-\[95px\] {
   gap: 95px;
+}
+
+.gap-\[100px\] {
+  gap: 100px;
 }
 
 .gap-x-2 {
@@ -3415,6 +3448,18 @@ input:focus,
 
   .lg\:w-auto {
     width: auto;
+  }
+
+  .lg\:w-\[206px\] {
+    width: 206px;
+  }
+
+  .lg\:w-\[280px\] {
+    width: 280px;
+  }
+
+  .lg\:w-\[330px\] {
+    width: 330px;
   }
 
   .lg\:min-w-\[108px\] {

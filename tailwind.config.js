@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	mode: "jit",
-	content: ["./*.{html,js}", "./form-bashar/**/*.{html,js}"],
+	content: ["./*.{html,js}", "./form-bashar/**/*.{html,js}", "./form-joy/**/*.{html,js}"],
 	theme: {
 		container: {
 			center: true,
