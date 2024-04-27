@@ -913,6 +913,10 @@ input:focus,
   top: 50%;
 }
 
+.top-\[70px\] {
+  top: 70px;
+}
+
 .top-full {
   top: 100%;
 }
@@ -1964,6 +1968,10 @@ input:focus,
 
 .gap-\[65px\] {
   gap: 65px;
+}
+
+.gap-\[80px\] {
+  gap: 80px;
 }
 
 .gap-\[94px\] {
@@ -3452,6 +3460,10 @@ input:focus,
     width: 350px;
   }
 
+  .lg\:w-\[358px\] {
+    width: 358px;
+  }
+
   .lg\:w-\[363px\] {
     width: 363px;
   }
@@ -3474,6 +3486,10 @@ input:focus,
 
   .lg\:w-\[41\%\] {
     width: 41%;
+  }
+
+  .lg\:w-\[414px\] {
+    width: 414px;
   }
 
   .lg\:w-\[420px\] {
