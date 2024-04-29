@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply text-base font-normal scroll-smooth text-black relative;
+	}
+	p {
+		@apply text-base font-normal;
+	}
+
+	h1 {
+		@apply text-3xl font-semibold;
+	}
+	h2 {
+		@apply text-3xl font-semibold;
+	}
+	h3 {
+		@apply text-2xl font-semibold;
+	}
+	h4 {
+		@apply text-xl font-semibold;
+	}
+	h5 {
+		@apply text-lg font-semibold;
+	}
+}
+
+@layer components {
+	/* Global */
+	.btn {
+		@apply inline-flex justify-center items-center gap-1 text-sm px-4 py-2 rounded-lg border border-transparent;
+	}
+
+	/* Form Input Fuild */
+	input,
+	textarea,
+	select {
+		@apply h-auto flex items-center py-2 px-4 text-sm border border-solid border-transparent focus:outline-none;
+	}
+	/* Form Input Fuild */
+	/* Global */
+
+	/* Top Navbar */
+	.site_logo img {
+		@apply max-w-[12rem] w-full;
+	}
+	#buttonList li,
+	#buttonList_2 li {
+		@apply py-1 md:p-2 px-4 rounded-sm md:rounded-full h-full;
+	}
+	#buttonList_2 li {
+		@apply rounded-none;
+	}
+	#buttonList li svg {
+		@apply w-5;
+	}
+	#buttonList li.active {
+		@apply bg-white;
+	}
+	#buttonList_2 li.active {
+		@apply bg-gray;
+	}
+	#buttonList .tab_list_btn {
+		@apply inline-flex items-center justify-between md:justify-normal w-full md:w-auto gap-2;
+	}
+	.user_avatar {
+		@apply bg-black h-12 w-12 rounded-full border-2 border-accent flex items-center justify-center relative;
+	}
+
+	#grid-view-btn,
+	#list-view-btn {
+		@apply px-2;
+	}
+	#grid-view-btn.active,
+	#list-view-btn.active {
+		@apply shadow-component border border-transparent;
+	}
+	/* Top Navbar */
+
+	/* Card Body */
+	.card_item {
+		@apply border border-black2 rounded-xl bg-white;
+	}
+	.status {
+		@apply rounded-full px-2 py-1 text-sm;
+	}
+	.status.active {
+		@apply bg-active text-[#026AA2] border border-[#AAEFC6];
+	}
+	.status.inactive {
+		@apply bg-inactive text-[#067647] border border-[#B9E6FE];
+	}
+	.status.archive {
+		@apply bg-archive text-[#344054] border border-[#ECEEF1];
+	}
+	/* Card Body */
+
+	/* Project Step */
+	#project_table_status span {
+		@apply h-3 w-3 border border-line rounded-full mr-1;
+	}
+	#project_table_status .active span {
+		@apply h-3 w-3 rounded-full bg-accent mr-1;
+	}
+	/* Project Step */
+}
+
+@layer utilities {
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	.no-scrollbar {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+
+	/* Tooltip */
+	.tooltip_content::after {
+		@apply content-[''] h-[1px] inline-block absolute top-2 right-full z-0 bg-gray;
+	}
+	/* Tooltip */
+}
