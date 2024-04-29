@@ -434,6 +434,52 @@ video {
   display: none;
 }
 
+body {
+  position: relative;
+  scroll-behavior: smooth;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(8 32 44 / var(--tw-text-opacity));
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -590,20 +636,26 @@ video {
 
 /* Form Input Fuild */
 
-input {
+input,
+    textarea,
+    select {
   display: flex;
   height: auto;
   align-items: center;
   border-width: 1px;
+  border-style: solid;
   border-color: #00000000;
-  padding: 0.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
 
-input:focus {
+input:focus,
+    textarea:focus,
+    select:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
@@ -614,21 +666,26 @@ input:focus {
 
 /* Top Navbar */
 
-.site_logo {
+.site_logo img {
   width: 100%;
   max-width: 12rem;
 }
 
 #buttonList li,
-	#buttonList_2 li {
+    #buttonList_2 li {
   height: 100%;
   border-radius: 0.125rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 @media (min-width: 768px) {
   #buttonList li,
-	#buttonList_2 li {
+    #buttonList_2 li {
     border-radius: 9999px;
+    padding: 0.5rem;
   }
 }
 
@@ -637,7 +694,7 @@ input:focus {
 }
 
 #buttonList li svg {
-  width: 25px;
+  width: 1.25rem;
 }
 
 #buttonList li.active {
@@ -646,7 +703,6 @@ input:focus {
 }
 
 #buttonList_2 li.active {
-  border-radius: 0.375rem;
   --tw-bg-opacity: 1;
   background-color: rgb(241 241 245 / var(--tw-bg-opacity));
 }
@@ -682,13 +738,13 @@ input:focus {
 }
 
 #grid-view-btn,
-	#list-view-btn {
+    #list-view-btn {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
 
 #grid-view-btn.active,
-	#list-view-btn.active {
+    #list-view-btn.active {
   border-width: 1px;
   border-color: #00000000;
   --tw-shadow: 1px 1px 3px #818D9314;
@@ -755,8 +811,8 @@ input:focus {
 
 #project_table_status span {
   margin-right: 0.25rem;
-  height: 0.5rem;
-  width: 0.5rem;
+  height: 0.75rem;
+  width: 0.75rem;
   border-radius: 9999px;
   border-width: 1px;
   border-color: #00000014;
@@ -764,8 +820,8 @@ input:focus {
 
 #project_table_status .active span {
   margin-right: 0.25rem;
-  height: 0.5rem;
-  width: 0.5rem;
+  height: 0.75rem;
+  width: 0.75rem;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgb(0 178 169 / var(--tw-bg-opacity));
@@ -845,12 +901,12 @@ input:focus {
   top: 50%;
 }
 
-.top-full {
-  top: 100%;
-}
-
 .top-\[70px\] {
   top: 70px;
+}
+
+.top-full {
+  top: 100%;
 }
 
 .z-10 {
@@ -883,6 +939,10 @@ input:focus {
 
 .col-span-3 {
   grid-column: span 3 / span 3;
+}
+
+.col-span-1 {
+  grid-column: span 1 / span 1;
 }
 
 .m-2 {
@@ -1311,6 +1371,10 @@ input:focus {
   width: 100%;
 }
 
+.w-2\/5 {
+  width: 40%;
+}
+
 .min-w-\[126px\] {
   min-width: 126px;
 }
@@ -1325,6 +1389,10 @@ input:focus {
 
 .min-w-\[160px\] {
   min-width: 160px;
+}
+
+.min-w-\[180px\] {
+  min-width: 180px;
 }
 
 .min-w-\[188px\] {
@@ -1429,6 +1497,26 @@ input:focus {
 
 .min-w-full {
   min-width: 100%;
+}
+
+.min-w-\[595px\] {
+  min-width: 595px;
+}
+
+.min-w-\[120px\] {
+  min-width: 120px;
+}
+
+.min-w-\[140px\] {
+  min-width: 140px;
+}
+
+.min-w-\[630px\] {
+  min-width: 630px;
+}
+
+.min-w-\[675px\] {
+  min-width: 675px;
 }
 
 .max-w-\[600px\] {
@@ -1581,16 +1669,12 @@ input:focus {
   gap: 65px;
 }
 
-.gap-\[94px\] {
-  gap: 94px;
-}
-
-.gap-\[60px\] {
-  gap: 60px;
-}
-
 .gap-\[80px\] {
   gap: 80px;
+}
+
+.gap-\[94px\] {
+  gap: 94px;
 }
 
 .gap-x-2 {
@@ -2311,20 +2395,18 @@ input:focus {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-
 .no-scrollbar {
   -ms-overflow-style: none;
-  /* IE and Edge */
   scrollbar-width: none;
-  /* Firefox */
 }
+
+/* Tooltip */
+
+/* Tooltip */
 
 .hover\:bg-\[\#FAFAFB\]:hover {
   --tw-bg-opacity: 1;
@@ -2456,6 +2538,10 @@ input:focus {
     right: 10px;
   }
 
+  .lg\:right-\[-10px\] {
+    right: -10px;
+  }
+
   .lg\:order-2 {
     order: 2;
   }
@@ -2534,6 +2620,10 @@ input:focus {
     display: inline-block;
   }
 
+  .lg\:flex {
+    display: flex;
+  }
+
   .lg\:h-\[645px\] {
     height: 645px;
   }
@@ -2610,6 +2700,10 @@ input:focus {
     width: 350px;
   }
 
+  .lg\:w-\[358px\] {
+    width: 358px;
+  }
+
   .lg\:w-\[363px\] {
     width: 363px;
   }
@@ -2628,6 +2722,10 @@ input:focus {
 
   .lg\:w-\[41\%\] {
     width: 41%;
+  }
+
+  .lg\:w-\[414px\] {
+    width: 414px;
   }
 
   .lg\:w-\[420px\] {
@@ -2670,16 +2768,32 @@ input:focus {
     width: auto;
   }
 
-  .lg\:w-\[136px\] {
-    width: 136px;
+  .lg\:w-\[290px\] {
+    width: 290px;
   }
 
-  .lg\:w-\[358px\] {
-    width: 358px;
+  .lg\:w-\[30\%\] {
+    width: 30%;
   }
 
-  .lg\:w-\[414px\] {
-    width: 414px;
+  .lg\:w-\[20\%\] {
+    width: 20%;
+  }
+
+  .lg\:w-\[245px\] {
+    width: 245px;
+  }
+
+  .lg\:w-\[90\%\] {
+    width: 90%;
+  }
+
+  .lg\:w-\[100\%\] {
+    width: 100%;
+  }
+
+  .lg\:w-\[91\%\] {
+    width: 91%;
   }
 
   .lg\:min-w-\[209px\] {
@@ -2694,16 +2808,12 @@ input:focus {
     min-width: 320px;
   }
 
-  .lg\:min-w-\[136px\] {
-    min-width: 136px;
+  .lg\:min-w-\[595px\] {
+    min-width: 595px;
   }
 
-  .lg\:min-w-\[100px\] {
-    min-width: 100px;
-  }
-
-  .lg\:min-w-\[50px\] {
-    min-width: 50px;
+  .lg\:min-w-\[675px\] {
+    min-width: 675px;
   }
 
   .lg\:grid-cols-3 {
@@ -2712,6 +2822,10 @@ input:focus {
 
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .lg\:flex-row {
