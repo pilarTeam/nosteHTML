@@ -1063,16 +1063,16 @@ input:focus,
   margin-top: 1.25rem;
 }
 
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
 .mt-8 {
   margin-top: 2rem;
 }
 
 .mt-\[10px\] {
   margin-top: 10px;
-}
-
-.mt-6 {
-  margin-top: 1.5rem;
 }
 
 .block {
@@ -1200,6 +1200,10 @@ input:focus,
   width: 18px;
 }
 
+.w-\[195px\] {
+  width: 195px;
+}
+
 .w-\[200px\] {
   width: 200px;
 }
@@ -1212,12 +1216,16 @@ input:focus,
   width: 25px;
 }
 
-.w-\[280px\] {
-  width: 280px;
-}
-
 .w-\[30px\] {
   width: 30px;
+}
+
+.w-\[350px\] {
+  width: 350px;
+}
+
+.w-\[40px\] {
+  width: 40px;
 }
 
 .w-\[45\%\] {
@@ -1232,36 +1240,16 @@ input:focus,
   width: 7px;
 }
 
+.w-\[80px\] {
+  width: 80px;
+}
+
 .w-\[85px\] {
   width: 85px;
 }
 
 .w-full {
   width: 100%;
-}
-
-.w-\[220px\] {
-  width: 220px;
-}
-
-.w-\[180px\] {
-  width: 180px;
-}
-
-.w-\[80px\] {
-  width: 80px;
-}
-
-.w-\[40px\] {
-  width: 40px;
-}
-
-.w-\[195px\] {
-  width: 195px;
-}
-
-.w-\[350px\] {
-  width: 350px;
 }
 
 .min-w-\[130px\] {
@@ -1296,6 +1284,14 @@ input:focus,
   min-width: 340px;
 }
 
+.min-w-\[40px\] {
+  min-width: 40px;
+}
+
+.min-w-\[450px\] {
+  min-width: 450px;
+}
+
 .min-w-\[480px\] {
   min-width: 480px;
 }
@@ -1308,24 +1304,28 @@ input:focus,
   min-width: 100%;
 }
 
-.min-w-\[400px\] {
-  min-width: 400px;
-}
-
-.min-w-\[450px\] {
-  min-width: 450px;
-}
-
-.min-w-\[50px\] {
-  min-width: 50px;
-}
-
-.min-w-\[40px\] {
-  min-width: 40px;
+.min-w-\[245px\] {
+  min-width: 245px;
 }
 
 .min-w-\[420px\] {
   min-width: 420px;
+}
+
+.min-w-\[430px\] {
+  min-width: 430px;
+}
+
+.min-w-\[435px\] {
+  min-width: 435px;
+}
+
+.min-w-\[300px\] {
+  min-width: 300px;
+}
+
+.max-w-\[250px\] {
+  max-width: 250px;
 }
 
 .max-w-\[310px\] {
@@ -1358,10 +1358,6 @@ input:focus,
 
 .max-w-full {
   max-width: 100%;
-}
-
-.max-w-\[250px\] {
-  max-width: 250px;
 }
 
 .flex-1 {
@@ -2487,6 +2483,22 @@ input:focus,
 
   .lg\:w-\[85\%\] {
     width: 85%;
+  }
+
+  .lg\:w-\[100px\] {
+    width: 100px;
+  }
+
+  .lg\:w-\[85px\] {
+    width: 85px;
+  }
+
+  .lg\:w-\[65px\] {
+    width: 65px;
+  }
+
+  .lg\:w-\[80px\] {
+    width: 80px;
   }
 
   .lg\:min-w-\[209px\] {
