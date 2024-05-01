@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TMK1 Pöytäkirja_ver1</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <!-- daterangepicker Style -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <!-- Main Style -->
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="font-roboto bg-bodyBg">
+    <!-- header part start  -->
+    <header class="lg:sticky top-0 z-10">
+        <!-- Top Header -->
+        <div class="py-3 bg-white border-b border-line">
+            <div class="container px-4">
+                <div class="flex items-center flex-wrap gap-4 justify-center md:justify-normal">
+                    <!-- site_logo -->
+                    <div class="site_logo order-1 w-[45%] xl:w-[20%]">
+                        <a href="index.html">
+                            <img src="../assets/images/logo.png" alt="logo" />
+                        </a>
+                    </div>
+                    <!-- site_logo -->
+
+                    <!-- Tab Fuild -->
+                    <div
+                        class="flex justify-center order-3 xl:order-2 col-span-3 lg:col-span-4 ml-auto w-full xl:w-[50%]">
+                        <ul class="flex flex-col sm:flex-row flex-auto items-center justify-between rounded-sm md:rounded-md bg-white border border-line"
+                            id="buttonList_2">
+                            <li class="flex item-center md:justify-center w-full md:w-auto md:border-r border-line">
+                                <button class="text-sm text-left">
+                                    Projektin valmistelu
+                                </button>
+                            </li>
+                            <li class="flex item-center md:justify-center w-full md:w-auto md:border-r border-line">
+                                <button class="text-sm text-left">
+                                    Rakentamisen valmistelu
+                                </button>
+                            </li>
+                            <li
+                                class="flex item-center md:justify-center w-full md:w-auto md:border-r border-line active">
+                                <button class="text-sm text-left">
+                                    Rakentamisen käynnistäminen
+                                </button>
+                            </li>
+                            <li class="flex item-center md:justify-center w-full md:w-auto md:border-r border-line">
+                                <button class="text-sm text-left">
+                                    Rakentaminen
+                                </button>
+                            </li>
+                            <li class="flex item-center md:justify-center w-full md:w-auto">
+                                <button class="text-sm text-left">
+                                    Rakennustöiden vastaanotto ja toimeksiannon lopetus
+                                </button>
+                            </li>
+                        </ul>
+                        <!-- tab_box -->
+                    </div>
+                    <!-- Tab Fuild -->
+
+                    <!-- User Profile -->
+                    <div class="flex justify-end order-2 xl:order-3 w-[45%] xl:w-[26%] ml-auto">
+                        <div class="flex items-center">
+                            <a href="#!" class="hidden sm:block hover:bg-[#FAFAFB] focus:bg-[#FAFAFB] rounded p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    class="w-4" viewBox="0 0 23 23">
+                                    <defs>
+                                        <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%"
+                                            height="100%" viewBox="0 0 100 100">
+                                            <image width="100" height="100"
+                                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACH0lEQVR4nO2aMU4DMRQFfVMEFceIqeNIsMdFIdRsEQlIMuPvN9IW6R4zdiRWaS2EEEJ4MH1sl0mfz8Npe2rVEIi9/PU5HD+++ml7bZWgpfZEqRWkV7sp+z+uyenVo1QJ0qtEKRDkvP/8dnx/abMye5DD2J73Uaa+KbMHaa21UlEqBCkVpUqQMlEqBSkRpVqQ6aNUDDJ1lKpBpo1SOciUUaoHmS7KCkGmirJKkGmirBRkiiirBdFHWTGIOsqqQbRRVg6ijDJ7kH6/54z87itBtmtRPhPEc0OYbwx8wC9JkMXo9AHFB8jAfeADZOA+8AEycB/4ABm4D3yADNwHPkAG7gMfIAP3gQ+QgfvAB8jAfeADZOA+8AEycB//HfDol339zm9rE2QkSG7IFXJDRm6I60TIwH3gA2TgPvABMnAf+AAZuA98gAzcBz5ABu4DHyAD94EPkIH7mP1dVpP5wAckyI1JkJ/khox8ZblOhAzcBz5ABu4DHyAD94EPkIH7wAfIwH3gA2TgPvABMnAf+AAZuI/Z/1PvN37XlSAjQXJDrpAbMnJDXCdCBu4DHyAD94EPkIH7wAfIwH3gA2TgPvABMnAf+AAZuA98gAzcBz5ABu4DHyAD94EPkIH7wAfIwH3gA2TgPvABMnAf+AAZuA98gAzcBz5ABu4DHyAD94EPkIH7wAfIwH3sB+TZEqSLD0JuyOAjJMjgxWuChBBCaKvzDQGUurXKthVmAAAAAElFTkSuQmCC" />
+                                        </pattern>
+                                    </defs>
+                                    <rect id="icons8-file-100_2_" data-name="icons8-file-100 (2)" width="23" height="23"
+                                        fill="url(#pattern)" />
+                                </svg>
+                            </a>
+
+                            <a href="#!" class="hidden sm:block hover:bg-[#FAFAFB] focus:bg-[#FAFAFB] rounded p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    class="w-4" viewBox="0 0 23 23">
+                                    <defs>
+                                        <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%"
+                                            height="100%" viewBox="0 0 100 100">
+                                            <image width="100" height="100"
+                                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACH0lEQVR4nO2aMU4DMRQFfVMEFceIqeNIsMdFIdRsEQlIMuPvN9IW6R4zdiRWaS2EEEJ4MH1sl0mfz8Npe2rVEIi9/PU5HD+++ml7bZWgpfZEqRWkV7sp+z+uyenVo1QJ0qtEKRDkvP/8dnx/abMye5DD2J73Uaa+KbMHaa21UlEqBCkVpUqQMlEqBSkRpVqQ6aNUDDJ1lKpBpo1SOciUUaoHmS7KCkGmirJKkGmirBRkiiirBdFHWTGIOsqqQbRRVg6ijDJ7kH6/54z87itBtmtRPhPEc0OYbwx8wC9JkMXo9AHFB8jAfeADZOA+8AEycB/4ABm4D3yADNwHPkAG7gMfIAP3gQ+QgfvAB8jAfeADZOA+8AEycB//HfDol339zm9rE2QkSG7IFXJDRm6I60TIwH3gA2TgPvABMnAf+AAZuA98gAzcBz5ABu4DHyAD94EPkIH7mP1dVpP5wAckyI1JkJ/khox8ZblOhAzcBz5ABu4DHyAD94EPkIH7wAfIwH3gA2TgPvABMnAf+AAZuI/Z/1PvN37XlSAjQXJDrpAbMnJDXCdCBu4DHyAD94EPkIH7wAfIwH3gA2TgPvABMnAf+AAZuA98gAzcBz5ABu4DHyAD94EPkIH7wAfIwH3gA2TgPvABMnAf+AAZuA98gAzcBz5ABu4DHyAD94EPkIH7wAfIwH3sB+TZEqSLD0JuyOAjJMjgxWuChBBCaKvzDQGUurXKthVmAAAAAElFTkSuQmCC" />
+                                        </pattern>
+                                    </defs>
+                                    <rect id="icons8-file-100_2_" data-name="icons8-file-100 (2)" width="23" height="23"
+                                        fill="url(#pattern)" />
+                                </svg>
+                            </a>
+
+                            <a href="#!" class="hidden sm:block hover:bg-[#FAFAFB] focus:bg-[#FAFAFB] rounded p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    class="w-4" viewBox="0 0 23 23">
+                                    <defs>
+                                        <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%"
+                                            height="100%" viewBox="0 0 100 100">
+                                            <image width="100" height="100"
+                                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACH0lEQVR4nO2aMU4DMRQFfVMEFceIqeNIsMdFIdRsEQlIMuPvN9IW6R4zdiRWaS2EEEJ4MH1sl0mfz8Npe2rVEIi9/PU5HD+++ml7bZWgpfZEqRWkV7sp+z+uyenVo1QJ0qtEKRDkvP/8dnx/abMye5DD2J73Uaa+KbMHaa21UlEqBCkVpUqQMlEqBSkRpVqQ6aNUDDJ1lKpBpo1SOciUUaoHmS7KCkGmirJKkGmirBRkiiirBdFHWTGIOsqqQbRRVg6ijDJ7kH6/54z87itBtmtRPhPEc0OYbwx8wC9JkMXo9AHFB8jAfeADZOA+8AEycB/4ABm4D3yADNwHPkAG7gMfIAP3gQ+QgfvAB8jAfeADZOA+8AEycB//HfDol339zm9rE2QkSG7IFXJDRm6I60TIwH3gA2TgPvABMnAf+AAZuA98gAzcBz5ABu4DHyAD94EPkIH7mP1dVpP5wAckyI1JkJ/khox8ZblOhAzcBz5ABu4DHyAD94EPkIH7wAfIwH3gA2TgPvABMnAf+AAZuI/Z/1PvN37XlSAjQXJDrpAbMnJDXCdCBu4DHyAD94EPkIH7wAfIwH3gA2TgPvABMnAf+AAZuA98gAzcBz5ABu4DHyAD94EPkIH7wAfIwH3gA2TgPvABMnAf+AAZuA98gAzcBz5ABu4DHyAD94EPkIH7wAfIwH3sB+TZEqSLD0JuyOAjJMjgxWuChBBCaKvzDQGUurXKthVmAAAAAElFTkSuQmCC" />
+                                        </pattern>
+                                    </defs>
+                                    <rect id="icons8-file-100_2_" data-name="icons8-file-100 (2)" width="23" height="23"
+                                        fill="url(#pattern)" />
+                                </svg>
+                            </a>
+
+                            <div class="border-l border-line pl-4 ml-3 flex items-center gap-3 relative">
+                                <div class="user_avatar">
+                                    <span class="text-xl lg:text-2xl font-bold text-white">K</span>
+                                    <img class="h-full w-full rounded-full object-cover hidden"
+                                        src="./assets/images/logo.png" alt="" />
+                                </div>
+                                <!-- user_avatar -->
+                                <div class="hidden md:block">
+                                    <p class="text-base text-black font-medium">Klara Royment</p>
+                                    <p class="text-sm text-[#818D93] font-normal">Admin</p>
+                                </div>
+                                <div class="dropdown relative">
+                                    <button class="dropdown-toggle" data-dropdown="profile-dropdown">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12"
+                                            viewBox="0 0 12 12">
+                                            <defs>
+                                                <pattern id="pattern6" preserveAspectRatio="xMidYMid slice" width="100%"
+                                                    height="100%" viewBox="0 0 96 96">
+                                                    <image width="96" height="96"
+                                                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAABmElEQVR4nO3ZwUrDQBSF4Ww8DWZvcWPSrgJ36Puv9CGk6BOIPoVSodBFKU0TeufO/B/MPj1/BgJtGgAAAAAAAAAAAAAAAAAAAAAAAOSj2+6e2iG9Pmx3qSmM+jS2Q3p7fBmfm2zH7+29HdLvqrefkiKoT+NqSF+H39b29pldhNPxj6eUCDod/3hyinBu/FIi6Nz4OUW4NH70CLo0fg4Rrhk/agRdM75nhCnjR4ugKeN7RLhl/CgRdMv494wwZ/zcI2jO+PeKsESAHCNoifH/j32EuAU5RVCk8UuLoIjjlxJBkcePHkEljB81gkoaP1oElTh+lAgqefzcI6iG8XONoJrGzy2Cahw/lwiqeXzvCGJ8vwhifL+bIMb3iyDG94sgxveLIMafrtukdTuk/QIRvg9n/qdm2h+eqanJUjehrfk7P34Eq3d8/wjG+H4RGN8xgvHm+0UwxveLYIzvF8EY3y+CMb5fBGN8vwjG+H4RjPH9Ihjj+0UwxveLYIzvF8EY3y+CMb6XbpPW1f2TBQAAAAAAAAAAgGaSP+MgIpmI76GJAAAAAElFTkSuQmCC" />
+                                                </pattern>
+                                            </defs>
+                                            <rect id="icons8-expand-arrow-96" width="12" height="12"
+                                                fill="url(#pattern6)" />
+                                        </svg>
+                                    </button>
+
+                                    <div class="w-[15rem] border-t bg-[#08202C] absolute right-0 top-12 z-[10] dropdown-menu hidden"
+                                        id="profile-dropdown">
+                                        <ul class="bg-transparent p-0">
+                                            <li class="text-center border-b border-[#283B44] py-4 px-2">
+                                                <div class="user_avatar mx-auto mb-2">
+                                                    <div class="flex items-center justify-center mx-auto"
+                                                        id="avatarContainer">
+                                                        <span class="text-2xl font-bold text-white" id="text">K</span>
+                                                        <img class="h-full w-full rounded-full object-cover hidden"
+                                                            src="./assets/images/logo.png" alt="User Avatar"
+                                                            id="avatarImage" />
+                                                        <label class="absolute -bottom-1 -right-2 cursor-pointer">
+                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="18"
+                                                                height="18" viewBox="0 0 18 18">
+                                                                <defs>
+                                                                    <pattern id="pattern" width="1" height="1"
+                                                                        viewBox="-4.444 -4.444 26.887 26.887">
+                                                                        <image preserveAspectRatio="xMidYMid slice"
+                                                                            width="18" height="18"
+                                                                            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAHTUlEQVR4nO1dSawURRguNS5xTSQe3BKXqFyMaxQ1ehLxoBJliUSiIcZEgvHgXYkJ4E1li1xFQI0eFEGJ8QoafS6HR1d1z189LP3//RBEQHbUMX/PPDNdPfNm5r3p5XXXl1Ty8qbTf/X/Tf1b/V0jhIWFhYWFhYWFhYWFhYWFhUVHOBpnK8CvFGCoNDXSGhLwHwVYl4AbXX//XZYOA41G4wKl8YM0Seg+8KwEfN2S0gap6b18yKD/h1ujFy0pbKbqY7MiE5IzIVLjUdfdd32lSRkdHb1IatwdUw5g6Gp8tNFonJeW3JGRxoVS4wtsrgzZn4kqQwG9aTjbv10/fDAz+ZreSK6U4GlRReyG/bdJoFOGQt7Pcg6NRuN8pWmXMYe9o6MHLhdVApsjqem7uLkg1PrwVVnPReqxO03TJQHfFUVE09bSfAW0SQJJBXg8NafqB8/k9ZwKaGV6AQP+1dQdbZKa5rFOJzfJGs5VmrxMohzAz0WOqNfrlygglVFE5w305WO7KjW9k2G4eUTu3XudyBmuT49JwH8zeWaWA7SKdd1zYhmToV0dPC4KAqVpqdR4IKvnZ1M58YRqONf8lkhNp5Wm1RyO/haGl2WmnZKAdca6U5rWtHQZWyldw2x2NqbPkJoCW3wbHtx6cDfr1FglbkdHH0VTxsqwZKRGSnylaJqXuJDDMsPGrU5hPhYi0vVaw3Rt7ERILOxzdfhAv/UoR+NrEvCHKE9pju+VDpfxZ5aBzgXVOCEkExcpjcfaL+qnfMDhqtT0ywSRxM/Ont+v7XWfqkHKg1fE9YTHEheZyuyvUjshGeNjZNLZaYnRU9+DEsJmaoCYe2laDzZdMXRCIp8RT/K28QaP5+2/QWrcbtxv17BielWjJznLVUBbI78HdLhZHMSz/HerbsSfrZI+zilq7jR0Qrho1n49EzH+Wa0W3NjTRg5SGfZxjtT0SYdyfe9qANApqeljvkeam15FIORY2oS4gM9KoF8HJaErOezzajhXVMRkbWdSmAyp8eupmCzXHbtFAe0YFhFJYvAbtSe8WZRrhYTLBjAbr/Y9UT9cyA0HE9zPk4DrXAie97zgntF9+67mKI6H4wQz+H8O4CIJuF5pqk1AyhHlhwtEWQjhsJfzjN5k4I/9hr1S49ud74Pnmk1tg++3t7paPuJ7dLw30HJRBkIYnPRxntGdEPyp38SQSzWq8zd5m+cduFUMYw8/aUpzKxOlQkhblXip0rSzGXlF0ddONlNTWhmAxx2glwZ8zt6yIFiigE7kvVJSI2TKE/PDhR3ICLkqmpZM9jMKcCy5Gmm+qDIhHE0lHDhgyOYlbdkswyQlcvQZRV+FJCQR2gIeT3NlmHBqeK9pvtjPVJIQTvpMmU4KPqMXlMaX82hJKhwhZsjMyZrICWbtjasDaZdZCkUI15WM8PjcMELbyUL6wR3cVxxbrT4+ISpDCOCnxur4UOQMpWmzoYMtlSCEdyLNqm2WHe/dIGvBw4bZOjmCeKkoOyHRfkZclicK0wCOOiuzVRxCeHMp9k3EdaIgUOZ7jr06C0tCyNZ4qIuLREEgo7eqYoR8WQVC4u1GGSaCfSWKvdpzSkeIpkOxFeIEM0RB4Hl0TTz6o4NVIORMu5wiNdN5nnexQcjptGRZQvpAVQmxJksU2Knz3oQoCCTQfUZI7lSBkMKGvUrTYsNkfVHFxHC9KAiUxg2VSwyTlV6qiYKUThRgPbZ6Nc4uPSHca8uFu9iD18dmiZyhAB8xVseJShQXGdyn2/MNoozB5XZDB5tTllfsDaosGhu6QdVxZmKDKkVzVThCWvLiDXZAO0ROMBvouCm7Ulu4bUd3xGRKCJaIjOH6+Io5D0eHT6Utt3CEMKIudMORehkmihLofjPA4NbVLGQXkhBuSoua02Kk4FgW/sTRwe3mMRoS6E9ZD28SVSUkkuuHC0zZCnCM9yZSXRkdzjTp+AJ/1QiJZAMtT/oTOslNbGn4DNNMtczlWyJDFJqQiV5HUEA7uG9qyvev40wF9G3pX0dIe6Wo1uGYnKhxq84g4WirHMIZ+BYzz8hrZUwrQhj8SkDC0cfJ8bk7hBsS2M/wFjDvOkZHfDjBDC6ht46A3WDWphIOPEOfMW0JaYu+ur3tNOXBoW1W0VQpCBkHd6H38x7jAGMki6SvtISM+wHuIGz6gQ7RUa/RfP9jc9q1qcoQ0g4uh0fkAK3k3TzeYlVAf7Q6Wc7w3/w//oyvYRLSLKGLqhNSJlhCph8hgx9gZjE5eN6hK42o7+jQjvizSOuIv+QhmGsmIctiWIdgdjwmtkCd6WUB69Tsb3aAnuv/IGVLSj4HKY9nxh0OpOf4fi3bPevoBwfrzKkFD7XMVGxlsK57Vg7MzkI7KD0dAK7o72eA+ADJjH66oYpDRj9XgSsG6myJCntAbt6TV2UbQO6kC5ytnzyax2FZVDcyTiK1g/r8ySN0WIccTdlDpS0sLCwsLCwsLCwsLCwsLCwsLCwsRAXwH8ObJ6aYQdgHAAAAAElFTkSuQmCC" />
+                                                                    </pattern>
+                                                                </defs>
+                                                                <rect id="icons8-photo-100" width="18" height="18"
+                                                                    rx="9" fill="url(#pattern)" />
+                                                            </svg>
+
+                                                            <input type="file" id="FileUpload1" class="hidden" />
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <!-- user_avatar -->
+
+                                                <p class="text-white">Klara Royment</p>
+                                                <p class="text-offwhite text-sm">nimi_sukunimi@noste.io</p>
+                                            </li>
+                                            <li class="border-b border-[#283B44] inline-block w-full p-2">
+                                                <a href="#!" class="flex items-center gap-5 text-offwhite">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="24"
+                                                        height="24" viewBox="0 0 24 24">
+                                                        <defs>
+                                                            <pattern id="pattern" preserveAspectRatio="xMidYMid slice"
+                                                                width="100%" height="100%" viewBox="0 0 100 100">
+                                                                <image width="100" height="100"
+                                                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAADAElEQVR4nO2c3W4TMRCFzQW8Az8vxAPAM4Dg6WhfoYAgcLWKp5WdUsAO4gapcL9owgRoUAUbvJmxfY5kqTdxvp5zdneU1nEOgiCoDy0W481xHG+Aw4AftFo/9CF/oZguabV+oALhwPHLiJA+UczjZoWU1QIJ4PhhxDYMWWqBRHDACIvFUAcQgQNG2CyGOoAIHDDCZjHUAUTggBE2i6EOIAIHjLBZDHUAEThghM1iqAOIwAEjdIoxDMOtZUxPfUgvKaRvu2/418WvCekFxfUT3svNJOrhSvUXF3d8zG8nh3D9erN89/m2m0HUeiDc5sJhbNeC/8TpCotaD4RvUzOEsV2PXWFR64FsnhlXngX5Gd/Cpu5zevr+LoV0tAP63BUWtR4IxfT1943Z2H33Ojv7cO8qaLp0hUXtB1J247kNowMFojZ1IhBjUycCMTZ1IhBjU+fmPxHxULczdf4JkI72mbR4wvIxHdc+9pL21MlTwFyXqA/50b6/TCtT3OT9+CHGU0D5MNKrGj86Ie1AWDyS8RRQLpD0utYPF8lCICxuM08BFPPJ7n30H0Pg15zwbWqOK6O7QGoRzf9Qr2rqbD4QX8vUaeXSo9mvkEqmzl4CGWqZOnsJpJqps6dAqpg6ewvEvKwYQUY41GXFCAIHjDBZDHUAEThghM1iqAOIwAEjbBZDHUAEDhhhsxjqACJwwAibxVAHEIEDRtgshjqACBwwwmYx1AFE4IARNouhDiACB4ywWYxDAQz4Rgk7gXh8o4SdQAbts30T1fwta6l9tm+img/Ea5/tm6jmAyHts30T1UEguej+tfGaAyAEgkD+R7hCGr+izQFQZWf7mg/E13K2r5dAqJazfb0EMtRytq+XQKo529dTIFWc7estkFqk7oc6gDGp+6EOIAIHjLBZDHUAEThghM1iqAOIwAEjbBZDHUAEDhhhsxjqACJwwAibxVAHEIEDRtgshjqACBwwwmYxKKTz7Zv7kFYHBxCB46cR+b6P+SMv/tkpicABQRAEQY71HbsT/O3PnJesAAAAAElFTkSuQmCC" />
+                                                            </pattern>
+                                                        </defs>
+                                                        <rect id="icons8-adjust-100" width="24" height="24"
+                                                            fill="url(#pattern)" />
+                                                    </svg>
+
+                                                    Aktiivinien
+                                                </a>
+                                            </li>
+                                            <li class="inline-block w-full p-2">
+                                                <a href="#!"
+                                                    class="user_box flex items-center justify-between gap-3 relative">
+                                                    <div class="flex items-center gap-2">
+                                                        <div class="user_avatar">
+                                                            <span
+                                                                class="text-xl lg:text-2xl font-bold text-white">K</span>
+                                                            <img class="h-full w-full rounded-full object-cover hidden"
+                                                                src="./assets/images/logo.png" alt="" />
+                                                        </div>
+                                                        <!-- user_avatar -->
+                                                        <div>
+                                                            <p class="text-base text-white font-medium">Klara Royment
+                                                            </p>
+                                                            <p class="text-sm text-[#818D93] font-normal">Admin</p>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="16"
+                                                                height="16" viewBox="0 0 16 16">
+                                                                <defs>
+                                                                    <pattern id="pattern"
+                                                                        preserveAspectRatio="xMidYMid slice"
+                                                                        width="100%" height="100%" viewBox="0 0 96 96">
+                                                                        <image width="96" height="96"
+                                                                            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAABeUlEQVR4nO3ZvUoDQRiF4b0orSysFAu9IwtLr/DMgDupnLESRJAwVcKChlSCP9mzy/c+sP3ynolrssMAAAAAAAAAAAAAAACwBPmp3aSx3bvvIyRt6nUa2zaXtkulPbrvJ2z8/HkxgjE+IywgPiPM88D9Nv5hBB7M85/8o6urvNz+8y3EJeL7EN+I+EbENyK+EfGNiG9EfOLHJL5kET8kcfKJH5I4+cQPSZx84s9qeiU3vcIb1vUacbuEe/6zVOrD16u5VJ7vXPehiH92juLvnCOI+L4RRHzfCAr7wF3AQy5HfOD+5tSd4pOgiCd/KSMoenznCCK+bwQR3zeCiO8bQcT3jSDi+0YQ8X0jiPi+EUR83wgivvf3mhTxt51T++Gp3oX+eWEFI3Ti+0boxPd9EjrxfSN04vtG6MT3jdCJb/qekPg/fz7atMtc6vthgLF9qNSrGW8BubTzPLbXVOpbHusFRQzS2M6mi/gAAAAAAAAAAAAAAADDyu0BWJ5kaQG3t14AAAAASUVORK5CYII=" />
+                                                                    </pattern>
+                                                                </defs>
+                                                                <rect id="icons8-done-96" width="16" height="16"
+                                                                    fill="url(#pattern)" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="border-b border-[#283B44] inline-block w-full p-2">
+                                                <a href="#!" class="flex items-center gap-5 text-offwhite">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="24"
+                                                        height="24" viewBox="0 0 24 24">
+                                                        <defs>
+                                                            <pattern id="pattern" preserveAspectRatio="xMidYMid slice"
+                                                                width="100%" height="100%" viewBox="0 0 100 100">
+                                                                <image width="100" height="100"
+                                                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAADd0lEQVR4nO3dzW7TQBQFYAuJ8gylfQU27FiAxJ+Q+HkBxBaJChbs2PJMFDbsKRWksIkyY3emaknuTVWJTUsLbAiMhUTjAHLMTHxIz5G8i+dK83XGSXzjZtnPdLvdhZ6XR8bJunXyyXod8dBfcxDmxMlr64cPw1xlKWN2ds4ar+8IoHX/CDd623uLSTCCNjG0yW7Q6XRGp6ODhG2KK0Obbs8r0UHKa8bYXqnPwhYWvdB/njz/sGSdrFZA1qIXsl4OjhcJhaMXmZMURX95HET2oxepLsPoBeYsNvV8EWS6EAQsBAELQcBCELAQBCwEAQtBwEIQsBAELAQBC0HAYp084XdZwCjxB+e3vf+EEn9ggjSO8fI0ix2CgIUgYCEIWAgCFoLUi/G756zTl8bLi96mnM9ShSD1Mt5MKAe5l4tZihCkXozXfqUFKA0KQeol35L7k52LcpBv6aUsZghSP9bJY+PkW6XT89BsDi/HK8JP6lFQrBteiVOAIFgoBAFDIQgYCkFSoQyuNhuQ1xAsFIKAoRAkPUruB9fqD8ItKzmKcXpUG4UgYCgEAUMhyIxRvH7J/fDWn0/iNQQLhSBgKARpF6Xnh7fHX8gtCwuFIAAfHr1+NX5wB2KFWK/3jJe9ydujeqIO4/Sz2ZIbrYKExxuF9+ZtT4ZFOZwetgpSFMWZ8gu4tifCgxxtg4QYL3etk93WJ8O3e0BsWSf1om6rGMffaREECKN8EVdIqxgTn9YJAoRRvpgrZPYYTo96Xq7//gSCzBzjr/dECAKEUZ7IFYKDUZ5MkOQYU3WeECQ9xlS9WQQBwigH4paVEKNB0zVBgDDKAblCcDDKQQmCg1EOTBAcjHJwgkTBiPZLXIIAYZRFuEJqJfx3tslbr3xwQCsJ3TGTzRh8tEZrGY1Gp6zTj8kxQrhl1Uvu9KZ1ao3T973NwYUsVQgCFoKAhSBgIQhYCNI8fJAyGEaS1luukOYYBAHDIAhAku8o3LKmC0HAQhCwEAQsBAELQcBCELAQBCwEAQtBwEKQkwci+8cLFEV/OXqROUlR9JcrrUD70YsYJ+vjnXiymucflqIXmgMM4+V5ZYWszagjj4et98CYB9FBut3ugvW6QQSd8uk98iZ0NGYp0tveW7ReO0TRmiDyNsxZlrx/1euK9foqtEoSRycaq8PchG0q2cr4AfEdWLK0nQuBWq4AAAAASUVORK5CYII=" />
+                                                            </pattern>
+                                                        </defs>
+                                                        <rect id="icons8-log-out-100" width="24" height="24"
+                                                            fill="url(#pattern)" />
+                                                    </svg>
+
+                                                    Lisää tili
+                                                </a>
+                                            </li>
+                                            <li class="border-b border-[#283B44] inline-block w-full p-2">
+                                                <a href="#!" class="flex items-center gap-5 text-offwhite">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="24"
+                                                        height="24" viewBox="0 0 24 24">
+                                                        <defs>
+                                                            <pattern id="pattern" preserveAspectRatio="xMidYMid slice"
+                                                                width="100%" height="100%" viewBox="0 0 100 100">
+                                                                <image width="100" height="100"
+                                                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAADd0lEQVR4nO3dzW7TQBQFYAuJ8gylfQU27FiAxJ+Q+HkBxBaJChbs2PJMFDbsKRWksIkyY3emaknuTVWJTUsLbAiMhUTjAHLMTHxIz5G8i+dK83XGSXzjZtnPdLvdhZ6XR8bJunXyyXod8dBfcxDmxMlr64cPw1xlKWN2ds4ar+8IoHX/CDd623uLSTCCNjG0yW7Q6XRGp6ODhG2KK0Obbs8r0UHKa8bYXqnPwhYWvdB/njz/sGSdrFZA1qIXsl4OjhcJhaMXmZMURX95HET2oxepLsPoBeYsNvV8EWS6EAQsBAELQcBCELAQBCwEAQtBwEIQsBAELAQBC0HAYp084XdZwCjxB+e3vf+EEn9ggjSO8fI0ix2CgIUgYCEIWAgCFoLUi/G756zTl8bLi96mnM9ShSD1Mt5MKAe5l4tZihCkXozXfqUFKA0KQeol35L7k52LcpBv6aUsZghSP9bJY+PkW6XT89BsDi/HK8JP6lFQrBteiVOAIFgoBAFDIQgYCkFSoQyuNhuQ1xAsFIKAoRAkPUruB9fqD8ItKzmKcXpUG4UgYCgEAUMhyIxRvH7J/fDWn0/iNQQLhSBgKARpF6Xnh7fHX8gtCwuFIAAfHr1+NX5wB2KFWK/3jJe9ydujeqIO4/Sz2ZIbrYKExxuF9+ZtT4ZFOZwetgpSFMWZ8gu4tifCgxxtg4QYL3etk93WJ8O3e0BsWSf1om6rGMffaREECKN8EVdIqxgTn9YJAoRRvpgrZPYYTo96Xq7//gSCzBzjr/dECAKEUZ7IFYKDUZ5MkOQYU3WeECQ9xlS9WQQBwigH4paVEKNB0zVBgDDKAblCcDDKQQmCg1EOTBAcjHJwgkTBiPZLXIIAYZRFuEJqJfx3tslbr3xwQCsJ3TGTzRh8tEZrGY1Gp6zTj8kxQrhl1Uvu9KZ1ao3T973NwYUsVQgCFoKAhSBgIQhYCNI8fJAyGEaS1luukOYYBAHDIAhAku8o3LKmC0HAQhCwEAQsBAELQcBCELAQBCwEAQtBwEKQkwci+8cLFEV/OXqROUlR9JcrrUD70YsYJ+vjnXiymucflqIXmgMM4+V5ZYWszagjj4et98CYB9FBut3ugvW6QQSd8uk98iZ0NGYp0tveW7ReO0TRmiDyNsxZlrx/1euK9foqtEoSRycaq8PchG0q2cr4AfEdWLK0nQuBWq4AAAAASUVORK5CYII=" />
+                                                            </pattern>
+                                                        </defs>
+                                                        <rect id="icons8-log-out-100" width="24" height="24"
+                                                            fill="url(#pattern)" />
+                                                    </svg>
+
+                                                    Kirjaudu ulos
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- user_box -->
+                        </div>
+                    </div>
+                    <!-- User Profile -->
+                </div>
+                <!-- grid -->
+            </div>
+            <!-- container -->
+        </div>
+        <!-- Top Header -->
+    </header>
+    <!-- header_area  -->
+    <!-- header part end  -->
+
+    <!-- Main Content Start-->
+    <section class="py-10">
+        <div class="container px-4">
+            <!-- grid View Item -->
+            <div class="grid grid-cols-1 gap-4">
+                <!-- card_item -->
+                <div class="lg:border border-[#EAECF0] lg:bg-[#FFFFFF] rounded-xl relative h-fit">
+                    <!-- Card Header -->
+                    <div class="card_header px-4 md:px-8 py-4 bg-[#FFFFFF] border lg:border-b border-line top-0 z-10">
+                        <div class="flex justify-between flex-wrap items-center">
+                            <div>
+                                <p class="text-sm font-normal text-[#818D93] mb-1">Project nimi</p>
+                                <h2 class="text-xl font-medium text-[#08202C]">Rakentamisen käynnistäminen / Työmaan
+                                    aloituskokous / TMK1 Pöytäkirja_ver1</h2>
+                            </div>
+
+                            <div>
+                                <button
+                                    class="text-[#08202C] font-medium border border-solid border-[#CCCCD6] shadow rounded-lg flex items-center gap-2 px-3 py-2 mt-3 lg:mt-0">
+                                    <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px"
+                                        viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve"
+                                        fill="#000000">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <g>
+                                                <path fill="#08202C"
+                                                    d="M60,12h-6V2c0-1.105-0.895-2-2-2H12c-1.105,0-2,0.895-2,2v10H4c-2.211,0-4,1.789-4,4v32 c0,2.211,1.789,4,4,4h6v10c0,1.105,0.895,2,2,2h40c1.105,0,2-0.895,2-2V52h6c2.211,0,4-1.789,4-4V16C64,13.789,62.211,12,60,12z M12,3c0-0.553,0.447-1,1-1h38c0.553,0,1,0.447,1,1v9H12V3z M52,61c0,0.553-0.447,1-1,1H13c-0.553,0-1-0.447-1-1V37 c0-0.553,0.447-1,1-1h38c0.553,0,1,0.447,1,1V61z M62,48c0,1.104-0.896,2-2,2h-6V36c0-1.105-0.895-2-2-2H12c-1.105,0-2,0.895-2,2 v14H4c-1.104,0-2-0.896-2-2V16c0-1.104,0.896-2,2-2h56c1.104,0,2,0.896,2,2V48z">
+                                                </path>
+                                                <path fill="#08202C"
+                                                    d="M19,44h12c0.553,0,1-0.447,1-1s-0.447-1-1-1H19c-0.553,0-1,0.447-1,1S18.447,44,19,44z">
+                                                </path>
+                                                <path fill="#08202C"
+                                                    d="M45,48H19c-0.553,0-1,0.447-1,1s0.447,1,1,1h26c0.553,0,1-0.447,1-1S45.553,48,45,48z">
+                                                </path>
+                                                <path fill="#08202C"
+                                                    d="M38,54H19c-0.553,0-1,0.447-1,1s0.447,1,1,1h19c0.553,0,1-0.447,1-1S38.553,54,38,54z">
+                                                </path>
+                                                <path fill="#08202C"
+                                                    d="M55,18c-1.657,0-3,1.343-3,3s1.343,3,3,3s3-1.343,3-3S56.657,18,55,18z M55,22c-0.553,0-1-0.447-1-1 s0.447-1,1-1s1,0.447,1,1S55.553,22,55,22z">
+                                                </path>
+                                                <path fill="#08202C"
+                                                    d="M45,18c-1.657,0-3,1.343-3,3s1.343,3,3,3s3-1.343,3-3S46.657,18,45,18z M45,22c-0.553,0-1-0.447-1-1 s0.447-1,1-1s1,0.447,1,1S45.553,22,45,22z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </svg>
+
+                                    Luonnos
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card Header -->
+
+                    <!-- Card Body -->
+                    <div class="pb-8 text-[#586B74]">
+
+                        <!-- 1st section -->
+                        <div class="bg-[#FFFFFF] mx-auto max-w-[987px] border border-[#E1E1EA] rounded-lg mt-8 px-[20px] lg:px-[0px]">
+                            <div class="mb-[31px] pt-[56px] lg:mx-[69px]">
+                                <div class="flex items-center justify-end">
+                                    <div class="w-[48px] h-[48px] bg-[#F6F8FF] "></div>
+                                    <div class="w-[118px] h-[44px] bg-[#F6F8FF] "></div>
+                                </div>
+                                <p>K1</p>
+                                <p>K4</p>
+
+                                <!-- main step start -->
+                                <div class="mt-14">
+                                    <h1 class="md:text-[32px] mb-8 text-[20px] text-black font-medium">TYÖMAAN
+                                        ALOITUSKOKOUS</h1>
+                                    <h1 class="md:text-[32px] text-[20px] text-black font-medium">ASIALISTA/PÖYTÄKIRJA
+                                    </h1>
+
+                                    <!-- Aika ja paikka -->
+                                    <div class="flex lg:gap-[187px] md:gap-[100px] gap-[20px] mt-14 flex-wrap">
+                                        <p class="text-[18px]">Aika ja paikka</p>
+                                        <div class="flex flex-wrap">
+                                            <p class="mr-12 text-[#283B44]">x.x.xxxx</p>
+                                            <p class="mr-8">klo</p>
+                                            <p class="lg:mr-[103px] md:mr-[60px] text-[#283B44] ">x:xx</p>
+                                            <p class="text-[#283B44] ">Vapaa teksti</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Aika ja paikka nested -->
+                                    <div class="lg:ml-[334px] md:ml-[210px] ml-[20px]">
+                                        <div class="flex items-center lg:gap-[231px] md:gap-[225px] gap-[20px] mt-6">
+                                            <p class="text-[18px]">U4</p>
+                                            <p class="text-[18px]">U1</p>
+                                        </div>
+
+                                        <div class="flex items-center lg:gap-[231px] md:gap-[225px] gap-[20px] mt-6">
+                                            <p class="text-[18px]">U7</p>
+                                            <p class="text-[18px]">U1</p>
+                                        </div>
+                                        <p class="text-[#283B44] mt-6">Vapaa teksti</p>
+
+                                        <div class="flex items-center lg:gap-[221px] md:gap-[217px] gap-[20px] mt-6">
+                                            <p class="text-[18px]">T10</p>
+                                            <p class="text-[18px]">T9</p>
+                                        </div>
+
+                                        <div class="flex items-center lg:gap-[164px] md:gap-[159px] gap-[20px] mt-6">
+                                            <p class="text-[#283B44]">Vapaa teksti</p>
+                                            <p class="text-[18px]">T9</p>
+                                        </div>
+
+                                        <div class="flex items-center gap-[20px] lg:gap-[231px] md:gap-[226px] mt-6">
+                                            <p class="text-[18px]">K6</p>
+                                            <p class="text-[18px]">K22</p>
+                                        </div>
+
+                                        <div class="flex items-center lg:gap-[231px] md:gap-[228px] gap-[20px] mt-6">
+                                            <p class="text-[18px]">T3</p>
+                                            <p class="text-[18px]">T2</p>
+                                        </div>
+
+                                        <div class="flex items-center lg:gap-[164px] md:gap-[160px] gap-[20px] mt-6">
+                                            <p class="text-[#283B44]">Vapaa teksti</p>
+                                            <p class="text-[#283B44]">Vapaa teksti</p>
+                                        </div>
+
+                                        <div class="flex items-center lg:gap-[231px] md:gap-[227px] gap-[20px] mt-6">
+                                            <p class="text-[18px]">P1</p>
+                                            <p class="text-[18px]">Partners at Noste Oy</p>
+                                        </div>
+
+                                        <div class="flex items-center lg:gap-[231px] md:gap-[227px] gap-[20px] mt-6">
+                                            <p class="text-[18px]">P4</p>
+                                            <p class="text-[18px]">Partners at Noste Oy</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- main step end -->
+
+                                <!-- step 1 start -->
+                                <div class="mt-14">
+                                    <h2 class="md:text-2xl text-[20px] text-black font-medium"><span
+                                            class="md:mr-14 mr-7">1.</span> KOKOUKSEN AVAUS JA JÄRJESTÄYTYMINEN</h2>
+                                    <p class="mt-6"><span class="mx-1">P1</span> P4 toivotti läsnäolijat tervetulleiksi
+                                        työmaan aloituskokoukseen. <br> Kokouksen puheenjohtajana toimii P1 <span
+                                            class="mr-3">P4</span> / Partners at Noste Oy ja sihteerinä <span
+                                            class="ml-1 mr-3">P1 P4</span> / Partners at Noste Oy. Puheenjohtaja avasi
+                                        kokouksen.</p>
+                                </div>
+                                <!-- step 1 end -->
+
+                                <!-- step 2 start -->
+                                <div class="mt-14">
+                                    <h2 class="md:text-2xl text-[20px] text-black font-medium"><span
+                                    class="md:mr-14 mr-7">2.</span> KOKOUKSEN PÄÄTÖSVALTAISUUS</h2>
+                                    <p class="mt-6">Todettiin, että Tilaajan ja Urakoitsijan päätösvaltaiset edustajat ovat paikalla. Kokouksen pitämisestä ja ajankohdasta on sovittu yhteisesti osapuolten kesken <span class="ml-5">xx.xx.xxxx.</span> <br>Todettiin kokous
+                                    sopimuksen mukaiseksi ja päätösvaltaiseksi työmaakokoukseksi.</p>
+                                </div>
+                                <!-- step 2 end -->
+                                <p class="text-center mt-14">1/13</p>
+                            </div>
+                        </div>
+
+                        <!-- 2nd section -->
+                        <div class="bg-[#FFFFFF] mx-auto max-w-[987px] border border-[#E1E1EA] rounded-lg mt-4 px-[20px] lg:px-[0px]">
+                            <div class="mb-[31px] pt-[56px] lg:mx-[69px]">
+
+                                <div class="flex items-center justify-end">
+                                    <div class="w-[48px] h-[48px] bg-[#F6F8FF] "></div>
+                                    <div class="w-[118px] h-[44px] bg-[#F6F8FF] "></div>
+                                </div>
+
+                                <div class="mt-6">
+                                <h2 class="md:text-2xl text-[20px] text-black font-medium"><span
+                                class="md:mr-14 mr-7">3.</span>YHTEYSHENKILÖT JA YHTEISTOIMINTA</h2>
+                                <p class="mt-6">KOHTEEN NIMI JA OSOITE <br> Kohde: K1, K4 <br> Osoite: K2, K3</p>
+                                </div>
+                                <h2 class="md:text-2xl text-[20px] text-black font-medium mt-12"><span
+                                class="md:mr-14 mr-7">3.</span>YHTEYSHENKILÖT JA YHTEISTOIMINTA</h2>
+                                <p class="mt-6">KOHTEEN NIMI JA OSOITE <br> Kohde: K1, K4 <br> Osoite: K2, K3</p>
+                                <p class="mt-6">PROJEKTIN OSAPUOLET</p>
+
+                                <!-- nested content start -->
+                                <div class="flex md:flex-row flex-wrap gap-7 mt-6 text-[#283B44]">
+                                    <p class="font-medium md:w-2/5 text-[18px]">Rakennuttaja</p>
+                                    <p class="text-[18px] font-medium">T1</p>
+                                </div>
+
+                                <div class="flex md:flex-row flex-wrap gap-7 mt-6 text-[#283B44]">
+                                    <p class="font-medium md:w-2/5 text-[18px]">Projektinjohtokonsultti</p>
+                                    <p class="text-[18px] font-medium">Partners at Noste Oy</p>
+                                </div>
+
+                                <div class="flex md:flex-row flex-wrap mt-6">
+                                    <p class="md:w-2/5 ml-7 text-[18px]">Projektipäällikkö</p>
+                                    <p class="text-[18px] ml-[28px] md:ml-[0px] mt-[8px] md:mt-[0px]">P1, puh. P2</p>
+                                </div>
+
+                                <div class="flex md:flex-row flex-wrap mt-6">
+                                    <p class="md:w-2/5 ml-7 text-[18px]">Projektijohtamisen asiantuntija</p>
+                                    <p class="text-[18px] ml-[28px] md:ml-[0px] mt-[8px] md:mt-[0px]">P4, puh. P5</p>
+                                </div>
+
+                                <div class="flex md:flex-row gap-7 mt-6 text-[#283B44]">
+                                    <p class="font-medium md:w-2/5 text-[18px]">Pääurakoitsija</p>
+                                    <p class="text-[18px] font-medium">U1</p>
+                                </div>
+
+                                <div class="flex md:flex-row gap-7 mt-6">
+                                    <p class="md:w-2/5 text-[18px]">Työnjohtaja</p>
+                                    <p class="text-[18px]">U7, puh. U9</p>
+                                </div>
+
+                                <div class="flex md:flex-row gap-7 mt-6 text-[#283B44]">
+                                    <p class="font-medium md:w-2/5 text-[18px]">Tilasuunnittelu</p>
+                                    <p class="text-[18px] font-medium">T9</p>
+                                </div>
+
+                                <div class="flex md:flex-row flex-wrap gap-7 mt-6">
+                                    <p class="md:w-2/5 text-[#283B44]">Sisustusarkkitehti</p>
+                                    <div>
+                                        <p class="text-[18px]">T10, puh. T11</p>
+                                        <p class="text-[18px] font-medium mt-6 text-[#283B44]">V1</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex md:flex-row gap-7 mt-6 text-[#283B44]">
+                                    <p class="font-medium md:w-2/5 text-[18px]">Kiinteistömanageeraus</p>
+                                    <p class="text-[18px] font-medium">K22</p>
+                                </div>
+
+                                <div class="flex md:flex-row flex-wrap gap-7 mt-6">
+                                    <p class="md:w-2/5 text-[#283B44]">Kiinteistöpäällikkö</p>
+                                    <div>
+                                        <p class="text-[18px]">K6, puh. K10</p>
+                                        <p class="text-[18px] font-medium mt-6 text-[#283B44]">K23</p>
+                                        <p class="text-[18px] mt-6">K11, puh. K13</p>
+                                    </div>
+                                </div>
+
+                                <p class="w-2/5 font-medium text-[#283B44] mt-6 text-[18px]">Aulapalvelut</p>
+
+                                <div class="flex gap-7 mt-6">
+                                    <p class="w-2/5"></p>
+                                    <p class="text-[18px]">Aukioloajat klo K16</p>
+                                </div>
+
+                                <p class="text-center md:mt-[34px] mt-[60px]">2/13</p>
+
+                            </div>
+                        </div>
+
+                        <!-- 3rd section -->
+                        <div class="bg-[#FFFFFF] mx-auto max-w-[987px] border border-[#E1E1EA] rounded-lg mt-4 px-[20px] lg:px-[0px]">
+                            <div class="mb-[31px] pt-[56px] lg:mx-[69px]">
+
+                                <div class="flex items-center justify-end">
+                                    <div class="w-[48px] h-[48px] bg-[#F6F8FF] "></div>
+                                    <div class="w-[118px] h-[44px] bg-[#F6F8FF] "></div>
+                                </div>
+
+                                <h2 class="md:text-2xl text-[20px] text-black font-medium mt-6"><span
+                                class="md:mr-14 mr-7">4.</span>SOPIMUSASIAT JA -LIITTEET</h2>
+                                <p class="mt-6">URAKKASOPIMUS JA -AIKA</p>
+                                <p class="mt-6">Urakkamuotona on kiinteähintainen kokonaisurakka. <br> Urakkasopimuksen tilanne</p>
+
+                                <!-- - TMK1: Kesken Kommenteilla Allekirjoitettu -->
+                                <div class="flex md:items-center md:gap-[60px] gap-[20px] mt-6">
+                                    <p>-</p>
+                                    <div class="flex md:items-center flex-wrap">
+                                        <p>TMK1:</p>
+                                        <p class="ml-5">Kesken</p>
+                                        <p class="md:ml-10">Kommenteilla</p>
+                                        <p class="md:ml-8">Allekirjoitettu</p>
+                                    </div>
+                                </div>
+
+                                <!-- - TMK1: Vapaa teksti -->
+                                <div class="flex md:items-center md:gap-[60px] gap-[20px] mt-6">
+                                    <p>-</p>
+                                    <div class="flex gap-5 md:items-center flex-wrap">
+                                        <p>TMK1:</p>
+                                        <p>Vapaa teksti</p>
+                                    </div>
+                                </div>
+
+                                <p class="mt-12">LASKUTUSKÄYTÄNTÖ</p>
+                                <!-- Maksuerätaulukko -->
+                                <p class="mt-6">Maksuerätaulukko</p>
+
+                                <!-- - TMK1: Kesken Kommenteilla Allekirjoitettu -->
+                                <div class="flex md:items-center md:gap-[60px] gap-[20px] mt-6">
+                                    <p>-</p>
+                                    <div class="flex md:items-center flex-wrap">
+                                        <p>TMK1:</p>
+                                        <p class="ml-5">Kesken</p>
+                                        <p class="md:ml-10">Kommenteilla</p>
+                                        <p class="md:ml-8">Hyväksytty</p>
+                                    </div>
+                                </div>
+
+                                <!-- - TMK1: Vapaa teksti -->
+                                <div class="flex md:items-center md:gap-[60px] gap-[20px] mt-6">
+                                    <p>-</p>
+                                    <div class="flex gap-5 md:items-center flex-wrap">
+                                        <p>TMK1:</p>
+                                        <p>Vapaa teksti</p>
+                                    </div>
+                                </div>
+
+                                <!-- Laskujen tarkastaminen -->
+                                <p class="mt-12">Laskujen tarkastaminen</p>
+                                <div class="mt-6">
+                                    <p><span class="md:mr-[60px] mr-[20px]">-</span>TMK1: Ennen laskujen lähettämistä urakoitsijan on hyväksytettävä laskutettavat maksuerät rakennuttajakonsultilla urakkasopimuksessa kirjatun mukaisesti ja liitettävä rakennuttajakonsultin hyväksyntä osaksi laskua.</p>
+                                </div>
+
+                                <!-- Laskutusohje -->
+                                <p class="mt-12">Laskutusohje</p>
+                                <div class="flex items-start md:gap-[60px] gap-[20px] mt-6">
+                                    <p>-</p>
+                                    <div>
+                                        <p>TMK1: Verkkolaskutusosoite:</p>
+                                        <p class="text-[18px] mt-[18px]">M1</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start md:gap-[60px] gap-[20px] mt-6">
+                                    <p>-</p>
+                                    <div class="flex items-center flex-wrap lg:gap-[32px] gap-[20px]">
+                                        <p>TMK1: Laskujen viitteeksi tulee laittaa</p>
+                                        <p>hankenumero K8</p>
+                                        <p>Vapaa teksti</p>
+                                    </div>
+                                </div>
+
+                                <!-- KOKOUSKÄYTÄNNÖT -->
+                                <p class="mt-12">KOKOUSKÄYTÄNNÖT</p>
+                                <p class="mt-6">Työmaakokouksiin osallistuvat ensisijaisesti urakoitsijat ja rakennuttajakonsultti.</p>
+                                <div class="flex md:gap-[60px] gap-[20px] mt-6">
+                                    <p>-</p>
+                                    <div>
+                                        <p>Suunnittelijat kutsutaan työmaakokouksiin vain tarvittaessa.</p>
+                                        <p class="mt-[18px]"><span class="mr-[64px]">o</span> TMK1: Tilasuunnittelija kutsuttu aloituskokoukseen</p>
+                                    </div>
+                                </div>
+
+                                    <p class="mt-5"><span class="md:mr-[60px] mr-[20px]">-</span>Pääurakoitsija laatii urakkasopimuksen mukaisesti työvaiheilmoitukset, joista viimeisin liitetään osaksi työmaakokouspöytäkirjaa.</p>
+
+                                <div class="flex md:gap-[60px] gap-[20px] mt-[18px]">
+                                    <p>-</p>
+                                    <p>Työmaakokouksia järjestetään arviolta kerran kuukaudessa. Kuitenkin tarpeen mukaan.</p>
+                                </div>
+
+                                <p class="text-center md:mt-[32px] mt-[60px]">3/13</p>
+
+                            </div>
+                        </div>
+
+                        <!-- 4th section -->
+                        <div class="bg-[#FFFFFF] mx-auto max-w-[987px] border border-[#E1E1EA] rounded-lg mt-4 px-[20px] lg:px-[0px]">
+                            <div class="mb-[31px] pt-[56px] lg:mx-[69px]">
+
+                                <div class="flex items-center justify-end">
+                                    <div class="w-[48px] h-[48px] bg-[#F6F8FF] "></div>
+                                    <div class="w-[118px] h-[44px] bg-[#F6F8FF] "></div>
+                                </div>
+
+                                <p class="mt-6">VAKUUTUKSET JA VAKUUDET</p>
+                                <p class="mt-6">Todistus vastuuvakuutuksesta</p>
+
+                                <p class="mt-6"><span class="md:mr-[60px] mr-[20px]">-</span>TMK1: Urakoitsija on toimittanut todistuksen voimassa olevasta vastuuvakuutuksesta sekä Luotettava Kumppani-raportin tarjouksen jättämisen yhteydessä, OK.</p>
+
+                                <!-- Rakennustyövakuutuksen toimittaminen -->
+                                <p class="mt-8">Rakennustyövakuutuksen toimittaminen</p>
+                                <div class="flex items-start md:gap-[60px] gap-[20px] mt-6">
+                                    <p>-</p>
+                                    <p>TMK1: Pääurakoitsija on toimittanut todistuksen rakennustyövakuutuksesta</p>
+                                </div>
+
+                                <div class="flex items-start md:gap-[60px] gap-[20px] mt-5">
+                                    <p>-</p>
+                                    <p>TMK1: Pääurakoitsija ei ole toimittanut todistusta rakennustyövakuutuksesta, toimitetaan <span class="font-medium">  (U7)</span></p>
+                                </div>
+
+                                <p class="mt-[34px]">Rakennusajan vakuus</p>
+                                <div class="flex items-start md:gap-[60px] gap-[20px] mt-6">
+                                    <p>-</p>
+                                    <p>TMK1: Pääurakoitsija on toimittanut rakennusajan vakuuden</p>
+                                </div>
+
+                                <div class="flex items-start md:gap-[60px] gap-[20px] mt-5">
+                                    <p>-</p>
+                                    <p>TMK1: Pääurakoitsija ei ole toimittanut rakennusajan vakuutta, toimitetaan<span class="font-medium"> (U7)</span></p>
+                                </div>
+
+                                <p class="mt-[34px]">Takuuajan vakuus</p>
+                                    <p class="mt-6"><span class="md:mr-[60px] mr-[20px]">-</span>Urakoitsijan tulee urakan vastaanoton yhteydessä toimittaa takuuajan vakuus, joka on 2 % laskettuna arvonlisäverottomasta urakkahinnasta lisä- ja muutostöineen. <span class="font-medium">(U7)</span></p>
+
+                                <!-- step 5 start -->
+                                <h2 class="md:text-2xl text-[20px] text-black font-medium mt-14"><span
+                                    class="md:mr-14 mr-7">5.</span> VIRANOMAISASIAT</h2>
+                                    <p class="mt-6">Rakennusluvan tilanne.</p>
+                                    <div class="flex items-start md:gap-[60px] gap-[20px] mt-6">
+                                        <p>-</p>
+                                        <p>Hankkeessa tehtävät työt eivät edellytä rakennuslupaa.</p>
+                                    </div>
+                                <!-- step 5 end -->
+
+                                <!-- step 6 start -->
+                                <div class="mt-12">
+                                    <h2 class="md:text-2xl text-[20px] text-black font-medium"><span
+                                    class="md:mr-14 mr-7">6.</span>AIKATAULU- JA TYÖMAATILANNE SEKÄ PÄÄURAKOITSIJAN ASIAT</h2>
+                                    <p class="mt-6">Pääurakoitsijan asiat:</p>
+
+                                    <div class="flex items-start md:gap-[60px] gap-[20px] mt-6">
+                                        <p>-</p>
+                                        <p>TMK1: Viimeisin työvaiheilmoitus ( <span class="px-4">xx.xx.xxxx</span> ), liite 1.</p>
+                                    </div>
+
+                                    <div class="flex items-start md:gap-[60px] gap-[20px] mt-[26px]">
+                                        <p>-</p>
+                                        <p>TMK1: Työvaiheilmoitusta ei toimitettu.</p>
+                                    </div>
+
+                                    <div class="flex items-start md:gap-[60px] gap-[20px] mt-6">
+                                        <p>-</p>
+                                        <p>TMK1: Työmaan yhteisvahvuus <span class="px-5">x</span> hlöä.</p>
+                                    </div>
+                                    <p class="text-center md:mt-[159px] mt-[60px]">4/13</p>
+
+                                </div>
+                                <!-- step 6 end -->
+                            </div>
+                        </div>
+
+                        <!-- 5th section -->
+                        <div class="bg-[#FFFFFF] mx-auto max-w-[987px] border border-[#E1E1EA] rounded-lg mt-4 px-[20px] lg:px-[0px]">
+                            <div class="mb-[31px] pt-[56px] lg:mx-[69px]">
+
+                                <div class="flex items-center justify-end">
+                                    <div class="w-[48px] h-[48px] bg-[#F6F8FF] "></div>
+                                    <div class="w-[118px] h-[44px] bg-[#F6F8FF] "></div>
+                                </div>
+
+                                <p class="mt-8">Pääurakoitsijan asiat:</p>
+
+                                    <div class="flex items-start md:gap-[60px] gap-[20px] mt-6">
+                                        <p>-</p>
+                                        <p>TMK1: Työmaa-aikataulu seurantaviivalla, ( <span class="md:px-4">xx.xx.xxxx</span> ), liite 2.</p>
+                                    </div>
+
+                                <div class="flex items-start md:gap-[60px] gap-[20px] mt-[26px]">
+                                    <p>-</p>
+                                    <p>TMK1: Työmaa-aikataulua ei toimitettu.</p>
+                                </div>
+
+                                <div class="flex items-start md:gap-[50px] gap-[20px] mt-[26px]">
+                                    <p>-</p>
+                                    <p>Urakoitsijan ilmoitus aikataulutilanteesta</p>
+                                </div>
+
+                                <div class="md:ml-[50px] ml-[20px]">
+                                    <div class="flex items-center md:gap-[50px] gap-[20px] mt-6">
+                                        <p>o</p>
+                                        <p>TMK1: <span class="ml-5">Työt aloitettu…</span></p>
+                                    </div>
+                                    <div class="flex items-center md:gap-[50px] gap-[20px] mt-6">
+                                        <p>o</p>
+                                        <p>TMK1: <span class="ml-5">Työt aloitettu…</span></p>
+                                    </div>
+                                    <div class="flex items-center md:gap-[50px] gap-[20px] mt-6">
+                                        <p>o</p>
+                                        <p>TMK1: <span class="ml-5">Työt aloitettu…</span></p>
+                                    </div>
+                                    <div class="flex items-center md:gap-[50px] gap-[20px] mt-6">
+                                        <p>o</p>
+                                        <p>TMK1: <span class="ml-5">Työt aloitettu…</span></p>
+                                    </div>
+                                    <div class="flex items-center md:gap-[50px] gap-[20px] mt-6">
+                                        <p>o</p>
+                                        <p>TMK1: <span class="ml-5">Työt aloitettu…</span></p>
+                                    </div>
+                                    <div class="flex items-center md:gap-[50px] gap-[20px] mt-6">
+                                        <p>o</p>
+                                        <p>TMK1: <span class="ml-5">Työt aloitettu…</span></p>
+                                    </div>
+
+                                </div>
+
+                                <div class="flex md:gap-[60px] gap-[20px] mt-[25px]">
+                                    <p>-</p>
+                                    <p>TMK1: Päivitetään aikataulu yllä olevien kirjausten mukaan. <span class="font-medium">(U7)</span></p>
+                                </div>
+                                <p class="mt-[50px]">Muut aikatauluasiat:</p>
+
+                                <div class="flex items-start md:gap-[60px] gap-[20px] mt-[26px]">
+                                    <p>-</p>
+                                    <p>TMK1: <span class="ml-5">Vapaa teksti…</span></p>
+                                </div>
+
+                                <div class="flex items-start md:gap-[50px] gap-[20px] mt-6">
+                                    <p>-</p>
+                                    <p>Toimitusajallisten tuotteiden hankinnan tilanne:</p>
+                                </div>
+
+                                <!-- 6 last -->
+                                <div class="md:ml-[50px] ml-[20px]">
+                                    <div class="flex items-center md:gap-[50px] gap-[20px] mt-6">
+                                        <p>o</p>
+                                        <p>TMK1: <span class="ml-5">Työt aloitettu…</span></p>
+                                    </div>
+
+                                    <div class="flex items-start md:gap-[50px] gap-[20px] mt-6">
+                                        <p>o</p>
+                                        <p>TMK1: [ <span class="ml-5">Urakoitsijalla selvityksessä</span>] [ <span class="md:ml-5">Tilattu</span>] [ <span class="md:ml-5">Toimituksessa</span>] [ <span class="md:ml-5">Toimitettu työmaalle</span>]</p>
+                                    </div>
+
+                                    <div class="flex items-start md:gap-[50px] gap-[20px] mt-[53px]">
+                                        <p>o</p>
+                                        <p>TMK1: Toimitusaika [ <span class="md:ml-5">vahvistettu vapaa teksti</span>] [ <span class="md:ml-5">arviolta vapaa teksti</span>] [ <span class="md:ml-5">ei vielä tiedossa</span>]</p>
+                                    </div>
+                                    <div class="flex items-start md:gap-[50px] gap-[20px] mt-6">
+                                        <p>o</p>
+                                        <p>TMK1: Tavarantoimittaja <span class="ml-3">vapaa teksti]</span></p>
+                                    </div>
+                                    <div class="flex items-start md:gap-[50px] gap-[20px] mt-6">
+                                        <p>o</p>
+                                        <p>TMK1: <span class="ml-3">Vapaa teksti…</span></p>
+                                    </div>
+                                    <p class="text-center md:mt-[243px] mt-[60px]">5/13</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- 6th section -->
+                        <div class="bg-[#FFFFFF] mx-auto max-w-[987px] border border-[#E1E1EA] rounded-lg mt-4 px-[20px] lg:px-[0px]">
+                            <div class="mb-[31px] pt-[56px] lg:mx-[64px]">
+
+                                <div class="flex items-center justify-end">
+                                    <div class="w-[48px] h-[48px] bg-[#F6F8FF] "></div>
+                                    <div class="w-[118px] h-[44px] bg-[#F6F8FF] "></div>
+                                </div>
+
+                                <p class="mt-8">Työmaatilanne:</p>
+                                <div class="flex items-start md:gap-[60px] gap-[20px] mt-6">
+                                    <p>-</p>
+                                    <p>TMK1: Työmaa on luovutettu urakoitsijan käyttöön <span class="ml-4">xx.xx.xxxx</span>.</p>
+                                </div>
+                                
+                                <div class="flex items-start md:gap-[60px] gap-[20px] mt-6">
+                                    <p>-</p>
+                                    <p>Avaimet ja kulkutunnisteet</p>
+                                </div>
+
+                                <div class="md:ml-[60px] ml-[20px]">
+                                    <div class="flex items-start md:gap-[72px] gap-[20px] mt-6">
+                                        <p>o</p>
+                                        <p>TMK1: Urakoitsijalla on tarvittavat avaimet ja kulkutunnisteet kiinteistössä liikkumiseen.</p>
+                                    </div>
+
+                                    <p class="mt-[26px]"><span class="md:mr-[72px] mr-[20px]">o</span>TMK1: Kulkutunnisteet myönnetään aulasta. Sähköpostiin henkilöiden nimet, työnantajat ja kopioksi rakennuttajakonsultti.</p>
+
+                                    <div class="flex items-start md:gap-[72px] gap-[20px] mt-6">
+                                        <p>o</p>
+                                        <p>TMK1: <span class="ml-3">Vapaa teksti…</span></p>
+                                    </div>
+
+                                </div>
+
+                                <div class="flex md:gap-[60px] gap-[20px] mt-[34px]">
+                                    <p>-</p>
+                                    <p>Työmaatoimisto ja sosiaalitilat</p>
+                                </div>
+
+                                <!-- - Työmaatoimisto ja sosiaalitilat -->
+                                <div class="md:ml-[60px] ml-[20px]">
+                                    <div class="flex md:gap-[60px] gap-[20px] mt-6">
+                                        <p>o</p>
+                                        <p>TMK1: <span class="ml-3">Vapaa teksti</span></p>
+                                    </div>
+
+                                    <div class="flex md:gap-[90px] gap-[20px] mt-[30px]">
+                                        <p>o</p>
+                                        <p>TMK1: <span class="ml-3">Vapaa teksti</span></p>
+                                    </div>
+                                </div>
+
+                                <!-- - Jätehallinta -->
+                                <div class="flex md:gap-[60px] gap-[20px] mt-[32px]">
+                                    <p>-</p>
+                                    <p>Jätehallinta</p>
+                                </div>
+
+                                <div class="md:ml-[60px] ml-[20px]">
+                                    <div class="flex md:gap-[60px] gap-[20px] mt-6">
+                                        <p>o</p>
+                                        <p>TMK1: <span class="ml-3">Vapaa teksti</span></p>
+                                    </div>
+
+                                    <div class="flex md:gap-[90px] gap-[20px] mt-[30px]">
+                                        <p>o</p>
+                                        <p>TMK1: <span class="ml-3">Vapaa teksti</span></p>
+                                    </div>
+                                </div>
+
+                                <!-- - - Varastointi -->
+                                <div class="flex md:gap-[60px] gap-[20px] mt-[32px]">
+                                    <p>-</p>
+                                    <p>Varastointi</p>
+                                </div>
+
+                                <div class="md:ml-[60px] ml-[20px]">
+                                    <div class="flex md:gap-[60px] gap-[20px] mt-6">
+                                        <p>o</p>
+                                        <p>TMK1: <span class="ml-3">Vapaa teksti</span></p>
+                                    </div>
+
+                                    <div class="flex md:gap-[90px] gap-[20px] mt-[30px]">
+                                        <p>o</p>
+                                        <p>TMK1: <span class="ml-3">Vapaa teksti</span></p>
+                                    </div>
+                                </div>
+
+                                <!-- - - - Pysäköinti -->
+                                <div class="flex md:gap-[60px] gap-[20px] mt-[32px]">
+                                    <p>-</p>
+                                    <p>Pysäköinti</p>
+                                </div>
+
+                                <div class="md:ml-[60px] ml-[20px]">
+                                    <div class="flex md:gap-[60px] gap-[20px] mt-6">
+                                        <p>o</p>
+                                        <p>TMK1: <span class="ml-3">Vapaa teksti</span></p>
+                                    </div>
+
+                                    <div class="flex md:gap-[90px] gap-[20px] mt-[30px]">
+                                        <p>o</p>
+                                        <p>TMK1: <span class="ml-3">Vapaa teksti</span></p>
+                                    </div>
+                                </div>
+
+                                <!-- Kiinteistön tiedotus -->
+                                <div class="flex md:gap-[60px] gap-[20px] mt-[32px]">
+                                    <p>-</p>
+                                    <p>Kiinteistön tiedotus</p>
+                                </div>
+
+                                <div class="md:ml-[60px] ml-[20px]">
+                                    <div class="flex md:gap-[60px] gap-[20px] mt-6">
+                                        <p>o</p>
+                                        <p>TMK1: <span class="ml-3">Vapaa teksti</span></p>
+                                    </div>
+
+                                    <div class="flex md:gap-[90px] gap-[20px] mt-[30px]">
+                                        <p>o</p>
+                                        <p>TMK1: <span class="ml-3">Vapaa teksti</span></p>
+                                    </div>
+                                </div>
+                                <p class="text-center md:mt-[116px] mt-[60px]">6/13</p>
+                            </div>
+                        </div>
+
+                        <!-- 7th section -->
+                        <div class="bg-[#FFFFFF] mx-auto max-w-[987px] border border-[#E1E1EA] rounded-lg mt-4 px-[20px] lg:px-[0px]">
+                            <div class="mb-[31px] pt-[56px] lg:mx-[69px]">
+
+                                <div class="flex items-center justify-end">
+                                    <div class="w-[48px] h-[48px] bg-[#F6F8FF] "></div>
+                                    <div class="w-[118px] h-[44px] bg-[#F6F8FF] "></div>
+                                </div>
+
+                                <!-- Muut pääurakoitsijan asiat -->
+                                <p class="mt-[30px]">Muut pääurakoitsijan asiat</p>
+                                <div class="md:ml-[60px] ml-[20px]">
+                                    <div class="flex md:gap-[60px] gap-[20px] mt-6">
+                                        <p>-</p>
+                                        <p>TMK1: <span class="ml-3">Vapaa teksti</span></p>
+                                    </div>
+
+                                    <div class="flex md:gap-[90px] gap-[20px] mt-[30px]">
+                                        <p>-</p>
+                                        <p>TMK1: <span class="ml-3">Vapaa teksti</span></p>
+                                    </div>
+                                </div>
+
+                                <!-- Tilasuunnittelijan aikatauluasiat -->
+                                <p class=" mt-[32px]">Tilasuunnittelijan aikatauluasiat</p>
+                                <div class="md:ml-[60px] ml-[20px]">
+                                    <div class="flex md:gap-[60px] gap-[20px] mt-6">
+                                        <p>-</p>
+                                        <p>TMK1: <span class="ml-3">Vapaa teksti</span></p>
+                                    </div>
+
+                                    <div class="flex md:gap-[90px] gap-[20px] mt-[30px]">
+                                        <p>-</p>
+                                        <p>TMK1: <span class="ml-3">Vapaa teksti</span></p>
+                                    </div>
+                                </div>
+
+                                <!-- step 7 start -->
+                                <div class="mt-14">
+                                    <h2 class="md:text-2xl text-[20px] text-black font-medium"><span class="md:mr-14 mr-7">7.</span> LISÄ- JA MUUTOSTYÖT</h2>
+                                    <p class="mt-6">Lisä- ja muutostyötarjoukset tehdään urakkasopimuksen mukaisesti ja tarjoukset tarvittavine laskelmineen ja erittelyineen tulee hyväksyttää rakennuttajalla ennen töiden aloitusta. <br> <br> Huom. Oikeus tilata lisä- ja muutostöitä on vain erikseen urakkasopimuksessa määritetyillä henkilöillä. Suunnittelijalla, muulla asiantuntijalla tai käyttäjän edustajalla ei ole oikeutta antaa muutoksia koskevia määräyksiä.</p>
+
+                                    <!-- Hyväksytyt lisätyöt -->
+                                    <p class="mt-8">Hyväksytyt lisätyöt</p>
+                                    <!--  -->
+                                    <div class="flex md:gap-[75px] gap-[20px] md:items-start mt-6">
+                                        <p class="md:ml-[60px] ml-[20px]">-</p>
+                                        <div class="flex flex-wrap">
+                                            <p>TMK1: LMT <span class="mx-4">x</span> , <span class="ml-5 md:mr-[46px]">Aihe</span> ,</p>
+                                            <div class="border-b mb-[5px] w-[171px] text-[#586B74] md:block hidden mx-1"></div>
+                                            <p class="md:mt-[12px] lg:mt-[0px]">€ (alv. 0 %), tilattu <span class="md:ml-8">xx.xx.xxxx</span></p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tarjotut lisätyöt -->
+                                    <p class="mt-8">Tarjotut lisätyöt</p>
+                                    <!--  -->
+                                    <div class="flex md:gap-[75px] gap-[20px] md:items-start mt-6">
+                                        <p class="md:ml-[60px] ml-[20px]">-</p>
+                                        <div class="flex flex-wrap">
+                                            <p>TMK1: LMT <span class="mx-4">x</span> , <span class="ml-5 md:mr-[46px]">Aihe</span> ,</p>
+                                            <div class="border-b mb-[5px] w-[171px] text-[#586B74] md:block hidden mx-1"></div>
+                                            <p>€ (alv. 0 %)</p>
+                                        </div>
+                                    </div>
+
+                                    <p class="mt-[34px]">Muut lisätyöaiheet</p>
+                                    <div class="flex md:gap-[75px] gap-[20px] mt-6">
+                                        <p class="md:ml-[60px] ml-[20px]">-</p>
+                                        <p>TMK1</p>
+                                    </div>
+                                    <p class="font-medium text-[#283B44] mt-[42px]">Rakennuttajakonsultti huomautti, että lisätöitä ei saa suorittaa ennen kirjallista hyväksyntää.</p>
+
+                                    <p class="text-center md:mt-[263px] mt-[60px]">7/13</p>
+                                </div>
+                                <!-- step 7 end -->
+                            </div>
+                        </div>
+
+                        <!-- 8th section -->
+                        <div class="bg-[#FFFFFF] mx-auto max-w-[987px] border border-[#E1E1EA] rounded-lg mt-4 px-[20px] lg:px-[0px]">
+                            <div class="mb-[31px] pt-[56px] lg:mx-[69px]">
+
+                                <div class="flex items-center justify-end">
+                                    <div class="w-[48px] h-[48px] bg-[#F6F8FF] "></div>
+                                    <div class="w-[118px] h-[44px] bg-[#F6F8FF] "></div>
+                                </div>
+
+                                <h2 class="md:text-2xl text-[20px] text-black font-medium mt-[22px]"><span
+                                class="md:mr-14 mr-7">8.</span> TYÖTURVALLISUUS</h2>
+                                <p class="mt-6">Päätoteuttajan vastuut</p>
+
+                                <p class="mt-6"><span class="md:mr-[60px] mr-[20px]">-</span>Pääurakoitsijana toimiva U1 vastaa työmaan johtovelvollisuuksista ja toimii lainsäädännön tarkoittamana työturvallisuudesta vastaavana päätoteuttajana.</p>
+
+                                <p class="mt-6"><span class="md:mr-[60px] mr-[20px]">-</span>Päätoteuttajan työsuojelupäällikkönä ja työturvallisuudesta vastaavana henkilönä toimii <span class="lg:ml-4">työnjohtaja U7. Työsuojeluvaltuutettuna toimii <span class="ml-3">U7.</span></span></p>
+
+                                <div class="flex md:gap-[75px] gap-[20px] mt-7">
+                                    <p>-</p>
+                                    <p>TMK1: Työnjohtajana toimii U7</p>
+                                </div>
+
+                                <p class="mt-[23px]"><span class="md:mr-[60px] mr-[20px]"></span>Päätoteuttajan vastuulla on huolehtia verottajan edellyttämästä rakentamisen tiedonantovelvollisuudesta. Pääurakoitsija vastaa sekä aliurakoitsijoidensa että kaikkien yhteisellä työmaalla työskentelevien henkilöiden ilmoittamisesta suoraan verottajalle. Päätoteuttajan tiedonantovelvollisuus koskee kaikkia yhteisellä työmaalla työskenteleviä henkilöitä, myös Tilaajan mahdollisiin erillishankintoihin liittyen.</p>
+
+                                <div class="flex md:gap-[60px] gap-[20px] md:ml-[60px] ml-[20px] mt-6">
+                                    <p>o</p>
+                                    <p>TMK1: <span class="ml-5">Miten tiedot kerätään? (perehdytyksessä, leimauslaitteella, muuten?)</span></p>
+                                </div>
+
+                                <div class="flex md:gap-[60px] gap-[20px] md:ml-[60px] ml-[20px] mt-6">
+                                    <p>o</p>
+                                    <p>TMK1: <span class="ml-5">Vapaa teksti</span></p>
+                                </div>
+
+                                <p class="mt-10"><span class="md:mr-[60px] mr-[20px]">-</span>Kaikki työmaalla työskentelevät henkilöt on perehdytettävä työmaahan. Perehdyttämisen suorittaa päätoteuttaja, myös aliurakoitsijoiden työntekijöille. Pääurakoitsija ylläpitää listaa työmaan työntekijöistä. Pääurakoitsijalla tulee olla aina tiedossa työmaalla työskentelevien henkilöiden nimet, syntymäajat, veronumerot ja heidän palkanmaksajansa.</p>
+
+                                <!--  -->
+                                <div class="flex md:gap-[60px] gap-[20px] md:ml-[60px] ml-[20px] mt-6">
+                                    <p>o</p>
+                                    <p>TMK1: <span class="ml-5">Miten tiedot kerätään? (perehdytyksessä, leimauslaitteella, muuten?)</span></p>
+                                </div>
+
+                                <div class="flex md:gap-[60px] gap-[20px] md:ml-[60px] ml-[20px] mt-6">
+                                    <p>o</p>
+                                    <p>TMK1: <span class="ml-5">Vapaa teksti</span></p>
+                                </div>
+
+                                <!-- Tilaajavastuulain mukaiset selvitykset -->
+                                <p class="mt-10">Tilaajavastuulain mukaiset selvitykset</p>
+
+                                <div class="flex md:gap-[60px] gap-[20px] mt-6">
+                                    <p>-</p>
+                                    <p>Pääurakoitsijan selvitykset toimitettu urakkatarjouksen yhteydessä</p>
+                                </div>
+
+                                <div class="flex md:gap-[60px] gap-[20px] mt-6">
+                                    <p>-</p>
+                                    <p>Aliurakoitsijoiden Tilaajavastuulain mukaiset selvitykset:</p>
+                                </div>
+
+                                <div class="flex md:gap-[60px] gap-[20px] md:ml-[60px] ml-[20px] mt-6">
+                                    <p>o</p>
+                                    <p>TMK1: <span class="ml-5"> Miten tiedot kerätään? (perehdytyksessä, leimauslaitteella, muuten?)</span></p>
+                                </div>
+
+                                <p class="mt-10">Ilmoitusvelvollisuudet</p>
+                                <div class="flex md:gap-[60px] gap-[20px] mt-6">
+                                    <p>-</p>
+                                    <p>Rakennustyön ennakkoilmoitus</p>
+                                </div>
+
+                                <div class="flex md:gap-[60px] gap-[20px] md:ml-[60px] ml-[20px] mt-6">
+                                    <p>o</p>
+                                    <p>TMK1: <span class="ml-5"> Miten tiedot kerätään? (perehdytyksessä, leimauslaitteella, muuten?)</span></p>
+                                </div>
+                                <p class="text-center mt-[68px]">8/13</p>
+                            </div>
+                        </div>
+
+                        <!-- 9th section -->
+                        <div class="bg-[#FFFFFF] mx-auto max-w-[987px] border border-[#E1E1EA] rounded-lg mt-4 px-[20px] lg:px-[0px]">
+                            <div class="mb-[31px] pt-[56px] lg:mx-[69px]">
+
+                                <div class="flex items-center justify-end">
+                                    <div class="w-[48px] h-[48px] bg-[#F6F8FF] "></div>
+                                    <div class="w-[118px] h-[44px] bg-[#F6F8FF] "></div>
+                                </div>
+
+                                <div class="flex md:gap-[60px] gap-[20px] mt-[22px]">
+                                    <p>-</p>
+                                    <p>Työsuojeluhenkilöilmoitus</p>
+                                </div>
+
+                                <div class="flex md:gap-[60px] gap-[20px] md:ml-[60px] ml-[20px] mt-6">
+                                    <p>o</p>
+                                    <p>TMK1: <span class="ml-5"> Miten tiedot kerätään? (perehdytyksessä, leimauslaitteella, muuten?)</span></p>
+                                </div>
+
+                                <!-- Urakoitsijan turvallisuussuunnitelmat -->
+                                <p class="mt-10">Urakoitsijan turvallisuussuunnitelmat</p>
+
+                                <div class="flex md:gap-[60px] gap-[20px] mt-6">
+                                    <p>-</p>
+                                    <p>Työmaan turvallisuussuunnitelma</p>
+                                </div>
+
+                                <div class="flex md:gap-[60px] gap-[20px] md:ml-[60px] ml-[20px] mt-6">
+                                    <p>o</p>
+                                    <p>TMK1: <span class="ml-5"> Miten tiedot kerätään? (perehdytyksessä, leimauslaitteella, muuten?)</span></p>
+                                </div>
+
+                                <!-- - Pölynhallintasuunnitelma -->
+                                <div class="flex md:gap-[60px] gap-[20px] mt-12">
+                                    <p>-</p>
+                                    <p>Pölynhallintasuunnitelma</p>
+                                </div>
+
+                                <div class="flex md:gap-[60px] gap-[20px] md:ml-[60px] ml-[20px] mt-6">
+                                    <p>o</p>
+                                    <div>
+                                        <p>TMK1: <span class="ml-5"> Miten tiedot kerätään? (perehdytyksessä, leimauslaitteella, muuten?)</span></p>
+                                    </div>
+                                </div>
+
+                                    <div class="md:ml-[60px] ml-[20px] mt-6 max-w-[700px]">
+                                    <p><span class="md:mr-[60px] mr-[20px]">o</span>TMK1: <span class="ml-5"> Onko toimenpiteitä noudatettu? (IV-tulppaus, kanavien varastointi suojattuna,</span> kohdepoistot purkutöissä jne.?)</p>
+                                    </div>
+
+                                <!-- Työmaan aluesuunnitelma -->
+                                <div class="flex md:gap-[60px] gap-[20px] mt-10">
+                                    <p>-</p>
+                                    <p>Työmaan aluesuunnitelma</p>
+                                </div>
+
+                                <!--  -->
+                                <div class="md:ml-[60px] ml-[20px] mt-[26px]">
+                                    <div class="flex md:gap-[60px] gap-[20px]">
+                                        <p>o</p>
+                                        <p>TMK1: [ <span class="ml-6">Laadittu.</span>] [ <span class="md:ml-6">Laaditaan xx.xx.xxxx mennessä.</span>]</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex md:gap-[60px] gap-[20px] md:ml-[60px] ml-[20px] mt-6">
+                                    <p>o</p>
+                                    <div>
+                                        <p>TMK1: <span class="ml-5"> Miten tiedot kerätään? (perehdytyksessä, leimauslaitteella, muuten?)</span></p>
+                                    </div>
+                                </div>
+
+                                <div class="md:ml-[60px] ml-[20px] mt-6">
+                                    <p><span class="md:mr-[60px] mr-[20px]">o</span>TMK1: Rakennuttajakonsultti huomautti, että työmaasuunnitelma tulee olla näkyvillä työmaalla.</p>
+                                </div>
+
+                                <div class="md:ml-[60px] ml-[20px] mt-6">
+                                    <p><span class="md:mr-[70px] mr-[20px]"></span>TMK1: [ <span class="ml-5">Suunnitelma nähtävillä työmaalla.</span>] [ <span class="md:ml-5">Urakoitsija lisää työmaasuunnitelman näkyviin</span> työmaalle. (U1)]</p>
+                                </div>
+
+                                <div class="flex md:gap-[60px] gap-[20px] md:ml-[60px] ml-[20px] mt-[86px]">
+                                    <p>o</p>
+                                    <div>
+                                        <p>TMK1: <span class="ml-5"> Miten tiedot kerätään? (perehdytyksessä, leimauslaitteella, muuten?)</span></p>
+                                    </div>
+                                </div>
+
+                                <!-- Henkilökohtaiset suojavarusteet -->
+                                <p class="mt-[47px]">Henkilökohtaiset suojavarusteet</p>
+                                <div class="flex md:gap-[60px] gap-[20px] md:ml-[60px] ml-[20px] mt-6">
+                                    <p>-</p>
+                                    <p>Työmaalla tulee käyttää turvallisuusasiakirjassa mainittuja suojavarusteita.</p>
+                                </div>
+
+                                <p class="mt-10">Kiinteistöä palvelevat järjestelmät</p>
+                                <div class="md:ml-[60px] ml-[20px] mt-6">
+                                    <p><span class="md:mr-[60px] mr-[20px]">-</span>Urakoitsijan on toiminnassaan huomioitava, että kiinteistöä palvelevat ja toiminnassa olevat järjestelmät ( <span class="mx-5">mm. paloilmaisinjärjestelmä</span> ) eivät häiriinny rakentamisen aikana.</p>
+                                </div>
+
+                                <p class="text-center md:mt-[118px] mt-[60px]">9/13</p>
+
+                            </div>
+                        </div>
+
+                        <!-- 10th section -->
+                        <div class="bg-[#FFFFFF] mx-auto max-w-[987px] border border-[#E1E1EA] rounded-lg mt-4 px-[20px] lg:px-[0px]">
+                            <div class="mb-[31px] pt-[56px] lg:mx-[69px]">
+
+                                <div class="flex items-center justify-end">
+                                    <div class="w-[48px] h-[48px] bg-[#F6F8FF] "></div>
+                                    <div class="w-[118px] h-[44px] bg-[#F6F8FF] "></div>
+                                </div>
+
+                                <p class="mt-6">Rakennuttajan turvallisuuskoordinaattorina toimii henkilö [ <span class="ml-2">P1</span>] [ <span class="ml-2">P4</span>], Partners at Noste Oy.</p>
+
+                                <!-- Rakennuttajan turvallisuusasiakirja. -->
+                                <p class="mt-[42px]">Rakennuttajan turvallisuusasiakirja.</p>
+                                <div class="md:ml-[60px] ml-[20px] mt-6">
+
+                                    <div>
+                                        <p><span class="md:mr-[60px] mr-[20px]">-</span>Rakennuttaja on laatinut kohteesta turvallisuusasiakirjan ( <span class="md:px-4">xx.xx.xxxx</span> ) ja se on jaettu urakoitsijoille.</p>
+                                    </div>
+
+                                    <div class="mt-6">
+                                        <p><span class="md:mr-[60px] mr-[20px]">-</span>Mikäli urakoitsija havaitsee tarvetta päivittää turvallisuusasiakirjaa, on tästä ilmoitettava turvallisuuskoordinaattorille.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Työturvallisuuden havainnointi -->
+                                <p class="mt-[40px]">Työturvallisuuden havainnointi</p>
+                                <div class="md:ml-[60px] ml-[20px] mt-6">
+
+                                    <div class="flex md:gap-[60px] gap-[20px]">
+                                        <p>-</p>
+                                        <p>[ <span class="ml-5">Viikoittainen TR-mittaus</span></p>
+                                    </div>
+
+                                    <div class="flex md:gap-[60px] gap-[20px] mt-[25px]">
+                                        <p>-</p>
+                                        <p>Edellisen viikon TR-mittaus toimitetaan rakennuttajakonsultille ennen työmaakokousta</p>
+                                    </div>
+
+                                    <div class="flex md:gap-[60px] gap-[20px] mt-6">
+                                        <p>-</p>
+                                        <p>Tavoitellaan > <span class="px-6">90</span> %</p>
+                                    </div>
+
+                                    <div class="flex md:gap-[60px] gap-[20px] mt-6">
+                                        <p>-</p>
+                                        <div class="flex flex-wrap">
+                                            <p>TMK1: Viimeisin mittaustulos <span class="md:mx-5 mx-2">xx.xx.xxxx</span> ,</p>
+                                            <div class="border-b w-[40px] text-[#586B74] md:block hidden mb-[5px] mx-1"></div>
+                                            <p>%]</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex md:gap-[55px] gap-[20px] md:mt-[88px] mt-6">
+                                        <p>o</p>
+                                        <p>TMK1: <span class="ml-5">Miten tiedot kerätään? (perehdytyksessä, leimauslaitteella, muuten?)</span></p>
+                                    </div>
+
+                                </div>
+
+                                <!-- step 9 start -->
+                                <div class="mt-[63px]">
+                                    <h2 class="md:text-2xl text-[20px] text-black font-medium"><span
+                                    class="md:mr-14 mr-7">9.</span> LAADUNVARMISTUS</h2>
+                                    <p class="mt-6">Työmaan laatusuunnitelma</p>
+
+                                    <div class="md:ml-[60px] ml-[20px] mt-[30px]">
+                                        <p><span class="md:mr-[55px] mr-[20px]">o</span>TMK1: <span class="ml-5">Noudatetaan urakoitsijan omaa laatusuunnitelmaa. Urakoitsija toimittaa työmaan</span> laatusuunnitelman rakennuttajakonsultille.</p>
+                                    </div>
+
+                                    <p class="ml-5 mt-6">Muut laadunvarmistustoimenpiteet</p>
+
+                                    <div class="flex md:gap-[60px] gap-[20px] md:ml-[60px] ml-[20px] mt-[26px]">
+                                        <p>-</p>
+                                        <p>TMK1: <span class="ml-5">Vapaa teksti</span></p>
+                                    </div>
+
+                                    <p class="mt-[39px]">Ennen vastaanottotarkastusta urakoitsija laatii ja toimittaa rakennuttajakonsultille urakkasopimusasiakirjojen mukaiset dokumentit, joita on:</p>
+                                    <p class="text-center md:mt-[165px] mt-[60px]">10/13</p>
+                                </div>
+                                <!-- step 9 end -->
+                            </div>
+                        </div>
+
+                        <!-- 11th section -->
+                        <div class="bg-[#FFFFFF] mx-auto max-w-[987px] border border-[#E1E1EA] rounded-lg mt-4 px-[20px] lg:px-[0px]">
+                            <div class="mb-[31px] pt-[56px] lg:mx-[69px]">
+
+                                <div class="flex items-center justify-end">
+                                    <div class="w-[48px] h-[48px] bg-[#F6F8FF] "></div>
+                                    <div class="w-[118px] h-[44px] bg-[#F6F8FF] "></div>
+                                </div>
+
+                                <p class="md:ml-[60px] ml-[20px] mt-6">Urakoitsijan itselle luovutuksen virhe- ja puutelista (täydennetään vastaanottotarkastuksessa) <br> VL1 <br>VL2… <br>. <br>. <br>. <br>…VLX Käytettyjen tuotteiden materiaalitiedot ja CE-todistukset <br> Käytettyjen tuotteiden käyttö- ja huolto-ohjeet</p>
+
+                                <!-- step 10 start -->
+                            <div class="mt-14">
+                                <h2 class="md:text-2xl text-[20px] text-black font-medium"><span
+                                class="md:mr-14 mr-7">10.</span> SUUNNITTELUASIAT</h2>
+                                <p class="mt-6">Projektipankki</p>
+
+                                <!-- - Urakan suunnitelmat ja loppudokumentit jaetaan: -->
+                                <div class="md:ml-[60px] ml-[20px] mt-6">
+                                    <div class="flex md:gap-[60px] gap-[20px]">
+                                        <p>-</p>
+                                        <p>Urakan suunnitelmat ja loppudokumentit jaetaan:</p>
+                                    </div>
+
+                                    <div class="flex md:gap-[57px] gap-[20px] mt-6">
+                                        <p>-</p>
+                                        <p>[ <span class="ml-6">Projektipankin kautta</span></p>
+                                    </div>
+
+                                    <div class="md:ml-[60px] ml-[20px]">
+                                        <div class="flex md:gap-[60px] gap-[20px] mt-[25px]">
+                                            <p>o</p>
+                                            <p>TMK1: <span class="ml-5">Mikä pankki</span></p>
+                                        </div>
+
+                                        <div class="flex md:gap-[60px] gap-[20px] mt-[25px]">
+                                            <p>o</p>
+                                            <p>TMK1: <span class="ml-5">Tilanne (Onko kaikilla tunnukset, toimiiko jne.)</span></p>
+                                        </div>
+
+                                        <div class="flex md:gap-[60px] gap-[20px] mt-[25px]">
+                                            <p>o</p>
+                                            <p>TMK1: <span class="ml-5"> Vapaa teksti</span></p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="flex md:gap-[57px] gap-[20px] mt-6">
+                                        <p>-</p>
+                                        <p>[ <span class="ml-6">Sähköpostilla</span></p>
+                                    </div>
+
+                                    <div class="flex md:gap-[60px] gap-[20px] mt-[26px] md:ml-[60px] ml-[20px]">
+                                        <p>o</p>
+                                        <p>TMK1: <span class="ml-5">Vapaa teksti</span></p>
+                                    </div>
+
+                                </div>
+
+                                <p class="mt-[46px] text-[#283B44]">Aihe</p>
+                                <div class="flex md:gap-[60px] gap-[20px] mt-6">
+                                    <p>-</p>
+                                    <p>TMK1: <span class="ml-5">Vapaa teksti</span></p>
+                                </div>
+
+                            </div>
+                            <!-- step 10 end -->
+
+                            <!-- step 11 start -->
+                            <div class="mt-[63px]">
+                                <h2 class="md:text-2xl text-[20px] text-black font-medium"><span
+                                class="md:mr-14 mr-7">11.</span> RAKENNUTTAJAN ASIAT</h2>
+                                <p class="mt-6">Urakoitsijan on kiinnitettävä huomiota, ettei meluavia töitä suoriteta arkisin klo K7 välisenä aikana.</p>
+                                <p class="mt-[25px] text-[#283B44]">Aihe</p>
+
+                                <div class="flex md:gap-[60px] gap-[20px] mt-6 md:ml-[124px] ml-[20px]">
+                                    <p>-</p>
+                                    <p>TMK1: <span class="ml-3">Vapaa teksti</span></p>
+                                </div>
+                                <p class="text-center md:mt-[130px] mt-[60px]">11/13</p>
+                            </div>
+                            <!-- step 11 end -->
+                            </div>
+                        </div>
+
+                        <!-- 12th section -->
+                        <div class="bg-[#FFFFFF] mx-auto max-w-[987px] border border-[#E1E1EA] rounded-lg mt-4 px-[20px] lg:px-[0px]">
+                            <div class="mb-[31px] pt-[56px] lg:mx-[69px]">
+
+                                <div class="flex items-center justify-end">
+                                    <div class="w-[48px] h-[48px] bg-[#F6F8FF] "></div>
+                                    <div class="w-[118px] h-[44px] bg-[#F6F8FF] "></div>
+                                </div>
+
+                                <!-- step 12 start -->
+                                <h2 class="md:text-2xl text-[20px] text-black font-medium mt-[22px]"><span
+                                class="md:mr-14 mr-7">12.</span> KÄYTTÄJIEN ASIAT</h2>
+
+                                <p class="mt-6">Urakoitsijan on kiinnitettävä huomiota, ettei meluavia töitä suoriteta arkisin klo K7 välisenä aikana.</p>
+                                <p class="mt-[25px] text-[#283B44]">Aihe</p>
+
+                                <div class="flex md:gap-[60px] gap-[20px] mt-6 md:ml-[124px] ml-20px">
+                                    <p>-</p>
+                                    <p>TMK1: <span class="ml-3">Vapaa teksti</span></p>
+                                </div>
+                                <!-- step 12 start -->
+
+                                <!-- step 13 start -->
+                                <div class="mt-[63px]">
+                                    <h2 class="md:text-2xl text-[20px] text-black font-medium"><span
+                                    class="md:mr-14 mr-7">13.</span>TYÖMAAKIERROS</h2>
+                                    <p class="mt-6">Urakoitsijan on kiinnitettävä huomiota, ettei meluavia töitä suoriteta arkisin klo K7 välisenä aikana.</p>
+
+                                    <div class="md:ml-[60px] ml-[20px] mt-6">
+                                        <div class="flex md:gap-[60px] gap-[20px]">
+                                            <p>-</p>
+                                            <p>TMK1: [ <span class="ml-7">Kokouksen jälkeen</span>] [ <span class="ml-7">Ennen kokousta</span>] tehtiin yhteinen kierros työmaalla.</p>
+                                        </div>
+
+                                        <div class="flex md:gap-[60px] gap-[20px] mt-[21px]">
+                                            <p>-</p>
+                                            <p>TMK1: [ <span class="ml-6">Tarkistettiin seuraavat asiat</span></p>
+                                        </div>
+
+                                        <div class="flex md:gap-[55px] gap-[20px] md:ml-[65px] ml-[25px] mt-[17px]">
+                                            <p>o</p>
+                                            <p>TMK1: <span class="ml-8">Aihe ja kommentti/sovittu toimenpide</span></p>
+                                        </div>
+
+                                        <div class="flex md:gap-[60px] gap-[20px] mt-[17px]">
+                                            <p>-</p>
+                                            <p>TMK1: <span class="ml-6">Kuvat työmaalta liitteessä <span class="ml-4">3</span>.</span></p>
+                                        </div>
+
+                                        <div class="flex md:gap-[60px] gap-[20px] mt-5">
+                                            <p>-</p>
+                                            <p>TMK1: [ <span class="ml-6">Ei pidetty yhteistä kierrosta työmaalla, koska vapaa teksti.]</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- step 13 end -->
+
+                                <!-- step 14 start -->
+                                <div class="mt-[58px]">
+                                    <h2 class="md:text-2xl text-[20px] text-black font-medium"><span
+                                    class="md:mr-14 mr-7">14.</span>MUUT ASIAT</h2>
+                                    <p class="mt-[25px] text-[#283B44]">Aihe</p>
+
+                                    <div class="flex md:gap-[60px] gap-[20px] mt-6 md:ml-[124px] ml-[20px]">
+                                        <p>-</p>
+                                        <p>TMK1: <span class="ml-3">Vapaa teksti</span></p>
+                                    </div>
+                                </div>
+                                <!-- step 14 end -->
+
+                                <!-- step 15 start -->
+                                <div class="mt-[63px]">
+                                    <h2 class="md:text-2xl text-[20px] text-black font-medium"><span
+                                    class="md:mr-14 mr-7">15.</span>SEURAAVAT KOKOUKSET</h2>
+                                    <p class="mt-[30px]">TMK1: <span class="ml-5">Vapaa teksti</span></p>
+                                    <p class="mt-6">Rakennuttajakonsultti lähettää kokouskutsun. (<span class="font-medium text-[#283B44]">NOSTE</span>)</p>
+                                </div>
+                                <!-- step 15 end -->
+
+                                <!-- step 16 start -->
+                                <div class="mt-14">
+                                    <h2 class="md:text-2xl text-[20px] text-black font-medium"><span
+                                    class="md:mr-14 mr-7">16.</span>KOKOUKSEN PÄÄTTÄMINEN</h2>
+                                    <p class="mt-6">Puheenjohtaja päätti kokouksen klo <span class="ml-4">xx.xx.</span></p>
+
+                                    <!--  -->
+                                    <p class="mt-8">Pöytäkirjan vakuudeksi <br> [ <span class="ml-6">P1</span>] [ <span class="ml-6">P4</span>] <br> Partners at Noste Oy</p>
+                                    <p class="text-center md:mt-[28px] mt-[60px]">12/13</p>
+                                </div>
+                                <!-- step 16 end -->
+                            </div>
+                        </div>
+
+                        <!-- 13th section -->
+                        <div class="bg-[#FFFFFF] mx-auto max-w-[987px] border border-[#E1E1EA] rounded-lg mt-4 px-[20px] lg:px-[0px]">
+                            <div class="mb-[31px] pt-[56px] lg:mx-[69px]">
+
+                                <div class="flex items-center justify-end">
+                                    <div class="w-[48px] h-[48px] bg-[#F6F8FF] "></div>
+                                    <div class="w-[118px] h-[44px] bg-[#F6F8FF] "></div>
+                                </div>
+
+                                <p class="max-w-[700px] mt-6">Pöytäkirja tarkastetaan ja vahvistetaan hyväksytyksi allekirjoituksilla seuraavassa  työmaakokouksessa. Pöytäkirjan allekirjoittavat rakennuttajan ja pääurakoitsijan edustajat. Virheet korjataan seuraavan työmaakokouksen pöytäkirjaan.</p>
+
+                                <p class="mt-8 max-w-[700px]"><span class="mr-6">[</span> Sopijapuolet ovat allekirjoittaneet tämän pöytäkirjan sähköisesti. Pöytäkirja on pätevä, kun molemmat osapuolet ovat sen allekirjoittaneet. Kumpikin sopijapuoli tallentaa ja/tai tulostaa allekirjoituspalvelujärjestelmästä oman asiakirjakappaleensa.]</p>
+
+                                <!-- between section -->
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:gap-[150px] gap-[24px] md:mt-[125px] mt-[100px]">
+                                    <!-- 1st nested -->
+                                    <div class="col-span-1">
+                                        <div class="border-b w-full text-[#94969C] mb-6"></div>
+                                        <p class="mt-6"><span class="italic">Tilaajan edustaja</span> <br> [ <span class="ml-[25px]">P1</span>]  <span class="ml-8">P4</span>] <br> <span class="italic">Partners at Noste Oy</span></p>
+                                    </div>
+
+                                    <!-- 2nd nested -->
+                                    <div class="col-span-1 mt-[60px] md:mt-[0px]">
+                                        <div class="border-b w-full text-[#94969C] mb-6"></div>
+                                        <p class="mt-6"><span class="italic">Urakoitsijan edustaja</span> <br> [ <span class="ml-[25px]">P1</span>]  <span class="ml-8">P4</span>] <br> <span class="italic">U1</span></p>
+                                    </div>
+
+                                </div>
+
+                                <p class="mt-16">Liitteet:</p>
+                                <p class="ml-3 mt-6">Ei liitteitä</p>
+                                <p class="ml-3 mt-6">Liite 1 <span class="ml-5">Vapaa teksti, xx.xx.xxxx</span></p>
+                                <p class="lg:mt-[547px] mt-[60px] text-center">13/13</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Card Body -->
+
+                    <!-- Card footer -->
+                    <div class="card_footer bg-[#FFFFFF] p-5 border border-line">
+                        <div class="flex items-center justify-between">
+                            <a href="./project-details.html" class="btn gap-2 shadow border border-line">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+                                    <defs>
+                                        <pattern id="pattern13" width="1" height="1" patternTransform="matrix(-1, 0, 0, 1, 40, 0)" viewBox="0 0 20 20">
+                                            <image preserveAspectRatio="xMidYMid slice" width="20" height="20" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABkklEQVR4nO3dQYrVQBhF4ecKFVF6oHu5dZ12SuiK6xNUeiC6A4UnDxyI9jwHcz4IZPjDISGTP3W5SJIkSdJ/rnN/3bm+da7HbOvF0fOc2vV6fTa29b1zv/6+foxt3R0916l1rq9/BDHK0XK/Xt6eDKOA5P7h1d9RxrZ+vpvr7dGznZZRgIwCZBQgowAZBSh+ffHEKDwxCk+MwhOj8MQoPDEKT4zCE6PwxCg8MQpPjMITo/DEKDwxCk+MwhOj8MQoPDEKT4zCE6PwxCg8MQpPjMITo/DEKDwxCk+MwhOj8MQoPGNbd08torpHz4vy5ciZTm08EWTM9fnouU5p+Mqi/Xtl/2dnfmwPb46e7XRqDI4ag6PG4KgxOGoMjhqDo8bgqDE4agyOGoOjxuCoMThqDI4ag6PG4KgxOGoMjhqDo8bgqDE4agyOGoOjxuCoMThqDI4ag6PG4KgxOGoMDmOAGAPEGCDGADEGiDFA+v7Dcw8nBrmtGntSNEjnevQsddora9s/jbl/vN0fPY8kSZIkXU7uFxa7dmp7vSU5AAAAAElFTkSuQmCC" />
+                                        </pattern>
+                                    </defs>
+                                    <rect id="icons8-arrow-100" width="20" height="20" fill="url(#pattern13)" />
+                                </svg>
+
+                                Takaisin
+                            </a>
+
+                            <!-- button section -->
+                            <button
+                                class="text-[#586B74] shadow flex items-center gap-3 btn border border-solid border-[#E1E1EA] rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19" height="19" viewBox="0 0 19 19">
+                                    <defs>
+                                        <pattern id="pattern7" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 96 96">
+                                            <image width="96" height="96" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAE9klEQVR4nO2dz4scRRTHe0wU/AEi+C+IIhgPHlT8EdCD4L0Ew07VJGKD2XlvyM572RwCLYjgQQgoojHJGo0xapKThigeRLx5kISgBw+evMaL+DNjlNreIZnNTHfNTM9WV/X7Qt26q3q+n6pX1fWjJ0lEIpFoanWWVx/QXT6ogb/WQD8ZpF8N8s8G6FsD9OpSr//w9LmKSqWRdmjkzw3yf6XJwujSY+W5ipxkkFON/I+T+dfSVYP0WpZlN7mVIhqnlkY+NKXxI0kDn7T5jM1dVGr+G/OYfy0k8cvFRYk2q2WA3qrE/GE4gv2P3FCKaKL5b1Zo/rAVfDO+ONH1ammgt53jO/J5g/SKQTqtgf4tu353d/XBkdJEM5oP/IdGWrr+5nZv/zMa+HIhsC4fHC1SNFTLIL/jVuvp9063/1QyRh3kZ/Ph58T7vxx3X9PVMkiH5zV/KA10rqDlXNq6n9VA86000OsFAH5Zv0iUJPYNVQO/W6X5Vna0U5DPBfE+yc03SEcqN79LneLOmz5rPIBsQebb6+zoqCi/NtDKyE1punqnQf4q+AT0xW7o3+8Ydo4uwnx7fUmeVzvI94zc+PzKyt1O4956p8HmMfm84/wNM592MV/3+k8apN9K8wQ+c8PNEQAYdJB2OYUdoDVPNd/G/r/HttDAAQxca/40L1lV1/yNlI7NJGAAA9ear5Hf81bz8/miQxMzChTAwKXmb4Sd4z5rvn3PKFyMCRDAIBrzXQBo5L/yVX//SQNfdgk7SqltBvh9n2HHLuY4LUOWtwA6nAQkNaX5i+lw6YjzQnxMAFRo5scEQIVofiwAlFLbNNIHnjvcozPt/wkdgArZ/NABqDqYj3Rsrp1voQJQecw/EbT5oQJQsZgfIgAVk/mhAVB5zP+wavM7XX7CeagJtFbpbudQAKgYzQ8FgIrV/BAAKGs+8Emf5tv1hIUdsqgzABW7+XUGoOxoB+kjr+YDn7LPsdAfWkcAqinm1xGAapL5dQOg8ph/yqf5BujjnVm2Pdkq1QVAmqY3a6SzfpcR+YRLzTfdlfuS2AAYoOUQzLdr0vawdhIhgOO+zLcvea7m57sy+HwSHwC+5CXmI3/iEvM19J8zQFfyZ4kMQJpmtw1/XN3NjxJAu0ePltT+YwsYan46i/lRAjAlHXAbeW9dzI8SgC45MFH2/Z2tND9KAAb5+4nlA11R+/bdWslQ0zHm5880GWhUAFSW3WIPL8xyqnC6DpdOT/OGWwQ1KgAG+w8Vlg+0NrzWtgT7xZH1PgNobRE1v3kAevRiccymc+tHi4AvFg1V5435jQWgp/gyyQzmn7FzTDM9V3MA8Hd1M78xAHZm2XaN9Gfl5iOdncf8xgDQSDvqaH5jABjsv1BH8xsEgJw+EzMx2VGRnUW1U9lAy1WZ3xwAwBenMVsj/2C3o2vkXhtXH7ezqIt6tugBpAVT0PYLtZvNLpqOWISiB9BZn0YY1my6YMvpAO+xHfOWLoo3FcCeHt9rISz1+7cnNVT0AOouAeBZAsCzBIBnCQDPEgCeJQA8SwB4lgDwLAHgWQLAswSAZwkAzxIAniUAPEsAeJYA8CwB4FkCwLMEgGcJAM+qDwCgH/MdbA1LUHRsdkt3RUgyAoBrVRGkBaAA8F4LjbQA/0YYCUH+zTAekvQBGBEA+08/u146cJekA84eqL3ZHVUCECV+9D+kYPLGTI9dEQAAAABJRU5ErkJggg==" />
+                                        </pattern>
+                                    </defs>
+                                    <rect id="icons8-create-96" width="19" height="19" fill="url(#pattern7)" />
+                                </svg>
+                                Muokkaa</button>
+                        </div>
+                    </div>
+                    <!-- Card footer -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Main Content End-->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
