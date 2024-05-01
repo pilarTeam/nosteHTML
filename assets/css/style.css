@@ -829,14 +829,6 @@ input:focus,
 
 /* Project Step */
 
-.invisible {
-  visibility: hidden;
-}
-
-.collapse {
-  visibility: collapse;
-}
-
 .fixed {
   position: fixed;
 }
@@ -1000,6 +992,11 @@ input:focus,
 .my-\[30px\] {
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .mb-1 {
@@ -1168,6 +1165,18 @@ input:focus,
 
 .mt-\[60px\] {
   margin-top: 60px;
+}
+
+.mb-\[50px\] {
+  margin-bottom: 50px;
+}
+
+.ml-\[55px\] {
+  margin-left: 55px;
+}
+
+.mt-52 {
+  margin-top: 13rem;
 }
 
 .block {
@@ -1375,6 +1384,10 @@ input:focus,
   width: 100%;
 }
 
+.w-\[50\%\] {
+  width: 50%;
+}
+
 .min-w-\[126px\] {
   min-width: 126px;
 }
@@ -1497,6 +1510,18 @@ input:focus,
 
 .min-w-full {
   min-width: 100%;
+}
+
+.min-w-\[125px\] {
+  min-width: 125px;
+}
+
+.min-w-\[150px\] {
+  min-width: 150px;
+}
+
+.min-w-\[195px\] {
+  min-width: 195px;
 }
 
 .max-w-\[600px\] {
@@ -2048,6 +2073,16 @@ input:focus,
 .py-\[7px\] {
   padding-top: 7px;
   padding-bottom: 7px;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .pb-10 {
@@ -2760,6 +2795,10 @@ input:focus,
     width: auto;
   }
 
+  .lg\:w-\[200px\] {
+    width: 200px;
+  }
+
   .lg\:min-w-\[209px\] {
     min-width: 209px;
   }
@@ -2794,6 +2833,10 @@ input:focus,
 
   .lg\:flex-row {
     flex-direction: row;
+  }
+
+  .lg\:items-start {
+    align-items: flex-start;
   }
 
   .lg\:items-end {
