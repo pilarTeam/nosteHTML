@@ -1139,6 +1139,10 @@ input:focus,
   margin-bottom: 40px;
 }
 
+.mb-\[50px\] {
+  margin-bottom: 50px;
+}
+
 .ml-1 {
   margin-left: 0.25rem;
 }
@@ -1221,6 +1225,10 @@ input:focus,
 
 .ml-\[50px\] {
   margin-left: 50px;
+}
+
+.ml-\[55px\] {
+  margin-left: 55px;
 }
 
 .ml-\[57px\] {
@@ -1854,6 +1862,10 @@ input:focus,
 
 .min-w-\[190px\] {
   min-width: 190px;
+}
+
+.min-w-\[195px\] {
+  min-width: 195px;
 }
 
 .min-w-\[203px\] {
@@ -2754,6 +2766,11 @@ input:focus,
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .py-6 {
@@ -4053,6 +4070,10 @@ input:focus,
 
   .lg\:w-\[192px\] {
     width: 192px;
+  }
+
+  .lg\:w-\[200px\] {
+    width: 200px;
   }
 
   .lg\:w-\[206px\] {
