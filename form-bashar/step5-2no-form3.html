@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esitietolomake</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- daterangepicker Style -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    
+    <!-- Main Style -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="font-roboto bg-bodyBg">
+    <!-- header part start  -->
+    <header class="lg:sticky top-0 z-10">
+        <!-- Top Header -->
+        <div class="py-3 bg-white border-b border-line">
+            <div class="container px-4">
+                <div class="flex items-center justify-between">
+                    <!-- site_logo -->
+                    <div class="site_logo order-1">
+                        <a href="index.html">
+                            <img src="../assets/images/logo.png" alt="logo">
+                        </a>
+                    </div><!-- site_logo -->
+    
+                    <!-- User Profile -->
+                    <div class="flex justify-end order-2 lg:order-3">
+                        <div class="flex items-center gap-5">
+    
+                            <a href="#!">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-6" viewBox="0 0 32 32">
+                                    <defs>
+                                        <pattern id="pattern5" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                            <image width="100" height="100" xlink:href="data:image/png;base64,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" />
+                                        </pattern>
+                                    </defs>
+                                    <rect id="icons8-time-machine-100" width="32" height="32" fill="url(#pattern5)" />
+                                </svg>
+                            </a>
+    
+                            <div class="border-l border-line pl-4 flex items-center gap-3 relative">
+                                <div class="user_avatar">
+                                    <span class="text-xl lg:text-2xl font-bold text-white">K</span>
+                                    <img class="h-full w-full rounded-full object-cover hidden" src="../assets/images/logo.png" alt="">
+                                </div> <!-- user_avatar -->
+                                <div class="hidden md:block">
+                                    <p class="text-base text-black font-medium">Klara Royment</p>
+                                    <p class="text-sm text-[#818D93] font-normal">Admin</p>
+                                </div>
+                                <div class="dropdown relative">
+                                    <button class="dropdown-toggle" data-dropdown="profile-dropdown">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12" viewBox="0 0 12 12">
+                                            <defs>
+                                                <pattern id="pattern6" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 96 96">
+                                                    <image width="96" height="96" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAABmElEQVR4nO3ZwUrDQBSF4Ww8DWZvcWPSrgJ36Puv9CGk6BOIPoVSodBFKU0TeufO/B/MPj1/BgJtGgAAAAAAAAAAAAAAAAAAAAAAAOSj2+6e2iG9Pmx3qSmM+jS2Q3p7fBmfm2zH7+29HdLvqrefkiKoT+NqSF+H39b29pldhNPxj6eUCDod/3hyinBu/FIi6Nz4OUW4NH70CLo0fg4Rrhk/agRdM75nhCnjR4ugKeN7RLhl/CgRdMv494wwZ/zcI2jO+PeKsESAHCNoifH/j32EuAU5RVCk8UuLoIjjlxJBkcePHkEljB81gkoaP1oElTh+lAgqefzcI6iG8XONoJrGzy2Cahw/lwiqeXzvCGJ8vwhifL+bIMb3iyDG94sgxveLIMafrtukdTuk/QIRvg9n/qdm2h+eqanJUjehrfk7P34Eq3d8/wjG+H4RGN8xgvHm+0UwxveLYIzvF8EY3y+CMb5fBGN8vwjG+H4RjPH9Ihjj+0UwxveLYIzvF8EY3y+CMb6XbpPW1f2TBQAAAAAAAAAAgGaSP+MgIpmI76GJAAAAAElFTkSuQmCC" />
+                                                </pattern>
+                                            </defs>
+                                            <rect id="icons8-expand-arrow-96" width="12" height="12" fill="url(#pattern6)" />
+                                        </svg>
+                                    </button>
+    
+                                    <div class="w-[15rem] border-t bg-[#08202C] absolute right-0 top-12 z-[10] dropdown-menu hidden" id="profile-dropdown">
+                                        <ul class="bg-transparent p-0">
+                                            <li class="text-center border-b border-[#283B44] py-4 px-2">
+                                                <div class="user_avatar mx-auto mb-2">
+                                                    <div class="flex items-center justify-center mx-auto" id="avatarContainer">
+                                                        <span class="text-2xl font-bold text-white" id="text">K</span>
+                                                        <img class="h-full w-full rounded-full object-cover hidden" src="../assets/images/logo.png" alt="User Avatar" id="avatarImage">
+                                                        <label class="absolute -bottom-1 -right-2 cursor-pointer">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+                                                                <defs>
+                                                                    <pattern id="pattern" width="1" height="1" viewBox="-4.444 -4.444 26.887 26.887">
+                                                                        <image preserveAspectRatio="xMidYMid slice" width="18" height="18" xlink:href="data:image/png;base64,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" />
+                                                                    </pattern>
+                                                                </defs>
+                                                                <rect id="icons8-photo-100" width="18" height="18" rx="9" fill="url(#pattern)" />
+                                                            </svg>
+    
+                                                            <input type="file" id="FileUpload1" class="hidden" />
+                                                        </label>
+                                                    </div>
+                                                </div> <!-- user_avatar -->
+    
+                                                <p class="text-white">Klara Royment</p>
+                                                <p class="text-offwhite text-sm">nimi_sukunimi@noste.io</p>
+                                            </li>
+                                            <li class="border-b border-[#283B44] inline-block w-full p-2">
+                                                <a href="#!" class="flex items-center gap-5 text-offwhite">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                                                        <defs>
+                                                            <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                                                <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAADAElEQVR4nO2c3W4TMRCFzQW8Az8vxAPAM4Dg6WhfoYAgcLWKp5WdUsAO4gapcL9owgRoUAUbvJmxfY5kqTdxvp5zdneU1nEOgiCoDy0W481xHG+Aw4AftFo/9CF/oZguabV+oALhwPHLiJA+UczjZoWU1QIJ4PhhxDYMWWqBRHDACIvFUAcQgQNG2CyGOoAIHDDCZjHUAUTggBE2i6EOIAIHjLBZDHUAEThghM1iqAOIwAEjdIoxDMOtZUxPfUgvKaRvu2/418WvCekFxfUT3svNJOrhSvUXF3d8zG8nh3D9erN89/m2m0HUeiDc5sJhbNeC/8TpCotaD4RvUzOEsV2PXWFR64FsnhlXngX5Gd/Cpu5zevr+LoV0tAP63BUWtR4IxfT1943Z2H33Ojv7cO8qaLp0hUXtB1J247kNowMFojZ1IhBjUycCMTZ1IhBjU+fmPxHxULczdf4JkI72mbR4wvIxHdc+9pL21MlTwFyXqA/50b6/TCtT3OT9+CHGU0D5MNKrGj86Ie1AWDyS8RRQLpD0utYPF8lCICxuM08BFPPJ7n30H0Pg15zwbWqOK6O7QGoRzf9Qr2rqbD4QX8vUaeXSo9mvkEqmzl4CGWqZOnsJpJqps6dAqpg6ewvEvKwYQUY41GXFCAIHjDBZDHUAEThghM1iqAOIwAEjbBZDHUAEDhhhsxjqACJwwAibxVAHEIEDRtgshjqACBwwwmYx1AFE4IARNouhDiACB4ywWYxDAQz4Rgk7gXh8o4SdQAbts30T1fwta6l9tm+img/Ea5/tm6jmAyHts30T1UEguej+tfGaAyAEgkD+R7hCGr+izQFQZWf7mg/E13K2r5dAqJazfb0EMtRytq+XQKo529dTIFWc7estkFqk7oc6gDGp+6EOIAIHjLBZDHUAEThghM1iqAOIwAEjbBZDHUAEDhhhsxjqACJwwAibxVAHEIEDRtgshjqACBwwwmYxKKTz7Zv7kFYHBxCB46cR+b6P+SMv/tkpicABQRAEQY71HbsT/O3PnJesAAAAAElFTkSuQmCC" />
+                                                            </pattern>
+                                                        </defs>
+                                                        <rect id="icons8-adjust-100" width="24" height="24" fill="url(#pattern)" />
+                                                    </svg>
+    
+                                                    Aktiivinien
+                                                </a>
+                                            </li>
+                                            <li class="inline-block w-full p-2">
+                                                <a href="#!" class="user_box flex items-center justify-between gap-3 relative">
+                                                    <div class="flex items-center gap-2">
+                                                        <div class="user_avatar">
+                                                            <span class="text-xl lg:text-2xl font-bold text-white">K</span>
+                                                            <img class="h-full w-full rounded-full object-cover hidden" src="../assets/images/logo.png" alt="">
+                                                        </div> <!-- user_avatar -->
+                                                        <div>
+                                                            <p class="text-base text-white font-medium">Klara Royment</p>
+                                                            <p class="text-sm text-[#818D93] font-normal">Admin</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="">
+                                                        <span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                                                                <defs>
+                                                                    <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 96 96">
+                                                                        <image width="96" height="96" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAABeUlEQVR4nO3ZvUoDQRiF4b0orSysFAu9IwtLr/DMgDupnLESRJAwVcKChlSCP9mzy/c+sP3ynolrssMAAAAAAAAAAAAAAACwBPmp3aSx3bvvIyRt6nUa2zaXtkulPbrvJ2z8/HkxgjE+IywgPiPM88D9Nv5hBB7M85/8o6urvNz+8y3EJeL7EN+I+EbENyK+EfGNiG9EfOLHJL5kET8kcfKJH5I4+cQPSZx84s9qeiU3vcIb1vUacbuEe/6zVOrD16u5VJ7vXPehiH92juLvnCOI+L4RRHzfCAr7wF3AQy5HfOD+5tSd4pOgiCd/KSMoenznCCK+bwQR3zeCiO8bQcT3jSDi+0YQ8X0jiPi+EUR83wgivvf3mhTxt51T++Gp3oX+eWEFI3Ti+0boxPd9EjrxfSN04vtG6MT3jdCJb/qekPg/fz7atMtc6vthgLF9qNSrGW8BubTzPLbXVOpbHusFRQzS2M6mi/gAAAAAAAAAAAAAAADDyu0BWJ5kaQG3t14AAAAASUVORK5CYII=" />
+                                                                    </pattern>
+                                                                </defs>
+                                                                <rect id="icons8-done-96" width="16" height="16" fill="url(#pattern)" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="border-b border-[#283B44] inline-block w-full p-2">
+                                                <a href="#!" class="flex items-center gap-5 text-offwhite">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                                                        <defs>
+                                                            <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                                                <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAADd0lEQVR4nO3dzW7TQBQFYAuJ8gylfQU27FiAxJ+Q+HkBxBaJChbs2PJMFDbsKRWksIkyY3emaknuTVWJTUsLbAiMhUTjAHLMTHxIz5G8i+dK83XGSXzjZtnPdLvdhZ6XR8bJunXyyXod8dBfcxDmxMlr64cPw1xlKWN2ds4ar+8IoHX/CDd623uLSTCCNjG0yW7Q6XRGp6ODhG2KK0Obbs8r0UHKa8bYXqnPwhYWvdB/njz/sGSdrFZA1qIXsl4OjhcJhaMXmZMURX95HET2oxepLsPoBeYsNvV8EWS6EAQsBAELQcBCELAQBCwEAQtBwEIQsBAELAQBC0HAYp084XdZwCjxB+e3vf+EEn9ggjSO8fI0ix2CgIUgYCEIWAgCFoLUi/G756zTl8bLi96mnM9ShSD1Mt5MKAe5l4tZihCkXozXfqUFKA0KQeol35L7k52LcpBv6aUsZghSP9bJY+PkW6XT89BsDi/HK8JP6lFQrBteiVOAIFgoBAFDIQgYCkFSoQyuNhuQ1xAsFIKAoRAkPUruB9fqD8ItKzmKcXpUG4UgYCgEAUMhyIxRvH7J/fDWn0/iNQQLhSBgKARpF6Xnh7fHX8gtCwuFIAAfHr1+NX5wB2KFWK/3jJe9ydujeqIO4/Sz2ZIbrYKExxuF9+ZtT4ZFOZwetgpSFMWZ8gu4tifCgxxtg4QYL3etk93WJ8O3e0BsWSf1om6rGMffaREECKN8EVdIqxgTn9YJAoRRvpgrZPYYTo96Xq7//gSCzBzjr/dECAKEUZ7IFYKDUZ5MkOQYU3WeECQ9xlS9WQQBwigH4paVEKNB0zVBgDDKAblCcDDKQQmCg1EOTBAcjHJwgkTBiPZLXIIAYZRFuEJqJfx3tslbr3xwQCsJ3TGTzRh8tEZrGY1Gp6zTj8kxQrhl1Uvu9KZ1ao3T973NwYUsVQgCFoKAhSBgIQhYCNI8fJAyGEaS1luukOYYBAHDIAhAku8o3LKmC0HAQhCwEAQsBAELQcBCELAQBCwEAQtBwEKQkwci+8cLFEV/OXqROUlR9JcrrUD70YsYJ+vjnXiymucflqIXmgMM4+V5ZYWszagjj4et98CYB9FBut3ugvW6QQSd8uk98iZ0NGYp0tveW7ReO0TRmiDyNsxZlrx/1euK9foqtEoSRycaq8PchG0q2cr4AfEdWLK0nQuBWq4AAAAASUVORK5CYII=" />
+                                                            </pattern>
+                                                        </defs>
+                                                        <rect id="icons8-log-out-100" width="24" height="24" fill="url(#pattern)" />
+                                                    </svg>
+                                                
+                                                    Lisää tili
+                                                </a>
+                                            </li>
+                                            <li class="border-b border-[#283B44] inline-block w-full p-2">
+                                                <a href="#!" class="flex items-center gap-5 text-offwhite">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                                                        <defs>
+                                                            <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 100 100">
+                                                                <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAADd0lEQVR4nO3dzW7TQBQFYAuJ8gylfQU27FiAxJ+Q+HkBxBaJChbs2PJMFDbsKRWksIkyY3emaknuTVWJTUsLbAiMhUTjAHLMTHxIz5G8i+dK83XGSXzjZtnPdLvdhZ6XR8bJunXyyXod8dBfcxDmxMlr64cPw1xlKWN2ds4ar+8IoHX/CDd623uLSTCCNjG0yW7Q6XRGp6ODhG2KK0Obbs8r0UHKa8bYXqnPwhYWvdB/njz/sGSdrFZA1qIXsl4OjhcJhaMXmZMURX95HET2oxepLsPoBeYsNvV8EWS6EAQsBAELQcBCELAQBCwEAQtBwEIQsBAELAQBC0HAYp084XdZwCjxB+e3vf+EEn9ggjSO8fI0ix2CgIUgYCEIWAgCFoLUi/G756zTl8bLi96mnM9ShSD1Mt5MKAe5l4tZihCkXozXfqUFKA0KQeol35L7k52LcpBv6aUsZghSP9bJY+PkW6XT89BsDi/HK8JP6lFQrBteiVOAIFgoBAFDIQgYCkFSoQyuNhuQ1xAsFIKAoRAkPUruB9fqD8ItKzmKcXpUG4UgYCgEAUMhyIxRvH7J/fDWn0/iNQQLhSBgKARpF6Xnh7fHX8gtCwuFIAAfHr1+NX5wB2KFWK/3jJe9ydujeqIO4/Sz2ZIbrYKExxuF9+ZtT4ZFOZwetgpSFMWZ8gu4tifCgxxtg4QYL3etk93WJ8O3e0BsWSf1om6rGMffaREECKN8EVdIqxgTn9YJAoRRvpgrZPYYTo96Xq7//gSCzBzjr/dECAKEUZ7IFYKDUZ5MkOQYU3WeECQ9xlS9WQQBwigH4paVEKNB0zVBgDDKAblCcDDKQQmCg1EOTBAcjHJwgkTBiPZLXIIAYZRFuEJqJfx3tslbr3xwQCsJ3TGTzRh8tEZrGY1Gp6zTj8kxQrhl1Uvu9KZ1ao3T973NwYUsVQgCFoKAhSBgIQhYCNI8fJAyGEaS1luukOYYBAHDIAhAku8o3LKmC0HAQhCwEAQsBAELQcBCELAQBCwEAQtBwEKQkwci+8cLFEV/OXqROUlR9JcrrUD70YsYJ+vjnXiymucflqIXmgMM4+V5ZYWszagjj4et98CYB9FBut3ugvW6QQSd8uk98iZ0NGYp0tveW7ReO0TRmiDyNsxZlrx/1euK9foqtEoSRycaq8PchG0q2cr4AfEdWLK0nQuBWq4AAAAASUVORK5CYII=" />
+                                                            </pattern>
+                                                        </defs>
+                                                        <rect id="icons8-log-out-100" width="24" height="24" fill="url(#pattern)" />
+                                                    </svg>
+    
+                                                    Kirjaudu ulos
+                                                </a>
+                                            </li>
+                                        </ul>
+    
+                                    </div>
+                                </div>
+                            </div> <!-- user_box -->
+    
+                        </div>
+                    </div> <!-- User Profile -->
+    
+                </div> <!-- grid -->
+            </div> <!-- container -->
+        </div>
+        <!-- Top Header -->
+
+    </header> <!-- header_area  -->
+    <!-- header part end  -->
+    
+    <section class="my-8">
+        <div class="container px-4">
+            <div class="border border-solid border-[#E1E1EA] rounded-[12px] p-[20px] bg-white h-fit overflow-hidden relative">
+                <div class="flex gap-3 lg:gap-0 lg:items-center flex-col lg:flex-row justify-between mb-4">
+                    <div>
+                        <span class="text-[#818D93] text-[13px] font-medium">Project nimi</span>
+                        <p class="text-[#08202C] text-[18px] font-medium mt-2 lg:mt-0">Rakennustöiden vastaanotto ja toimeksiannon lopetus <span class="text-offwhite font-normal">/</span> Hallinnanluovutustilaisuus <span class="text-offwhite font-normal">/</span> Hallinnanluovutus_valmis_ver2</p>
+                    </div>
+    
+                    <div>
+                        <button class="text-[#08202C] font-medium bg-[#E9E9F0] border border-solid border-[#CCCCD6] rounded-lg flex items-center gap-2 px-3 py-2">
+                            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="#08202C" d="M60,12h-6V2c0-1.105-0.895-2-2-2H12c-1.105,0-2,0.895-2,2v10H4c-2.211,0-4,1.789-4,4v32 c0,2.211,1.789,4,4,4h6v10c0,1.105,0.895,2,2,2h40c1.105,0,2-0.895,2-2V52h6c2.211,0,4-1.789,4-4V16C64,13.789,62.211,12,60,12z M12,3c0-0.553,0.447-1,1-1h38c0.553,0,1,0.447,1,1v9H12V3z M52,61c0,0.553-0.447,1-1,1H13c-0.553,0-1-0.447-1-1V37 c0-0.553,0.447-1,1-1h38c0.553,0,1,0.447,1,1V61z M62,48c0,1.104-0.896,2-2,2h-6V36c0-1.105-0.895-2-2-2H12c-1.105,0-2,0.895-2,2 v14H4c-1.104,0-2-0.896-2-2V16c0-1.104,0.896-2,2-2h56c1.104,0,2,0.896,2,2V48z"></path> <path fill="#08202C" d="M19,44h12c0.553,0,1-0.447,1-1s-0.447-1-1-1H19c-0.553,0-1,0.447-1,1S18.447,44,19,44z"></path> <path fill="#08202C" d="M45,48H19c-0.553,0-1,0.447-1,1s0.447,1,1,1h26c0.553,0,1-0.447,1-1S45.553,48,45,48z"></path> <path fill="#08202C" d="M38,54H19c-0.553,0-1,0.447-1,1s0.447,1,1,1h19c0.553,0,1-0.447,1-1S38.553,54,38,54z"></path> <path fill="#08202C" d="M55,18c-1.657,0-3,1.343-3,3s1.343,3,3,3s3-1.343,3-3S56.657,18,55,18z M55,22c-0.553,0-1-0.447-1-1 s0.447-1,1-1s1,0.447,1,1S55.553,22,55,22z"></path> <path fill="#08202C" d="M45,18c-1.657,0-3,1.343-3,3s1.343,3,3,3s3-1.343,3-3S46.657,18,45,18z M45,22c-0.553,0-1-0.447-1-1 s0.447-1,1-1s1,0.447,1,1S45.553,22,45,22z"></path> </g> </g></svg>
+      
+                            Luonnos
+                        </button>
+                    </div>
+                </div>
+
+                <hr class="border border-solid border-[#E1E1EA] ml-[-20px] mr-[-20px]">
+
+                <div class="lg:h-[645px] overflow-y-auto no-scrollbar scroll-smooth">
+                    <div class="max-w-[800px] mx-auto mt-20">
+                        <div class="mb-[30px]">
+                            <span class="font-medium italic text-[#00B2A9] block">K1</span>
+                            <span class="font-medium italic text-[#00B2A9] block">K4</span>
+                        </div>
+    
+                        <div class="mb-[30px]">
+                            <h1 class="text-black text-[25px] font-medium mb-4">Vuokrakohteen hallinnan luovutusta koskeva pöytäkirja</h1>
+                        </div>
+    
+                        <div class="flex items-center mb-5">
+                            <span class="text-[#283B44] text-[17px] w-[30%] font-medium">Vuokranantaja:</span>
+                            <span class="text-[#586B74] text-[14px] block">
+                                <span class="text-[#00B2A9] italic">T1</span> (Y -tunnus <span class="text-[#00B2A9] italic">T7</span> )
+                            </span>
+                        </div>
+                        <div class="flex items-center mb-5">
+                            <span class="text-[#283B44] text-[17px] w-[30%] font-medium">Vuokralainen:</span>
+                            <span class="text-[#586B74] text-[14px] block">
+                                <span class="text-[#00B2A9] italic">V1 </span> (Y -tunnus <span class="text-[#00B2A9] italic">V6</span> )
+                            </span>
+                        </div>
+                    </div>
+    
+                    <div class="help_wrap mb-5 relative">
+                        <div class="max-w-[800px] mx-auto flex items-center">
+    
+                            <span class="text-[#283B44] text-[17px] w-[30%] font-medium">Vuokrasopimus:</span>
+                            <span class="h-[1px] bg-[#94969C] inline-block self-end w-full mt-5 lg:mt-0 lg:w-[200px]"></span>
+    
+                            <a href="#!" class="help_click"><svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="12" r="10" stroke="#000000" stroke-width="0.72"></circle> <path d="M10.125 8.875C10.125 7.83947 10.9645 7 12 7C13.0355 7 13.875 7.83947 13.875 8.875C13.875 9.56245 13.505 10.1635 12.9534 10.4899C12.478 10.7711 12 11.1977 12 11.75V13" stroke="#000000" stroke-width="0.72" stroke-linecap="round"></path> <circle cx="12" cy="16" r="1" fill="#000000"></circle> </g></svg> </a>                                      
+                            
+                            <hr class="help_line w-[200px] border border-solid border-[#E1E1EA] hidden">
+                        </div>
+    
+                        <div class="help_show text-[#586B74] text-[14px] lg:w-[310px] bg-[#F6F8FF] border border-solid border-[#E1E1EA] rounded-lg p-5 lg:absolute lg:right-[10px] mt-[10px] mb-[15px] lg:mb[0] lg:mt-[-80px] hidden">
+                            Vuokrasopimuksen yksilöinti. Esim. kansakoulukatu 10, 6. krs liiketiloja koskeva vuokrasopimus, joka on allekirjoitettu Vuokralaisen osalta 1.1.1900 ja Vuokranantajan osalta 2.1.1900.
+                        </div>
+                    </div>
+    
+                    <div class="max-w-[800px] mx-auto">
+                        <div class="flex items-center mb-5">
+                            <span class="text-[#283B44] text-[17px] w-[30%] font-medium">Aika:</span>
+                            <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+                                <span class="">
+                                    <input type="text" name="pilar_VA1" placeholder="xx.xx.xxxx" class="w-full lg:w-[120px] shadow-[0_0_5px_2px_rgb(81,244,200,44%)]  border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                                </span>
+                                <span class="text-[#283B44] text-[15px]">klo</span>
+                                <span class="">
+                                    <input type="text" name="pilar_VA1" placeholder="xx.xx" class="w-full lg:w-[120px] shadow-[0_0_5px_2px_rgb(81,244,200,44%)]  border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex items-center mb-5">
+                            <span class="text-[#283B44] text-[17px] w-[30%] font-medium">Paikka:</span>
+                            <input type="text" name="pilar_VA1" placeholder="X" class="w-full lg:w-[120px] shadow-[0_0_5px_2px_rgb(81,244,200,44%)]  border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                        </div>
+                        <div class="flex items-center mb-5">
+                            <span class="text-[#283B44] text-[17px] w-[30%] font-medium">Läsnä:</span>
+                            <span class="text-[#283B44] text-[17px] w-[30%] font-medium">Vuokralaisen edustajat:</span>
+                        </div>
+                        <div class="flex items-center mb-5">
+                            <span class="text-[#283B44] text-[17px] w-[30%] font-medium"></span>
+                            <label class="inline-flex items-center gap-2 cursor-pointer w-[40%]">
+                                <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[16px] h-[16px] rounded-[4px] inline-flex items-center justify-center">
+                                    <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                </span>
+                                <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_K18">
+                                <span class="italic text-[#00B2A9]">V2</span>
+                            </label>
+                            <span class="text-[#00B2A9] italic">V1</span>
+                        </div>
+                        <div class="flex items-center mb-5">
+                            <span class="text-[#283B44] text-[17px] w-[30%] font-medium"></span>
+                            <label class="inline-flex items-center gap-2 cursor-pointer w-[40%]">
+                                <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[16px] h-[16px] rounded-[4px] inline-flex items-center justify-center">
+                                    <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                </span>
+                                <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_K18">
+                                <span class="italic text-[#00B2A9]">V3</span>
+                            </label>
+                            <span class="text-[#00B2A9] italic">V1</span>
+                        </div>
+                        <div class="flex items-center mb-5">
+                            <span class="text-[#283B44] text-[17px] w-[30%] font-medium"></span>
+                            <div class="flex items-center gap-3 w-[40%]">
+                                <label class="inline-flex items-center gap-2 cursor-pointer">
+                                    <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                        <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                    </span>
+                                    <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                </label>
+                                <input type="text" name="pilar_filed8_6" placeholder="Muu" class="w-full lg:w-[120px] shadow-[0_0_5px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                            </div>
+                            <input type="text" name="pilar_filed8_6" placeholder="V1" class="w-full lg:w-[120px] shadow-[0_0_5px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                        </div>
+                        
+                        <div class="flex items-center mt-10 mb-5">
+                            <span class="text-[#283B44] text-[17px] w-[30%] font-medium"></span>
+                            <span class="text-[#283B44] text-[17px] w-[30%] font-medium">Vuokranantajan edustajat:</span>
+                        </div>
+                        <div class="flex items-center mb-5">
+                            <span class="text-[#283B44] text-[17px] w-[30%] font-medium"></span>
+                            <label class="inline-flex items-center gap-2 cursor-pointer w-[40%]">
+                                <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[16px] h-[16px] rounded-[4px] inline-flex items-center justify-center">
+                                    <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                </span>
+                                <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_K18">
+                                <span class="italic text-[#00B2A9]">T3</span>
+                            </label>
+                            <span class="text-[#00B2A9] italic">T2</span>
+                        </div>
+                        <div class="flex items-center mb-5">
+                            <span class="text-[#283B44] text-[17px] w-[30%] font-medium"></span>
+                            <div class="flex items-center gap-3 w-[40%]">
+                                <label class="inline-flex items-center gap-2 cursor-pointer">
+                                    <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                        <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                    </span>
+                                    <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                </label>
+                                <input type="text" name="pilar_filed8_6" placeholder="Muu" class="w-full lg:w-[120px] shadow-[0_0_5px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                            </div>
+                            <input type="text" name="pilar_filed8_6" placeholder="T2" class="w-full lg:w-[120px] shadow-[0_0_5px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                        </div>
+                        <div class="flex items-center mb-5">
+                            <span class="text-[#283B44] text-[17px] w-[30%] font-medium"></span>
+                            <label class="inline-flex items-center gap-2 cursor-pointer w-[40%]">
+                                <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[16px] h-[16px] rounded-[4px] inline-flex items-center justify-center">
+                                    <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                </span>
+                                <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_K18">
+                                <span class="italic text-[#00B2A9]">K6</span>
+                            </label>
+                            <span class="text-[#00B2A9] italic">K22</span>
+                        </div>
+                        <div class="flex items-center mb-5">
+                            <span class="text-[#283B44] text-[17px] w-[30%] font-medium"></span>
+                            <label class="inline-flex items-center gap-2 cursor-pointer w-[40%]">
+                                <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[16px] h-[16px] rounded-[4px] inline-flex items-center justify-center">
+                                    <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                </span>
+                                <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_K18">
+                                <span class="italic text-[#00B2A9]">P1</span>
+                            </label>
+                            <span class="text-[#586B74]">Partners at Noste Oy</span>
+                        </div>
+                        <div class="flex items-center mb-5">
+                            <span class="text-[#283B44] text-[17px] w-[30%] font-medium"></span>
+                            <label class="inline-flex items-center gap-2 cursor-pointer w-[40%]">
+                                <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[16px] h-[16px] rounded-[4px] inline-flex items-center justify-center">
+                                    <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                </span>
+                                <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_K18">
+                                <span class="italic text-[#00B2A9]">P4</span>
+                            </label>
+                            <span class="text-[#586B74]">Partners at Noste Oy</span>
+                        </div>
+                        <div class="flex items-center mb-5">
+                            <span class="text-[#283B44] text-[17px] w-[30%] font-medium"></span>
+                            <div class="flex items-center gap-3 w-[40%]">
+                                <label class="inline-flex items-center gap-2 cursor-pointer">
+                                    <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                        <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                    </span>
+                                    <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                </label>
+                                <input type="text" name="pilar_filed8_6" placeholder="Muu" class="w-full lg:w-[120px] shadow-[0_0_5px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                            </div>
+                            <input type="text" name="pilar_filed8_6" placeholder="X" class="w-full lg:w-[120px] shadow-[0_0_5px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                        </div>
+    
+                        <div class="flex items-center mt-10 mb-5">
+                            <span class="text-[#283B44] text-[17px] w-[30%] font-medium"></span>
+                            <span class="text-[#283B44] text-[17px] w-[30%] font-medium">Suunnittelijoiden edustajat:</span>
+                        </div>
+                        <div class="flex items-center mb-5">
+                            <span class="text-[#283B44] text-[17px] w-[30%] font-medium"></span>
+                            <label class="inline-flex items-center gap-2 cursor-pointer w-[40%]">
+                                <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[16px] h-[16px] rounded-[4px] inline-flex items-center justify-center">
+                                    <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                </span>
+                                <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_K18">
+                                <span class="text-[#586B74]">Ei paikalla</span>
+                            </label>
+                        </div>
+                        <div class="flex items-center mb-5">
+                            <span class="text-[#283B44] text-[17px] w-[30%] font-medium"></span>
+                            <div class="flex items-center gap-3 w-[40%]">
+                                <label class="inline-flex items-center gap-2 cursor-pointer">
+                                    <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                        <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                    </span>
+                                    <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                </label>
+                                <input type="text" name="pilar_filed8_6" placeholder="Muu" class="w-full lg:w-[120px] shadow-[0_0_5px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                            </div>
+                            <input type="text" name="pilar_filed8_6" placeholder="X" class="w-full lg:w-[120px] shadow-[0_0_5px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                        </div>
+    
+                        <div class="flex items-center mt-10 mb-5">
+                            <span class="text-[#283B44] text-[17px] w-[30%] font-medium"></span>
+                            <span class="text-[#283B44] text-[17px] w-[30%] font-medium">Urakoitsijoiden edustajat:</span>
+                        </div>
+                        <div class="flex items-center mb-5">
+                            <span class="text-[#283B44] text-[17px] w-[30%] font-medium"></span>
+                            <label class="inline-flex items-center gap-2 cursor-pointer w-[40%]">
+                                <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[16px] h-[16px] rounded-[4px] inline-flex items-center justify-center">
+                                    <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                </span>
+                                <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_K18">
+                                <span class="text-[#586B74]">Ei paikalla</span>
+                            </label>
+                        </div>
+                        <div class="flex items-center mb-5">
+                            <span class="text-[#283B44] text-[17px] w-[30%] font-medium"></span>
+                            <div class="flex items-center gap-3 w-[40%]">
+                                <label class="inline-flex items-center gap-2 cursor-pointer">
+                                    <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                        <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                    </span>
+                                    <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                </label>
+                                <input type="text" name="pilar_filed8_6" placeholder="Muu" class="w-full lg:w-[120px] shadow-[0_0_5px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                            </div>
+                            <input type="text" name="pilar_filed8_6" placeholder="X" class="w-full lg:w-[120px] shadow-[0_0_5px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                        </div>
+                        
+                        <h2 class="flex gap-10 text-black text-[20px] font-medium mt-10">
+                            1. HALLINNANLUOVUTUSTILAISUUDEN TARKOITUS
+                        </h2>
+                        <p class="text-[#586B74] ml-[60px] mt-2">Tilaisuuden tarkoituksena on tarkastaa ja hyväksyä luovutettavaksi vuokralaisen hallintaan vuokrakohde, todeta että vuokrakohde vastaa vuokrasopimuksessa sovittua sekä kirjata vuokranantajan tai vuokralaisen hallinnanluovutuksen jälkeiset toimenpiteet.</p>
+                        
+                        <h2 class="flex gap-10 text-black text-[20px] font-medium mt-10">
+                            2. HALLINNANLUOVUTUSTILAISUUDEN TARKOITUS
+                        </h2>
+                        <div class="ml-[60px] flex flex-col flex-wrap lg:flex-row lg:items-center gap-2 mt-3">
+                            <span class="text-[#586B74] text-[15px]">Vuokralaisen tiloja koskeva rakennustöiden vastaanotto on pidetty vuokranantajan toimesta</span>
+                            <input type="text" name="pilar_VA1" placeholder="XX.XX.XXXX" class="w-full lg:w-[119px] shadow-[0_0_5px_2px_rgb(81,244,200,44%)]  border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                        </div>
+    
+                        <h2 class="flex gap-10 text-black text-[20px] font-medium mt-10">
+                            3. TULEVAT TOIMENPITEET
+                        </h2>
+                        <div class="ml-[60px]">
+                            <div class="flex items-start gap-3 mt-3">
+                                <label class="inline-flex items-center gap-2 cursor-pointer mt-[5px]">
+                                    <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                        <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                    </span>
+                                    <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                </label>
+                                <span class="text-[#586B74]">Vuokralainen ja vuokranantaja ovat laatineet yhdessä vuokrakohteen virhe- ja puutelistauksen (liite1).</span>
+                            </div>
+                            <div class="flex items-start gap-3 mt-3">
+                                <label class="inline-flex items-center gap-2 cursor-pointer mt-[5px]">
+                                    <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                        <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                    </span>
+                                    <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                </label>
+                                <span class="text-[#586B74]">Yhteisesti todettiin, että vuokrakohteessa tehdyssä tarkastuksessa ei havaittu toimenpiteitä aiheuttavia virheitä ja puutteita.</span>
+                            </div>
+                            <div class="flex items-start gap-3 mt-3">
+                                <label class="inline-flex items-center gap-2 cursor-pointer mt-[5px]">
+                                    <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                        <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                    </span>
+                                    <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                </label>
+                                <span class="text-[#586B74]">Yhteisesti todettiin, että vuokrakohteessa tullaan tekemään liitteen 1 mukaiset jälkityöt kohteen hallinnanluovutuksen jälkeen. </span>
+                            </div>
+                            <p class="text-[#586B74]">Osapuolet totesivat, että liitteessä 1 esitetyt seikat eivät vaikuta vuokrakohteen hallinnanluovutukseen tai vuokralaisen oikeuteen ottaa vuokrakohde hallintaansa.</p>
+                            <div class="flex items-center gap-2">
+                                <span class="text-[#586B74] text-[15px]">Osapuolet sopivat yhteisesti, että liitteessä 1 esitetyt työt on korjattu</span>
+                                <input type="text" name="pilar_VA1" placeholder="työvaihetta" class="w-full lg:w-[130px] shadow-[0_0_5px_2px_rgb(81,244,200,44%)]  border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                                <span class="text-[#586B74] text-[15px]">mennessä. ]</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <label class="inline-flex items-center gap-2 cursor-pointer">
+                                    <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                        <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                    </span>
+                                    <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                </label>
+                                <input type="text" name="pilar_filed8_6" placeholder="Vapaa teksti." class="w-full lg:w-[120px] shadow-[0_0_5px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                            </div>
+                        </div>
+    
+                        <h2 class="flex gap-10 text-black text-[20px] font-medium mt-10">
+                            4. HALLINNAN LUOVUTUKSEN VAHVISTAMINEN JA HALLINTAAN OTTAMINEN
+                        </h2>
+                        <p class="text-[#586B74] ml-[60px] mt-2">Tämän pöytäkirjan allekirjoituksin vuokranantaja vahvistaa luovuttaneensa vuokrakohteen vuokralaiselle vuokrasopimuksen mukaisesti ja vuokralainen vahvistaa vastaanottaneensa vuokrakohteen hallinnan vuokrasopimuksen mukaisesti.</p>
+    
+                        <h2 class="flex gap-10 text-black text-[20px] font-medium mt-10">
+                            5. VUOKRAVAKUUDEN TOIMITTAMINEN
+                        </h2>
+                        <div class="ml-[60px]">
+                            <div class="flex items-start gap-3 mt-3">
+                                <label class="inline-flex items-center gap-2 cursor-pointer mt-[5px]">
+                                    <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                        <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                    </span>
+                                    <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                </label>
+                                <span class="text-[#586B74]">Vuokranantaja ja vuokralainen ovat yhteisesti sopineet, ettei vuokravakuuden toimittaminen ole tarpeen.</span>
+                            </div>
+                            <div class="flex items-center gap-3 mt-3">
+                                <label class="inline-flex items-center gap-2 cursor-pointer">
+                                    <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                        <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                    </span>
+                                    <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                </label>
+                                <span class="text-[#586B74]">Vuokralaisen tulee toimittaa Vuokranantajalle Vuokrasopimuksen mukainen vuokravakuus.</span>
+                            </div>
+                            <div class="flex items-center gap-3 mt-3">
+                                <label class="inline-flex items-center gap-2 cursor-pointer">
+                                    <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                        <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                    </span>
+                                    <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                </label>
+                                <span class="text-[#586B74]">Todettiin, että Vuokralainen on toimittanut vuokravakuuden.</span>
+                            </div>
+                            <div class="flex items-center gap-3 mt-3">
+                                <label class="inline-flex items-center gap-2 cursor-pointer">
+                                    <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                        <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                    </span>
+                                    <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                </label>
+                                <span class="text-[#586B74]">Vakuuden toimittaminen vahvistetaan erikseen tämän hallinnanluovutuksen jälkeen.</span>
+                            </div>
+                            <div class="flex items-center gap-3 mt-3">
+                                <label class="inline-flex items-center gap-2 cursor-pointer">
+                                    <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                        <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                    </span>
+                                    <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                </label>
+                                <input type="text" name="pilar_filed8_6" placeholder="Vapaa teksti." class="w-full lg:w-[120px] shadow-[0_0_5px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                            </div>
+                        </div>
+    
+                        <h2 class="flex gap-10 text-black text-[20px] font-medium mt-10">
+                            6. MUUT ASIAT
+                        </h2>
+                        <p class="text-[#586B74] ml-[60px] mt-2 mb-5">Takuuajan toimintamalli on seuraava:</p>
+                        <div class="flex flex-col ml-[60px] flex-wrap lg:flex-row lg:items-center gap-2 mt-5">
+                            <span class="text-[#586B74] text-[15px]">Virheen ilmentyessä takuuaikana tilan käyttäjän reklamaation vastaanottaa kohteen</span> 
+                            <span class="text-[#586B74] text-[15px] inline-flex gap-1">
+                                [
+                                <label class="inline-flex items-center gap-2 cursor-pointer">
+                                    <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[16px] h-[16px] rounded-[4px] inline-flex items-center justify-center">
+                                        <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                    </span>
+                                    <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_K18">
+                                </label>
+                                <span class="flex-1 text-[#586B74] text-[14px]">huoltoyhtiö (<span class="text-[#00B2A9] italic">K23</span>, <span class="text-[#00B2A9] italic">K11</span>, <span class="text-[#00B2A9] italic">K12</span>, puh <span class="text-[#00B2A9] italic">K13</span> )</span>
+                                ]
+                            </span>
+                            <span class="text-[#586B74] text-[15px] inline-flex gap-1">
+                                [
+                                <label class="inline-flex items-center gap-2 cursor-pointer">
+                                    <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[16px] h-[16px] rounded-[4px] inline-flex items-center justify-center">
+                                        <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                    </span>
+                                    <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_K18">
+                                </label>
+                                <span class="flex-1 text-[#586B74] text-[14px]">kiinteistöpäällikkö (<span class="text-[#00B2A9] italic">K22</span>, <span class="text-[#00B2A9] italic">K6</span>, <span class="text-[#00B2A9] italic">K9</span>, puh. <span class="text-[#00B2A9] italic">K10</span> )</span>
+                                ]
+                            </span>
+                            <span class="text-[#586B74] text-[15px]">Kiinteistön yhteyshenkilö erottelee, onko kyseessä ylläpitohuollollinen toimenpide vai vuokrasopimuksen mukaisiin rakennustöihin liittyvä virhe ja toimittaa reklamaation pääurakoitsijalle tai kiinteistöhuollolle toimenpiteitä varten. Urakkaan kuuluvan reklamaation kiinteistön yhteyshenkilö välittää tiedoksi myös rakennuttajakonsultille. Rakennustöihin liittyen tehdään 2 vuotistakuutarkastus ja tarvittaessa takuuajan välitarkastus.</span>
+                        </div>
+    
+                    </div>
+    
+                    <div class="help_wrap relative mb-2 mt-3">
+                        <div class="max-w-[800px] mx-auto flex items-center gap-2 text-[#586B74]">
+                            <label class="inline-flex items-center gap-2 cursor-pointer ml-[65px]">
+                                <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                    <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                </span>
+                                <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                
+                                <input type="text" name="pilar_VA1" placeholder="vapaa teksti" class="w-full lg:w-[110px] shadow-[0_0_5px_2px_rgb(81,244,200,44%)]  border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                            </label>
+    
+                            <a href="#!" class="help_click"><svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="12" r="10" stroke="#000000" stroke-width="0.72"></circle> <path d="M10.125 8.875C10.125 7.83947 10.9645 7 12 7C13.0355 7 13.875 7.83947 13.875 8.875C13.875 9.56245 13.505 10.1635 12.9534 10.4899C12.478 10.7711 12 11.1977 12 11.75V13" stroke="#000000" stroke-width="0.72" stroke-linecap="round"></path> <circle cx="12" cy="16" r="1" fill="#000000"></circle> </g></svg> </a>                                      
+                            
+                            <hr class="help_line w-full border border-solid border-[#E1E1EA] hidden">
+                        </div>
+    
+                        <div class="help_show text-[#586B74] text-[14px] lg:w-[284px] bg-[#F6F8FF] border border-solid border-[#E1E1EA] rounded-lg p-5 lg:absolute lg:right-[10px] mt-[10px] mb-[15px] lg:mb[0] lg:mt-[-50px] hidden">
+                            Tähän voi kirjata esimerkiksi avaintenluovutukseen liittyviä tietoja.
+                        </div>
+                    </div>
+    
+                    <div class="help_wrap mt-10 mb-5 relative">
+                        <div class="max-w-[800px] mx-auto flex items-center gap-2">
+                            <h3 class="flex gap-10 text-black text-[20px] font-medium min-w-[215px]">
+                                7. ALLEKIRJOITUKSET
+                            </h3>
+    
+                            <a href="#!" class="help_click"><svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="12" r="10" stroke="#000000" stroke-width="0.72"></circle> <path d="M10.125 8.875C10.125 7.83947 10.9645 7 12 7C13.0355 7 13.875 7.83947 13.875 8.875C13.875 9.56245 13.505 10.1635 12.9534 10.4899C12.478 10.7711 12 11.1977 12 11.75V13" stroke="#000000" stroke-width="0.72" stroke-linecap="round"></path> <circle cx="12" cy="16" r="1" fill="#000000"></circle> </g></svg> </a>                                      
+                            
+                            <hr class="help_line w-full border border-solid border-[#E1E1EA] hidden">
+                        </div>
+    
+                        <div class="help_show text-[#586B74] text-[14px] lg:w-[300px] bg-[#F6F8FF] border border-solid border-[#E1E1EA] rounded-lg p-5 lg:absolute lg:right-[10px] mt-[10px] mb-[15px] lg:mb[0] lg:mt-[-50px] hidden">
+                            Valitse sähköinen tai perinteinen allekirjoitustapa. Perinteisessä täytä tiedot manuaalisesti. Voi olla useampia allekirjoittajia.
+                        </div>
+                    </div>
+    
+                    <div class="max-w-[800px] mx-auto">
+                        <div class="ml-[60px]">
+                            <div class="flex items-start gap-3 mt-3">
+                                <label class="inline-flex items-center gap-2 cursor-pointer mt-[5px]">
+                                    <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                        <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                    </span>
+                                    <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                </label>
+                                <span class="text-[#586B74]">Sopijapuolet ovat allekirjoittaneet tämän sopimuksen sähköisesti. Sopimus on sitova, kun molemmat osapuolet ovat sen allekirjoittaneet. Kumpikin sopijapuoli tallentaa ja/tai tulostaa allekirjoituspalvelujärjestelmästä oman sopimuskappaleensa.</span>
+                            </div>
+                            <div class="flex items-start gap-3 mt-3">
+                                <label class="inline-flex items-center gap-2 cursor-pointer mt-[5px]">
+                                    <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[18px] h-[18px] rounded-[4px] inline-flex items-center justify-center">
+                                        <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                    </span>
+                                    <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_TY1">
+                                </label>
+                                <span class="text-[#586B74]">Tätä sopimusta on tehty kaksi samasanaista kappaletta, toinen vuokranantajalle ja toinen vuokralaiselle.</span>
+                            </div>
+    
+                            <div class="flex items-center mt-8">
+                                <span class="text-[#586B74] text-[15px] w-[20%]">Paikka</span>
+                                <span class="h-[1px] bg-[#94969C] inline-block w-full mt-5 lg:mt-0 lg:w-[200px]"></span>
+                            </div>
+                            <div class="flex items-center mt-5">
+                                <span class="text-[#586B74] text-[15px] w-[20%]">Aika</span>
+                                <span class="h-[1px] bg-[#94969C] inline-block w-full mt-5 lg:mt-0 lg:w-[200px]"></span>
+                            </div>
+                            <p class="text-[#586B74] text-[15px] w-[20%] mt-5">Vuokranantaja</p>
+                            <div class="flex items-center gap-2 mt-5">
+                                <label class="inline-flex items-center gap-2 cursor-pointer">
+                                    <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[16px] h-[16px] rounded-[4px] inline-flex items-center justify-center">
+                                        <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                    </span>
+                                    <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_K18">
+                                    <span class="italic text-[#00B2A9]">T1</span>
+                                </label>
+                                <input type="text" name="pilar_filed8_6" placeholder="c/o T2" class="w-full lg:w-[160px] shadow-[0_0_5px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                            </div>
+                            <div class="flex items-center mt-5">
+                                <span class="text-[#00B2A9] italic  w-[20%]">T3</span>
+                                <span class="h-[1px] bg-[#94969C] inline-block w-full mt-5 lg:mt-0 lg:w-[290px]"></span>
+                            </div>
+                            <div class="flex items-center gap-2 mt-5">
+                                <label class="inline-flex items-center gap-2 cursor-pointer">
+                                    <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[16px] h-[16px] rounded-[4px] inline-flex items-center justify-center">
+                                        <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                    </span>
+                                    <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_K18">
+                                    <span class="italic text-[#00B2A9]">T1</span>
+                                </label>
+                                <input type="text" name="pilar_filed8_6" placeholder="c/o T2" class="w-full lg:w-[160px] shadow-[0_0_5px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                            </div>
+                            <div class="flex items-center my-10 gap-8">
+                                <span class="h-[1px] bg-[#94969C] inline-block w-full mt-5 lg:mt-0 lg:w-[120px]"></span>
+                                <span class="h-[1px] bg-[#94969C] inline-block w-full mt-5 lg:mt-0 lg:w-[290px]"></span>
+                            </div>
+                            <p class="text-[#586B74] text-[15px] my-5">Vuokralainen</p>
+    
+                            <label class="inline-flex items-center gap-2 cursor-pointer">
+                                <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[16px] h-[16px] rounded-[4px] inline-flex items-center justify-center">
+                                    <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                </span>
+                                <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_K18">
+                                <span class="italic text-[#00B2A9]">V1</span>
+                            </label>
+                            <div class="flex items-center mt-5">
+                                <span class="italic text-[#00B2A9] w-[20%]">V2</span>
+                                <span class="h-[1px] bg-[#94969C] inline-block w-full mt-5 lg:mt-0 lg:w-[290px]"></span>
+                            </div>
+    
+                            <label class="inline-flex items-center gap-2 cursor-pointer mt-10">
+                                <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[16px] h-[16px] rounded-[4px] inline-flex items-center justify-center">
+                                    <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                </span>
+                                <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_K18">
+                                <span class="italic text-[#00B2A9]">V1</span>
+                            </label>
+                            <div class="flex items-center mt-5">
+                                <span class="italic text-[#00B2A9] w-[20%]">V3</span>
+                                <span class="h-[1px] bg-[#94969C] inline-block w-full mt-5 lg:mt-0 lg:w-[290px]"></span>
+                            </div>
+    
+                            <label class="inline-flex items-center gap-2 cursor-pointer mt-10">
+                                <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[16px] h-[16px] rounded-[4px] inline-flex items-center justify-center">
+                                    <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                </span>
+                                <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_K18">
+                                <span class="italic text-[#00B2A9]">V1</span>
+                            </label>
+                            <div class="flex items-center my-10 gap-8">
+                                <span class="h-[1px] bg-[#94969C] inline-block w-full mt-5 lg:mt-0 lg:w-[120px]"></span>
+                                <span class="h-[1px] bg-[#94969C] inline-block w-full mt-5 lg:mt-0 lg:w-[290px]"></span>
+                            </div>
+                        </div>
+    
+                        <div class="flex flex-col flex-wrap lg:flex-row lg:items-center gap-2 mt-20">
+                            <span class="text-[#283B44] text-[15px] font-medium">LIITTEET:</span>
+                        </div>
+                        <div class="flex items-center mt-5">
+                            <span class="text-[#586B74] text-[14px] underline w-[15%] ">Liite 1</span>
+                            <span class="text-[#586B74] text-[14px]">Hallinnanluovutustarkastuksessa havaitut virheet ja puutteet</span>
+                        </div>
+                        <div class="flex items-center mt-5">
+                            <label class="inline-flex items-center gap-2 cursor-pointer w-[15%]">
+                                <span class="shadow-[0_0_4px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] w-[16px] h-[16px] rounded-[4px] inline-flex items-center justify-center">
+                                    <svg class="check_show hidden" width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                </span>
+                                <input type="checkbox" class="checkbox_change absolute opacity-0" name="pilar_K18">
+                                <span class="text-[#586B74] text-[14px] underline">Liite 2</span>
+                            </label>
+                            <input type="text" name="pilar_filed8_6" placeholder="Muu, mikä" class="w-full lg:w-[160px] shadow-[0_0_5px_2px_rgb(81,244,200,44%)] border border-solid border-[#06F9B7] rounded-[5px] p-2">
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="border border-solid border-[#E1E1EA] ml-[-20px] mr-[-20px] mt-10">
+
+                <div class="flex items-center justify-between pt-[20px]">
+                    <div>
+                        <a href="../index.html" class="text-[14px] text-black font-medium border border-solid border-[#E1E1EA] rounded-lg flex items-center pr-3 py-1">
+                            <svg width="24px" height="24px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" stroke="#000000" stroke-width="0.00032"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="icomoon-ignore"> </g> <path d="M12.792 15.233l-0.754 0.754 6.035 6.035 0.754-0.754-5.281-5.281 5.256-5.256-0.754-0.754-3.013 3.013z" fill="#7a7a7a"> </path> </g></svg>
+                            Takaisin
+                        </a>
+                    </div>
+    
+                    <div>
+                        <button class="text-[14px] text-white font-medium bg-[#00B2A9] border border-solid border-[#818D930F] rounded-lg flex items-center gap-2 px-3 py-1">
+                            Hyväksy
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

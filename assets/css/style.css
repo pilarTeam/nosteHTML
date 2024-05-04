@@ -1243,6 +1243,10 @@ input:focus,
   margin-left: 60px;
 }
 
+.ml-\[65px\] {
+  margin-left: 65px;
+}
+
 .ml-auto {
   margin-left: auto;
 }
@@ -4060,6 +4064,10 @@ input:focus,
     width: 157px;
   }
 
+  .lg\:w-\[160px\] {
+    width: 160px;
+  }
+
   .lg\:w-\[170px\] {
     width: 170px;
   }
@@ -4136,8 +4144,20 @@ input:focus,
     width: 285px;
   }
 
+  .lg\:w-\[290px\] {
+    width: 290px;
+  }
+
   .lg\:w-\[298px\] {
     width: 298px;
+  }
+
+  .lg\:w-\[300px\] {
+    width: 300px;
+  }
+
+  .lg\:w-\[310px\] {
+    width: 310px;
   }
 
   .lg\:w-\[320px\] {
