@@ -3908,6 +3908,10 @@ input:focus,
     margin-left: 65px;
   }
 
+  .lg\:ml-\[70px\] {
+    margin-left: 70px;
+  }
+
   .lg\:mr-16 {
     margin-right: 4rem;
   }
